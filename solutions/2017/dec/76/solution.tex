@@ -1,0 +1,138 @@
+See Tables \ref{eq:solutions/2017/dec/76/table0}, \ref{eq:solutions/2017/dec/76/table2} and \ref{eq:solutions/2017/dec/76/table1}
+
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+& \\
+Given & $V$ be a vector space over $C$ of all the polynomials in a variable $X$ of degree atmost 3\\
+& $D$ : $P_3 \xrightarrow{} P_3$ \\ 
+& \\
+& $D:V\xrightarrow{}V$ be the linear operator given by differentiation wrt $X$\\
+& $D(P(x)) \xrightarrow{}$ $P'(x)$ \\
+& \\
+& $A$ be the matrix of $D$ wrt some basis for $V$ \\
+& Assume basis for $V$ be $\{1,x,x^2,x^3\}$ \\
+& \\
+\hline
+\end{tabular}
+\end{center}
+\caption{}
+\label{eq:solutions/2017/dec/76/table0}
+\end{table*}
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+&\\
+Matrix & $D(1)$ = $0$ = $0.1+0.x+$\\
+& $0.x^2+0.x^3$\\
+& $D(1)$ = $\myvec{0\\0\\0\\0}$ \\
+& $D(x)$ = $1$ = $1.1+0.x+$\\
+& $0.x^2+0.x^3$\\
+& $D(x)$ = $\myvec{1\\0\\0\\0}$ \\
+& $D(x^2)$ = $2x$ = $0.1+2.x+$\\
+& $0.x^2+0.x^3$\\
+& $D(x^2)$ = $\myvec{0\\2\\0\\0}$ \\
+& $D(x^3)$ = $3x^2$ = $0.1+0.x+$\\
+& $3.x^2+0.x^3$\\
+& $D(x^3)$ = $\myvec{0\\0\\3\\0}$ \\
+& Matrix $A$ = $\myvec{0&1&0&0\\
+                0&0&2&0\\
+                0&0&0&3\\
+                0&0&0&0}$\\
+&\\
+\hline
+& \\
+Inference & An $n\times n$ matrix with $\lambda$\\
+& as diagonal elements, ones on the\\
+& super diagonal and zeroes in all\\
+& other entries is nilpotent with\\
+& minimal polynomial $(A-\lambda I)^n$\\
+&\\
+\hline
+& \\
+Nilpotent & $A$ = $\myvec{0&1&0&0\\
+                0&0&2&0\\
+                0&0&0&3\\
+                0&0&0&0}$\\
+& \\
+& All eigen values of matrix $A$\\
+& is $0$\\
+& Thus, above matrix is \\
+& nilpotent matrix \\
+& Thus, above statement \\
+& is true\\
+& \\
+\hline
+\end{tabular}
+\end{center}
+\caption{}
+\label{eq:solutions/2017/dec/76/table2}
+\end{table*}
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Diagonalizable & $A$ = $\myvec{0&1&0&0\\
+                0&0&2&0\\
+                0&0&0&3\\
+                0&0&0&0}$\\
+& $Rank(A)$ + $nullity(A)$ = no of column\\
+& $Rank(A)$ = 3, no of column = 4 \\
+& $nullity(A)$ = 4 - 3 = 1\\
+& means there exists only one\\
+& linearly independent eigen vector\\
+& corresponding to $0$ eigen values\\
+& Thus,matrix $A$ is not Diagonalizable.\\
+& Thus, above statement is false\\
+& \\
+\hline
+& \\
+Rank & $A$ = $\myvec{0&1&0&0\\
+                0&0&2&0\\
+                0&0&0&3\\
+                0&0&0&0}$\\
+& \\
+& Rank of matrix $A$ is $3$\\
+& Thus, above statement is false\\
+& \\
+\hline
+& \\
+Jordan CF & Assume characteristic polynomial of \\
+& matrix $A$ is $c_A(x)$ \\
+& $c_A(x)$ = $x^4$ \\
+& Assume minimal polynomial of\\
+& $A$ is $m_A(x)$\\
+& $m_A(x)$ always divide $c_A(x)$ \\
+& $m_A(x)$ = $\{x,x^2,x^3,x^4\}$\\
+& Minimal polynomial always annihilates\\
+& its matrix.Thus,we see that\\
+& $m_A(A)$ = $\{A=0,A^2=0,A^3=0,A^4=0\}$\\
+& But we see that neither A is zero matrix\\
+& nor $A^2$ and $A^3$ equal to zero\\
+& but $A^4$ is equal to zero.Thus,$x^4$\\
+& is minimal polynomial.\\
+& Algebraic Multiplicity = $a_M$($\lambda$ = 0) = 4\\
+& Geometric Multiplicity = $g_M$($\lambda$ = 0) = \\
+& $nullity(A-0I)$ = $nullity(A)$ = 1\\
+& Hence, Jordan form of block size 4\\
+& Using Inference, $\vec{J} = \myvec{\lambda & 1 & 0 & 0 \\ 
+                        0 & \lambda & 1 & 0\\ 
+                        0 & 0 & \lambda & 1\\
+                        0 & 0 & 0 & \lambda }$ \\
+& $\lambda$ = 0 \\ 
+& $\myvec{0&1&0&0\\
+       0&0&1&0\\
+       0&0&0&1\\
+       0&0&0&0}$\\
+& which is same as given in\\
+& the question. Thus,statement is true \\
+& \\
+\hline
+\end{tabular}
+\end{center}
+\caption{}
+\label{eq:solutions/2017/dec/76/table1}
+\end{table*}

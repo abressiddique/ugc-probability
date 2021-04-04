@@ -1,0 +1,203 @@
+See Tables     \ref{eq:solutions/2018/june/76/table:3},     
+\ref{eq:solutions/2018/june/76/table:3} and     \ref{eq:solutions/2018/june/76/table:3}
+
+
+
+\onecolumn
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{Orthogonal Complement} 
+	& \\
+	& Let $\mathcal{S}$ be a subset of an inner product space $\vec{V}$. The space of all vectors\\
+	&orthogonal to $\mathcal{S}$ is called the \textbf{orthogonal complement} of $\mathcal{S}$:\\
+	&\\
+	&$\qquad\qquad\mathcal{S}^{\perp}=\cbrak{\vec{x}\in\vec{V}\colon<\vec{x},\vec{y}>=0,\quad\forall \vec{y}\in\mathcal{S}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Closure of subset} 
+	& \\
+	& closure of a set $\mathcal{S}$ is the set of all limits of points from $\mathcal{S}$\\
+	& Let $\mathcal{S}$ be a subset of an inner product space $\vec{V}$. Then closure of $\mathcal{S}$ satisfies,\\
+	&$\qquad\qquad\overline{\mathcal{S}}=\cbrak{\vec{y}\in\vec{V}\colon \textit{ there exist } \vec{x_n}\in\mathcal{S}\textit{ such that } \vec{x_n}\rightarrow \vec{y}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Projection Theorem} 
+	& \\
+	&  Let $\mathcal{S}$ be a closed subspace of a finite dimensional vector space $\vec{V}$, then,\\
+	&Every $\vec{x}\in \mathcal{S}$ can be expressed as,\\
+	&\\
+	&$\qquad\qquad\qquad\qquad \vec{x} = \vec{u} + \vec{v}$, where,\\
+	&$\qquad\qquad\qquad\qquad \vec{u}\in \mathcal{S},\quad \vec{v} \in \mathcal{S}^{\perp}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Theorem} 
+	& \\
+	& If $\mathcal{S}_1$ and $\mathcal{S}_2$ are subsets of $\vec{V}$ and $\mathcal{S}_1\subseteq \mathcal{S}_2$, then\\
+	&\\
+	&$\qquad\qquad\qquad\qquad\mathcal{S}_{2}^{\perp}\subseteq\mathcal{S}_{1}^{\perp}$
+.\\
+	&\\
+	\hline
+    \caption{Definitions and results used}
+    \label{eq:solutions/2018/june/76/table:1}
+\end{longtable}
+\begin{longtable}{|c|l|}
+    \hline
+    \multirow{3}{*}{Given} 
+	& \\
+	& Let $\mathcal{S}$ be any set, then $\mathcal{S}^{\perp}$ is the set of all vectors that are perpendicular\\
+	&to all elements of $\mathcal{S}$\\
+	&We will check if $\mathcal{S}^{\perp}$ is a subspace\\
+	&$\brak{1}$ Closed on Addition\\
+	& $\qquad$ Let $\vec{u},\vec{v} \in \mathcal{S}^{\perp}$, then, for $\vec{x}\in\vec{V}$,\\
+	& $\qquad\qquad<\vec{x},\vec{u}+\vec{v}>=<\vec{x},\vec{u}>+<\vec{x},\vec{v}>=0$\\
+	&$\qquad\qquad\implies \vec{u}+\vec{v} \in \mathcal{S}^{\perp}$\\
+	&\\
+	&$\brak{2}$ Closed on Multiplication\\
+	& $\qquad$ Let $\vec{u}\in \mathcal{S}^{\perp}$, then, for $\vec{x}\in\vec{V}$ and scalar $\alpha\in\mathbb{F}$,\\
+	& $\qquad\qquad<\vec{x},\alpha \vec{u}>=\alpha^{*}<\vec{x},\vec{u}>=0$\\
+	&$\qquad\qquad\implies \alpha \vec{u} \in \mathcal{S}^{\perp}$\\
+	&\\
+	&Therefore, $\mathcal{S}^{\perp}$ is a subspace\\
+	&\\
+	&Therefore, $\brak{\mathcal{S}^{\perp}}^{\perp}$ is also a subspace\\
+	&\\
+	\hline
+	&\\
+	&\textbf{Checking the options}\\
+	\hline
+	\multirow{3}{*}{$\mathcal{S}=\brak{\mathcal{S}^{\perp}}^{\perp}$} 
+	& \\
+	& We have,\\
+	&$\qquad\qquad\mathcal{S}^{\perp}=\cbrak{x\in\vec{V}\colon<x,y>=0,\quad\forall y\in\mathcal{S}}$\\
+	&$\implies \qquad\brak{\mathcal{S}^{\perp}}^{\perp}=\cbrak{x\in\vec{V}\colon<x,y>=0,\quad\forall y\in\mathcal{S}}$\\
+	&\\
+	& Let $\vec{s}\in\mathcal{{S}}$, then\\
+	&$\qquad <\vec{s},\vec{v}>=0,\quad\forall\vec{v}\in\mathcal{S}^{\perp}$\\
+	&$\qquad\implies\vec{s}\in\brak{\mathcal{S}^{\perp}}^{\perp}$\\
+	&Therefore,\\
+	&$\qquad\mathcal{S}\subseteq\brak{\mathcal{S}^{\perp}}^{\perp}\qquad\qquad\dots\brak{1}$\\
+	& We have proved that $\brak{\mathcal{S}^{\perp}}^{\perp}$ is a subspace\\
+	& But, $\mathcal{S}$ is a subset of $\vec{V}$ and is not necessarily a subspace.\\
+	&\\
+	&Therefore, this option is \textbf{false}.\\
+	&\\
+	&\\
+	\hline
+    \multirow{3}{*}{$\overline{\mathcal{S}}=\brak{\mathcal{S}^{\perp}}^{\perp}$} 
+	& \\
+	& Similarly,\\
+	& $\overline{\mathcal{S}}$ is a subset of $\vec{V}$ and is not necessarily a subspace.\\
+	&\\
+	&Therefore, this option is \textbf{false}.\\
+	&\\
+	\hline
+	\multirow{3}{*}{$\overline{span\brak{\mathcal{S}}}=\brak{\mathcal{S}^{\perp}}^{\perp}$} 
+	& \\
+	& Let $\vec{v}$ is a limit of some $\vec{v_i}$ such that $\vec{v_i}\in span\brak{\mathcal{S}}$\\ 
+	&\\
+	&$\qquad\qquad\implies \vec{v}\in\overline{span\brak{\mathcal{S}}}$\\
+	&Now,\\
+	& Since, $\vec{v_i}\in span\brak{\mathcal{S}}$,\\
+	&$\qquad\qquad\implies \vec{v_i}=\sum{\beta_j \vec{s_j}},\quad \vec{s_j}\in\mathcal{S}$\\
+	&\\
+	&Let $\vec{w}\in\mathcal{S}^{\perp}$,\\
+	&$\qquad\qquad\implies<\vec{w},\vec{s_j}>=0$\\
+	&Now, \\
+	&$\qquad\qquad<\vec{w},\vec{v_i}>=\sum{\beta_j<\vec{w},\vec{s_j}>}=0$\\\
+	&Therefore,\\
+	&$\qquad\qquad\vec{w}\perp\vec{v_i}$, hence,\\
+	&$\qquad\qquad\vec{w}\perp \vec{v}$\\
+	&$\qquad\implies \vec{v}\in \brak{\mathcal{S}^{\perp}}^{\perp}$\\
+	&$\qquad\implies \overline{span\brak{\mathcal{S}}}\subseteq\brak{\mathcal{S}^{\perp}}^{\perp}\qquad\qquad\qquad\qquad\dots\brak{2}$\\
+	&\\
+	&Therefore, this option is \textbf{false}.\\
+	&\\
+	&However, if we assume that $\vec{V}$ is a finite dimensional space, which implies,\\
+	&$\vec{V}$ is a hilbert space, then we have,\\
+	&\\
+	&for $\vec{x}\in\brak{\mathcal{S}^{\perp}}^{\perp}$,\\
+	&$\qquad\qquad\vec{x}=\vec{u}+\vec{v},\quad \vec{u}\in\overline{span(\mathcal{S})},\vec{v}\perp \overline{span(\mathcal{S})}$\\
+	&Now,\\
+	&$\qquad\qquad<\vec{x},\vec{u}>=0$\\
+	&$\qquad\implies<\vec{u}+\vec{v},\vec{v}>=0$\\
+	&$\qquad\implies<\vec{u},\vec{v}>+<\vec{v},\vec{v}>=0$\\
+	&$\qquad\implies\norm{\vec{v}}=0$\\
+	&$\qquad\implies \vec{v}=0$\\
+	&$\qquad\implies \vec{x}=\vec{u}\in \overline{span(\mathcal{S})}$\\
+	&$\qquad\implies \brak{\mathcal{S}^{\perp}}^{\perp}\subseteq\overline{span(\mathcal{S})}\qquad\qquad\qquad\qquad\dots\brak{3}$\\
+	&\\
+	&From $\brak{2}$ and $\brak{3}$,\\
+	&$\overline{span\brak{\mathcal{S}}}=\brak{\mathcal{S}^{\perp}}^{\perp}$ if $\vec{V}$ is a hilbert space.\\
+	&\\
+	\hline
+	\multirow{3}{*}{$\mathcal{S}^{\perp}=\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}$}
+	& \\
+	& From $\brak{1}$, we have,\\
+	& $\qquad\qquad\qquad\mathcal{S}\subseteq\brak{\mathcal{S}^{\perp}}^{\perp}$\\
+	&$\qquad\qquad\implies\mathcal{S}^{\perp}\subseteq\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}\qquad\qquad\qquad\dots\brak{4}$\\
+	&\\
+	&We know that,\\
+	&$\qquad\qquad\qquad\mathcal{S}_{2}^{\perp}\subseteq\mathcal{S}_{1}^{\perp}$\\
+	&Therefore,\\
+	&$\qquad\qquad\qquad\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}\subseteq\mathcal{S}^{\perp}\qquad\qquad\qquad\dots\brak{5}$\\
+	&\\
+	&From $\brak{4}$ and $\brak{5}$, we have,\\
+	&$\qquad\qquad\qquad\mathcal{S}^{\perp}=\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}$\\
+	&\\
+	&Therefore, this option is \textbf{True}.\\
+	&\\
+	\hline
+	&\\
+	\multirow{3}{*}{\textbf{Example:}}
+	&\\
+	&Let $\Vec{V}=\mathbb{R}^2$\\
+	&We want a subset $\mathcal{S}$ of $\vec{V}$ which is not a subspace.\\
+	&\\
+	&$\qquad$Let $\mathcal{S}=\cbrak{\myvec{x\\3x+1}}, x\in\mathbb{R}$,\\
+	&Then,\\
+	&$\qquad\qquad\mathcal{S}^{\perp}=\cbrak{\myvec{x\\-\frac{1}{3}x+c}}\qquad\qquad\qquad\dots\brak{1}$\\
+	&\\
+	&$\qquad\implies\brak{\mathcal{S}^{\perp}}^{\perp}=\cbrak{\myvec{x\\3x+c}}$\\
+	&Therefore,\\
+	&$\qquad\qquad\mathcal{S}\subseteq\brak{\mathcal{S}^{\perp}}^{\perp}$\\
+	&$\qquad\implies\boxed{\mathcal{S}\neq\brak{\mathcal{S}^{\perp}}^{\perp}}$\\
+	&Similarly,\\
+	&$\qquad\implies\boxed{\overline{\mathcal{S}}\neq\brak{\mathcal{S}^{\perp}}^{\perp}}$\\
+	&\\
+	&Also,\\
+	&$\qquad\qquad\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}=\cbrak{\myvec{x\\-\frac{1}{3}x+c}}\qquad\qquad\dots\brak{2}$\\
+	&\\
+	&From $\brak{1}$ and $\brak{2}$, we get,\\
+	&\\
+	&$\qquad\qquad\boxed{\mathcal{S}^{\perp}=\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}}$\\
+	&\\
+	\hline
+	\caption{Solution}
+    \label{eq:solutions/2018/june/76/table:2}
+\end{longtable}
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{$\mathcal{S}=\brak{\mathcal{S}^{\perp}}^{\perp}$} 
+	& \\
+	&\textbf{false}.\\
+	&\\
+	\hline
+    \multirow{3}{*}{$\overline{\mathcal{S}}=\brak{\mathcal{S}^{\perp}}^{\perp}$} 
+	& \\
+	&\textbf{false}.\\
+	&\\
+	\hline
+	\multirow{3}{*}{$\overline{span\brak{\mathcal{S}}}=\brak{\mathcal{S}^{\perp}}^{\perp}$}
+	&\\
+	&\textbf{false}\\
+	&\\
+	\hline
+	\multirow{3}{*}{$\mathcal{S}^{\perp}=\brak{\brak{\mathcal{S}^{\perp}}^{\perp}}^{\perp}$}
+	& \\
+    &\textbf{True}.\\
+	&\\
+	\hline
+	\caption{Conclusion}
+    \label{eq:solutions/2018/june/76/table:3}
+\end{longtable}

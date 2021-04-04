@@ -1,0 +1,60 @@
+See Tables \ref{eq:solutions/2016/dec/72/Table.1}, 
+\ref{eq:solutions/2016/dec/72/Table.2}, 
+\ref{eq:solutions/2016/dec/72/Table.3} and 
+\ref{eq:solutions/2016/dec/72/Table.4}. 
+
+
+
+
+\begin{table*}
+\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 1} & To conclude that m = n\\
+\hline
+Assumptions & \textbf{For the example:} Without loss of generality, Let m = 2, n = 3 and $\vec{A}$ = \myvec{1 & 0 & 0\\ 0 & 1 & 0} \\ & $\implies$ $\vec{A^t}$ = \myvec{1 & 0\\0 & 1\\0 & 0}\\
+\hline
+\multirow{3}{*}{Proof} & We know that $\brak{\vec{AA^t}}^r$ = $\vec{I}$ which is a square matrix of order m $\times$ m \\ & For any natural value of r, a square matrix ($\vec{I}$) of order m $\times$ m is obtained \\ & Hence, we cannot conclude that m = n because we get $\vec{I}$ of order m $\times$ m \\ & even if m $\neq$ n. To illustrate this, Consider the following example \\& $\vec{AA^t}$ = \myvec{1 & 0 & 0\\ 0 & 1 & 0}\myvec{1 & 0\\0 & 1\\0 & 0} = \myvec{1 & 0\\0 & 1} = $\vec{I}$ \ ($\vec{A}$ and $\vec{A^t}$ from Assumptions) \\& $\brak{\vec{AA^t}}^r$ = $\vec{I}$ \\[0.25em] & Here m $\neq$ n. Therefore, \textbf{Option 1} is incorrect\\
+\hline
+\end{tabular*}
+\caption{Option 1}
+\label{eq:solutions/2016/dec/72/Table.1}
+\end{table*}
+\begin{table*}
+\begin{tabular*}{0.9\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 2} & To conclude that $\vec{AA^t}$ is invertible\\
+\hline
+Assumptions & $\vec{AA^t}$ is not invertible\\
+\hline
+\multirow{3}{*}{Proof} & $\implies$ $\mydet{\vec{AA^t}}$ = 0 $\implies$ $\mydet{\brak{\vec{AA^t}}^r}$ = 0 \\[0.25em] & $\implies$ $\brak{\vec{AA^t}}^r$ $\neq$ $\vec{I}$ \Big($\mydet{\vec{I}}$ = 1\Big) \\[0.25em] & Since, this is a contradiction to the assumption made we can conclude that \\ &  $\vec{AA^t}$ is invertible. Therefore, \textbf{Option 2} is correct\\
+\hline
+\end{tabular*}
+\caption{Option 2}
+\label{eq:solutions/2016/dec/72/Table.2}
+\end{table*}
+\begin{table*}
+\begin{tabular*}{0.9\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 3} & To conclude that $\vec{A^tA}$ is invertible\\
+\hline
+Assumptions & Without loss of generality, Let m = 2, n = 3 and $\vec{A}$ = \myvec{1 & 0 & 0\\ 0 & 1 & 0} \\& $\implies$ $\vec{A^t}$ = \myvec{1 & 0\\0 & 1\\0 & 0}\\
+\hline
+\multirow{3}{*}{Proof} & $\implies$ $\vec{A^tA}$ = \myvec{1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 0} $\implies$ $\mydet{\vec{A^tA}}$ = 0 \\ & This means that $\vec{A^tA}$ is not invertible. Therefore, \textbf{Option 3} is incorrect\\
+\hline
+\end{tabular*}
+\caption{Option 3}
+\label{eq:solutions/2016/dec/72/Table.3}
+\end{table*}
+\begin{table*}
+\begin{tabular*}{0.75\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 4} & To conclude that if m = n then $\vec{A}$ is invertible\\
+\hline
+Assumptions & Let m = n\\
+\hline
+\multirow{3}{*}{Proof} & Since $\brak{\vec{AA^t}}^r$ = $\vec{I}$ $\implies$ $\mydet{\brak{\vec{AA^t}}^r}$ = $\mydet{\vec{I}}$ = 1 \\ & $\implies$ $\brak{\mydet{\vec{A}}\mydet{\vec{A^t}}}^r$ = 1 \big($\vec{A}$ is a square matrix\big) \\ & $\implies$  $\brak{\mydet{\vec{A}}}^{2r}$ = 1 \\ & Therefore, \textbf{Option 4} is correct\\
+\hline
+\end{tabular*}
+\caption{Option 4}
+\label{eq:solutions/2016/dec/72/Table.4}
+\end{table*}

@@ -1,0 +1,156 @@
+\begin{enumerate}
+\item If $\vec{A}$ is a self-adjoint matrix, then it satisfies 
+\begin{equation}\label{eq:solutions/2018/dec/30/2.0.1}
+\vec{A}^{*} = \vec{A}
+\end{equation}
+where $\vec{A}^{*}$ is the complex conjugate of $\vec{A}$
+\item For a self-adjoint(Hermitian) matrix the eigen values are real.
+\item Let $\vec{A}$ be an $n \times n$ matrix, $\lambda_A$ be its eigen values and $\vec{X}$ be its eigen vector.
+\begin{equation}\label{eq:solutions/2018/dec/30/2.0.2}
+\vec{A}\vec{X} = \lambda_A \vec{X} 
+\end{equation}
+\item If $\lambda_A$ be the eigen value of $\vec{A}$, then 
+\begin{enumerate}
+ \item Eigen value of $\vec{A}+k\vec{I}$ is $\lambda_A+k$
+ \item Eigen value of $\vec{A}^p$ is $\lambda_A^p$
+ \item Eigen value of $\vec{A}^{-1}$ is $1/\lambda_A$
+\end{enumerate}
+\end{enumerate}
+Since $\vec{A}$ is an $n \times n$ complex matrix and a self-adjoint matrix. Hence, eigen values of $\vec{A}$ are real.
+Let $\lambda_A$ be the eigen value of $\vec{A}$ and $\vec{X}$ be its eigen vector.
+\begin{equation}\label{eq:solutions/2018/dec/30/3.0.1}
+\vec{A}\vec{X} = \lambda_A \vec{X} 
+\end{equation}
+The eigen value of $\vec{B}$
+\begin{equation*}
+\vec{B} = (\vec{A}+i\vec{I})^{-1}
+\end{equation*}
+ Eigen value of $\vec{A}+i\vec{I}$ is $\lambda_A+i$\\
+ Eigen value of $\vec{B}$ i.e. $(\vec{A}+i\vec{I})^{-1}$ is $\frac{1}{\lambda_A+i}$\\
+ Eigen value of $\vec{A}-i\vec{I}$ is $\lambda_A-i$\\
+ Now Using \eqref{eq:solutions/2018/dec/30/3.0.1}
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.2}
+ (\vec{A}+i\vec{I})^{-1} \vec{X} = \frac{1}{\lambda_A+i} \vec{X}
+ \end{equation}
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.3}
+ (\vec{A}-i\vec{I}) \vec{X} = (\lambda_A-i) \vec{X}
+ \end{equation}
+ Multiplying \eqref{eq:solutions/2018/dec/30/3.0.2} by $\vec{A}-i\vec{I}$
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.4}
+ (\vec{A}-i\vec{I})(\vec{A}+i\vec{I})^{-1} \vec{X} = (\vec{A}-i\vec{I})  \frac{1}{\lambda_A+i} \vec{X}
+ \end{equation}
+ Using \eqref{eq:solutions/2018/dec/30/3.0.3} in \eqref{eq:solutions/2018/dec/30/3.0.4}
+ \begin{equation*}
+ (\vec{A}-i\vec{I})(\vec{A}+i\vec{I})^{-1} \vec{X} = (\lambda_A-i) \frac{1}{\lambda_A+i} \vec{X}
+ \end{equation*}
+ \begin{equation} \label{eq:solutions/2018/dec/30/3.0.5}
+ (\vec{A}-i\vec{I})\vec{B} \vec{X} = \left(\frac{\lambda_A-i}{\lambda_A+i}\right) \vec{X}
+ \end{equation}
+ From \eqref{eq:solutions/2018/dec/30/3.0.5} the eigen values of $(\vec{A}-i\vec{I})\vec{B}$ are:
+ \begin{enumerate}
+ \item $\frac{\lambda_A-i}{\lambda_A+i}$
+ \item not real 
+ \item Magnitude:
+ \begin{equation}
+ \left| \frac{\lambda_A-i}{\lambda_A+i} \right| = \frac{\sqrt{\lambda_A^2+1}}{\sqrt{\lambda_A^2+1}}\\ = 1
+ \end{equation}
+ \end{enumerate}
+ Therefore, option (2) is correct.\\
+ \\
+ What happens when the eigen values of $\vec{A}$ are complex?\\
+ If $\lambda_A$ is complex i.e.
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.7}
+ \lambda_A = x + iy
+ \end{equation}
+ from \eqref{eq:solutions/2018/dec/30/3.0.5} Eigen values of $(\vec{A}-i\vec{I})\vec{B}$ are:\\
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.8}
+ EV = \frac{\lambda_A-i}{\lambda_A+i}
+ \end{equation}
+ Using \eqref{eq:solutions/2018/dec/30/3.0.7} in \eqref{eq:solutions/2018/dec/30/3.0.8} we get,
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.9}
+ EV = \frac{x+i(y-1)}{x+i(y+1)}
+ \end{equation}
+ Rationalizing \eqref{eq:solutions/2018/dec/30/3.0.9} we get,
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.10}
+ EV = \frac{x^2-2xi+y^2-1}{x^2+(y+1)^2}
+ \end{equation}
+ From \eqref{eq:solutions/2018/dec/30/3.0.10}\\
+ The eigen values of $(\vec{A}-i\vec{I})\vec{B}$ are complex.\\
+ They can be real only if the eigen values of $\vec{A}$ are purely imaginary.\\
+ Verification of the result using a $2\times2$ matrix.\\
+ Let 
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.11}
+ \vec{A} = \myvec{1 && i \\ 1 && 0}
+ \end{equation}
+ Characteristic equation of $\vec{A}$:
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.12}
+ \begin{split}
+ \vert\vec{A}-\lambda\vec{I}\vert = 0\\
+ \implies \lambda^2 - \lambda - i = 0
+ \end{split}
+ \end{equation}
+ Eigen values of $\vec{A}$:
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.13}
+ \begin{split}
+ \lambda_1 = -0.3 - 0.625i \\
+ \lambda_2 = 1.3 + 0.625i
+ \end{split}
+ \end{equation}
+ Let $\alpha$ be the eigen values of $(\vec{A}-i\vec{I})\vec{B}$ \\
+ Using \eqref{eq:solutions/2018/dec/30/3.0.10} we get 
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.14}
+ \begin{split}
+ \alpha_1 = -2.25 + 2.6i \\
+ \alpha_2 = 0.25 - 0.6i
+ \end{split}
+ \end{equation}
+ Now let's verify \eqref{eq:solutions/2018/dec/30/3.0.14}
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.15}
+ (\vec{A}-i\vec{I})\vec{B} = \myvec{-1 && 2 \\ -2i && -1+2i}
+ \end{equation}
+ Characteristic equation of $(\vec{A}-i\vec{I})\vec{B}$:
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.16}
+ \begin{split}
+ \vert\vec{A}-\alpha\vec{I}\vert = 0\\
+ \alpha^2 + (2-2i)\alpha + 1 + 2i = 0
+ \end{split}
+ \end{equation}
+ Eigen Values of $(\vec{A}-i\vec{I})\vec{B}$ using \eqref{eq:solutions/2018/dec/30/3.0.16}  
+ \begin{equation}\label{eq:solutions/2018/dec/30/3.0.17}
+ \begin{split}
+ \alpha_1 = -2.25 + 2.6i\\
+ \alpha_2 = 0.25 - 0.6i
+ \end{split}
+ \end{equation}
+ Since \eqref{eq:solutions/2018/dec/30/3.0.14} and \eqref{eq:solutions/2018/dec/30/3.0.17} are equal.\\
+ Hence the result is verified.  See Table \ref{eq:solutions/2018/dec/30/tab}
+
+\begin{table}
+ \begin{center}
+\begin{tabular}{ | m{4cm}| m{5cm} | } 
+\hline
+		\multirow{3}{*}{Eigen values of $\vec{A}$} & \\
+		& Eigen Values of $(\vec{A}-i\vec{I})\vec{B}$ 
+\quad \qquad \qquad\\		\hline	
+		
+		(1) If eigen values of $\vec{A}$ are real  &  \qquad \qquad (a) $ \frac{\lambda_A-i}{\lambda_A+i}$ \\
+		& \qquad \qquad (b) not real 
+ \\
+		& \qquad \qquad (c) Magnitude = 1 \\
+		& \\
+		\hline	
+		(2) If eigen values of $\vec{A}$ are complex  & \qquad \qquad (a) $\frac{x^2-2xi+y^2-1}{x^2+(y+1)^2}$ \\
+		& \qquad \qquad (b) complex  
+ \\
+		& \\
+		\hline	
+		(3) If eigen values of $\vec{A}$ are purely imaginary   & \qquad \qquad (a)  $\frac{y^2-1}{(y+1)^2}$ \\
+		& \qquad \qquad (b) real 
+ \\
+		& \qquad \qquad (c) Magnitude  $\leqslant 1$ \\
+		\hline	
+\end{tabular}
+\end{center}
+\caption{}
+\label{eq:solutions/2018/dec/30/tab}
+\end{table}

@@ -1,0 +1,71 @@
+See Tables     \ref{eq:solutions/2015/dec/77/tab:defs}
+, \ref{eq:solutions/2015/dec/77/tab:construction} and 
+    \ref{eq:solutions/2015/dec/77/tab:example}
+
+
+\onecolumn
+\begin{longtable}{|l|l|}
+    \hline
+    Given & Every non-zero vector $\mathbb{C}^n$ is an eigen vector of $\vec{A}$, where $\vec{A}$ is an $n\times n$ matrix over $\mathbb{C}$.\\
+    \hline
+    Determining &Since every vector is an eigen vector, the standard basis vectors are also eigen vectors\\
+    $\vec{A}$&$\implies\vec{A}\vec{e_i}=\lambda_i\vec{e_i}\implies\myvec{a_1&a_2&.&.&.&a_n}\vec{e_i}=\lambda_i\vec{e_i}\implies a_i=\lambda_i\vec{e_i}$ where $\lambda_i\in\mathbb{C}$\\
+    & therefore $\vec{A}=\myvec{\lambda_1\vec{e_1}&\lambda_2\vec{e_2}&.&.&\lambda_n\vec{e_n}}$\\
+    & Any vector $\vec{b}$ can be represented in the standard basis as\\
+    &$\vec{b}=b_1\vec{e_1}+b_2\vec{e_2}+...+b_n\vec{e_n}$ where $b_i \in \mathbb{C}$\\
+    & As every non-zero vector in $\mathbb{C}^n$ is an eigen vector\\
+    & $\vec{A}\vec{b}=\lambda\vec{b}\implies \vec{A}\brak{b_1\vec{e_1}+b_2\vec{e_2}+...+b_n\vec{e_n}}=\lambda\brak{b_1\vec{e_1}+b_2\vec{e_2}+...+b_n\vec{e_n}}$\\
+    &$\implies b_1\lambda_1\vec{e_1}+b_2\lambda_2\vec{e_2}+...+b_n\lambda_n\vec{e_n}=\lambda\brak{b_1\vec{e_1}+b_2\vec{e_2}+...+b_n\vec{e_n}}$\\
+    &$\implies b_1\brak{\lambda_1-\lambda}\vec{e_1}+b_2\brak{\lambda_2-\lambda}\vec{e_2}+...+b_n\brak{\lambda_n-\lambda}\vec{e_n}=0$\\
+    & since basis are linearly independent we get $\lambda_1=\lambda_2=..=\lambda_n=\lambda$\\
+    & Therefore the matrix $\vec{A}$ is\\
+    &\qquad \qquad $\vec{A}=\myvec{\lambda_1\vec{e_1}&\lambda_2\vec{e_2}&.&.&\lambda_n\vec{e_n}}=\lambda\myvec{\vec{e_1}&\vec{e_2}&.&.&\vec{e_n}}=\lambda\vec{I}_n$ where $\lambda\in\mathbb{C}$\\
+    \hline
+\caption{}
+\label{eq:solutions/2015/dec/77/tab:defs}
+\end{longtable}
+\begin{longtable}{|l|l|}
+    \hline
+    option 1 & Since $\vec{A}=\lambda\vec{I}_n$, all the eigen values are equal to $\lambda$. Therefore option 1 is correct as the \\
+    &matrix $\vec{A}$ is a scalar matrix.\\
+    \hline
+    option 2 & since the matrix $\vec{A}$ is a scalar matrix, all the eigen values are equal. So this option \\
+    &is incorrect.\\
+    \hline
+    option 3 & This option is correct. As proved in the construction the matrix $\vec{A}=\lambda\vec{I}$ for some $\lambda \in \mathbb{C}$\\
+    \hline
+    option 4 & Since $\vec{A}=\lambda\vec{I}$ where $\lambda\in\mathbb{C}$, the characteristic polynomial and the minimal polynomial are\\
+    & $\chi_\vec{A}=\brak{x-\lambda}^n$ and $m_\vec{A}=\brak{x-\lambda}\implies\chi_\vec{A}=m_\vec{A}^n$. Therefore this option is incorrect\\
+    \hline
+    \caption{Answer}
+    \label{eq:solutions/2015/dec/77/tab:construction}
+\end{longtable}
+\begin{longtable}{|l|l|}
+    \hline
+    Scalar matrix &Consider a $3\times 3$ scalar matrix $\vec{A}=\brak{2+3i}\vec{I}$, for which the eigen values are \\
+    &$\brak{2+3i},\brak{2+3i},\brak{2+3i}$\\
+    & The eigen vectors will be the nullspace of $\vec{A}-\lambda\vec{I}$\\
+    & $\vec{A}-\lambda\vec{I}=\myvec{2+3i&0&0\\0&2+3i&0\\0&0&2+3i}-\brak{2+3i}\myvec{1&0&0\\0&1&0\\0&0&1}=\myvec{0&0&0\\0&0&0\\0&0&0}$\\
+    &The nullspace consists of the entire vector space so every vector is an eigen vector\\
+    &The characteristic polynomial and the minimal polynomial are $\chi_\vec{A}=\brak{x-\brak{2+3i}}^3$\\
+    & and $m_\vec{A}=\brak{x-\brak{2+3i}}\implies\chi_\vec{A}=m_\vec{A}^3$\\
+    &Therefore options 1 and 3 are correct.\\
+    \hline
+    Diagonal matrix& Consider the matrix $\vec{A}$ as\\
+    &$\vec{A}=\myvec{2+3i&0&0\\0&2&0\\0&0&3i}$ The eigen values are $\lambda_1=2+3i$, $\lambda-2=2$, $\lambda_3=3i$\\
+    \hline
+    &The eigen vector with respect to $\lambda_1=2+3i$ will be the nullspace of $\vec{A}-\lambda_1\vec{I}$\\
+    &$\vec{A}-\lambda_1\vec{I}$=\myvec{0&0&0\\0&-3i&0\\0&0&-2}, so the eigen vector will be $\vec{e_1}=x_1\myvec{1\\0\\0}$ where $x_1\in\mathbb{C}$\\
+    &The eigen vector with respect to $\lambda_2=2$ will be the nullspace of $\vec{A}-\lambda_2\vec{I}$\\
+    &$\vec{A}-\lambda_2\vec{I}$=\myvec{3i&0&0\\0&0&0\\0&0&3i-2}, so the eigen vector will be $\vec{e_2}=x_2\myvec{0\\1\\0}$ where $x_2\in\mathbb{C}$\\
+    &The eigen vector with respect to $\lambda_3=3i$ will be the nullspace of $\vec{A}-\lambda_3\vec{I}$\\
+    &$\vec{A}-\lambda_3\vec{I}$=\myvec{2&0&0\\0&2-3i&0\\0&0&0}, so the eigen vector will be $\vec{e_3}=x_3\myvec{0\\0\\1}$ where $x_3\in\mathbb{C}$\\
+    &Consider the vector $\vec{y}=\myvec{1\\1\\1}=\vec{e_1}+\vec{e_2}+\vec{e_3}$ where $x_1=x_2=x_3=1$\\
+    & $\vec{Ay}=\vec{Ae_1}+\vec{Ae_2}+\vec{Ae_3}=\brak{2+3i}\vec{e_1}+2\vec{e_2}+3i\vec{e_3}=\myvec{2+3i\\2\\3i}$\\
+    & As $\vec{Ay}$ can not be written as $c\vec{y}$ where $c\in\mathbb{C}$, $\vec{y}$ is not an eigen vector which \\
+    &is a contradiction.\\
+    \hline
+    \caption{Examples}
+    \label{eq:solutions/2015/dec/77/tab:example}
+\end{longtable}
+\twocolumn

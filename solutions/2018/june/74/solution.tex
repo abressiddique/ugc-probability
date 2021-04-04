@@ -1,0 +1,84 @@
+See Table \ref{eq:solutions/2018/june/74/table:1}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\text{Given} &
+\text{$\vec{A}$ be the $n\times n$ matrix where $n>1$ satisfying the following equation } \\
+& \parbox{10cm}{\begin{align}
+    \vec{A}^2-7\vec{A}+12\vec{I}_{n\times n}=\vec{0}_{n\times n} 
+\label{eq:solutions/2018/june/74/given}
+\end{align}}\\
+\hline
+\text{Explanation} & \text{The Cayley Hamilton Theorem states that every square matrix satisfies its own characteristic}\\
+& \text{equation}.\\
+& \text{Using this theorem the given equation \eqref{eq:solutions/2018/june/74/given} can be written as ,}\\
+& \parbox{10cm}{\begin{align}
+    \lambda^2-7\lambda+12&=0\label{eq:solutions/2018/june/74/4}\\
+    (\lambda-4)(\lambda-3)&=0\\
+    \lambda_1&=3\\
+    \lambda_2&=4
+\end{align}}\\
+& \text{Here $\lambda_1$ and $\lambda_2$ were eigen values of matrix $\vec{A}$}\\
+& \text{We know that determinant is product of eigen values.}\\
+& \parbox{10cm}{\begin{align}
+    d&=Det(\vec{A})\\
+    \implies d &=\lambda_1\lambda_2\\
+     \implies d&=12\neq 0 \label{eq:solutions/2018/june/74/1}
+\end{align}}\\
+\hline
+\textbf{Statement 1} & \text{$\vec{A}$ is invertible}\\
+\hline
+& \text{From equation \eqref{eq:solutions/2018/june/74/1}, since $d \neq 0$ the given matrix $\vec{A}$ is Invertible}.\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline 
+\textbf{Statement 2} & \parbox{10cm}{\begin{align}
+    t^2-7t+12n=0 \label{eq:solutions/2018/june/74/trace}
+\end{align}}\\
+\hline
+& We know that the trace is the sum of the eigen values.\\
+& \parbox{10cm}{\begin{align}
+    t&=Tr(\vec{A})\\
+    \implies t &=\lambda_1+\lambda_2\\
+     \implies t&=7 \label{eq:solutions/2018/june/74/t}
+\end{align}}\\
+& Substituting the equation \eqref{eq:solutions/2018/june/74/t} in \eqref{eq:solutions/2018/june/74/trace} we get,\\
+& \parbox{10cm}{\begin{align}
+    7^2-7(7)+12n&=0\\
+    12n&=0\label{eq:solutions/2018/june/74/2}
+\end{align}}\\
+& Since given that $n>1$ the equation \eqref{eq:solutions/2018/june/74/2} is not possible i.e $12n\neq 0$.\\
+& \parbox{10cm}{\begin{center}
+Therefore, $t^2-7t+12n=0$ is a \textbf{False Statement }
+\end{center}}\\
+\hline 
+\textbf{Statement 3} & \parbox{10cm}{\begin{align}
+    d^2-7d+12=0 \label{eq:solutions/2018/june/74/det}
+\end{align}}\\
+\hline
+& Substituting the equation \eqref{eq:solutions/2018/june/74/1} in \eqref{eq:solutions/2018/june/74/det}, we get, \\
+& \parbox{10cm}{\begin{align}
+    12^2-7(12)+12&=0\\
+    72&=0 
+%\label{eq:solutions/2018/june/74/2}
+\end{align}} \\
+& From equation \eqref{eq:solutions/2018/june/74/2} it is clear that the above statement 3 is invalid.\\
+& \parbox{10cm}{\begin{center}
+\textbf{False Statement} 
+\end{center}}\\
+\hline
+\textbf{Statement 4} & \parbox{10cm}{\begin{align}
+    \lambda^2-7\lambda+12=0 \label{eq:solutions/2018/june/74/eigen}
+\end{align}}\\
+\hline
+& \text{By Cayley Hamilton Theorem, equation \eqref{eq:solutions/2018/june/74/4} shows that the above statement 4 is valid.}\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline
+\caption{Explanation}
+\label{eq:solutions/2018/june/74/table:1}
+\end{longtable}
+\twocolumn

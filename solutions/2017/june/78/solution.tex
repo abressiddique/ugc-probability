@@ -1,0 +1,61 @@
+Let $\lambda = 0$ be an eigenvalue. Hence,
+\begin{align}
+\mydet{A-\lambda I} = 0\\
+\implies \mydet{A} = 0 \\
+\implies \mydet{A} = \mydet{1+x^2&7&11\\3x&2x&4\\8x&17&13} = 0
+\end{align}
+Performing row reduction we get,
+\begin{align}
+\mydet{1+x^2&7&11\\0&\frac{2x^3 - 19x}{1+x^2}&\frac{4x^2 - 33x +4}{1+x^2}\\0&0&\frac{26x^3 - 244x^2 + 538x - 68}{2x^3 - 19x}} = 0
+\end{align}
+\begin{align}
+\implies 26 x^3 - 244 x^2 + 538 x - 68 = 0\\
+\implies x_1 = 6.01, x_2 = 3.23, x_3 = 0.13
+\label{eq:solutions/2017/june/78/x}
+\end{align} 
+%
+See Table \ref{table:solutions/2017/june/78/}
+
+\begin{table*}[h!]
+\begin{center}
+\resizebox{\columnwidth}{!}
+{
+\begin{tabular}{|c|c|}
+\hline
+& \\
+\textbf{OPTIONS} & \textbf{Explanation}\\
+&\\
+\hline
+& \\
+Option (b) & At the Values of x given by \eqref{eq:solutions/2017/june/78/x}, eigen value $\lambda = 0$. \\ &
+Hence option (b) can't be correct.\\
+&\\
+\hline
+& \\
+Option (c) & If one of the eigenvalue is 0 for A(x) then, $\mydet{A(x)} = 0 \forall x \in R$.\\ & 
+But from \eqref{eq:solutions/2017/june/78/x} we have concluded that $\mydet{A} = 0$ only for, 
+\\& $x_1 = 6.01, x_2 = 3.23, x_3 = 0.13$.\\ &
+Hence, Option (c) is incorrect.\\
+& \\
+\hline
+& \\
+Option (d) & Now for the values of x given by \eqref{eq:solutions/2017/june/78/x}, $\mydet{A} = 0$. \\ &
+Hence it is not invertible $\forall x\in \vec{R}$ \\&
+Hence Option (d) is incorrect. \\ 
+& \\
+\hline
+& \\
+Option (a) & Now clearly from above arguments A(x) has eigenvalue 0 for some $x \in R$  \\&
+Hence Option (a) is Correct. \\ 
+& \\
+\hline
+
+\end{tabular}
+}
+\end{center}
+\caption{}
+\label{table:solutions/2017/june/78/}
+\end{table*}
+\begin{comment}
+In other words at these values of x, eigenvalue $\lambda = 0$. Hence option (b) is eliminated. Now for these values of x, $\mydet{A} = 0$. Hence it is not invertible $\forall x\in \vec{R} \implies$ option (d) is eliminated. Now, if one of the eigenvalue is 0 for A(x), then $\mydet{A(x)} = 0 \forall x\in \vec{R}$. But from equation \eqref{eq:solutions/2017/june/78/x} we have concluded that $\mydet{A} = 0$ only for $x_1 = 6.01, x_2 = 3.23, x_3 = 0.13$. hence, option (b) is also eliminated. Hence the correct option is (a).
+\end{comment} 

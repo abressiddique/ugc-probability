@@ -1,0 +1,47 @@
+See Table \ref{eq:solutions/106/dec/27/Table1}
+
+\onecolumn
+\begin{longtable}{|p{5cm}|p{13cm}|}
+\hline
+\textbf{Statement} &\textbf{Solution}\\
+\hline
+Definition & Let $\vec{V}$  be a vector space. Then  $\{\vec{v}_{1},\cdots ,\vec{v}_{n}\}$  is called a basis for  $\vec{V}$ if the following conditions hold. \\
+& \parbox{12cm}{\begin{align}
+    \text{span} \{\vec{v}_{1},\cdots ,\vec{v}_{n}\}=\vec{V}\\
+    \{\vec{v}_{1},\cdots ,\vec{v}_{n}\} \text{ is linearly independent}
+\end{align}}\\
+\hline
+Given&
+\parbox{12cm}{\begin{align}
+\vec{B_1}=\myvec{1&1&1&1\\0&1&1&1\\0&0&1&1\\0&0&0&1},  \vec{B_2}=\myvec{1&1&1&1\\0&2&2&2\\0&0&3&3\\0&0&0&4},
+\vec{B_3}=\myvec{1&0&2&-5\\2&0&1&5\\0&1&0&0\\0&1&0&0}
+\end{align}}\\
+\hline
+Checking $\vec{B_1}$  &
+\parbox{12cm}{\begin{align}\text{Checking for linear independence.}
+ \text{Upon row reducing }\vec{B_1}\\ \myvec{1&1&1&1\\0&1&1&1\\0&0&1&1\\0&0&0&1}\xleftrightarrow[]{R_1\rightarrow R_1-R_2,R_2\rightarrow R_2-R_3,R_3\rightarrow R_3-R_4}
+  \myvec{1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1}
+\end{align}}\\
+&Clearly Rank of $\vec{B_1}$ is 4,ie full rank.Hence it forms a Basis.\\
+\hline
+Checking $\vec{B_2}$&
+\parbox{12cm}{\begin{align}\text{Checking for linear independence.}
+  \text{Upon row reducing }\vec{B_2}\\
+    \myvec{1&1&1&1\\0&2&2&2\\0&0&3&3\\0&0&0&4}\xleftrightarrow[]{R_2\rightarrow\frac{R_2}{2}, R_1\rightarrow R_1-R_2,R_3\rightarrow \frac{R_3}{3},R_2\rightarrow R_2-R_3,R_4\rightarrow \frac{R_4}{4},R_3\rightarrow  R_3-R_4}\myvec{1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1}
+\end{align}}\\
+& Rank of $\vec{B_2}$ is 4, ie full rank.Hence it also forms a Basis.\\
+\hline
+ Checking $\vec{B_3}$&
+\parbox{12cm}{\begin{align}\text{Checking for linear independence.}
+  \text{Upon row reducing }\vec{B_3}\\
+    \myvec{1&0&2&-5\\2&0&1&5\\0&1&0&0\\0&1&0&0}\xleftrightarrow[]{R_2\rightarrow R_2-2R_1, R_4\rightarrow R_4-R_2,R_3\rightarrow -\frac{R_3}{3},R_1\rightarrow R_1-2R_3}\myvec{1&0&0&5\\0&1&0&0\\0&0&1&-5\\0&0&0&0}
+\end{align}}\\
+& Rank of $\vec{B_3}$ is 3, ie not full rank.Hence it does not forms a Basis.\\
+\hline
+ Conclusion&
+Hence option 1, ie  $\vec{B_1}$,$\vec{B_2}$ and not  $\vec{B_3}$ is the correct answer.\\
+\hline
+\caption{Solution}
+\label{eq:solutions/106/dec/27/Table1}
+\end{longtable}
+\twocolumn

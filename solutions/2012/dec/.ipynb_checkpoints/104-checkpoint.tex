@@ -1,0 +1,29 @@
+X has a binomial distribution :
+\begin{align}
+\Pr\brak{X=k} = {\comb{n}{k}}(q)^{n-k}(p)^{k}
+\end{align}
+Where,
+\begin{itemize}
+\item n=11
+\item $\displaystyle{p=\frac{1}{3}}$
+\item $\displaystyle{q=1-p=1-\frac{1}{3}=\frac{2}{3}}$
+\end{itemize}
+\begin{align}
+\Pr\brak{X = k}={\comb{11}{k}}\left(\frac{2}{3}\right)^{11-k}\left(\frac{1}{3}\right)^{k}
+\end{align}
+For Pr(X = k) to be maximized
+\begin{align}
+\Pr\brak{X = k}\:\geq\:\Pr\brak{X = k+1}\\
+\frac{\Pr\brak{X = k}}{\Pr\brak{X = k+1}}=\frac{{\comb{11}{k}}\left(\frac{2}{3}\right)^{11-k}\left(\frac{1}{3}\right)^{k}}{{\comb{11}{k+1}}\left(\frac{2}{3}\right)^{10-k}\left(\frac{1}{3}\right)^{k+1}}\geq1
+\end{align}
+\begin{align}
+\frac{2(k+1)}{11-k}\geq1\\
+\implies k\geq3\label{dec2012-104:0.0.7}\\
+\Pr\brak{X = k}\:\geq\:\Pr\brak{X = k-1}\\
+\frac{\Pr\brak{X = k}}{\Pr\brak{X = k-1}}=\frac{{\comb{11}{k}}\left(\frac{2}{3}\right)^{11-k}\left(\frac{1}{3}\right)^{k}}{{\comb{11}{k-1}}\left(\frac{2}{3}\right)^{12-k}\left(\frac{1}{3}\right)^{k-1}}\geq1\\
+\frac{12-k}{2k}\geq1\\
+\implies k\leq4\label{dec2012-104:0.0.10}
+\end{align}
+From \eqref{dec2012-104:0.0.7} , \eqref{dec2012-104:0.0.10} and since k is an integer\\
+$\Pr\brak{X = k}$ is maximized for k=3, k=4\\
+Thus options 2) and 3) are correct\\

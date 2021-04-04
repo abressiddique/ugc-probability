@@ -1,0 +1,136 @@
+See Tables \ref{eq:solutions/2015/dec/74/deftab}, \ref{eq:solutions/2015/dec/74/obs}, \ref{eq:solutions/2015/dec/74/sol}
+
+and \ref{eq:solutions/2015/dec/74/exp}
+
+%
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+$Range(\vec{T})$&It is column-space of linear operator $\vec{T}$.\\&\parbox{15cm}{\begin{align}
+    \vec{T}(\vec{x})=\vec{v}
+    \implies\vec{Ax}=\vec{v}
+\end{align}}\\&where $\vec{x}$,$\vec{v}\in\vec{V}$ and We can also say that\\&\parbox{15cm}{\begin{align}
+    Range(\vec{T})=C(\vec{A})\label{eq:solutions/2015/dec/74/R}
+\end{align}}\\&where $C(\vec{A})$ is column space of $\vec{A}$.\\
+\hline$Kernel(\vec{T})$&It is null-space of linear operator $\vec{T}$.\\&\parbox{15cm}{\begin{align}
+    \vec{T}(\vec{x})=0
+    \implies\vec{Ax}=0
+\end{align}}\\&where $\vec{x}\in\vec{V}$ and matrix $\vec{A}$ is same as before. We can also say that\\&\parbox{15cm}{\begin{align}
+    Kernel(\vec{T})=N(\vec{A})\label{eq:solutions/2015/dec/74/K}
+\end{align}}\\&where $N(\vec{A})$ is null space of $\vec{A}$.\\
+\hline$rank(\vec{T})$&\parbox{15cm}{\begin{align}
+    rank(\vec{T})=rank(\vec{A})
+\end{align}}\\
+\hline$\vec{T}^2$&\parbox{15cm}{\begin{align}
+    \vec{T}^2(\vec{x})&=\vec{A}^2\vec{x}\quad\quad\vec{x}\in\vec{V}\\
+    rank(\vec{T}^2)&=rank(\vec{A}^2)
+\end{align}}\\
+\hline$\vec{A}$ and $\vec{A}^2$&The basis vectors of column-space of $\vec{A}$ and $\vec{A}^2$ are same.\\&The basis vectors of null-space of $\vec{A}$ and $\vec{A}^2$ are same.\\
+\hline
+\caption{Definitions and theorem used}
+\label{eq:solutions/2015/dec/74/deftab}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Statement}&\textbf{Observations}\\
+\hline
+Given&$\vec{V}$ is a finite dimensional space over $\mathbb{R}$ and $T:\vec{V}\rightarrow\vec{V}$\\&\parbox{15cm}{\begin{align}
+    rank(\vec{T})=rank(\vec{T}^2)\label{eq:solutions/2015/dec/74/r}
+\end{align}}\\&According to rank-nullity theorem.\\&\parbox{15cm}{\begin{align}
+    dim(\vec{V})=rank(\vec{T})+nullity(\vec{T})\label{eq:solutions/2015/dec/74/drn1}\\
+    dim(\vec{V})=rank(\vec{T}^2)+nullity(\vec{T}^2)\label{eq:solutions/2015/dec/74/drn2}
+\end{align}}\\&from \eqref{eq:solutions/2015/dec/74/drn1} and \eqref{eq:solutions/2015/dec/74/drn2}. we get\\&\parbox{15cm}{\begin{align}
+    \implies rank(\vec{T})+nullity(\vec{T})&=rank(\vec{T}^2)+nullity(\vec{T}^2)\\
+    \implies nullity(\vec{T})&=nullity(\vec{T}^2)\label{eq:solutions/2015/dec/74/n}
+\end{align}}\\
+\hline
+\caption{Observations}
+\label{eq:solutions/2015/dec/74/obs}
+\end{longtable}
+\begin{longtable}{|l|l|l|}
+\hline
+\endhead
+\textbf{Option}&\textbf{Solution}&\textbf{True/False}\\
+\hline
+1&From \eqref{eq:solutions/2015/dec/74/n}, let&\\&\parbox{13cm}{\begin{align}
+    nullity(\vec{T})&=nullity(\vec{T}^2)=n\label{eq:solutions/2015/dec/74/p1}
+\end{align}}&\\&Therefore, from table \ref{eq:solutions/2015/dec/74/deftab} and \eqref{eq:solutions/2015/dec/74/p1} we can say that both null space of&True\\&linear operator $\vec{T}$ and null space of linear operator $\vec{T}^2$ will have same n&\\& number of basis.&\\&\parbox{13cm}{\begin{align}
+    \implies Kernel(\vec{T})=Kernel(\vec{T}^2)\label{eq:solutions/2015/dec/74/res1}
+\end{align}}&\\
+\hline
+2&From \eqref{eq:solutions/2015/dec/74/r}, let&\\&\parbox{13cm}{\begin{align}
+    rank(\vec{T})&=rank(\vec{T}^2)=r\label{eq:solutions/2015/dec/74/p2}
+\end{align}}&\\&Therefore, from table \ref{eq:solutions/2015/dec/74/deftab} and \eqref{eq:solutions/2015/dec/74/p2} we can say that both column space of&True\\&linear operator $\vec{T}$ and column space of linear operator $\vec{T}^2$ will have same r&\\& number of basis.&\\&\parbox{13cm}{\begin{align}
+    \implies Range(\vec{T})=Range(\vec{T}^2)\label{eq:solutions/2015/dec/74/res2}
+\end{align}}&\\
+\hline
+3&From \eqref{eq:solutions/2015/dec/74/p1}, \eqref{eq:solutions/2015/dec/74/p2} and also we can say that column space $C(\vec{A})$ and null&\\&space $N(\vec{A})$ are r-dimensional space and n-dimensional space respectively&\\&which will intersect only at origin(zero vector).&True\\&And also from \eqref{eq:solutions/2015/dec/74/R} and \eqref{eq:solutions/2015/dec/74/K}, we get&\\&\parbox{13cm}{\begin{align}
+    \implies Kernel(\vec{T})\cap Range(\vec{T})=\cbrak{0}\label{eq:solutions/2015/dec/74/res3}
+\end{align}}&\\
+\hline
+4&From table \eqref{eq:solutions/2015/dec/74/res1}, \eqref{eq:solutions/2015/dec/74/res2} and \eqref{eq:solutions/2015/dec/74/res3}, we get&\\&\parbox{13cm}{\begin{align}
+    \implies Kernel(\vec{T}^2)\cap Range(\vec{T}^2)=\cbrak{0}
+\end{align}}&True\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2015/dec/74/sol}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Statement}&\textbf{Calculations and observations}\\
+\hline
+Consider vector space&\\$\vec{V}=\mathbb{R}^3$&\\
+Let matrix $\vec{A}$ be&\parbox{11cm}{\begin{align}
+    \vec{A}=\myvec{1&2&1\\0&1&1\\-1&3&4}
+\end{align}}\\
+\hline$\vec{A}^2$&\parbox{11cm}{\begin{align}
+    \vec{A}^2=\myvec{0&7&7\\-1&4&5\\-5&13&18}
+\end{align}}\\
+\hline 
+Convert both $\vec{A}$ and $\vec{A}^2$ to&\\Row Reduced echelon&For matrix $\vec{A}$,\\form&\\&\parbox{11cm}{\begin{align}
+    \myvec{1&2&1\\0&1&1\\-1&3&4}&\xleftrightarrow[R_1\leftarrow R_1-2R_2]{R_3\leftarrow R_3+R_1}\myvec{1&0&-1\\0&1&1\\0&5&5}\\&\xleftrightarrow{R_3\leftarrow R_3-5R_2}\myvec{1&0&-1\\0&1&1\\0&0&0}\label{eq:solutions/2015/dec/74/Aref}
+\end{align}}\\&For matrix $\vec{A}^2$,\\&\parbox{11cm}{\begin{align}
+    \myvec{0&7&7\\-1&4&5\\-5&13&18}\xleftrightarrow[]{R1\leftrightarrow R2}\myvec{-1&4&5\\0&7&7\\-5&13&18}\\\xleftrightarrow[]{R_3\leftarrow R_3-5R_1}\myvec{-1&4&5\\0&7&7\\0&-7&-7}\xleftrightarrow[]{R_3\leftarrow R3+R_1}\myvec{-1&4&5\\0&7&7\\0&0&0}\\\xleftrightarrow[R_1\leftarrow -R_1]{R_2\leftarrow\frac{R_2}{7}}\myvec{1&-4&-5\\0&1&1\\0&0&0}\xleftrightarrow[]{R1\leftarrow R_1+4R_2}\myvec{1&0&-1\\0&1&1\\0&0&0}\label{eq:solutions/2015/dec/74/A2ref}
+\end{align}}\\
+\hline $Range(\vec{T})=Range(\vec{T}^2)$&Therefore, from \eqref{eq:solutions/2015/dec/74/Aref} and \eqref{eq:solutions/2015/dec/74/A2ref} we can say that the basis\\&vectors of $Range(\vec{T})$ and $Range(\vec{T}^2)$ are same as shown below\\&\parbox{11cm}{\begin{align}
+    \vec{b_1}=\myvec{1\\0\\0}\quad\quad\vec{b_2}=\myvec{0\\1\\0}\label{eq:solutions/2015/dec/74/basis}
+\end{align}}\\&and also we can say\\&\parbox{11cm}{\begin{align}
+    Range(\vec{T})=Range(\vec{T}^2)\label{eq:solutions/2015/dec/74/exp1}
+\end{align}}\\
+\hline
+$Kernel(\vec{T})=Kernel(\vec{T}^2)$&Lets find the basis for null-space of linear operator $\vec{T}$ or $N(\vec{A})$.\\&It is the solution of the equation $\vec{Ax}=0$. From \eqref{eq:solutions/2015/dec/74/Aref} we have,\\&\parbox{11cm}{\begin{align}
+\vec{Ax} &= 0\\
+\implies\myvec{1&0&-1\\0&1&1\\0&0&0}\myvec{x_1\\x_2\\x_3} &= 0
+\end{align}}\\&Setting the value of the free variable $x_3 = 1$ we get the solution,\\&\parbox{11cm}{
+\begin{align}
+\vec{x} &= \myvec{1\\-1\\1}
+\end{align}}\\&Hence, the basis vector of the $Kernel(\vec{T})$ is given by,\\&\parbox{11cm}{
+\begin{align}
+\vec{p} &= \myvec{1\\-1\\1}\label{eq:solutions/2015/dec/74/bp1}
+\end{align}}\\&Now, lets find the basis for null-space of linear operator $\vec{T}^2$ or\\&$N(\vec{A}^2)$.It is the solution of the equation $\vec{A^2x}=0$. From \eqref{eq:solutions/2015/dec/74/A2ref}\\&we have,\\&\parbox{11cm}{\begin{align}
+\vec{A}^2\vec{x} &= 0\\
+\implies\myvec{1&0&-1\\0&1&1\\0&0&0}\myvec{x_1\\x_2\\x_3} &= 0
+\end{align}}\\&Setting the value of the free variable $x_3 = 1$ we get the solution,\\&\parbox{11cm}{
+\begin{align}
+\vec{x} &= \myvec{1\\-1\\1}\label{eq:solutions/2015/dec/74/bp2}
+\end{align}}\\&Hence, from \eqref{eq:solutions/2015/dec/74/bp1} and \eqref{eq:solutions/2015/dec/74/bp2} we got the basis vector of\\&$Kernel(\vec{T}^2)$ same as the basis vector of $Kernel(\vec{T})$ which is $\vec{p}$.\\&Therefore, we can say that\\&\parbox{11cm}{\begin{align}
+    Kernel(\vec{T})=Kernel(\vec{T}^2)\label{eq:solutions/2015/dec/74/exp2}
+\end{align}}\\
+\hline
+$Kernel(\vec{T})\cap Range(\vec{T})=\cbrak{0}$&From \eqref{eq:solutions/2015/dec/74/basis} and \eqref{eq:solutions/2015/dec/74/bp1}, we got 2 basis vectors $\vec{b_1}$, $\vec{b_2}$ for \\&$Range(\vec{T})$and 1 basis vector $\vec{p}$ for $Kernel(\vec{T})$. Here $\vec{b_1}$, $\vec{b_2}$, $\vec{p}$\\&are linearly independent which can be proven as below.\\&Let columns of matrix $\vec{M}$ are filled with vectors $\vec{b_1}$, $\vec{b_2}$, $\vec{p}$.\\&\parbox{11cm}{\begin{align}
+    \implies\vec{M}=&\myvec{1&0&1\\0&1&-1\\0&0&1}\label{eq:solutions/2015/dec/74/rkm}
+\end{align}}\\&From \eqref{eq:solutions/2015/dec/74/rkm}, we get $rank(\vec{M})=3$.Therefore $\vec{b_1}$, $\vec{b_2}$, $\vec{p}$ are\\&linearly independent\\&$Range(\vec{T})$ is a 2-dimensional space which is a plane in $\mathbb{R}^3$ and\\&$Kernel(\vec{T})$ is a 1-dimensional space which is a line in $\mathbb{R}^3$.\\&Since $\vec{b_1}$, $\vec{b_2}$, $\vec{p}$ are linearly independent then plane and line \\&intersect at origin(zero vector). And we can say that\\&\parbox{11cm}{\begin{align}
+    Kernel(\vec{T})\cap Range(\vec{T})=\cbrak{0}\label{eq:solutions/2015/dec/74/exp3}
+\end{align}}\\
+\hline
+$Kernel(\vec{T}^2)\cap Range(\vec{T}^2)=\cbrak{0}$&From \eqref{eq:solutions/2015/dec/74/exp1}, \eqref{eq:solutions/2015/dec/74/exp2}, \eqref{eq:solutions/2015/dec/74/exp3} we get\\&\parbox{11cm}{\begin{align}
+    \implies Kernel(\vec{T}^2)\cap Range(\vec{T}^2)=\cbrak{0}
+\end{align}}\\
+\hline
+\caption{Example}
+\label{eq:solutions/2015/dec/74/exp}
+\end{longtable}
+\twocolumn

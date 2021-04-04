@@ -1,0 +1,22 @@
+See Table \ref{eq:solutions/2016/dec/74/table}
+
+\begin{table*}[ht!]
+\begin{center}
+\resizebox{2\columnwidth}{!}
+{
+\begin{tabular}{ | c | c| } \hline 
+%\begin{tabular}{|c|c|}\hline
+Vector space & Is it subspace to $M_n$?\\  \hline
+1)$V_1$: All non-singular matrices of $n \times n$ &   The matrices $I_{n\times n}$ and $-I_{n\times n}$ are non-singular matrices, but the sum $I_{n\times n}-I_{n\times n}$ is zero matrix and it is singular. \\& $\therefore V_1$ does not form subspace of $ M_n$.\\
+\hline
+2)$V_2$: All singular matrices of $n \times n$ &    The matrices $\myvec{1&0\\0&0} and \myvec{0 &0\\0&1}$  are singular matrices, but the sum is a non-singular matrix. \\& $\therefore V_2$ does not form subspace  $ M_n$.\\
+\hline
+3)$V_3$: All matrices of $n \times n$ with trace =0&    Let $ \vec{v_1}$ and $ \vec{v_2}$ be matrices with Trace = 0. \\& $Tr(\vec{v_1} + \alpha\vec{v_2}) = Tr(\vec{v_1}) + \alpha Tr(\vec{v_2}) = 0$. \\& $\therefore$ the vector space $V_3$  forms linear subspace of  $ M_n$.\\\hline
+4)$V_4$: $F_A$ = BA, where B  is some fixed matrix in $ M_n$&     Let $ \vec{v_1}$ and $ \vec{v_2}$ be matrices in the vector space $V_4$.\\& $F_{v_1 +\alpha v_2}$ = $B(\vec{v_1} + \alpha\vec{v_2})$\\& =$ B\vec{v_1} + \alpha B\vec{v_2}  =$\\& $ F_{v_1} + \alpha F_{v_2} $.\\& $\therefore V_4$   forms linear subspace of $ M_n$.\\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{}
+\label{eq:solutions/2016/dec/74/table}
+\end{table*}

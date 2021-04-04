@@ -1,0 +1,79 @@
+Options 2 and 4 are correct as verified in the table \ref{eq:solutions/2017/june/70/table2}
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Properties}&\textbf{Norm $\forall x \in V$}\\
+\hline
+Positivity & $\norm{x}\ge 0, \norm{x} = 0 \iff x=0 $ \\
+\hline
+Scalar Multiplication & $\norm{\alpha x} = \abs{\alpha}\norm{x}, \alpha \in F $\\
+\hline
+Triangle Inequality & $\norm{x+y} \le \norm{x} + \norm{y} $\\
+\hline
+\end{tabular}
+\caption{Properties of Norm}
+\label{eq:solutions/2017/june/70/table1}
+\end{center}
+\end{table*}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{
+For $p \in V$ then the norm, 
+$max\cbrak{\abs{p(a_j)}: 0 \leq j \leq k}=0 \iff \abs{p(a_j)}_{0 \leq j \leq k}=0$
+} \\[3ex]
+\hline
+\textbf{Conditions} & \textbf{Explanation} \\[0.5ex]
+\hline
+\text{only if $k < n$} & 
+A polynomial doesn't necessarily have $k$ distinct real roots,\\
+&i.e., it may have repeated, complex roots. \\
+Example:& let $p$ be polynomial of degree $n=2$ and $k=1$ given by:-\\
+&  \parbox{12cm}{\begin{align}
+    p(x) &= x^2 + 4x + 4 \\
+    %p(x) &=0 \implies x=-2, -2 \\
+    \abs{p(a_j)}_{0\le j \le 1} &= 0 \implies a_0 = -2, a_1 = -2
+\end{align}}\\ 
+& but $a_0, a_1, \cdots, a_k$ should be distinct real numbers.\\
+& This contradicts the property of Norm. Thus condition fails.
+\\ [0.5ex]
+\hline
+\text{only if $k\ge n$} & 
+p is a polynomial of degree $\le$n,\\
+& it can't have more than $n$ roots and is only possible when,\\
+&$p(x)=0 \implies \abs{p(a_j)}_{0 \leq j \leq k}=0$\\
+& hence $p$ is identically zero. Thus condition satisfies.
+\\ [0.5ex]
+\hline
+\text{if $k+1 \leq n$} & 
+Not a norm for $k<n$. Hence incorrect. 
+\\ [0.5ex]
+\hline
+\text{if $k \ge n+1$} &
+Norm for $k \ge n$. Hence correct.
+\\[0.5ex]
+\hline
+\end{tabular}
+\caption{Verifying Positivity Property of Norm}
+\label{eq:solutions/2017/june/70/table2}
+\end{center}
+\end{table*}
+
+The scalar multiplication and triangle inequality properties holds true for all $k$.
+\begin{align}
+    &max\cbrak{\abs{\alpha p(a_j)}} = \abs{\alpha}max\cbrak{\abs{p(a_j)}}\\
+    &max\cbrak{\abs{p(a_i)+p(a_j)}} \le max\cbrak{\abs{p(a_i)}} + max\cbrak{\abs{p(a_j)}}
+\end{align}
+The positivity property holds true only if $k \ge n$ as more than $n$ roots are possible when, 
+\begin{align}
+    p(x) &= 0 \implies \abs{p(a_j)}_{0 \leq j \leq k}=0 
+\end{align}
+\begin{align}
+    \implies max\cbrak{\abs{p(a_j)}: 0 \leq j \leq k}=0
+\end{align}
+
+
+

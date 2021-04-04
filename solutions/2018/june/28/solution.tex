@@ -1,0 +1,120 @@
+See Table     \ref{eq:solutions/2018/june/28/table:1}
+
+\onecolumn
+\begin{longtable}{|p{5cm}|p{13cm}|}
+\hline
+    \multirow{3}{*}{Given} 
+    &\\
+     & $\vec{A}$ be a $2\times2$ matrix over $\mathbb{R}$ with\\
+     &\\
+      &$\qquad\qquad \qquad \det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
+      &\\
+     \hline
+     \multirow{3}{*}{Explanation} &\\
+     & If $\vec{X}$ is an eigen vector of matrix $\vec{A}$
+     corresponding to the eigen value $\lambda$ i.e \\
+     &\\
+     & $\qquad\qquad\qquad\vec{A}\vec{X}=\lambda\vec{X}$\\
+     &\\
+     & then, $\brak{\vec{I}+\vec{A}}\vec{X}=\brak{1+\lambda}\vec{X}$\\
+     &\\
+     &Thus, $\vec{X}$ is an eigen vector of $\brak{\vec{A}+\vec{I}}$ corresponding to the eigen value $\brak{1+\lambda}$.\\
+     
+     &\\
+     
+     & Let $\lambda_1,\lambda_2$ be two eigen values of $\vec{A}$ and $\brak{1+\lambda_1},\brak{1+\lambda_2}$ be the eigen values of $\brak{\vec{A}+\vec{I}}.$\\
+    &\\
+    & $\implies$ Eigen value of $\vec{A}=\lambda_1,\lambda_2$\\
+    &\\
+    &  $\implies$ Eigen value of $\brak{\vec{A}+\vec{I}} = \lambda_1+1,\lambda_2+1$\\
+    &\\
+    & Since,\\
+    \hline
+    &$\qquad\qquad \qquad \det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
+    &\\
+     & Trace of any matrix is sum of its eigen values. \\
+    &\\
+    & Determinant of matrix is product of its eigen values \\
+    &\\
+    & $\qquad\qquad\implies \brak{\lambda_1+1}\brak{\lambda_2+1}=1+\brak{\lambda_1\lambda_2}$\\
+    &\\
+    &$\qquad\qquad\implies\boxed{ \lambda_1+\lambda_2 = 0}$\\
+    &\\
+   
+    &$\qquad\qquad\implies\boxed{ tr(\vec{A})=0}$\\
+    &\\
+    \hline
+    \multirow{3}{*}{\textbf{Statement 1} : $\det\vec{A}=0$ } 
+	& \\
+	& False\\
+	\hline
+	&\\
+	& Let, $\vec{A}=\myvec{1&0\\0&-1}$\\
+	&\\
+	& Here, $\det{\vec{A}}=-1$ and $\det(\vec{A}+\vec{I})=0$\\
+	&\\
+	& Thus,$1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\
+	&\\
+	& In this case, \\
+	& $\det\vec{A}\neq 0$\\ 
+	&but satisfy the given condition i.e $1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\ 
+	&\\
+	\hline
+	\multirow{3}{*}{\textbf{Statement 2} : $\vec{A}=\vec{0}$} & \\
+	& False\\
+	\hline
+	&\\
+	& Let , $\vec{A}= \myvec{0&1\\0&0}$\\
+	&\\
+	& Here, $\det{\vec{A}}=0$ and $\det(\vec{A}+\vec{I})=1$\\
+	&\\
+	& Thus,$1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\
+	&\\
+	& In this case, \\
+	& $\vec{A}\neq \vec{0}$\\ 
+	& But , satisfy the given condition i.e $ 1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\
+	&\\
+	\hline
+	\multirow{3}{*}{\textbf{Statement 3}: $tr(\vec{A})=0$}&\\
+    & True\\
+	\hline
+	&\\
+	& The given statement is true for all possible matrices.\\
+	&\\
+	& If $tr\vec{A}\neq0$ then the given condition i.e $1
+	+\det(\vec{A})=\det(\vec{A}+\vec{I})$ doesn't satisy.\\
+	& Let , $\vec{A}= \myvec{1&0\\0&0}$\\
+	\hline
+	& Here, $\det{\vec{A}}=0$ , $\det(\vec{A}+\vec{I})=2 , tr{\vec{A}} \neq 0$\\
+	&\\
+	& Thus, $ 1+\det(\vec{A})\neq\det(\vec{A}+\vec{I})$\\
+	&\\
+	\hline
+	\multirow{3}{*}{\textbf{Statement4}:$\vec{A}$ is non singular} &\\
+    & False\\
+	\hline
+	&\\
+
+   & Non Singular Matrix:
+   A non-singular matrix is a square one whose determinant is not zero.non-singular matrix is also  a full rank matrix.\\
+   &\\
+   & Let, $\vec{A}=\myvec{0&0\\0&0}$\\
+	&\\
+	& Here, $\det{\vec{A}}=0$ and $\det(\vec{A}+\vec{I})=1$\\
+	&\\
+	& Thus,$1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\
+	&\\
+	& In this case, \\
+	& $\vec{A}$ is Singular,\\ & But satisfy the given condition i.e $1+\det(\vec{A})=\det(\vec{A}+\vec{I})$ \\ 
+	&\\
+	\hline
+	\multirow{3}{*}{Conclusion} &\\
+	& Thus, we can conclude Statement 3 is true for all possible matrices which satisfy the given condition i.e 
+	$1+\det(\vec{A})=\det(\vec{A}+\vec{I})$\\
+	&\\
+	\hline
+	\caption{Solution Summary}
+    \label{eq:solutions/2018/june/28/table:1}
+\end{longtable}
+
+\twocolumn

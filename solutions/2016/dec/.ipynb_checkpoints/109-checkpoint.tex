@@ -1,0 +1,58 @@
+The pdf for each random variable is same as they are all identical and independent Normal Distributions with same $\mu$ and $\sigma^2$.
+\begin{align}
+    f_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{\frac{(x-\mu)^2}{2\sigma^2}}
+\end{align}
+Let us take our maximum likelihood function for given random variable $X_i$
+\begin{align}
+    L(\mu ; \sigma | X_i) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{\frac{(X_i-\mu)^2}{2\sigma^2}}\label{dec2016-109:gen_eq}
+\end{align}
+Since all the random variables are i.i.d
+\begin{align}
+    L(\mu ; \sigma | X_1,X_2,\ldots,X_n) = \prod_{i=1}^nL(\mu ; \sigma | X_i)\label{dec2016-109:main_eq}
+\end{align}
+Let us denote:
+\begin{align}
+    L_m : L(\mu ; \sigma | X_1,X_2,\ldots,X_n)
+\end{align}
+Substituting \eqref{dec2016-109:gen_eq} for each Random Variable in \eqref{dec2016-109:main_eq}
+\begin{align}
+    L_m = \prod_{i=1}^n\frac{1}{\sqrt{2\pi\sigma^2}}\exp{\frac{(X_i-\mu)^2}{2\sigma^2}}
+\end{align}
+Taking natural log on both sides and simplifying
+\begin{align}
+    \ln{L_m} = \frac{-n}{2}\ln{2\pi} -n\ln{\sigma} - \sum_{i = 1}^n\frac{(X_i - \mu)^2}{2\sigma^2}
+\end{align}
+In order to find Maximum Likelihood we need to maximise $\mu$ and $\sigma$ w.r.t. all Random variables. Taking partial derivative w.r.t $\mu$ and taking $\sigma$ as constant 
+\begin{align}
+    \frac{\partial \ln{L_m}}{\partial \mu} = \sum_{i = 1}^n\frac{(X_i - \mu)}{\sigma^2}
+\end{align}
+The value for $\mu$ at which $L_m$ achieves maximum value is same in $\ln{L_m}$
+\begin{align}
+   \because \frac{\partial \ln{L_m}}{\partial \mu} &=0\\
+   \therefore \sum_{i = 1}^n\frac{(X_i -\mu)}{\sigma^2}&=0
+\end{align}
+On simplifying the expression we get:
+\begin{align}
+    n\mu &= \sum_{i=1}^nX_i\\
+    \mu &= \frac{1}{n}\sum_{i=1}^nX_i\label{dec2016-109:mu_value}
+\end{align}
+Let us denote the value achieved in \eqref{dec2016-109:mu_value} as $\bar{X}$. Taking partial derivative w.r.t $\sigma$ and taking $\mu$ as constant
+\begin{align}
+    \frac{\partial \ln{L_m}}{\partial \sigma} &= \frac{-n}{\sigma} + \sum_{i=1}^n\frac{(X_i - \mu)^2}{\sigma^3}
+\end{align}
+The value for $\sigma$ at which $L_m$ achieves maximum value is same in $\ln{L_m}$
+\begin{align}
+    \frac{\partial \ln{L_m}}{\partial \sigma} &= 0\\
+    \frac{-n}{\sigma} + \sum_{i=1}^n\frac{(X_i - \mu)^2}{\sigma^3} &=0
+\end{align}
+Upon simplifying the expression
+\begin{align}
+\frac{n}{\sigma} &= \sum_{i=1}^n \frac{(X_i -\mu)^2}{\sigma^3}\\
+{\sigma^2} &= \sum_{i=1}^n\frac{(X_i-\mu)^2}{n}\label{dec2016-109:sig_value}
+\end{align}
+Substituting \eqref{dec2016-109:mu_value} in \eqref{dec2016-109:sig_value}
+\begin{align}
+    {\sigma^2} &= \sum_{i=1}^n\frac{(X_i-\bar{X})^2}{n}\\
+    {\sigma} &= \sqrt{\sum_{i=1}^n\frac{(X_i-\bar{X})^2}{n}}
+\end{align}
+Hence \textbf{Option 3} and \textbf{Option 4} are correct

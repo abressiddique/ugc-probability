@@ -1,0 +1,60 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let X and Y be i.i.d random variables uniformly distributed on (0,4).Then \pr{X>Y|X<2Y} is
+\begin{enumerate}
+    \item 1/3
+    \item 5/6
+    \item 1/4
+    \item 2/3
+\end{enumerate}
+\solution
+\input{solutions/2018/dec/50.tex}
+%
+\item Suppose $X$ is a positive random variable with the following probability density function,
+\begin{align*}
+f(x) = (\alpha x^{\alpha -1} + \beta x^{\beta-1} ) e^{-x^{\alpha}-x^{\beta}} ; x>0
+\end{align*}
+for $ \alpha >0, \beta >0$.
+Then the hazard function of $X$ for some choices of $\alpha$ and $\beta$ can be
+\begin{enumerate}
+    \item an increasing function.
+    \item a decreasing function.
+    \item a constant function.
+    \item a non monotonic function
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/118/Assignment7.tex}
+%
+
+
+% \item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
+% \begin{align}
+% P = 
+% \begin{blockarray}{c@{\hspace{1pt}}rrr@{\hspace{3pt}}}
+%          & 0   & 1   & 2 \\
+%         \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+%     (@{\hspace{1pt}}rrr@{\hspace{1pt}}@{\hspace{1pt}})}
+%         0 & \frac{1}{2} & \frac{1}{2} & 0  \\
+%         1 & 0 &\frac{1}{2}  & \frac{3}{4}  \\
+% %
+%         2 &  \frac{1}{3} & \frac{1}{3} & \frac{1}{3}  \\
+%         \end{block}
+%     \end{blockarray}
+% \end{align}
+% For any two states $i$ and $j$, let $p_{ij}^{(n)}$ denote the $n$-step transition probability of going from $i$ to $j$.  Identify correct statements.
+% \begin{enumerate}
+% \item $\lim_{n \to \infty} p_{11}^{(n)} = \frac{2}{9}$
+% \item $\lim_{n \to \infty} p_{21}^{(n)} = 0$
+% \item $\lim_{n \to \infty} p_{32}^{(n)} = \frac{1}{3}$
+% \item $\lim_{n \to \infty} p_{13}^{(n)} = \frac{1}{3}$
+% \end{enumerate}
+% \solution
+% \input{solutions/2018/dec/106/solution.tex}
+
+\end{enumerate}

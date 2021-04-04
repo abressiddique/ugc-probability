@@ -1,0 +1,44 @@
+Let $P_A(x)$ denote the characteristic polynomial of a matrix $\vec{A}$, then for which of the following matrices $P_A(x) - P_{A^{-1}}(x)$ a constant?
+\begin{enumerate}
+    \item \myvec{3 & 3 \\ 2 & 4} \item \myvec{4 & 3 \\ 2 & 3} 
+    \item \myvec{3 & 2 \\ 4 & 3} \item \myvec{2 & 3 \\ 3 & 4}
+\end{enumerate}
+The characteristic polynomial of a matrix $\vec{A}$ is defined as 
+\begin{align}
+    P_A(x) = det(xI - A)
+\end{align}
+Let matrix A be 
+\begin{align}
+      &\myvec{a & b \\ c & d} \\
+    \implies P_A(x) &= det(xI - A) \\
+    &= det\myvec{x - a & -b \\ -c & x - d} \\
+    &= x^2 - (a+d)x +(ad - bc) 
+\end{align}
+From Cayley Hamilton theorem, we can write:
+\begin{align}
+    A^2 - (a+d)A + (ad-bc) &= 0 
+\end{align}
+Multiplying both sides with $A^{-2}$ :
+\begin{align}
+   (ad-bc)A^{-2} - (a+d)A^{-1} + I &= 0 
+\end{align}
+Dividing with $(ad-bc)$ on both sides:
+\begin{align}
+      (A^{-1})^{-2} - \brak{\frac{a+d}{ad-bc}}A^{-1} + \brak{\frac{1}{ad-bc}}I = 0 \nonumber  
+\end{align}
+From above equation, we can write $P_{A^{-1}}(x)$ as:
+\begin{align}
+    x^2 - \brak{\frac{a+d}{ad-bc}}x + \brak{\frac{1}{ad-bc}}  \label{eq:solutions/2019/28/eq1}
+\end{align}
+So, $P_A(x) - P_{A^{-1}}(x)$ becomes:
+\begin{align}
+    \brak{\frac{a+d}{ad-bc} - (a+d)}x + \brak{(ad-bc) - \frac{1}{ad-bc}} \nonumber
+\end{align}
+Hence it can be observed that $P_A(x) - P_{A^{-1}}(x)$ becomes a constant when either $a + d = 0$ or $ad - bc = 1$. 
+
+From the given options it is easy to see that option 3 is the correct answer as its determinant $(ad-bc) = 1$.
+\begin{align}
+   \intertext{From \eqref{eq:solutions/2019/28/eq1}, eigenvalues of $A^{-1}$ can be calculated as}
+    x^2 - 6x + 1 = 0 \\
+    \implies x = 3+\sqrt{8} \text{ or } 3-\sqrt{8}
+\end{align}

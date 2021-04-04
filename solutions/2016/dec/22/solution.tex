@@ -1,0 +1,23 @@
+\begin{enumerate}
+\item For a real symmetric matrix to be positive definite the eigen values of the matrix should be positive.
+\item For a real symmetric matrix to be negative definite the eigen values of the matrix should be negative.
+\end{enumerate}
+\begin{align*}
+\vec{A} = \myvec{3 && -1 && 0 \\ -1 && 2 && -1\\ 0 && -1 && 3}
+\end{align*}
+The characteristic equation of the matrix $\vec{A}$is given by
+\begin{equation} \label{eq:solutions/2016/dec/22/eq:2.0.1}
+\begin{split}
+\mydet{V-\lambda \vec{I}}=\mydet{3-\lambda && -1 && 0\\ -1 && 2-\lambda && -1\\ 0 && -1 && 3-\lambda} = 0\\
+\implies \lambda^3 - 8\lambda^2 + 19\lambda - 12 = 0
+\end{split}
+\end{equation}
+The Eigen values of $\vec{A}$ are:
+\begin{equation}
+\begin{split}
+\lambda_1 = 5/2\\
+\lambda_2 = 3/2 \\
+ \lambda_3 = 4
+\end{split}
+\end{equation}
+Since all the eigen values of matrix $\vec{A}$ are positive, Therefore the matrix $\vec{A}$ is positive definite.

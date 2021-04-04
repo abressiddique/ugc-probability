@@ -1,0 +1,97 @@
+Let S be a set of functions.
+Let $f_1,f_2$ $\in$ $S$ and $\alpha,\beta$ $\in$ $\Re$\\
+ For a set of functions to be considered as a vector space:
+\begin{enumerate}
+\item The linear combination of $f_1$ and $f_2$ should be in S.\\
+i.e. $\alpha f_1(x) + \beta f_2(x)$ $\in$ $S$
+\item The $\vec{0}$ should belong to S\\
+i.e. $\vec{0}$ $\in$ $S$
+\end{enumerate}
+Case1: Test for $S_1$
+\begin{enumerate}
+\item Let $f_1,f_2$ $\in$ $S_1$ and $\alpha,\beta$ $\in$ $\Re$
+\begin{equation}\label{eq:solutions/2016/dec/31/3.0.1}
+\begin{split}
+\lim_{x\to3} f_1(x) = 0\\
+\lim_{x\to3} f_2(x) = 0
+\end{split}
+\end{equation}
+Then Using \eqref{eq:solutions/2016/dec/31/3.0.1}
+\begin{equation*}
+\begin{split}
+\lim_{x\to3} (\alpha f_1(x) + \beta f_2(x))\\
+= \alpha \left(\lim_{x\to3} f_1(x)\right) + \beta \left(\lim_{x\to3} f_2(x)\right)\\
+= \alpha \times 0 + \beta \times 0\\
+= 0\\
+ \therefore \alpha f_1(x) + \beta f_2(x) \in S_1
+\end{split}
+\end{equation*}
+\item Let $f(x) = 0$\\
+then 
+\begin{equation*}
+\begin{split}
+\lim_{x\to3} f(x) = 0\\
+\therefore \vec{0} \in S_1
+\end{split}
+\end{equation*}
+\end{enumerate}
+Hence, $S_1$ is a vector space.\\
+\\
+Case2: Test for $S_2$
+\begin{enumerate}
+\item Let $g_1,g_2$ $\in$ $S_2$ and $\alpha,\beta$ $\in$ $\Re$
+\begin{equation}\label{eq:solutions/2016/dec/31/3.0.2}
+\begin{split}
+\lim_{x\to3} g_1(x) = 1\\
+\lim_{x\to3} g_2(x) = 1
+\end{split}
+\end{equation}
+Then Using \eqref{eq:solutions/2016/dec/31/3.0.2}
+\begin{equation*}
+\begin{split}
+\lim_{x\to3} (\alpha g_1(x) + \beta g_2(x))\\
+= \alpha \left(\lim_{x\to3} g_1(x)\right) + \beta \left(\lim_{x\to3} g_2(x)\right)\\
+= \alpha \times 1 + \beta \times 1\\
+= \alpha + \beta\\
+ \therefore \alpha g_1(x) + \beta g_2(x) \in S_1 ~~iff~~  \alpha + \beta = 1
+\end{split}
+\end{equation*}
+\item Let $g(x) = 0$\\
+then 
+\begin{equation*}
+\begin{split}
+\lim_{x\to3} g(x) = 1\\
+\therefore \vec{0} \notin S_1
+\end{split}
+\end{equation*}
+\end{enumerate}
+Hence, $S_2$ is not a vector space.\\
+\\
+Case3: Test for $S_3$
+\begin{enumerate}
+\item Let $h_1,h_2$ $\in$ $S_3$ and $\alpha,\beta$ $\in$ $\Re$
+\begin{equation} \label{eq:solutions/2016/dec/31/3.0.3}
+\begin{split}
+\lim_{x\to3} h_1(x) ~exists\\
+\lim_{x\to3} h_2(x) ~exists
+\end{split}
+\end{equation}
+Then Using \eqref{eq:solutions/2016/dec/31/3.0.3}
+\begin{equation*}
+\begin{split}
+\lim_{x\to3} (\alpha h_1(x) + \beta h_2(x)) ~exists\\
+ \therefore \alpha h_1(x) + \beta h_2(x) \in S_3
+\end{split}
+\end{equation*}
+\item Let $h(x) = 0$\\
+then 
+\begin{equation*}
+\begin{split}
+\lim_{x\to3^-} h(x) = 0 = \lim_{x\to3^+} h(x)\\
+\therefore \vec{0} \in S_1
+\end{split}
+\end{equation*}
+\end{enumerate}
+Hence, $S_3$ is a vector space.\\
+\\
+Therefore, Option (3) is correct.

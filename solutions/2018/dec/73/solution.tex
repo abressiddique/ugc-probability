@@ -1,0 +1,103 @@
+See Table \ref{eq:solutions/2018/dec/73/table:1}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\text{Given} & \parbox{10cm}{\begin{align}
+    \vec{M}=\myvec{1 & -1 & 1\\2 & 1 & 4\\-2 & 1 & -4}
+\end{align}}\\
+& One of the eigenvalue of $\vec{M}$ is 1\\
+\hline
+\text{Solution} & \text{Let the eigenvalues of matrix $\vec{M}$ of order $3 \times 3$ be $\lambda_1,\lambda_2,\lambda_3$}\\
+& \text{From given , let $\lambda_1=1$}.\\
+& \text{We know that sum of the eigenvalues of matrix is Trace of the matrix and product of }\\
+& \text{eigenvalues of matrix is Determinant of the matrix.}\\
+& Trace of the square matrix(Tr($\vec{M}$)) is the sum of the elements in the main diagonal of $\vec{M}$.\\
+& \parbox{10cm}{\begin{align}
+    Tr(\vec{M})&=1+1-4\\
+    \implies Tr(\vec{M})&=-2\\
+    \implies \lambda_1+\lambda_2+\lambda_3&=-2\\
+    \implies \lambda_2+\lambda_3&=-3\\
+    \implies \lambda_2&=-3-\lambda_3 \label{eq:solutions/2018/dec/73/1}
+\end{align}}\\
+& By row reducing the matrix $\vec{M}$, we get ,\\
+& \parbox{10cm}{\begin{align}
+ \vec{M}=\myvec{1 & -1 & 1 \\ 0 & 3 & 2\\ 0 & 0 & -\frac{4}{3}}
+\end{align}}\\
+\hline
+& \parbox{10cm}{\begin{align}
+    Det(\vec{M})&=1\left(3\left(-\frac{4}{3}\right)\right)=-4\\
+    \implies \lambda_1\lambda_2\lambda_3&=-4\\
+    \implies \lambda_2\lambda_3&=-4 \label{eq:solutions/2018/dec/73/2}
+\end{align}}\\
+& \text{Solving equations \eqref{eq:solutions/2018/dec/73/1} and \eqref{eq:solutions/2018/dec/73/2} one of the possibilities we get, }\\
+& \parbox{10cm}{\begin{align}
+   \lambda_1&=1\\
+   \lambda_2&=1\\
+   \lambda_3&=-4
+\end{align}}\\
+\hline
+& \text{Using the eigenvalues the characteristic polynomial of matrix $\vec{M}$ is given by,}\\
+& \parbox{10cm}{\begin{align}
+   c(x)&=x^3+2x^2-7x+4=0 \label{eq:solutions/2018/dec/73/cx}
+\end{align}}\\
+& \text{The Cayley Hamilton Theorem states that every square matrix satisfies its own characteristic}\\
+& \text{equation}.\\
+& Using the above theorem, the equation \eqref{eq:solutions/2018/dec/73/cx} can be written as,\\
+& \parbox{10cm}{\begin{align}
+   \vec{M}^3+2\vec{M}^2-7\vec{M}+4\vec{I}&=0 \label{eq:solutions/2018/dec/73/cheq}\\
+   \vec{M}^2+2\vec{M}-7\vec{I}+4\vec{M}^{-1}&=0\\
+   \implies \vec{M}^{-1}&=-\frac{1}{4}(\vec{M}^2+2\vec{M}-7\vec{I}) \label{eq:solutions/2018/dec/73/4}
+\end{align}}\\
+\hline
+\textbf{Statement 1} & \text{The minimal polynomial of $\vec{M}$ is $(x-1)(x+4)$}\\
+\hline
+& \text{If (x-1)(x+4) is a minimal polynomial of $\vec{M}$ then,}\\
+& \parbox{10cm}{\begin{align}
+   (\vec{M}-\vec{I})(\vec{M}+4\vec{I})&=\vec{0}_{3\times3}
+\end{align}}\\
+& \text{But,}\\
+& \parbox{10cm}{\begin{align}
+  (\vec{M}-\vec{I})(\vec{M}+4\vec{I})&=\myvec{-4 & -4 & -4\\2 & 2 & 2\\ 2 & 2 & 2}\neq \vec{0}_{3\times 3}
+\end{align}}\\
+& \parbox{10cm}{\begin{center}
+\textbf{False Statement }
+\end{center}}\\
+\hline 
+\textbf{Statement 2} & \text{The minimal polynomial of $\vec{M}$ is $(x-1)^2(x+4)$}\\
+\hline
+& Let m(x) be the minimal polynomial\\
+& \parbox{10cm}{\begin{align}
+   m(x)&=(x-1)^2(x+4) \label{eq:solutions/2018/dec/73/mx}\\
+   &=x^3+2x^2-7x+4\\
+   &=c(x) \notag
+\end{align}}\\
+& \text{In this case both minimal polynomial and characteristic polynomial were same.} \\
+& \text{Therefore wecould say that equation \eqref{eq:solutions/2018/dec/73/mx} is the minimal polynomial of $\vec{M}$ as it satisfies }\\
+& equation \eqref{eq:solutions/2018/dec/73/cheq} by Cayley Hamilton Theorem. \\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline 
+\textbf{Statement 3} & \text{$\vec{M}$ is not diagonalizable.} \\
+\hline
+& $\vec{M}$ is diagonalizable if and only if its minimal polynomial is a product of distinct monic linear\\
+\hline
+& factors. From equation \eqref{eq:solutions/2018/dec/73/mx} we could see that one of the factor of minimal polynomial is \\
+& repeated and it is not a linear factor. Therefore, Matrix $\vec{M}$ is not diagonalizable.\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline 
+\textbf{Statement 4} & \parbox{10cm}{\begin{align}
+    \vec{M}^{-1}=\frac{1}{4}(\vec{M}+3\vec{I}) \label{eq:solutions/2018/dec/73/minv}
+\end{align}}\\
+\hline
+& \text{Comparing equation \eqref{eq:solutions/2018/dec/73/4} and \eqref{eq:solutions/2018/dec/73/minv} we could say that the given statement is}\\
+& \text{\textbf{False Statement}}.\\
+\hline
+\caption{Explanation}
+\label{eq:solutions/2018/dec/73/table:1}
+\end{longtable}
+
+\twocolumn

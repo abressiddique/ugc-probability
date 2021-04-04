@@ -1,0 +1,49 @@
+See Tables \ref{tab:my_label}
+and     \ref{tab:my_label1}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|m{2cm}|m{6cm}|}\hline
+        Linear Transformation and change of Basis & If matrix $\vec{A}$ represents Linear Transformation with respect to standard ordered basis and matrix $\vec{B}$ represents same transformation with respect to basis $\vec{V}$,Then{\begin{align*}
+            \vec{B} = \vec{V}^{-1}\vec{A}\vec{V}
+        \end{align*}}\\
+        \hline
+\end{tabular}
+\end{center}
+\caption{Linear Transformation and change of basis}
+\label{tab:my_label}
+\end{table}
+In above question $\vec{A}$ = $\vec{T}$,$\vec{B}$ = $\vec{T[C]}$,$\vec{V}$ = $\vec{C}$.
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|m{2.2cm}|m{6.3cm}|}\hline
+        Evaluate $\vec{T}$ & For linear transformation $\vec{T}$ we have {\begin{align*}
+            \vec{T}\myvec{x\\y} &= \myvec{x+y\\x-2y}\\
+            \vec{T}\myvec{x\\y} &= \myvec{1&1\\1&-2}\myvec{x\\y}\\
+            \implies\vec{T} &= \myvec{1&1\\1&-2}
+        \end{align*}} \\
+        \hline
+        Evaluate inverse of basis $\vec{C}$ & To find inverse of matrix $\vec{C}$ we row reduce augmented matrix $\vec{C}$$\vec{I}$ {\begin{align*}
+            \myvec{1&2&1&0\\2&1&0&1}\xleftrightarrow[R_2=-\frac{1}{3}R_2]{R_2=R_2-2R_1}\myvec{1&2&1&0\\0&1&\frac{2}{3}&-\frac{1}{3}}\\
+            \xleftrightarrow{R_1=R_1-2R_2}\myvec{1&0&-\frac{1}{3}&\frac{2}{3}\\0&1&\frac{2}{3}&-\frac{1}{3}}
+        \end{align*}}\\
+        &$\therefore$ $\vec{C}^{-1}$ = $\myvec{-\frac{1}{3}&\frac{2}{3}\\\frac{2}{3}&-\frac{1}{3}}$ \\
+        \hline
+        Evaluate $\vec{TC}$ & {\begin{align*}
+            \vec{TC} &= \myvec{1&1\\1&-2}\myvec{1&2\\2&1}\\
+            &= \myvec{3&3\\-3&0}
+        \end{align*}}\\
+        \hline
+        Evaluate $\vec{T[C]}$=$\vec{C}^{-1}\vec{TC}$& {\begin{align*}
+            \vec{T[C]} &= \vec{C}^{-1}\vec{TC}\\
+            &=\myvec{-\frac{1}{3}&\frac{2}{3}\\\frac{2}{3}&-\frac{1}{3}}\myvec{3&3\\-3&0}\\
+            \implies \vec{T[C]} &= \myvec{-3&-1\\3&2}
+        \end{align*}} \\
+        \hline
+        Conclusion&Option 3) is correct.Options 1),2) and 4) are incorrect\\
+        \hline
+    \end{tabular}
+    \end{center}
+    \caption{Calculation of $\vec{T[C]}$}
+    \label{tab:my_label1}
+\end{table}

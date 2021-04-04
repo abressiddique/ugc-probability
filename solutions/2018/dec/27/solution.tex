@@ -1,0 +1,64 @@
+%\section{Problem}
+%Consider the subspaces $\vec{W_1}$ and $\vec{W_2}$ of $\vec{R}^3$ given by:
+%\begin{align}
+%\vec{W_1}=\{\vec{{(x,y,z)\in {R^3}: x+y+z=0}}\} \label{eq:solutions/2018/dec/27/eq:1}
+%\end{align} and
+%\begin{align}
+%\vec{W_2}=\{\vec{{(x,y,z)\in {R^3}: x-y+z=0}}\} \label{eq:solutions/2018/dec/27/eq:2}
+%\end{align} 
+%If $\vec{W}$ is a subspace of $\vec{R^3}$ such that 
+%\begin{align}
+%(i) \vec{W} \cap \vec{W_2} = \mbox{span} \{(0,1,1)\} \\ \label{eq:solutions/2018/dec/27/eq:3}
+%\end{align}
+%\begin{align}
+%(ii) \vec{W} \cap \vec{W_1} \mbox{is orthogonal
+% to}  \vec{W} \cap \vec{W_2}       \label{eq:solutions/2018/dec/27/eq:4}
+%\end{align} 
+%with respect to the usual inner products of $\vec{R^3}$, then 
+%\newline    1.\quad $ \vec{W}=$ span $\{(0,1,-1), (0,1,1)\}$ 
+%\newline    2.\quad $ \vec{W}=$ span $\{(1,0,-1), (0,1,-1)\}$ 
+%\newline    3.\quad $ \vec{W}=$ span $\{(1,0,-1), (0,1,1)\}$
+%\newline    4.\quad $ \vec{W}=$ span $\{(1,0,-1), (1,0,1)\}$ 
+%\section{Solution}
+Using \eqref{eq:solutions/2018/dec/27/eq:1},
+\begin{align}
+\vec{W_1}=\myvec{1 \\ 1 \\ 1} \label{eq:solutions/2018/dec/27/eq:5}
+\end{align}
+From \eqref{eq:solutions/2018/dec/27/eq:2},
+\begin{align}
+\vec{W_2}=\myvec{1 \\ -1 \\ 1} \label{eq:solutions/2018/dec/27/eq:6}
+\end{align}
+From \eqref{eq:solutions/2018/dec/27/eq:3}, we can say that, both the subspaces $\vec{W}$ and $\vec{W_2}$ of $\vec{R^3}$ contains the column vector as follows: .
+\begin{align}
+\vec{W}=\myvec{0 \\ 1 \\ 1} \label{eq:solutions/2018/dec/27/eq:7} \\ \vec{W_2}=\myvec{0 \\ 1 \\ 1}  \label{eq:solutions/2018/dec/27/eq:8}
+\end{align}
+From \eqref{eq:solutions/2018/dec/27/eq:6} and \eqref{eq:solutions/2018/dec/27/eq:8},
+\begin{align}
+\vec{W_2} = \myvec{1 & 0 \\ -1 & 1\\ 1 & 1 } \label{eq:solutions/2018/dec/27/eq:9}\\ Rank(\vec{W_2})=2
+\label{eq:solutions/2018/dec/27/eq:10}
+\end{align}
+Since, rank $<$ 3 and the vectors are linearly independent they span a subspace of $\vec{R^3}$. \newline \newline
+Consider the vector,
+\begin{align}
+\myvec{x\\y\\z} \in \vec{W} \cap \vec{W_1}
+\end{align} \newline
+From \eqref{eq:solutions/2018/dec/27/eq:3} and \eqref{eq:solutions/2018/dec/27/eq:4}, \newline
+The vector $\myvec{x\\y\\z}$ is orthogonal to $\myvec{0 \\ 1 \\ 1}$. 
+\begin{align}
+\implies \myvec{x & y & z}.\myvec{0 \\ 1 \\ 1} =0 \\ \implies \myvec{x \\ y \\ z}=\myvec{0 \\ 1 \\ -1} \label{eq:solutions/2018/dec/27/eq:13}
+\end{align}\newpage
+Since, $\myvec{x\\y\\z} \in \vec{W}\cap \vec{W_1}$: \newline 
+From \eqref{eq:solutions/2018/dec/27/eq:5} and \eqref{eq:solutions/2018/dec/27/eq:13},
+\begin{align}
+ \vec{W_1}=\myvec{1 & 0 \\ 1 & 1 \\ 1 & -1} 
+\end{align}
+Also from \eqref{eq:solutions/2018/dec/27/eq:7} and \eqref{eq:solutions/2018/dec/27/eq:13},
+\begin{align}
+\boxed{\vec{W}=\myvec{0 & 0 \\ 1 & 1 \\ 1 & -1}} \label{eq:solutions/2018/dec/27/eq:15}
+\end{align}
+Using \eqref{eq:solutions/2018/dec/27/eq:15}, \newline
+The vectors linearly independent and rank($\vec{W}$)=2 ($<$ 3), then the vector span subspace of $\vec{R^3}$. \newline \newline
+Hence,
+\begin{align}
+\boxed{\vec{W}= span \{(0,1,-1), (0,1,1)\} \implies \vec{Ans: 1}}
+\end{align}

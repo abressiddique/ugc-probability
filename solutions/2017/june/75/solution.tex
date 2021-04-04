@@ -1,0 +1,185 @@
+See Tables \ref{table:1} and \ref{table:2}
+
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Test for diagonalizability} & \\
+& Let $\vec{W}_{i}$ be the eigenspace corresponding to eigenvalue $\lambda_{i}$  of $\vec{A}$\\
+&\\
+& $1)\vec{A}$ is diagonalizable \\
+&\\
+& $2)$ characteristic polynomial of $\vec{A}$ is \\
+&\\
+& f = $(\vec{x}-\lambda_1)^{d_1}....(\vec{x}-\lambda_k)^{d_k}$ and $dim(\vec{W}_i) = d_i $\\
+&\\
+& $3) \sum_{i=1}^{k}\vec{W_i}=n$\\
+&\\
+\hline
+\multirow{3}{*}{Concept} & \\
+&
+A linear operator $\vec{A}$ on a $n$-dimensional space $\mathbb{V}$ is\\ 
+&\\ for diagonalization
+& diagonalizable , if and only if $\vec{A}$ has $n$ distinct \\
+&\\
+& characteristic vectors or null spaces corresponding to the characteristic values\\
+\hline
+\caption{Illustration of theorem.}
+\label{table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Option A} & \\
+& Given matrix is  \\
+&\\
+& $\vec{A}=\myvec{1&2&3\\0&4&5\\0&0&6}$\\
+&\\
+\hline
+\multirow{3}{*}{Finding Characteristics} & \\
+&
+Characteristics polynomial of the matrix $\vec{A}$ is $det(x\vec{I}-\vec{A})$\\ 
+polynomial
+& $\det(x\vec{I}-\vec{A})$= $\left|
+                \begin{array}{ccc}
+                (x-1) & -3 & -2\\
+                0 & (x-4) & -5\\
+                0 & 0 & x-6
+                \end{array} \right|$  \\
+&\\
+& Characteristic Polynomial = $(x-1)(x-4)(x-6)$\\
+&\\
+\hline
+\multirow{3}{*}{Testing diagonalizability over $\mathbb{R}$} & \\
+& 1) As the characteristics  polynomial is product of linear factors\\
+&over $\mathbb{R}$ .\\
+&\\
+&2) To find characteristic values of the operator $\det(xI-A) = 0$ which gives  \\
+& $\lambda_1= 1 , \lambda_2= 4, \lambda_3= 6$\\
+&\\
+& Thus over $\mathbb{R}$ matrix $\vec{A}$ has three distinct characteristic values.\\
+&There will be atleast one characteristics vector i.e., one\\ & dimension with each characteristics value .\\
+&Thus $dim \vec{W}_i$ = $d_i$\\
+&\\
+&3) $\sum_{i} \vec{W_i} = n = 3$ , which is equal to $dim$ of $\vec{A}$.\\ 
+&\\
+\hline
+\multirow{3}{*}{Conclusion on Option A} & \\
+& Option A satisfy all three condition of Diagonalizability over $\mathbb{R}$. \\
+&\\
+
+\hline \hline
+\multirow{3}{*}{Option B} & \\
+& Given matrix is  \\
+&\\
+& $\vec{A}$=$\myvec{0&1&0\\-1&0&0\\0&0&1}$\\
+&\\
+\hline
+\multirow{3}{*}{Finding Characteristics} & \\
+&
+Characteristics polynomial of the matrix $det(x\vec{I}-\vec{A})$\\ 
+polynomial
+& $det(x\vec{I}-\vec{A})= \left|
+                \begin{array}{ccc}
+                x & -1 & 0\\
+                1 & x & 0\\
+                0 & 0 & x-1
+                \end{array} \right|$  \\
+&\\
+& Characteristic Polynomial = $(x-1)(x+i)(x-i)$\\
+&\\
+\hline
+\multirow{3}{*}{Testing diagonalizability over $\mathbb{R}$} & \\
+& 1) As the characteristics  polynomial is not the product of linear factors\\
+&over $\mathbb{R}$ beacuse roots of characteristic eq are complex .\\ & Thus $\vec{A}$ is not diagonalizable over $\mathbb{R}$.\\
+
+&\\
+\hline
+\multirow{3}{*}{Conclusion on Option B} & \\
+& Option B does not satisfy condition 1. \\
+&\\
+\hline \hline
+\multirow{3}{*}{Option C} & \\
+& Given matrix is  \\
+&\\
+& $\vec{A}$=$\myvec{1&2&3\\2&1&4\\3&4&1}$\\
+&\\
+\hline
+\multirow{3}{*}{Finding Characteristics} & \\
+&
+Characteristics polynomial of the matrix $\vec{A}$ is $det(x\vec{I}-\vec{A})$\\ 
+polynomial
+& $det(x\vec{I}-\vec{A})$= $\left|
+                \begin{array}{ccc}
+                (x-1) & -2 & -3\\
+                -2 & (x-1) & -4\\
+                -3 & -4 & x-1
+                \end{array} \right|$  \\
+&\\
+& Characteristic Polynomial = $(x+3.19)(x+0.877)(x-7.07)$\\
+&\\
+\hline
+\multirow{3}{*}{Testing diagonalizability over $\mathbb{R}$} & \\
+& 1) As the characteristics  polynomial are product of linear factors\\
+&over $\mathbb{R}$ .\\
+&\\
+&2) To find characteristic values of the operator $det(x\vec{I}-\vec{A})=0$ which gives  \\
+& $\lambda_1= -3.19 , \lambda_2= -0.887, \lambda_3= 7.07$\\
+&\\
+& Thus over $\mathbb{R}$ matrix $\vec{A}$ has three distinct characteristic values.\\
+&There will be atleast one characteristics vector i.e., one\\ & dimension with each characteristics value .\\
+&Thus $dim \vec{W}_i$ = $d_i$\\
+&\\
+&3) $\sum_{i} \vec{W_i} = n = 3$ , which is equal to $dim$ of $\vec{A}$.\\ 
+&\\
+\hline
+\multirow{3}{*}{Conclusion on Option C} & \\
+& Option C satisfy all three condition of Diagonalizability over $\mathbb{R}$. \\
+&\\
+\hline
+%\hline
+%\newpage
+%\hline
+\multirow{3}{*}{Option D} & \\
+& Given matrix is  \\
+&\\
+& $\vec{A}$=$\myvec{0&1&2\\0&0&1\\0&0&0}$\\
+&\\
+\hline
+\multirow{3}{*}{Finding Characteristics} & \\
+&Characteristics polynomial of the matrix $\vec{A}$ is $det(x\vec{I}-\vec{A})$\\ 
+polynomial
+& $det(x\vec{I}-\vec{A})$= $\left|
+                \begin{array}{ccc}
+                x & -1 & -2\\
+                0 & x & -1\\
+                0 & 0 & x
+                \end{array} \right|$  \\
+&\\
+& Characteristic Polynomial = $(x)(x)(x)=x^3$\\
+&\\
+\hline
+\multirow{3}{*}{Testing diagonalizability over $\mathbb{R}$} & \\
+& 1) As the characteristics  polynomial is product of linear factors\\
+&over $\mathbb{R}$ .\\
+&\\
+&2) To find characteristic values of the operator $\det(x\vec{I}-\vec{A}) = 0$ \\
+& $\lambda_1= 0$\\
+&$d_1=3$\\
+&$\vec{W}_1=\vec{A}-\lambda_1\vec{I}\implies\myvec{0&1&2\\0&0&1\\0&0&0}-0\myvec{1&0&0\\0&1&0\\0&0&1}=\myvec{0&1&2\\0&0&1\\0&0&0}$\\
+
+&$dim \vec{W}_1 = 2$\\
+&$dim \vec{W}_i \neq d_i$\\
+&Algebric Multiplicity is not equal to Geometric Multiplicity.\\
+&\\
+\hline
+\multirow{3}{*}{Conclusion on Option D} & \\
+& Option D  does not satisfy second condition of Diagonalizability.\\
+&\\
+\hline \hline
+\multirow{3}{*}{Answer} & \\
+&Option A and Option C are Diagonalizable over $\mathbb{R}$.\\
+
+\hline
+\caption{Option Checking Table}
+\label{table:2}
+\end{longtable}

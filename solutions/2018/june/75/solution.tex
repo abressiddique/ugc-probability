@@ -1,0 +1,135 @@
+See Tables     \ref{eq:solutions/2018/june/75/table:1} and     \ref{eq:solutions/2018/june/75/table:1}
+
+
+\onecolumn
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Jordan canonical form} 
+	&\\
+	& If $\vec{A}$ is a matrix of order n$\times$n ,then the Jordan canonical form\\
+	&of $\vec{A}$  is a matrix of order n$\times$n expressed as \\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{J} = \myvec{\vec{J_1} & & \\
+    & \ddots & \\
+    & &
+    \vec{J_{k}}} \label{eq:solutions/2018/june/75/eq:1}
+	\end{align}}\\ 
+	&\text{where} $\vec{J_1},...,\vec{J_k}$ are the Jordan blocks. \\
+	&\\
+	\hline
+	\multirow{3}{*}{Algebraic multiplicity $A_M$} 
+	& \\
+	& Algebraic multiplicity of characteristic value $\lambda$ in the characteristic \\ 
+	& polynomial determines the size of Jordan block for that eigen value\\
+	&\parbox{10cm}
+	{\begin{align}
+	A_M= \text{Size of Jordan block for that $\lambda$ } \label{eq:solutions/2018/june/75/eq:2}
+	\end{align}}\\ 
+	&\\
+	\hline
+	\multirow{3}{*}{Geometric multiplicity $G_M$} 
+	&\\
+	& Geometric multiplicity determines the number of Jordan sub-blocks \\
+	&in a Jordan block for $\lambda$\\
+	&\\
+    \hline
+    	\multirow{3}{*}{Minimal Polynomial}
+	&\\
+	&The multiplicity of $\lambda$ in the minimal polynomial determines the\\
+	&  size of the largest sub-block.\\
+	&\\
+    \hline
+    \caption{Definition and Properties used}
+    \label{eq:solutions/2018/june/75/table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Characteristic polynomial}
+	&\\
+    &\parbox{10cm}
+	{\begin{align}
+	p\brak{x}=\brak{x-3}^2\brak{x-2}^4
+	\end{align}}\\
+    \hline
+	\multirow{3}{*}{Algebraic Multiplicity}
+	& \\
+	&\parbox{10cm}
+	{\begin{align}
+	\text{For }\lambda=3, A_M=2\\ \text{For }\lambda=2, A_M=4 
+	\end{align}}\\
+	&\\
+	\hline
+	\multirow{3}{*}{Minimal polynomial}
+	&\\
+    &\parbox{10cm}
+	{\begin{align}
+	m\brak{x}=\brak{x-3}\brak{x-2}^2
+	\end{align}}\\
+	&\\
+	\hline
+	\multirow{3}{*}{Finding Jordan blocks for $\lambda_{1}$=3}
+	&\\
+	&For $\lambda_{1}$=3,We can write from table\ref{eq:solutions/2018/june/75/table:1} that\\
+	&\parbox{10cm}
+	{\begin{align}
+	\text{The highest order of Jordan block}=1 \nonumber\\
+	\text{Size of Jordan block}=A_M=2 \nonumber
+	\end{align}}\\
+	&The Jordan blocks for $\lambda_{1}$=3\\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{J_1}=\myvec{3},
+	\vec{J_2}=\myvec{3}
+	\end{align}}\\
+	&\\
+	\hline
+	\multirow{3}{*}{Finding Jordan blocks for $\lambda_{1}$=2}
+	&\\
+	&For $\lambda_{1}$=2,We can write from table\ref{eq:solutions/2018/june/75/table:1} that\\
+	&\parbox{10cm}
+	{\begin{align}
+	\text{The highest order of Jordan block}=2 \nonumber\\
+	\text{Size of Jordan block}=A_M=4 \nonumber
+	\end{align}}\\
+	&The Jordan blocks for $\lambda_{1}$=3\\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{J_3}=\myvec{2&1\\0&2},
+	\vec{J_4}=\myvec{2&1\\0&2}\\
+	\text{or} \nonumber\\ 
+	\vec{J_3}=\myvec{2&1\\0&2},
+	\vec{J_4}=\myvec{2},\vec{J_5}=\myvec{2}
+	\end{align}}\\
+	&\\
+    \hline
+	\multirow{3}{*}{Jordan canonical form} 
+	&\\
+	& Jordan canonical form of $\vec{A}$ is \\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{J} = \myvec{\vec{J_1} & & \\
+	& \vec{J_2} & \\
+    && \vec{J_3} & \\
+    &&& \vec{J_{4}} } \text{or}
+    \myvec{\vec{J_1} & & \\
+	& \vec{J_2} & \\
+    && \vec{J_3} & \\
+    &&& \vec{J_{4}} & \\
+    &&&& \vec{J_{5} } }
+	\end{align}}\\ 
+	&\parbox{10cm}
+	{\begin{align}
+	\myvec{3&0&0&0&0&0\\0&3&0&0&0&0\\0&0&2&1&0&0\\0&0&0&2&0&0\\0&0&0&0&2&1\\0&0&0&0&0&2}\text{or}
+	\myvec{3&0&0&0&0&0\\0&3&0&0&0&0\\0&0&2&1&0&0\\0&0&0&2&0&0\\0&0&0&0&2&0\\0&0&0&0&0&2}
+	\end{align}}\\ 
+	& \\
+    \hline
+	\multirow{3}{*}{Conclusion} & \\
+	& From above,we can say that options 2) and 3) are correct.\\
+    &\\
+	\hline
+	\caption{Finding Jordan canonical form}
+    \label{eq:solutions/2018/june/75/table:2}
+\end{longtable}
+\twocolumn

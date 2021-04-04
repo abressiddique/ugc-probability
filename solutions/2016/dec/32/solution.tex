@@ -1,0 +1,92 @@
+See Table \ref{eq:solutions/2016/dec/32/table:2}
+
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+option&Solution\\
+\hline
+&\\
+1.&Let us consider $\vec{A}$ as follows and let s be the summation of all column entries:\\
+&\parbox{6cm}{\begin{align*}
+    \vec{A}&=\myvec{a_{11}&a_{12}&\dots&a_{1m}\\a_{21}&a_{22}&\dots&a_{2m}\\\vdots&\vdots&\vdots&\vdots\\a_{n1}&a_{n2}&\dots&a_{nm}}\\
+    \mydet{\vec{A}-\lambda\vec{I}}&=\myvec{a_{11}-\lambda&a_{12}&\dots&a_{1m}\\a_{21}&a_{22}-\lambda&\dots&a_{2m}\\\vdots&\vdots&\vdots&\vdots\\a_{n1}&a_{n2}&\dots&a_{nm}-\lambda}=0\\
+    &=\myvec{a_{11}+a_{21}+\dots+a{n1}-\lambda&a_{11}+a_{21}+\dots+a{n1}-\lambda&\dots&a_{11}+a_{21}+\dots+a{n1}-\lambda\\
+    a_{21}&a_{22}-\lambda&\dots&a_{2m}\\\vdots&\vdots&\vdots&\vdots\\a_{n1}&a_{n2}&\dots&a_{nm}-\lambda}\\
+    &\implies (s-\lambda)\myvec{1&1&\dots&1\\a_{21}&a_{22}-\lambda&\dots&a_{2m}\\\vdots&\vdots&\vdots&\vdots\\a_{n1}&a_{n2}&\dots&a_{nm}-\lambda}=0\\
+\end{align*}}\\
+\hline
+%\pagebreak
+%\hline
+&\\
+& Since s=0 according to question,\\
+&Therefore $\lambda=0$ is an eigen value of $\vec{A}$.\\
+&Since $\lambda=0$, Hence $\vec{A}$ is singular.\\
+&Which means at least two rows are linearly dependent.\\
+&Therefore,\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Rank}(\vec{A}) &< n\\
+    \mbox{Rank}(\vec{A}) &\leq n-1
+\end{align*}}\\
+Example&Let us Consider $\vec{A}$ as follows,where n=4 and m=3\\
+&\parbox{6cm}{\begin{align*}
+    \vec{A}=\myvec{1&0&0\\0&1&0\\0&0&1\\-1&-1&-1}
+\end{align*}}\\
+&Calculating Row Reduced Echelon Form of $\vec{A}$ as follows:\\
+&\parbox{6cm}{\begin{align*}
+    \xleftrightarrow[R_4 \leftarrow R_2+R_4]{R_4 \leftarrow R_1+R_4}
+		\myvec{1&0&0\\0&1&0\\0&0&1\\0&0&-1}\\
+	\xleftrightarrow[]{R_4 \leftarrow R_3+R_4}
+		\myvec{1&0&0\\0&1&0\\0&0&1\\0&0&0}
+\end{align*}}\\
+\hline
+&\\
+Conclusion&Since the Rank  $\vec{A}$=3 and n=4,\\
+&Therefore the Rank $\vec{A} \leq n-1$ statement is true.\\
+&\\
+\hline
+&\\
+2.&Let us Consider $\vec{A}$ as follows,where n=2 and m=2\\
+&\parbox{6cm}{\begin{align*}
+    \vec{A}=\myvec{-1&1\\1&-1}
+\end{align*}}\\
+&Applying elementary transformations on $\vec{A}$ as follows:\\
+&\parbox{6cm}{\begin{align*}
+    \xleftrightarrow[]{R_2 \leftarrow R_1+R_2}
+		\myvec{-1&1\\0&0}
+\end{align*}}\\
+\hline
+&\\
+Conclusion&Since the Rank  $\vec{A}$=1 and m=2,\\
+&Therefore the Rank $\vec{A} \neq m$, Hence the statement is false.\\
+&\\
+%\hline
+%\pagebreak
+\hline
+&\\
+3.&Let us Consider $\vec{A}$ as follows,where n=3 and m=2\\
+&\parbox{6cm}{\begin{align}
+    \vec{A}=\myvec{1&1\\-1&-1\\0&0}
+\end{align}}\\
+\hline
+&\\
+Conclusion&Since there exists a matrix $\vec{A}$ when n$>$m,\\
+&Therefore the statement is false.\\
+&\\
+\hline
+&\\
+4&Let us Consider $\vec{A}$ as follows,where n=4 and m=2\\
+&\parbox{6cm}{\begin{align}
+    \vec{A}=\myvec{1&1\\-1&-1\\0&0\\0&0}
+\end{align}}\\
+\hline
+&\\
+Conclusion&Since there exists a matrix $\vec{A}$ when n-1$>$m,\\
+&Therefore the statement is false.\\
+&\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2016/dec/32/table:2}
+\end{longtable}
+\twocolumn

@@ -1,0 +1,64 @@
+We can say,
+\begin{align}
+    \vec{T}(\vec{v}) = \vec{A}\vec{v} = \text{Image}(\vec{T}) = C(\vec{A})\\
+    \vec{T}^2(\vec{v}) = \vec{A}^2\vec{v} = \text{Image}(\vec{T}^2) = C(\vec{A}^2)
+\end{align}
+where $C(\vec{A})$ and $C(\vec{A}^2)$ denote the columnspace of $\vec{A}$ and $\vec{A}^2$ respectively. Therefore,
+\begin{align}
+    \text{dimension}(\text{Image}(\vec{T})) = \text{dimension}(C(\vec{A})) = \text{rank}(\vec{A})\\
+    \text{dimension}(\text{Image}(\vec{T}^2)) = \text{dimension}(C(\vec{A}^2)) = \text{rank}(\vec{A}^2)
+\end{align}
+See Table     \ref{eq:solutions/2015/june/31/tab:proof}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+    \hline
+        & \\
+        1. $\vec{A} = \myvec{0 & 0 & * & * \\ 0 & 0 & * & * \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & 0}$ & The number of linearly independent columns in $\vec{A}$ is 2\\
+    \hline
+        & \\
+        & hence, $dim(Image(\vec{T})) = dim(C(\vec{A})) = 2$\\
+        & \\
+        & $\vec{A}^2 = \myvec{0 & 0 & 0 & * \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0}$\\
+        & \\
+        & The number of linearly independent columns in $\vec{A}^2$ is 1\\
+        & hence, $dim(Image(\vec{T}^2)) = dim(C(\vec{A}^2)) = 1$\\
+        & \\
+        & $\therefore$ This option is true.\\
+    \hline
+        & \\
+        2. $\vec{A} = \myvec{0 & 0 & * & 0 \\ 0 & 0 & * & 0 \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & *}$ & The number of linearly independent columns in $\vec{A}$ is 2\\
+        & hence, dim(Image($\vec{T}$)) = dim(C($\vec{A}$)) = 2\\
+        & \\
+        & $\vec{A}^2 = \myvec{0 & 0 & 0 & * \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & *}$\\
+        & \\
+        & The number of linearly independent columns in $\vec{A}^2$ is 1\\
+        & hence, dim(Image($\vec{T}^2$)) = dim(C($\vec{A}^2$)) = 1\\
+        & \\
+        & $\therefore$ This option is true.\\
+    \hline
+        & \\
+        3. $\vec{A} = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & * \\ 0 & 0 & * & 0}$ & The number of linearly independent columns in $\vec{A}$ is 2\\
+        & hence, $dim(Image(\vec{T})) = dim(C(\vec{A})) = 2$\\
+        & \\
+        & $\vec{A}^2 = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & * & 0 \\ 0 & 0 & 0 & *}$\\
+        & \\
+        & The number of linearly independent columns in $\vec{A}^2$ is 2\\
+        & hence, $dim(Image(\vec{T}^2)) = dim(C(\vec{A}^2)) = 2 \neq 1$\\
+        & \\
+        & $\therefore$ This option is false.\\
+    \hline
+        & \\
+        4. $\vec{A} = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & * & * \\ 0 & 0 & * & *}$ & This option is false\\
+        & Counter example:\\
+        & For some non-zero $b,c \in \mathbb R$, let\\
+        & $\vec{A} = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & b & b \\ 0 & 0 & c & c}$\\
+        & \\
+        & The number of linearly independent columns in $\vec{A}$ is 1\\
+        & hence, $dim(Image(\vec{T})) = dim(C(\vec{A})) = 1 \neq 2$\\
+        & \\
+    \hline
+    \caption{Verifying with the options}
+    \label{eq:solutions/2015/june/31/tab:proof}
+\end{longtable}
+\twocolumn

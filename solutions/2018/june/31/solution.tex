@@ -1,0 +1,27 @@
+Given that
+\begin{align}
+    \lambda x^2+2xy+y^2 = (ax+by)^2+(cx+dy)^2
+    %\lambda x^2 + 2xy + y^2 =  (a^2+c^2)x^2 + 2(ab + cd)xy + (b^2+d^2)y^2
+    \intertext{Arranging this in form of a matrix,}
+    \myvec{x & y}\myvec{\lambda & 1 \\ 1 & 1}\myvec{x \\ y} = \myvec{x & y}\myvec{a^2 + c^2 & ab+cd \\ ab+cd & b^2+d^2}\myvec{x \\ y}
+\end{align}
+From this, we get
+\begin{align}
+    \lambda = a^2+c^2 \label{eq:solutions/2018/june/31/eq:oflambda}\\
+    ab+cd = 1\label{eq:solutions/2018/june/31/eq:abandcd}\\
+    b^2 + d^2 = 1\label{eq:solutions/2018/june/31/eq:bandd}
+    \intertext{Let}
+    \vec{u} = \myvec{a \\ c}\\
+    \vec{v} = \myvec{b \\ d}\\
+    \norm{\vec{u}}^2 = a^2 + c^2 = \lambda \label{eq:solutions/2018/june/31/eq:u}\\
+    \norm{\vec{v}}^2 = b^2 + d^2 = 1 \label{eq:solutions/2018/june/31/eq:v}
+    \intertext{Then,}
+    \vec{u}^T\vec{v} = \myvec{a & c}\myvec{b \\ d} = ab+cd = 1 \label{eq:solutions/2018/june/31/eq:uv}
+\end{align}
+Using the Cauchy-Schwartz Inequality, we get
+\begin{align}
+    |\vec{u}^T\vec{v}|^2 \leq \norm{\vec{u}}^2 \norm{\vec{v}}^2
+    \intertext{Now, substituing values from \eqref{eq:solutions/2018/june/31/eq:u}, \eqref{eq:solutions/2018/june/31/eq:v}, \eqref{eq:solutions/2018/june/31/eq:uv} above,}
+    \implies 1 \leq \lambda
+\end{align}
+So from the given options, option 2) $\lambda \geq 1$ is correct.

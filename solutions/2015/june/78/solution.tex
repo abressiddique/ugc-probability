@@ -1,0 +1,128 @@
+See Table \ref{eq:solutions/2015/june/78/table:2}
+
+{\textbf{Theorem 1.}}
+Let $\vec{A}_{m \times n}$ and $\vec{B}_{n \times k}$ be matrices such that the product $\vec{AB}$ is well defines. Then\\
+%Then rank($\vec{AB}$)$\leq$min( rank($\vec{A}$),rank($\vec{B}$) )\\
+\begin{align}
+    \mbox{rank}(\vec{AB})&\leq\mbox{min(rank}(\vec{A}),\mbox{rank}(\vec{B}))
+\end{align}
+Proof: Matrix $\vec{A}$ can be treated  as a linear transformation from $\mathbb{F}^n$ to $\mathbb{F}^m$.In that case rank of the matrix is the dimension of the image space of the transformation. If $\vec{T}$ is a linear
+transformation from $\vec{V}_1$ to $\vec{V}_2$ then clearly dim $\vec{T}(\vec{V}_1)\leq$ dim ($\vec{V}_1$).Hence rank($\vec{AB}$) $\leq$ rank($\vec{B}$). Since row rank and column rank of a matrix are equal,
+\begin{align}
+    \mbox{Therefore rank}(\vec{AB})&\leq\mbox{min(rank}(\vec{A}),\mbox{rank}(\vec{B}))\label{eq:solutions/2015/june/78/eq:rank_of_AB}
+\end{align}
+
+
+{\textbf{Explanation}}
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement&Solution\\
+\hline
+&\\
+1.&\\
+&\parbox{10cm}{\begin{align*}
+    \mbox{Let }\vec{u}&=\myvec{u_1\\u_2\\\vdots\\u_n}\\
+    \mbox{Let }\vec{B}&=\vec{u}\vec{u}^T\\
+    \therefore \vec{B}&=\myvec{u_1\\u_2\\\vdots\\u_n}\myvec{u_1&u_2&\dots&u_n}\\
+    \therefore \vec{B}&=\myvec{u_1^2&u_1u_2&\dots&u_1u_n\\
+    u_2u_1&u_2^2&\dots&u_2u_n\\
+    \vdots&\vdots&\ddots&\vdots\\
+    u_nu_1&u_nu_2&\dots&u_n^2}\\
+    \mbox{given that, }\vec{u}^T\vec{u}&=1\\
+    \therefore \vec{u}^T\vec{u}&=\myvec{u_1&u_2&\dots&u_n}\myvec{u_1\\u_2\\\vdots\\u_n}\\
+    \therefore \vec{u}^T\vec{u}&=u_1^2+u_2^2+\dots+u_n^2
+\end{align*}}\\
+&Since $\vec{u}$ is non-zero vector and $\vec{B}=\vec{u}\vec{u}^T$.\\
+&Hence $\vec{B}$ is a non-zero matrix.\\
+&Therefore Rank of $\vec{B}$ is at least 1.\\
+&From \eqref{eq:solutions/2015/june/78/eq:rank_of_AB}\\
+&\parbox{8cm}{\begin{align*}
+    \mbox{rank}(\vec{B})&\leq\mbox{min(rank}(\vec{u}),\mbox{rank}(\vec{u}^T))\\
+    \therefore\mbox{rank}(\vec{B})&\leq\mbox{min}(1,1)
+\end{align*}}\\
+&So Rank of $\vec{B}$ is at most 1.\\
+&Hence Rank of $\vec{B}$ is equal to 1.\\
+&Therefore $\vec{B}$ has n-1 eigenvalues equal to 0.\\
+&Since the trace of a matrix is equal to the sum of its eigen values.\\
+&We know that trace of $\vec{B}=u_1^2+u_2^2+\dots+u_n^2=1$\\
+&\parbox{10cm}{\begin{align*}
+    \therefore\mbox{Trace of }\vec{B}&=\lambda_1+\lambda_2+\dots+\lambda_{n-1}+\lambda_n\\
+    1&=0+0+\dots+\lambda_n\\
+    \therefore \lambda_n&=1
+\end{align*}}\\
+&Therefore the eigen values of $\vec{B}$ are $\lambda_1=0,\lambda_2=0,\dots,\lambda_{n-1}=0,\lambda_n=1$\\
+&Hence the characteristic polynomial for $\vec{B}=x^{n-1}(x-1)$\\
+&Since $\vec{A}=\vec{I}-2\vec{u}\vec{u}^T$\\
+&and we know the eigen values of $\vec{I}$ are $\lambda_1=1,\lambda_2=1,\dots,\lambda_{n-1}=1,\lambda_n=1$\\
+&and we know the eigen values of $\vec{u}\vec{u^T}$ are $\lambda_1=0,\lambda_2=0,\dots,\lambda_{n-1}=0,\lambda_n=1$\\
+&\parbox{14cm}{\begin{align}
+ \therefore\mbox{ The eigen values of }\vec{A}&=\lambda_1=1,\lambda_2=1,\dots,\lambda_{n-1}=1,\lambda_n=-1\label{eq:solutions/2015/june/78/eq:eigen_values_of_general_A}   
+\end{align}}\\
+\hline
+&\\
+Example&\\
+&\parbox{14cm}{\begin{align}
+    \mbox{Let }\vec{u}&=\myvec{1\\0\\0}\\
+    \mbox{then }\vec{u}^T&=\myvec{1&0&0}\\
+    \mbox{ which satisfies }\vec{u}^T\vec{u}&=1\\
+    \therefore \vec{u}\vec{u}^T&=\myvec{1&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Since }\vec{A}&=\vec{I}-2\vec{u}\vec{u}^T\\
+    \therefore \vec{A}&=\myvec{1&0&0\\0&1&0\\0&0&1}-2\myvec{1&0&0\\0&0&0\\0&0&0}\\
+    \therefore \vec{A}&=\myvec{-1&0&0\\0&1&0\\0&0&1}\\
+    \therefore \mbox{The eigen values of }\vec{A}&=\lambda_1=1,\lambda_2=1,\lambda_3=-1\\
+    \therefore \vec{A}^2&=\myvec{1&0&0\\0&1&0\\0&0&1}
+\end{align}}\\
+&\\
+\hline
+&\\
+Conclusion&From \eqref{eq:solutions/2015/june/78/eq:eigen_values_of_general_A}\\
+&Since $\vec{A}$ does not have 0 as an eigen value\\
+&Therefore $\vec{A}$ is not singular.\\
+&Therefore the statement is false.\\
+&\\
+\hline
+&\\
+2.&\\
+& For $\vec{A}^2=\vec{A}$ ,\\
+&we know that $p(x)=x^2-x$\\
+&$\therefore$ minimal polynomial of $\vec{A}$ must divide x(x-1)\\
+&$\therefore$ possible eigenvalues of $\vec{A}$ are 0 or 1\\
+&But from \eqref{eq:solutions/2015/june/78/eq:eigen_values_of_general_A} , we know that $\vec{A}$ has -1 as an eigen value\\
+&Therefore $\vec{A}^2=\vec{A}$ is false.\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
+&\\
+3.&\\
+& From equation \eqref{eq:solutions/2015/june/78/eq:eigen_values_of_general_A} ,\\
+&Trace of $\vec{A}=n-2$\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is true.\\
+&\\
+\hline
+&\\
+4.&\\
+&\parbox{8cm}{\begin{align*}
+    \mbox{Since }\vec{A}&=\vec{I}-2\vec{u}\vec{u}^T\\
+    \vec{A}^2&=(\vec{I}-2\vec{u}\vec{u}^T)(\vec{I}-2\vec{u}\vec{u}^T)\\
+    \therefore\vec{A}^2&=\vec{I}-2\vec{u}\vec{u}^T-2\vec{u}\vec{u}^T+4\vec{u}\vec{u}^T\vec{u}\vec{u}^T\\
+    \mbox{Since }\vec{u}^T\vec{u}&=1\\
+    \therefore\vec{A}^2&=\vec{I}-2\vec{u}\vec{u}^T-2\vec{u}\vec{u}^T+4\vec{u}\vec{u}^T\\
+    \therefore \vec{A}^2&=\vec{I}
+\end{align*}}\\
+\hline
+&\\
+Conclusion&Therefore the statement is true.\\
+&\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2015/june/78/table:2}
+\end{longtable}
+\twocolumn

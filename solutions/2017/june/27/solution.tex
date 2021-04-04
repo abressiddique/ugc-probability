@@ -1,0 +1,48 @@
+The nullspace is given by 
+\begin{align}
+	\myvec{1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0}\myvec{x\\y\\z\\w} = \myvec{0 \\ 0 \\ 0 \\ 0}
+\end{align}	
+Row reducing the above matrix we get,
+\begin{align}
+	\myvec{1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0}
+	\xleftrightarrow[R_2 \leftarrow R_2 \times -1]{R_2 \leftarrow R_2 - R_1}
+	\myvec{1 & 1 & 1 & 0 \\ 0 & 0 & 1 & -1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0}\\
+	\xleftrightarrow{R_1 \leftarrow R_1- R_2}
+	\myvec{1 & 1 & 0 & 1 \\ 0 & 0 & 1 & -1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0} \label{eq:solutions/2017/dec/27/eq:rref}
+\end{align}
+See Table \ref{eq:solutions/2017/dec/27/tab}
+
+\begin{table*}[!ht]
+	\begin{tabular}{|m{4.5cm}|l|}
+		\hline
+		&\\
+		dim(C$(\vec{A})) = 1$ 
+		& \textbf{False}. Because the number of pivot variables are 2 as obtained in \eqref{eq:solutions/2017/dec/27/eq:rref}\\
+		&\\
+		\hline
+		&\\
+		dim(C$(\vec{A})) = 2$
+		& \textbf{True}. Since the number of pivot variables are 2, the rank of $\vec{A}$ is 2.\\
+		&$\therefore dim(C(\vec{A})) = 2 \quad [\because dim(C(\vec{A})) = rank(\vec{A})]$ \\
+		&\\
+		\hline
+		&\\
+	     rank$(\vec{A}) = 1$
+		& \textbf{False}. Because the rank$(\vec{A}) = 2$, as the number of pivot variables are 2\\
+		&\\
+		\hline
+		&\\
+		$\vec{S}$ = $\cbrak{(1, 1, 1, 0), (1, 1, 0, 1)}$ is a basis of $N(\vec{A})$
+		& \textbf{False}. \\
+		& Let, \\
+		&  $\vec{u} = \myvec{1\\1\\1\\0}, \vec{v} = \myvec{1\\1\\0\\1}$\\ 
+		&Consider, \\
+		&$\myvec{1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0}\myvec{1\\1\\1\\0} = \myvec{3\\2\\0\\0} \not = \myvec{0\\0\\0\\0}$\\
+		& Similarly,\\
+		&$\myvec{1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1\\ 0 & 0 & 0 & 0\\0 & 0 & 0 & 0}\myvec{1\\1\\0\\1} = \myvec{2\\3\\0\\0} \not = \myvec{0\\0\\0\\0}$ \\
+		&Hence, the given vectors do not form the basis.\\
+		\hline
+	\end{tabular}
+\caption{}
+\label{eq:solutions/2017/dec/27/tab}
+\end{table*}

@@ -1,0 +1,80 @@
+See Table     \ref{eq:solutions/2014/dec/77/tab:proof}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+    \hline
+        & \\
+        1. $U \cap (V+W) \subset (U \cap V) + (U \cap W)$ & False.\\
+        &\\
+        & Counter Example:\\
+        & Let $\vec{u}_1 = (\vec{v}_1 + \vec{w}_1) \in U \cap (V+W)$ such that\\
+        & $(\vec{v}_1 + \vec{w}_1) \in U, \vec{v}_1 \in V, \vec{w}_1 \in W$\\
+        & \\
+        & But since $\vec{w}_1 \not\in V$, hence $\vec{v}_1 + \vec{w}_1 \not\in V$\\
+        & $\implies (\vec{v}_1 + \vec{w}_1) \not\in (U\cap V)$\\
+        & And since $\vec{v}_1 \not\in W$, hence $\vec{v}_1 + \vec{w}_1 \not\in W$\\
+        & $\implies (\vec{v}_1 + \vec{w}_1) \not\in (U\cap W)$\\
+        & Therefore, $(\vec{v}_1 + \vec{w}_1) \not\in (U\cap V) + (U \cap W)$\\
+        & \\
+        & There exists an element in LHS that does not belong to RHS.\\
+        & $\therefore U \cap (V+W) \not\subset (U \cap V) + (U \cap W)$\\
+        & \\
+    \hline
+        & \\
+        2. $U \cap (V+W) \supset (U \cap V) + (U \cap W)$ & Let $(\vec{u}_1 + \vec{u}_2) \in (U \cap V) + (U \cap W)$\\
+        & such that $\vec{u}_1 \in U \cap V$\\
+        & and $\vec{u}_2 \in U \cap W$\\
+        & $\implies \vec{u}_1 \in U, V$ and $\vec{u}_2 \in U,W$\\
+        & \\
+        & Since $\vec{u}_1 \in V, \vec{u}_2 \in W$\\
+        & $\implies (\vec{u}_1 + \vec{u}_2) \in (V+W)$\\
+        & And since $\vec{u}_1, \vec{u}_2 \in U$\\
+        & $\implies (\vec{u}_1 + \vec{u}_2) \in U$\\
+        & $\therefore (\vec{u}_1 + \vec{u}_2) \in U \cap (V+W)$\\
+        & So, $(\vec{u}_1 + \vec{u}_2) \in (U \cap V) + (U \cap W) \implies (\vec{u}_1 + \vec{u}_2) \in U \cap (V+W)$\\
+        & Hence, $U \cap (V+W) \supset (U \cap V) + (U \cap W)$\\
+        & \\
+        & The given option is true.\\
+        & \\
+    \hline
+        & \\
+        3. $(U \cap V) + W \subset (U+W) \cap (V+W)$ & Let $(\vec{u}_1 + \vec{w}_1) \in (U \cap V) + W$, such that\\
+        & $\vec{u}_1 \in (U \cap V)$ and $\vec{w}_1 \in W$\\
+        & Since, $\vec{u}_1 \in (U \cap V), \implies \vec{u}_1 \in U, V$\\
+        & \\
+        & Now, since $\vec{u}_1 \in U, \vec{w}_1 \in W$\\
+        & $(\vec{u}_1 + \vec{w}_1) \in (U+W)$\\
+        & And since, $\vec{u}_1 \in V, \vec{w}_1 \in W$\\
+        & $(\vec{u}_1 + \vec{w}_1) \in (V+W)$\\
+        & $\therefore (\vec{u}_1 + \vec{w}_1) \in (U+W) \cap (V+W)$\\
+        & \\
+        & Hence, $(\vec{u}_1 + \vec{w}_1) \in (U \cap V) + W \implies (\vec{u}_1 + \vec{w}_1) \in (U+W) \cap (V+W)$\\
+        & $(U \cap V) + W \subset (U+W) \cap (V+W)$\\
+        & \\
+        & The given option is true.\\
+        & \\
+    \hline
+        & \\
+        4. $(U \cap V) + W \supset (U+W) \cap (V+W)$ & False.\\
+        & \\
+        & Counter Example:\\
+        & Let $\vec{u}_1 = \vec{v}_1 + \vec{w}_1 \in U$\\
+        & $\vec{v}_1 \in V, \vec{w}_1 \in W$\\
+        & \\
+        & Then, since $\vec{v}_1 + \vec{w}_1 \in U \implies \vec{v}_1 + \vec{w}_1 \in U+W$\\
+        & And since, $\vec{v}_1 \in V, \vec{w}_1 \in W \implies \vec{v}_1 + \vec{w}_1 \in V+W$\\
+        & $\therefore \vec{v}_1 + \vec{w}_1 \in (U+W) \cap (V+W)$\\
+        & \\
+        & Now, since $\vec{w}_1 \not\in V \implies \vec{v}_1 + \vec{w}_1 \not\in V$\\
+        & $\implies \vec{v}_1 + \vec{w}_1 \not\in U \cap V$\\
+        & And since, $\vec{v}_1 \not\in W \implies \vec{v}_1 + \vec{w}_1 \not\in W$\\
+        & $\implies \vec{v}_1 + \vec{w}_1 \not\in (U \cap V) + W$\\
+        & \\
+        & There exists an element in RHS that does not exist in LHS\\
+        & $\therefore (U \cap V) + W \not\supset (U+W) \cap (V+W)$\\
+        & \\
+    \hline
+    \caption{Proving properties of subspaces of a vectorspace}
+    \label{eq:solutions/2014/dec/77/tab:proof}
+\end{longtable}
+\twocolumn

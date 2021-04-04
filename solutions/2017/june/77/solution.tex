@@ -1,0 +1,55 @@
+See Tables \ref{table:2017/june/77/0} and \ref{table:2017/june/77/1}
+\begin{table*}[!ht]
+\resizebox{\columnwidth}{!}
+{
+	\begin{tabular}{|l|l|}
+		\hline
+		\multirow{3}{*}{Positive Semi} & \\
+		& A $n \times n$ symmetric real matrix $\vec{M}$ is said to be positive semi definite if $\vec{x^TMx} \geq 0$ for all  \\
+		Definite Matrix	& non-zero $\vec{x}$ in $\mathbb{R}^n$. Formally\\
+		& \qquad \qquad  $\vec{M}$ is positive semi-definite $\xLeftrightarrow[]{}$ $\vec{x^TMx} \geq 0$ $\forall$ $\vec{x}$ $\in$ $\mathbb{R}^{n}\backslash\{0\}$\\
+		& \\
+		\hline
+		\multirow{3}{*}{Theorem} & \\
+		& For a symmetric $n \times n$ matrix $\vec{M}$ $\in$ $\vec{L(V)}$, following are equivalent.\\
+		& \qquad 1). $\vec{x^TMx} \geq 0$ $\forall$ $\vec{x}$ $\in$ $\vec{V}$.\\
+		& \qquad 2). All the eigenvalues of $\vec{M}$ are non-negative. \\
+		& \\
+		\hline
+\end{tabular}
+}
+\caption{Definition and Result used}
+\label{table:2017/june/77/0}
+\end{table*}	
+\begin{table*}[!ht]
+\resizebox{\columnwidth}{!}
+{
+	\begin{tabular}{|l|l|}
+		\hline
+		\multirow{3}{*}{Calculating eigen} & \\
+	     & Given \\
+values of $\vec{A}$	& \qquad \qquad \qquad  $\vec{A}= \myvec{3 & 1 &2 \\ 1 & 2 & 3 \\ 2 & 3 &1}$ \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad  \\
+         & Calculating, eigen values of $\vec{A}$, ie \\
+		 & \qquad \qquad \qquad det($\vec{A-\lambda I}) =0$ \\
+		 & \qquad \qquad  $\implies$ $\abs{\myvec{3-\lambda & 1 & 2 \\ 1 & 2-\lambda & 3 \\ 2 & 3 & 1-\lambda}} = 0$ \\
+		 & \qquad \qquad $\implies \brak{3-\lambda}\brak{(2-\lambda)(1-\lambda)-9} -1\brak{1-\lambda-6} + 2\brak{3-2(2-\lambda)} = 0$\\
+		 & \qquad \qquad $\implies \lambda^3 - 6\lambda^2 -3\lambda + 18 = 0$\\
+		 & \qquad \qquad $\implies \lambda_1 = 6$, $ \lambda_2 = \sqrt{3}$ and $\lambda_3 = -\sqrt{3}$\\
+		 & Hence, $\vec{A}$ has exactly two positive eigen values.  \\
+		 & \\
+		\hline
+		\multirow{3}{*}{Proving $\vec{x^TAx} < 0$} & \\
+		&  Suppose $\vec{x^TAx} \geq 0$ for all $\vec{x}$ $\in$ $\mathbb{R}^{3}$. Then, by theorem above in definition section, matrix $\vec{A}$ \\
+for some $\vec{x} \in \mathbb{R}^3$&  is positive semi definite. Hence, all the eigen values of $\vec{A}$      non-negative, but this is not the\\	
+using contradiction  & case as one of eigen value is $\lambda_3 = -\sqrt{3}$. So, $\vec{x^TAx} \geq 0$ is not true for all $\vec{x} \in \mathbb{R}^3$. \\
+		& Similarly, as $\lambda_i \leq 0 $,$\forall i$ is also not true, so $\vec{x^TAx} \leq 0$ is not true for all $\vec{x} \in \mathbb{R}^3$. \\
+		& Thus, $\vec{x^TAx} < 0$ for some $\vec{x} \in \mathbb{R}^3$. \\
+		& \\
+		\hline
+		\multirow{3}{*}{Correct Options} & \\
+		& Hence, correct options are $(1)$ and $(4)$.\\
+		& \\
+		\hline
+	\end{tabular}
+}
+\caption{Solution}\label{table:2017/june/77/1}\end{table*}	

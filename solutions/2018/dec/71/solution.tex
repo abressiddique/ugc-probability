@@ -1,0 +1,117 @@
+See Tables \ref{eq:solutions/2018/dec/71/table:1} and \ref{eq:solutions/2018/dec/71/table:2}
+
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+	\multirow{3}{*}{Characteristic Polynomial} 
+	& \\
+	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
+	&\\
+	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Cayley-Hamilton Theorem}
+    &\\
+    & If $p\brak{x}$ is the characteristic polynomial of an $n\times n$ matrix $\vec{A}$, then,\\
+    &\\
+    &$\qquad \qquad \qquad p\brak{\vec{A}}=\vec{0}$\\
+    &\\
+    \hline
+	\multirow{3}{*}{Minimal Polynomial} 
+	&\\
+	& Minimal polynomial $m\brak{x}$ is the smallest factor of\\
+	&characteristic polynomial $p\brak{x}$ such that,\\
+	&\\
+	& $\qquad \qquad \qquad m\brak{\vec{A}}=0$\\
+	& \\
+	& Every root of characteristic polynomial should be the root of\\
+	&minimal polynomial\\
+	&\\
+    \hline
+\end{tabular}
+    \caption{Definitions}
+\label{eq:solutions/2018/dec/71/table:1}
+\end{table*}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement&Solution\\
+\hline
+&\\
+1.&\\
+&Given that $\vec{T}:\mathbb{R}^n \rightarrow \mathbb{R}^n$\\
+&Since $\vec{T}$ is a linear map from $\mathbb{R}^n$ to $\mathbb{R}^n$ therefore the matrix\\
+&corresponding to it is of order $n \times n$.\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Since }\vec{T}^2&=\vec{T}-\vec{I}_{n}\\
+    \therefore\vec{T}^2-\vec{T}+\vec{I}_{n}&=\vec{0}
+\end{align*}}\\
+&$\implies p(x)=x^2-x+1$ will be annihilating polynomial.\\
+&$\therefore p(\vec{T})=\vec{T}^2-\vec{T}+\vec{I}_{n}=\vec{0}$\\
+&We know that minimal polynomial always divides annihilating polynomial.\\
+&$\therefore$ The roots of minimal polynomial are as follows:\\
+&\parbox{6cm}{\begin{align}
+    x&=\frac{1\pm\sqrt{3}i}{2}\label{eq:solutions/2018/dec/71/eq:root}
+\end{align}}\\
+&Therefore any eigenvalue of $\vec{T}$ is a root of its minimal polynomial.\\
+&Since 0 is not a root of p(x), Therefore 0 is not an eigen value for $\vec{T}$.\\
+&Since $\vec{T}$ is not invertible iff there exists an eigen value which is zero.\\
+&\parbox{6cm}{\begin{align}
+    \therefore\vec{T}\mbox{ is invertible.}
+\end{align}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is true.\\
+&\\
+\hline
+&\\
+2.&\\
+& From equation \eqref{eq:solutions/2018/dec/71/eq:root} ,\\
+&Since 1 is not a root of p(x), Therefore 1 is not an eigen value for $\vec{T}$.\\
+&Therefore, 0 is not an eigen values of  $\vec{T}-\vec{I}_{n}$.\\
+&\parbox{6cm}{\begin{align}
+    \therefore\vec{T}-\vec{I}_{n}\mbox{ is invertible.}
+\end{align}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+3.&\\
+& From equation \eqref{eq:solutions/2018/dec/71/eq:root} ,\\
+&Therefore any eigenvalue of $\vec{T}$ is a root of its minimal polynomial.\\
+&But the roots of minimal polynomial are not real.\\
+&Therefore $\vec{T}$ cant have a real eigen value.\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
+&\\
+4.&\\
+&\parbox{6cm}{\begin{align}
+    \mbox{Since }\vec{T}^2&=\vec{T}-\vec{I}_{n}\\
+    \vec{T}^3&=\vec{T}(\vec{T}-\vec{I}_{n})\\
+    \therefore\vec{T}^3&=\vec{T}^2-\vec{T}\\
+    \therefore \vec{T}^3&=-\vec{I}_{n}\label{eq:solutions/2018/dec/71/eq:T_cube}
+\end{align}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is true.\\
+&\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2018/dec/71/table:2}
+\end{longtable}
+\twocolumn

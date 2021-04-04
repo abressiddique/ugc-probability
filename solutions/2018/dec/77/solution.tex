@@ -1,0 +1,77 @@
+See Tables \ref{eq:solutions/2018/dec/77/deftab}
+, \ref{eq:solutions/2018/dec/77/obs}
+and \ref{eq:solutions/2018/dec/77/sol}.
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Subspace}&A non-empty subset $\vec{W}$ of $\vec{V}$ is a subspace of $\vec{V}$ if and only if for each pair of vectors $\vec{\alpha}$,\\& $\vec{\beta}$ in $\vec{W}$ and each scalar $c$ in $\vec{F}$ the vector $c\vec{\alpha}+\vec{\beta}$ is again in $\vec{W}$.\\
+\hline
+\caption{Definitions and theorem used}
+\label{eq:solutions/2018/dec/77/deftab}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Statement}&\textbf{Observations}\\
+\hline
+Given&\parbox{15cm}{\begin{align}
+    \vec{W}&=\cbrak{\vec{v}\in\mathbb{R}^2:\vec{B}(\vec{v_0},\vec{v})=0}\label{eq:solutions/2018/dec/77/W}\\
+    \vec{v}&=\myvec{x_1\\x_2}\label{eq:solutions/2018/dec/77/v}\\
+    \vec{w}&=\myvec{y_1\\y_2}\label{eq:solutions/2018/dec/77/w}\\
+    \vec{v_0}&=\myvec{1\\0}\label{eq:solutions/2018/dec/77/v0}\\
+    \vec{B}(\vec{v},\vec{w})&=x_1y_1-x_1y_2-x_2y_1+4x_2y_2\label{eq:solutions/2018/dec/77/B}
+\end{align}}\\&we will express \eqref{eq:solutions/2018/dec/77/B} in quadratic form.\\&\parbox{15cm}{\begin{align}
+    \vec{B}(\vec{v},\vec{w})=\vec{v}^T\myvec{1&-1\\-1&4}\vec{w}\label{eq:solutions/2018/dec/77/Bq}
+\end{align}}\\&From \eqref{eq:solutions/2018/dec/77/v}, \eqref{eq:solutions/2018/dec/77/v0}, \eqref{eq:solutions/2018/dec/77/Bq} we will calculate $\vec{B}(\vec{v_0},\vec{v})$\\&\parbox{15cm}{\begin{align}
+    \implies\vec{B}(\vec{v_0},\vec{v})&=\vec{v_0}^T\myvec{1&-1\\-1&4}\vec{v}\\
+    \implies\vec{B}(\vec{v_0},\vec{v})&=\myvec{1&0}\myvec{1&-1\\-1&4}\myvec{x_1\\x_2}\\
+    \implies\vec{B}(\vec{v_0},\vec{v})&=\myvec{1&-1}\myvec{x_1\\x_2}\label{eq:solutions/2018/dec/77/Bv0}
+\end{align}}\\&Now we find the basis vector for $\vec{W}$, which is the basis vector of null space of $\vec{B}(\vec{v_0},\vec{v})$.\\&\parbox{15cm}{\begin{align}
+    \implies&\vec{B}(\vec{v_0},\vec{v})=0\\
+    \implies&\myvec{1&-1}\myvec{x_1\\x_2}=0\\
+    \implies&\myvec{1&-1}\myvec{x_1\\x_2}=0\\
+    \implies&x_1=x_2
+\end{align}}\\&Therefore, the basis vector for $\vec{W}$ is\\&\parbox{15cm}{\begin{align}
+    \vec{b}=\myvec{1\\1}\label{eq:solutions/2018/dec/77/basis}
+\end{align}}\\&Therefore\\&\parbox{15cm}{\begin{align}
+    \vec{W}=\cbrak{k\vec{b}:\forall k\in\mathbb{R}}\label{eq:solutions/2018/dec/77/Wkb}
+\end{align}}\\
+\hline
+\caption{Observations}
+\label{eq:solutions/2018/dec/77/obs}
+\end{longtable}
+\begin{longtable}{|l|l|l|}
+\hline
+\endhead
+\textbf{Option}&\textbf{Solution}&\textbf{True/False}\\
+\hline
+1.&Now we will see whether $\vec{W}$ is a subspace or not.&\\&Let $\vec{\alpha}$,$\vec{\beta}$ be two pair of vectors in $\vec{W}$ where&\\&\parbox{13cm}{\begin{align}
+    \vec{\alpha}=m\vec{b}\\
+    \vec{\beta}=n\vec{b}
+\end{align}}&\\& Here $m$,$n\in\mathbb{R}$ and now we will see whether the vector $c\vec{\alpha}+\vec{\beta}$ is in $\vec{W}$ or &\\&not where c is a scalar value in $\mathbb{R}$.&\\
+&Here&\\&\parbox{13cm}{\begin{align}
+    &c\vec{\alpha}+\vec{\beta}=cm\vec{b}+n\vec{b}\\
+    \implies &c\vec{\alpha}+\vec{\beta}=(cm+n)\vec{b}\label{eq:solutions/2018/dec/77/p1}
+\end{align}}&\\&From \eqref{eq:solutions/2018/dec/77/p1}, $(cm+n)\in\mathbb{R}$ and we can say that the vector $c\vec{\alpha}+\vec{\beta}\in\vec{W}$.&\\&Therefore, $\vec{W}$ is a subspace of $\mathbb{R}^2$&\\
+\hline
+2.&From Table \ref{eq:solutions/2018/dec/77/obs}, we got $\vec{W}$ contains the vectors which are all linear &\\&combination of basis vector $\vec{b}$ as shown in \eqref{eq:solutions/2018/dec/77/Wkb}.&\\&Therefore,&False\\&\parbox{13cm}{\begin{align}
+    \vec{W}\neq\cbrak{(0,0)}
+\end{align}}&\\
+\hline
+3.&Let us consider a vector on y-axis&\\&\parbox{13cm}{\begin{align}
+    \vec{p}=\myvec{3\\0}
+\end{align}}&\\&Here&\\&\parbox{13cm}{\begin{align}
+    \vec{p}\neq k\vec{b}
+\end{align}}&False\\&for any $k\in\mathbb{R}$&\\&The vector $\vec{p}$ can not be written in terms of the basis vector $\vec{b}$. Then $\vec{p}\not\in\vec{W}.$&\\&Therefore, the vectors in $\vec{W}$ is not y-axis.&\\
+\hline
+4.&There is only one basis vector $\vec{b}$ for $\vec{W}$. Therefore the vectors in $\vec{W}$ forms &\\&a straight line in vector space $\mathbb{R}^2$.&\\&Since,&\\&\parbox{13cm}{\begin{align}
+    \myvec{0\\0}=0\vec{b}\\
+    \myvec{1\\1}=1\vec{b}
+\end{align}}&True\\&Therefore, the line passes through (0,0) and (1,1).&\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2018/dec/77/sol}
+\end{longtable}
+\twocolumn

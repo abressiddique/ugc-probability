@@ -1,0 +1,41 @@
+
+The PDF is given by
+\begin{align}
+   &f_X (x)=f_Y (x)=\nonumber \begin{cases}
+         \frac{1}{4}, &\text{if 0 \(< x <\) 4}\\
+         0, &\text{otherwise}\\
+   \end{cases} 
+\end{align}    
+The CDF is given by
+\begin{align}
+   \nonumber& F(x)=\int_{-\infty}^{x} f(x)dx \\ \nonumber
+   &F_X (x)=F_Y (x)=\nonumber \begin{cases}
+          0, & x\leq 0\\
+         \frac{x}{4}, &\text{if 0 \(< x <\) 4}\\
+          1, &x\geq4\\
+   \end{cases}    
+\end{align}
+Using definition of conditional probability 
+\begin{align}
+    &\pr{X>Y|X<2Y}=\frac{\pr{Y < X< 2Y}}{\pr{X<2Y}} \label{eqn1}
+\end{align}
+Now finding \pr{X<2Y}
+\begin{align}
+    &\pr{X<2y}=F_X (2y)\\
+    \implies& \pr{X<2Y}=\int_{-\infty}^{\infty} f_Y(x) \times F_X (2x)dx\\
+    \implies& \pr{X<2Y}=\int_{0}^{2} \frac{x}{8}dx +\int_{2}^{4}\frac{1}{4}dx\\
+    \implies& \pr{X<2Y}=\frac{3}{4}=0.75 \label{eqn2}
+\end{align}
+Now to find \pr{Y<X<2Y}
+\begin{align}
+    &\pr{y<X<2y}=F_X (2y)- F_X (y) \\
+    \implies &\pr{Y<X<2Y}\\ \nonumber 
+    &=\int_{-\infty}^{\infty} f_Y (x)( F_X (2x)- F_X(x))dx \\
+   \implies &\int_{0}^{2}\frac{1}{4}\brak{\frac{x}{2}-\frac{x}{4}} dx +\int_{2}^{4}\frac{1}{4}\brak{1-\frac{x}{4}} dx\\
+   \implies &\pr{Y<X<2Y}=\frac{1}{4}=0.25 \label{eqn3}
+\end{align}
+Now using \eqref{eqn1},\eqref{eqn2} and \eqref{eqn3}
+\begin{align}
+    \pr{X>Y|X<2Y}=\frac{1/4}{3/4}=\frac{1}{3}
+\end{align}
+Hence final solution is option 1) or 1/3 

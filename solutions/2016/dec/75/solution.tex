@@ -1,0 +1,109 @@
+See Table \ref{eq:solutions/2016/dec/75/table:1}
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\text{Given} &
+\text{$\vec{P}$ and $\vec{Q}$ are invertible matrices}. \\
+& \text{Therefore $\vec{P}^{-1}$ and $\vec{Q}^{-1}$ exists}.\\
+& \parbox{10cm}{\begin{align}
+    \vec{P}\vec{Q} =-\vec{Q}\vec{P} \label{eq:solutions/2016/dec/75/given1}
+\end{align}}
+\\ [0.5ex]
+\hline
+\text{To Prove} & \text{Tr($\vec{P}$)=0}\\
+\hline
+\text{Proof 1} &
+\text{Post multiplying equation \eqref{eq:solutions/2016/dec/75/given1} by $\vec{Q}^{-1}$ we get,} \\
+& \parbox{10cm}{\begin{align}
+    \vec{P}\vec{Q}\vec{Q}^{-1}&=-\vec{Q}\vec{P}\vec{Q}^{-1}\\
+    \implies \vec{P}\vec{I}&=-\vec{Q}\vec{P}\vec{Q}^{-1}\\
+    \implies \vec{P}&=-\vec{Q}\vec{P}\vec{Q}^{-1}\label{eq:solutions/2016/dec/75/p11}
+\end{align}} \\
+& Taking trace on both sides for the equation \eqref{eq:solutions/2016/dec/75/p11}, \\
+& \parbox{10cm}{\begin{align}
+    Tr(\vec{P})&=Tr(-\vec{Q}\vec{P}\vec{Q}^{-1})\\
+    \implies Tr(\vec{P})&=-Tr(\vec{Q}\vec{P}\vec{Q}^{-1})\label{eq:solutions/2016/dec/75/p12}
+\end{align}} \\
+& \text{We know that Tr($\vec{A}\vec{B}$)=Tr($\vec{B}\vec{A}$)}
+\\
+& \text{Let $\vec{A}$=$\vec{Q}$ and $\vec{B}$=$\vec{P}\vec{Q}^{-1}$}\\
+\hline
+& \text{From the above property of trace equation \eqref{eq:solutions/2016/dec/75/p12} can be modified as}\\
+&\parbox{10cm}{\begin{align}
+    Tr(\vec{P})&=-Tr(\vec{P}\vec{Q}^{-1}\vec{Q})\\
+    \implies Tr(\vec{P})&=-Tr(\vec{P}\vec{I})\\
+    \implies Tr(\vec{P})&=-Tr(\vec{P})\label{eq:solutions/2016/dec/75/c3}\\
+    \implies 2Tr(\vec{P})&=0\\
+    \implies Tr(\vec{P})&=0\label{eq:solutions/2016/dec/75/pf}
+\end{align}}\\
+\hline
+\text{To Prove} & \text{Tr($\vec{Q}$)=0}\\
+\hline
+\text{Proof 2} &
+\text{Post multiplying equation \eqref{eq:solutions/2016/dec/75/given1} by $\vec{P}^{-1}$ we get,} \\
+& \parbox{10cm}{\begin{align}
+    \vec{P}\vec{Q}\vec{P}^{-1}&=-\vec{Q}\vec{P}\vec{P}^{-1}\\
+    \implies \vec{P}\vec{Q}\vec{P}^{-1}&=-\vec{Q}\vec{I}\\
+    \implies \vec{P}\vec{Q}\vec{P}^{-1}&=-\vec{Q}\label{eq:solutions/2016/dec/75/p21}
+\end{align}} \\
+& Taking trace on both sides for the equation \eqref{eq:solutions/2016/dec/75/p21}, \\
+& \parbox{10cm}{\begin{align}
+    Tr(\vec{P}\vec{Q}\vec{P}^{-1})&=Tr(-\vec{Q})\\
+    \implies Tr(\vec{P}\vec{Q}\vec{P}^{-1})&=-Tr(\vec{Q})\label{eq:solutions/2016/dec/75/p22}
+\end{align}} \\
+& \text{We know that Tr($\vec{A}\vec{B}$)=Tr($\vec{B}\vec{A}$)}
+\\
+& \text{Let $\vec{A}$=$\vec{P}$ and $\vec{B}$=$\vec{Q}\vec{P}^{-1}$}\\
+& \text{From the above property of trace equation \eqref{eq:solutions/2016/dec/75/p22} can be modified as}\\
+&\parbox{10cm}{\begin{align}
+    Tr(\vec{Q}\vec{P}^{-1}\vec{P})&=-Tr(\vec{Q})\\
+    \implies Tr(\vec{Q}\vec{I})&=-Tr(\vec{Q})\\
+    \implies Tr(\vec{Q})&=-Tr(\vec{Q})\\
+    \implies 2Tr(\vec{Q})&=0\\
+    \implies Tr(\vec{Q})&=0\label{eq:solutions/2016/dec/75/qf}
+\end{align}}\\
+\hline
+\text{\textbf{Statement 1}} & \text{Tr($\vec{P}$)=Tr($\vec{Q}$)=0}\\
+\hline
+\text{Explanation} & From equation \eqref{eq:solutions/2016/dec/75/pf} and \eqref{eq:solutions/2016/dec/75/qf} we could say that,\\
+&\parbox{10cm}{\begin{align}
+     Tr(\vec{P})=Tr(\vec{Q})=0 \label{eq:solutions/2016/dec/75/co1}
+     \end{align}}\\
+& \parbox{10cm}{\begin{center}
+Valid Conclusion
+\end{center}}\\
+\hline
+\text{\textbf{Statement 2}} & \text{Tr($\vec{P})=Tr(\vec{Q})=1$}\\
+\hline
+\text{Explanation} & From equation \eqref{eq:solutions/2016/dec/75/pf} and \eqref{eq:solutions/2016/dec/75/qf} we could say that,\\
+&\parbox{10cm}{\begin{align}
+     Tr(\vec{P})=Tr(\vec{Q})\neq 1
+     \end{align}}\\
+& \parbox{10cm}{\begin{center}
+Invalid Conclusion
+\end{center}}\\
+\hline
+\text{\textbf{Statement 3}} & \text{Tr($\vec{P})=-Tr(\vec{Q})$}\\
+\hline
+\text{Explanation} & Substituting the conclusion 1 result equation \eqref{eq:solutions/2016/dec/75/co1} in equation \eqref{eq:solutions/2016/dec/75/c3} we get,\\
+&\parbox{10cm}{\begin{align}
+     Tr(\vec{P})=-Tr(\vec{Q})
+     \end{align}}\\
+\hline
+& \parbox{10cm}{\begin{center}
+Valid Conclusion
+\end{center}}\\
+\hline
+\text{\textbf{Statement 4}} & \text{Tr($\vec{P}) \neq Tr(\vec{Q})$}\\
+\hline
+\text{Explanation} & From equation \eqref{eq:solutions/2016/dec/75/pf} and \eqref{eq:solutions/2016/dec/75/qf} we could say that,\\
+&\parbox{10cm}{\begin{align}
+     Tr(\vec{P})=Tr(\vec{Q})
+     \end{align}}\\
+& \parbox{10cm}{\begin{center}
+Invalid Conclusion
+\end{center}}\\
+\hline
+\caption{Explanation with Proofs}
+\label{eq:solutions/2016/dec/75/table:1}
+\end{longtable}

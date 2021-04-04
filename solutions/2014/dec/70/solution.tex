@@ -1,0 +1,70 @@
+\begin{align}
+    \vec{<Ax,Ay>}&= \vec{\brak{Ax}^T Ay} \\
+    &=\vec{ x^T A^T Ay}\\
+    &= \vec{x^T y} \quad\because \vec{A^TA = I}\\
+    &= \vec{<x,y>}
+\end{align}
+Hence, option 1 is correct.
+\subsection{Option 2}
+Let $\lambda$ be the eigen value and $\vec v$ be the eigen vector corresponding to it.\\
+Then,
+\begin{align}
+    &\vec{Av} = \lambda\vec v\\
+    \implies & \norm{\vec{Av}}^2 = \norm{\lambda\vec v}^2\\
+    \implies & \norm{\vec{Av}}^2 = \abs{\lambda}^2 \norm{\vec v}^2 \label{eq:solutions/2014/dec/70/eq:1}
+\end{align}
+Now,
+\begin{align}
+    \norm{\vec{Av}}^2 &= \brak{\vec{Av}}^T \vec{Av}\\
+    &= \vec{v ^TA^TAv} \\
+    &= \vec{v^TIv}\\
+    &=\vec{v^Tv}\\
+    &=\norm{\vec v}^2 \label{eq:solutions/2014/dec/70/eq:2}
+\end{align}
+Comparing \eqref{eq:solutions/2014/dec/70/eq:1} and \eqref{eq:solutions/2014/dec/70/eq:2}, we get, 
+\begin{align}
+    \abs{\lambda}^2 =1 \\
+    \implies\abs{\lambda}= \pm 1
+\end{align}
+But $\abs{\lambda}$ cannot be -1.
+\begin{align}
+    \therefore \abs{\lambda}=1\\
+    \implies \lambda = \pm 1
+\end{align}
+Thus, option 2 is correct.
+\subsection{Option 3}
+Let $\vec{r_1, r_2, ..., r_n}$ denote the row vectors of $\vec A$.\\
+Then, 
+\begin{align}
+    \vec{AA^T} = \myvec{\vec{r_1^Tr_1} & \vec{r_1^T r_2} & ... & \vec{r_1^Tr_n}\\ . & . &... & .\\ . & . &... & .\\. & . &... & .\\ \vec{r_n^Tr_1} & \vec{r_n^Tr_2} & ... & \vec{r_n^T r_n}} \label{eq:solutions/2014/dec/70/eq:3}
+\end{align}
+But, $\vec A $ is orthogonal. So, $\vec {AA^T = I}$. It therefore follows that
+\begin{enumerate}
+    \item All diagonal elements of \eqref{eq:solutions/2014/dec/70/eq:3} are 1.
+    \item All off- diagonal elements of \eqref{eq:solutions/2014/dec/70/eq:3} are 0.
+\end{enumerate}
+That is, for all $i, j =1, 2, ..., n $, 
+\begin{align}
+    \vec{r_i^T r_j} &= 1 ,\quad  i=j\\
+    &= 0 , \quad i\neq j
+\end{align}
+Therefore, $\vec{r_1, r_2, ... r_n}$ are orthonormal and form a basis of $\vec R^n$.\\
+Hence, option 3 is correct.
+\subsection{Option 4}
+Counter Example:\\
+Let us consider a matrix  in $ \vec R^2 $
+\begin{align}
+    \vec Q= \myvec{ 0 & 1 \\-1 & 0}\\
+    \therefore \vec Q^T =\myvec{ 0 & -1\\1 & 0}
+\end{align}
+Check that $\vec{AA^T= I},  \therefore \vec Q$ is orthogonal. \\
+The characteristic equation is:
+\begin{align}
+    &\mydet{\vec Q- \lambda\vec I}=0\\
+    \implies & \mydet{-\lambda & 1\\ -1 & -\lambda}=0\\
+    \implies & \lambda^2 + 1 = 0\\
+    \implies & \lambda= \pm i \notin \vec R
+\end{align}
+which implies $\vec Q$ is not diagonalizable over $\vec R$.\\
+
+Hence, we can conclude that option 1, 2 and 3 are correct.

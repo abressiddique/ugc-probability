@@ -1,0 +1,32 @@
+{\em Property of eigen values of A: }
+%\label{eq:solutions/2017/dec/30/section:prop}
+Let $\vec{A}$ be an arbitary $n\times n$ matrix of complex numbers with eigen values $\lambda_1,\lambda_2,\hdots,\lambda_n$. Then  the eigen values of k\textsuperscript{th} power of $\vec{A}$, that is the eigen values of $\vec{A}^k$, for any positive integer k are $\lambda_1^k,\lambda_2^k,\hdots,\lambda_n^k$.
+Let us calculate the eigen values of $\vec{A}$.
+\begin{align}
+\vec{A}=\myvec{0&1\\-1&1}\\
+\det({\vec{A}-\lambda\vec{I}})=0\\
+\mydet{-\lambda&1\\-1&1-\lambda}=0\\
+-\lambda(1-\lambda)+1=0\\
+\lambda^2-\lambda+1=0\\
+\implies \lambda=\frac{-1\pm \sqrt{3}i}{2}
+\end{align}
+From the above property,
+%\ref{eq:solutions/2017/dec/30/section:prop}, 
+the eigen values of $\vec{A}^n$ are $\lambda^n$. Also as it is given that $\vec{A}^n=\vec{I}$, 
+\begin{align}
+\implies \lambda^n=1\\
+\implies \brak{\frac{-1\pm \sqrt{3}i}{2}}^n=1
+\end{align}
+Clearly $n\ne 1$. For $n=2$,
+\begin{align}
+\brak{\frac{-1\pm \sqrt{3}i}{2}}^2=\frac{-1\mp \sqrt{3}i}{2}
+\end{align}
+For $n=4$,
+\begin{align}
+\brak{\frac{-1\pm \sqrt{3}i}{2}}^4=\frac{-1\pm \sqrt{3}i}{2}
+\end{align}
+For $n=6$,
+\begin{align}
+\brak{\frac{-1\pm \sqrt{3}i}{2}}^6=1
+\end{align}
+Hence $n=6$ is the smallest positive integer.

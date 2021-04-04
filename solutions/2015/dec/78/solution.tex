@@ -1,0 +1,55 @@
+Two matrix are said to be similar if their eigen values are same.\\ Eigen value of $\vec{A}$ is given as:
+\begin{align}
+ \myvec{2 - \lambda & 2 & 1 \\0 & 2-\lambda & -1 \\ 0 & 0 & 3-\lambda} = 0\\
+ \implies -{\lambda}^3+7{\lambda}^2 -16\lambda +12 = 0\\
+\implies \lambda_1  = 2, \lambda_2 = 2, \lambda_3 = 3. \label{eq:solutions/2015/dec/78/2.3}\\
+ \intertext{Similarally, eigen values of $\vec{B}$ is givem as:}
+\myvec{2 - \lambda & 1 0 \\ 0 & 2 - \lambda & 0 \\ 0 & 0 & 3 - \lambda}\\
+\implies -{\lambda}^3+7{\lambda}^2 -16\lambda +12 = 0\\
+\implies \lambda_1  = 2, \lambda_2 = 2, \lambda_3 = 3.
+\end{align}
+Hence, matrices  $\vec{A}$ and $\vec{B}$ are similar.
+Matrix $\vec{A}$ is diagonalizable if and only if there is a basis of $\mathbb{R}^3$ consisting of eigenvectors of $\vec{A}$.
+
+From \eqref{eq:solutions/2015/dec/78/2.3} , our eigenvalues for $\vec{A}$ are,
+\begin{align}
+\lambda_1 = \lambda_2 = 2 \intertext{and,} \lambda_3 = 3 .
+\end{align}
+ Hence  $\lambda_1 = \lambda_2 $ is a repeated root with multiplicity two. Hence, We can get only two linearly independent eigenvectors for $\vec{A,}$ are given  as :
+ \begin{align}
+ \myvec{1 \\ 0 \\ 0} \textit{and,} \myvec{-1 \\ -1 \\ 1}
+ \end{align}
+But any basis for $\mathbb{R}^3$ consists of three vectors. Therefore there is no third eigenbasis for $\vec{A}$, hence $\vec{A}$ is not diagonalizable.
+From \eqref{eq:solutions/2015/dec/78/2.3} we have eigenvalue $\lambda_1 = 2 $ with geometic multiplicity 2. Hence the Jordon canonical form of $\vec{A}$ can be written as :
+\begin{align}
+\vec{J}_\vec{A} = \myvec{2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3}
+\end{align}
+Hence $\vec{B}$ is the Jordan canonical form of $\vec{A}$.
+ From \eqref{eq:solutions/2015/dec/78/2.3}, the characteristic polynomial of this matrix is: 
+ \begin{align}
+f(\lambda) = -{\lambda}^3+7{\lambda}^2 -16\lambda +12 = (\lambda - 2)^2 (\lambda - 3)
+ \end{align}
+ Minimal polynomial for a matrix is a smallest polynomial for which
+ \begin{align}
+ M_{\vec{A}}(x) = 0 \label{eq:solutions/2015/dec/78/2.4.1}
+ \end{align}
+ Using \eqref{eq:solutions/2015/dec/78/2.4.1}, we found minimal polynomial of $\vec{A}$ is :
+ \begin{align}
+ M_{\vec{A}}(x) = (x-2)^2(x-3) \label{eq:solutions/2015/dec/78/2.4.2}
+ \end{align}	
+ We can relate the minimal polynomial with the size of Jordan block.\\\\
+ 
+\textbf{Size of Jordan block $=$ degree of minimal polynomial with geometic multiplicity of the eigen values.}\\\\
+From \eqref{eq:solutions/2015/dec/78/2.4.2} we can observe that, geometric multiplicity of eigen value 2 is 2. Hence size of Jordan block is 2. which is given as:
+\begin{align}
+\myvec{2 & 1 \\ 0 & 2 }
+\end{align}
+if geometric multiplicity of $\lambda = 2$ would be 3, then Jordan block would be:
+\begin{align}
+\myvec{2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 &2}
+\end{align}
+In \eqref{eq:solutions/2015/dec/78/2.4.2} geometric multiplicity of eigen value 2 is 2, and geometric multiplicity of eigen value 3 is one hence jardon block is:
+\begin{align}
+\myvec{2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3}
+\end{align}
+

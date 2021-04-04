@@ -1,0 +1,134 @@
+See Tables     \ref{eq:solutions/2015/june/71/table:1}
+and     \ref{eq:solutions/2015/june/71/table:2}.
+
+\onecolumn
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Proof 1}	& \\
+	&Let $\vec{A}x$=0 and $\mathbb{N(\vec{A})}$ is the null space of $\vec{A}$\\
+	&\\
+	$Rank(\vec{A})=Rank(\vec{A}^T\vec{A})$&Then $\vec{A}^T\vec{A}$x=0 which means $\mathbb{N(\vec{A})}\subset \mathbb{N(\vec{A}^T\vec{A})}$ \\
+	&\\
+	&Thus if $\vec{A}^T\vec{A}$x=0 ,then\\
+	&\\
+	&$x^T\vec{A}^T\vec{A}x=0\implies\lVert\vec{A}x\rVert=0$\\
+	&\\
+	&Which means $\vec{A}x=0$ thus\\
+	&\\
+	& $\mathbb{N(\vec{A}^T\vec{A})}\subset\mathbb{N(\vec{A})}$\\
+	&\\
+	&From the Above two condition we can say that ${N(\vec{A}^T\vec{A})}=\mathbb{N(\vec{A})}$\\
+	&\\
+	&$rank(\vec{A})=n-\mathbb{N(\vec{A})}$\\
+	&\\
+	&$rank(\vec{A})=rank(\vec{A}^T\vec{A})$\\
+	&\\
+	&Hence Proved.\\
+	&\\
+	\hline
+	\multirow{3}{*}{Proof 2} 
+	&\\
+	&Suppose $\vec{A}=\myvec{\vec{a_1}&\hdots&\vec{a_n}}$ where $\vec{a_i}$ is the column vector of $\vec{A}$\\
+	&\\
+	Rowspace$(\vec{A}^T\vec{A})$=Rowspace($\vec{A}$) & $\vec{A}^T\vec{A}=\vec{A}^T\myvec{\vec{a_1}&\hdots&\vec{a_n}}=\myvec{\vec{A}^T\vec{a_1}&\hdots\vec{A}^T\vec{a_n}}$\\
+	&\\
+	&For each column of $\vec{A}^T\vec{A}$\\
+	&\\
+	&$\vec{A}^T\vec{a_i}=\myvec{\vec{b_1}&\hdots\vec{b_n}}\vec{a_i}$where $\vec{b_i}$ is the column vector of $\vec{A}^T$ and Row of $\vec{A}$\\
+	&\\
+	&$=\myvec{\vec{b_1}&\hdots\vec{b_n}}\myvec{a_{i1}\\ \vdots \\a_{in}}=\sum_{j=1}^{n}a_{ij}b_j$\\
+	&\\
+	&So column of $\vec{A}^T\vec{A}$ is the linear combination of rows of $\vec{A}$.\\
+	&\\
+	&Since rank$(\vec{A}^T)$=rank$(\vec{A})$ so,\\
+	&\\
+	&Row$(\vec{A}^T\vec{A})=$Column$(\vec{A}^T\vec{A})$=Row$(\vec{A})$\\
+	&\\
+	&Hence Proved.\\
+
+	&\\
+\hline
+  
+    \caption{Proofs}
+    \label{eq:solutions/2015/june/71/table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Option 1} & \\
+	&From Proof 2,Set $S$ contained a set of matrix whose First Column is Non-zero. \\ 
+    & \\
+    Nilpotent Matrix check&$S\in$ Set$\myvec{1&0&0\\0&0&0\\0&0&0}$,$\myvec{0&0&0\\1&0&0\\0&0&0}$,$\myvec{0&0&0\\0&0&0\\1&0&0}$\\
+    &\\
+    &Given $\vec{A}^T\vec{A}=\myvec{1&0&0\\0&0&0\\0&0&0}$\\
+    &\\
+    &So the only matrix $\vec{A}$ which satisfy $\vec{A}^T\vec{A}=\myvec{1&0&0\\0&0&0\\0&0&0}$, $\vec{A}^2=0$ such that $\vec{A}\in S$\\
+    &\\
+    &$\vec{A}=\myvec{0&0&0\\1&0&0\\0&0&0}\in S$\\
+    &\\
+    &$\vec{A}^T\vec{A}=\myvec{0&1&0\\0&0&0\\0&0&0}\myvec{0&0&0\\1&0&0\\0&0&0}=\myvec{1&0&0\\0&0&0\\0&0&0}$\\
+    
+    &\\
+    &$\vec{A}^2=\myvec{0&0&0\\1&0&0\\0&0&0}\myvec{0&0&0\\1&0&0\\0&0&0}=\myvec{0&0&0\\0&0&0\\0&0&0}$ which is a nilpotent matrix\\
+    &\\
+    &Option 1 is correct.\\
+    &\\
+    \hline
+	\multirow{3}{*}{Option 2}
+	& \\
+    &In Proof 1 we already prove that $Rank(\vec{A})=Rank(\vec{A}^T\vec{A})$\\
+    &\\
+    matrix of rank one check &Since the $Rank(\vec{A}^T\vec{A})=1$ so the $Rank(\vec{A})=1$ \\ 
+	&\\
+	&There fore Set S always contains only Rank 1 matrices.\\
+	&\\
+	&Hence Option 2 is correct.\\
+	&\\
+	\hline
+	\multirow{3}{*}{Option 3}
+	&\\
+    &Since set S contain only rank 1 matrices and none of rank 2 matrices \\
+    &\\
+    matrix of rank two check&as already proved above therefore\\
+    &\\
+    &Option 3 is incorrect.\\
+    &\\
+    
+    \hline
+	\multirow{3}{*}{Option 4}
+	&\\
+	&Proved by contradiction\\
+	&\\
+    non-zero skew .&Assume Rank of $\vec{A}$ is 1 so $\vec{A}$ can be written as $\vec{A}=\vec{u}\vec{v}^T$ for any non-zero\\
+    &\\
+    symmetric matrix check&Columns vectors $\vec{u}$ , $\vec{v}$ with n entries. If A is skew symmetric,we have:-\\
+    &\\
+    &$\vec{A}^T=-\vec{A}$\\
+    &\\
+    &$(\vec{u}\vec{v})^T=-\vec{u}\vec{v}^T$ $\vec{v}\vec{u}^T=-\vec{u}\vec{v}^T$\\
+    &\\
+    &The Column space of these matrices is same.The column space of $\vec{v}\vec{u}^T$\\ 
+    &is span of $\vec{v}$,where as the column space of $\vec{u}\vec{v}^T$ is the span of $\vec{u}$,\\
+    &\\
+    &So we must have $\vec{v}=k\vec{u}$ for some $k\in\mathbb{R}$.So the equation becomes\\
+    &\\
+    &$k\vec{u}\vec{u}^T=-k\vec{u}\vec{u}^T$ \\
+    &\\
+    &and since $\vec{u}\neq 0$;We can conclude that k=0,which means $\vec{v}=0$ therefore $\vec{A}=0$.\\
+    &\\
+    &This Contradicts our assumption that $\vec{A}$has rank 1.\\
+    &\\
+    &Thus real skew symmentric matrix can never have rank=1.\\
+    &\\
+    &Hence option 4 is incorrect.\\
+    &\\
+	\hline
+	\multirow{3}{*}{Answers}
+	&\\
+&Option 1 and Option 2 are correct.\\
+&\\
+	\hline
+	
+	\caption{Solution Table}
+    \label{eq:solutions/2015/june/71/table:2}
+\end{longtable}
+\twocolumn

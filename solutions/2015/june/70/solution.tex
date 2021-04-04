@@ -1,0 +1,181 @@
+See Tables \ref{eq:solutions/2015/june/70/tab1}
+and \ref{eq:solutions/2015/june/70/tab2}
+\onecolumn
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Minimal Polynomial} 
+		& \\
+		& The minimal polynomial $\mu_{\vec{A}}$ of an $n\times n$ matrix $\vec{A}$ over a field $\mathbf{F}$ is the \\
+		& monic polynomial $P$ over the field $\mathbf{F}$ of least degree such that $P(\Vec{A}) = 0$. Any \\
+		& other polynomial $Q$ with $Q(\vec{A}) = 0$ is polynomial multiple of $\mu_{\vec{A}}$. \\
+		& \\
+		\hline
+		\multirow{3}{*}{Eigen Value and } 
+		& \\
+		& If $\lambda$ is an eigen value of matrix $\Vec{A}$ then $\lambda$ will also be the root of the minimal \\ Minimal Polynomial
+		& polynomial $\mu_{\vec{A}}$.\\
+		& \\
+		\hline
+		\multirow{3}{*}{Diagonalizability and} 
+		& \\
+		& If $\Vec{A}$ is an $n\times n$ matrix with $n$ distinct eigenvalues, then $\vec{A}$ is diagonalizable \\ Eigen Values
+		& \\
+		\hline
+		\multirow{3}{*}{Polynomial and} 
+		& \\
+		& If a polynomial is of form $x^{k}-1$, it can be written as \\ it's Zeros
+		& \\
+		& \qquad \qquad \qquad $x^{k}-1$ = $(x - 1)(1 + x + x^2 + ... + x^{k-1})$\\
+		& \\
+		& The zeros to the given polynomial will be of the format \\
+		& \\
+		& \qquad \qquad \qquad $e^{\frac{n2\pi i}{k}}$ \qquad for $0 \leq n < k$. \\
+		& \\
+		& From this we can see that all the roots of the equation $x^{k}-1$ will be distinct. \\
+		& \\
+		\hline
+	\end{longtable}
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Inference from }   
+		& \\ 
+		& We are given that \\the Given Data
+		& \\
+		& \qquad \qquad \qquad$\vec{A}^k = \vec{I}_n$ \\
+		& \\
+		& This can be written as \\
+		& \\
+		& \qquad \qquad \qquad$\vec{A}^k - \vec{I}_n = 0$ \\
+		& \\
+		& This resembles the polynomial equation of the form $x^{k}-1$, So we further write \\
+		& the above equation as \\
+		& \\
+		& \qquad \qquad $\implies \vec{A}^k - \vec{I}_n = 0$ \\
+		& \\
+		& \qquad \qquad $\implies (\vec{A} - \vec{I}_n)(\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1}) = 0$ \\
+		& \\
+		& Let $\mu_{\vec{A}}$ be the minimal polynomial of $\vec{A}$. \\
+		& It is given that 1 is not an eigenvalue of $\vec{A}$. That means $\mu_{\vec{A}}$ cannot divide $(\vec{A} - \vec{I}_n)$.\\
+		& \\
+		& But $\mu_{\vec{A}}$ will be able to divide  $(\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1})$ as it is a polynomial multiple of $\vec{A}$\\ 
+		& \\
+		& i.e. $(\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1})$ is polynomial multiple of $\mu_{\vec{A}}$ \\
+		& \\
+		& \qquad \qquad  $\implies \vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1} = 0$ \\
+		& \\
+		& Since we know that $1 + x + x^2 + ... + x^{k-1}$ will have distinct roots which are not equal to 1. \\
+		& \\
+		\hline
+		\multirow{3}{*}{Option 1  } & \\
+		& We were able to find that $\implies \vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1}$ is a polynomial multiple of $\mu_{\vec{A}}$ \\
+		& with $k-1$ distinct roots. Which implies that $\mu_{\vec{A}}$ will also have distinct roots. \\
+		& \\
+		& Since, there are distinct roots to the minimal polynomial, it implies that $\vec{A}$ will be \\ 
+		& diagonalizable. \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{True}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 2} & \\
+		& We know that \\
+		& \\
+		& \qquad \qquad \qquad $\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1} = 0$ \\
+		& \\
+		& \qquad \qquad $\implies \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1} = -\vec{I}_n$ \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{False}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 3} & \\
+		& We know that \\
+		& \\
+		& \qquad \qquad \qquad $\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1} = 0$ \\
+		& \\
+		& \qquad \qquad $\implies \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1} = -\vec{I}_n$ \\
+		& \\
+		& Taking $trace()$ on both sides, we get \\
+		& \\
+		& \qquad \qquad $\implies tr(\vec{A} + \vec{A}^2 + ... + \vec{A}^{k-1}) = tr(-\vec{I}_n)$ \\
+		& \\
+		& \qquad \qquad $\implies tr(\vec{A}) + tr(\vec{A}^2) + ... + tr(\vec{A}^{k-1}) = tr(-\vec{I}_n)$ \qquad ($\because$ trace() is a linear function)\\
+		& \\
+		& \qquad \qquad $\implies tr(\vec{A}) + tr(\vec{A}^2) + ... + tr(\vec{A}^{k-1}) = -n$ \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{True}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 4} & \\
+		& We know that \\
+		& \\
+		& \qquad \qquad \qquad $\vec{I}_n + \vec{A} + \vec{A}^2 + ... + \vec{A}^{k-2} + \vec{A}^{k-1} = 0$ \\
+		& \\
+		& Multiply the whole equation with $\vec{A}^{-(k-1)}$. We get \\
+		& \\
+		& \qquad \qquad \qquad $\vec{A}^{-(k-1)} + \vec{A}^{1-(k-1)} + ... + \vec{A}^{k-2-(k-1)} + \vec{A}^{k-1-(k-1)} = 0$ \\
+	    & \\
+	    & \qquad \qquad $\implies \vec{A}^{-(k-1)} + \vec{A}^{1-(k-1)} + ... + \vec{A}^{-1} + \vec{I}_n = 0$ \\
+	    & \\
+	    & \qquad \qquad $\implies \vec{A}^{-1}+\Vec{A}^{-2}+...+\vec{A}^{-(k-1)} = -\vec{I}_n$ \\
+	    & \\
+		& $\therefore$ this statement is $\mathbf{True}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Conclusion} & \\
+		& From our observation we see that \\
+		&\\
+		& Options 1), 3) and 4) are True.\\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2015/june/70/tab1}
+	\end{longtable}
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Complex Matrix }   
+		& \\ 
+		& Let the complex matrix $\vec{A}$ $=$ $\myvec{i&0 \\ 0&-i}$ \\ Example
+		& \\
+		& When $k = 4$, we get \\
+		& \\
+		& \qquad \qquad \qquad $\vec{A}^4 = \vec{I}_2$ \\
+		& \\
+		& \\
+		& The eigen values of the matrix $\vec{A}$ are $-i$ and $+i$. \\
+        & \\
+        & Since, there are two distinct eigen values for the matrix $\vec{A}$,\\
+        & $\vec{A}$ is diagonalizable. \\
+        & \\
+        & \\
+        & Now checking the equation for $\vec{A}+\Vec{A}^2+...+\vec{A}^{k-1}$ \\
+        & \\
+        & \qquad \qquad \qquad $\vec{A}+\Vec{A}^2+\vec{A}^{3}$ \qquad ($\because$ here $k=4$) \\
+        & \\
+        & \qquad \qquad $\implies \myvec{i&0 \\ 0&-i} + \myvec{-1&0 \\ 0&-1} + \myvec{-i&0 \\ 0&i}$ \\
+        & \\
+        & \qquad \qquad $\implies \myvec{-1&0 \\ 0&-1} = -\vec{I}_2$  \\
+        & \\
+        & \\
+        & Now checking the equation for $tr(\vec{A})+tr(\Vec{A}^2)+...+tr(\vec{A}^{k-1}) = -n$ \\
+        & \\
+        & \qquad \qquad \qquad $tr(\vec{A})+tr(\Vec{A}^2)+tr(\vec{A}^{3})$ \qquad ($\because$ here $k=4$) \\
+        & \\
+        & \qquad \qquad $\implies tr\myvec{i&0 \\ 0&-i} + tr\myvec{-1&0 \\ 0&-1} + tr\myvec{-i&0 \\ 0&i}$ \\
+        & \\
+        & \qquad \qquad $\implies 0+(-2)+0 = -2$\\
+        & \\
+		& \\
+		& Now checking the equation for $\vec{A}^{-1}+\Vec{A}^{-2}+...+\vec{A}^{-(k-1)} = -\vec{I}_n$ \\
+        & \\
+        & \qquad \qquad \qquad $\vec{A}^{-1}+\Vec{A}^{-2}+\vec{A}^{-3}$ \qquad ($\because$ here $k=4$) \\
+        & \\
+        & \qquad \qquad $\implies \myvec{-i&0 \\ 0&i} + \myvec{-1&0 \\ 0&-1} + \myvec{i&0 \\ 0&-i}$ \\
+        & \\
+        & \qquad \qquad $\implies \myvec{-1&0 \\ 0&-1} = -\vec{I}_2$  \\
+        & \\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2015/june/70/tab2}
+	\end{longtable}
+		
+\twocolumn

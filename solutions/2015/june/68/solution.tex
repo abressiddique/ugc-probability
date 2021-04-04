@@ -1,0 +1,71 @@
+See Tables \ref{eq:solutions/2015/june/68/deftab}, \ref{eq:solutions/2015/june/68/obs}
+and \ref{eq:solutions/2015/june/68/sol}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Inner product}&Inner product between two vectors $\vec{x}$ and $\vec{y}$ is defined as\\&\parbox{13cm}{\begin{align}
+    \langle\vec{x},\vec{y}\rangle=\vec{x}^T\vec{y}\label{eq:solutions/2015/june/68/inp}
+\end{align}}\\&Where $\vec{x}$,$\vec{y}\in\mathbb{R}^n$\\
+\hline
+\textbf{Inner Product}&\\\textbf{Property used}&\parbox{13cm}{\begin{align}
+    \langle\vec{x},\vec{y}\rangle=\vec{x}^T\vec{y}=\vec{y}^T\vec{x}=\langle\vec{y},\vec{x}\rangle\label{eq:solutions/2015/june/68/prop1}
+    \end{align}}\\
+\hline
+\textbf{Total Derivative} $D$&Total derivative is a linear transformation. For function $\vec{F}(\vec{x},\vec{y})$, the total\\& derivative is given as $D\vec{F}(\vec{x},\vec{y})$ which says that total derivative of\\&function $\vec{F}$ at $(\vec{x},\vec{y})$.\\
+\hline
+\caption{Definitions and theorem used}
+\label{eq:solutions/2015/june/68/deftab}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Statement}&\textbf{Observations}\\
+\hline
+Given&Function $\vec{F}:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$, it is given as\\&\parbox{13cm}{\begin{align}
+    \vec{F}(\vec{x},\vec{y})=\langle\vec{Ax},\vec{y}\rangle=\vec{x}^T\vec{A}^T\vec{y}\label{eq:solutions/2015/june/68/F}
+\end{align}}\\&where $\vec{x}$,$\vec{y}\in\mathbb{R}^n$\\&Using property \eqref{eq:solutions/2015/june/68/prop1}, we can also get\\&\parbox{13cm}{\begin{align}
+    \implies\vec{F}(\vec{x},\vec{y})=\langle\vec{y},\vec{Ax}\rangle\\
+    \implies\vec{F}(\vec{x},\vec{y})=\vec{y}^T\vec{A}\vec{x}\label{eq:solutions/2015/june/68/Fp}
+\end{align}}\\
+\hline
+Total Derivative $D$&Now we will calculate $D\vec{F}(\vec{x},\vec{y})$\\&\parbox{13cm}{\begin{align}
+    D\vec{F}(\vec{x},\vec{y})=\myvec{\frac{\partial \vec{F}}{\partial \vec{x}}&\frac{\partial \vec{F}}{\partial \vec{y}}}\label{eq:solutions/2015/june/68/D}
+\end{align}}\\&From \eqref{eq:solutions/2015/june/68/F},\eqref{eq:solutions/2015/june/68/Fp} we get\\&\parbox{13cm}{\begin{align}
+    \frac{\partial \vec{F}}{\partial \vec{x}}=\vec{y}^T\vec{A}\label{eq:solutions/2015/june/68/df1}\\
+    \frac{\partial \vec{F}}{\partial \vec{y}}=\vec{x}^T\vec{A}^T\label{eq:solutions/2015/june/68/df2}
+\end{align}}\\&Substitute \eqref{eq:solutions/2015/june/68/df1} and \eqref{eq:solutions/2015/june/68/df2} in \eqref{eq:solutions/2015/june/68/D}\\&\parbox{13cm}{\begin{align}
+    D\vec{F}(\vec{x},\vec{y})=\myvec{\vec{y}^T\vec{A}&\vec{x}^T\vec{A}^T}_{1\times n^2}\label{eq:solutions/2015/june/68/Dsol}
+\end{align}}\\
+\hline
+\caption{Observations}
+\label{eq:solutions/2015/june/68/obs}
+\end{longtable}
+\begin{longtable}{|l|l|l|}
+\hline
+\endhead
+\textbf{Option}&\textbf{Solution}&\textbf{True/}\\&&\textbf{False}\\
+\hline
+1&First we calculate $(D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})$ where $\vec{u}$,$\vec{v}\in\mathbb{R}^n$&\\&Using \eqref{eq:solutions/2015/june/68/Dsol}and block matrix multiplication we get&\\&\parbox{14cm}{\begin{align}
+    (D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})=\myvec{\vec{y}^T\vec{A}&\vec{x}^T\vec{A}^T}\myvec{\vec{u}\\\vec{v}}\\
+    \implies(D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})=\vec{y}^T\vec{A}\vec{u}+\vec{x}^T\vec{A}^T\vec{v}\label{eq:solutions/2015/june/68/eq1}\\
+    (D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})=\langle\vec{y},\vec{Au}\rangle+\langle\vec{Ax},\vec{v}\rangle
+\end{align}}&\\&Using property \eqref{eq:solutions/2015/june/68/prop1} we get&True\\&\parbox{14cm}{\begin{align}
+    (D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})=\langle\vec{Au},\vec{y}\rangle+\langle\vec{Ax},\vec{v}\rangle\label{eq:solutions/2015/june/68/p1}
+\end{align}}&\\
+\hline
+2.&Using \eqref{eq:solutions/2015/june/68/eq1}, if $\vec{u}=0$ and $\vec{v}=0$ then we get&\\&\parbox{14cm}{\begin{align}
+    (D\vec{F}(\vec{x},\vec{y}))(0,0)=0\label{eq:solutions/2015/june/68/p2}
+\end{align}}&True\\
+\hline
+3.&Since from \eqref{eq:solutions/2015/june/68/Dsol} we can say that $D\vec{F}(\vec{x},\vec{y})$ will exist for any $(\vec{x},\vec{y})\in\mathbb{R}^n\times\mathbb{R}^n$.&False\\&&\\
+\hline
+4.&From \eqref{eq:solutions/2015/june/68/Dsol}, if $(\vec{x},\vec{y})=(0,0)$ we get&\\&\parbox{14cm}{\begin{align}
+    D\vec{F}(\vec{x},\vec{y})|_{(0,0)}=0
+\end{align}}&\\&Therefore we can say that $D\vec{F}(\vec{x},\vec{y})$ will exist at $(\vec{x},\vec{y})=(0,0)$.&False\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2015/june/68/sol}
+\end{longtable}
+\twocolumn

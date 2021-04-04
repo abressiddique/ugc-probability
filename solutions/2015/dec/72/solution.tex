@@ -1,0 +1,169 @@
+See Tables     \ref{eq:solutions/2015/dec/72/table:2} and     \ref{eq:solutions/2015/dec/72/table:2}
+
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{|p{3cm}|p{15cm}|}
+    \hline
+	\multirow{3}{*}{Theorem} 
+	&\\
+	& Suppose $T:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}$ is the linear transformation $\vec{T}(\vec{x})=\vec{A}\vec{x}$ where $\vec{A}$ s an $m\times n$ matrix.\\
+	&\\
+	&{\begin{enumerate}
+	    \item $T$ is \textbf{one to one} if the columns of $\vec{A}$ are linearly independent , which happens precisely when $\vec{A}$ has a pivot position in every column.
+	    
+	    \item $T$ is \textbf{onto} if an over $\mathbb{R}$  only if the span of the columns of $\vec{A}$ is $\mathbb{R}^{n}$, which happens precisely when $\vec{A}$ has a pivot position in every row.
+	\end{enumerate}}\\
+	\hline
+	\multirow{3}{*}{$Range(\vec{T})$}
+	&\\
+	& It is column-space of linear operator $\vec{T}$.\\
+	&\\
+    &$\qquad\qquad\qquad\vec{T}(\vec{x})=\vec{v}
+    \implies\vec{Ax}=\vec{v}$\\
+    &\\
+    & where $\vec{x}$,$\vec{v}\in\vec{V}$ and We can also say that\\
+    &\\
+    &$\qquad\qquad\qquad Range(\vec{T})=C(\vec{A})\label{eq:solutions/2015/dec/72/R}$\\
+    &where $C(\vec{A})$ is column space of $\vec{A}$.\\
+    \hline
+    \multirow{3}{*}{$rank(\vec{T})$}
+    &\\
+&$rank(\vec{T})=rank(\vec{A})$\\
+&\\
+    \hline
+\end{tabular}
+    \caption{Definitions and Theorem }
+\label{eq:solutions/2015/dec/72/table:1}
+\end{table*}
+\onecolumn
+\begin{longtable}{|p{5cm}|p{13cm}|}
+\hline
+\endhead
+    \multirow{3}{*}{\textbf{Given}} 
+     &\\
+     & $\vec{V}$ be a vector space of polynomials over $\mathbb{R}$ of degree less then $n$ \\
+     &\\
+     &$\qquad\qquad\qquad p(x)=a_0+a_{n-1}x+..+a_nx^{n}$\\
+     &\\
+     & $\vec{T}: \vec{V} \rightarrow \vec{V}$\\
+     &\\
+     & $\qquad\qquad\qquad(\vec{T}p)(x)=a_n+a_{n-1}x+..+a_0x^{n}$\\
+     &\\
+     \hline
+     \multirow{3}{*}{\textbf{Explanation}}&\\
+     & We know that Basis for a polynomial vector space $P=\brak{p_1,p_2,..,p_n}$ is a set of vectors that spans the space, and is linearly independent .\\
+     &\\
+     &$\qquad\qquad$  Basis = $\brak{1,x,x^2,...,x^{n}}$\\
+     &\\
+     & $\qquad\qquad\vec{T}(1) = x^{n} = 0.1+0.x+..+0.x^{n-1}+1.x^n$\\
+     & $\qquad\qquad\vec{T}(x) = x^{n-1} = 0.1+0.x+..+1.x^{n-1}+0.x^{n}$\\
+     & $\qquad\qquad\vdots$\\
+     & $\qquad\qquad\vec{T}(x^{n}) = 1 = 1.1+0.x+..+0.x^{n-1}+0.x $\\
+     &\\
+     & Expressing $\vec{T}$ in matrix form\\
+     &\\
+     & $\qquad\qquad\qquad\vec{T}=\myvec{0&0&\cdots&0&1\\0&0&\cdots&1&0\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&1&\cdots&0&0\\1&0&\cdots&0&0}$\\ 
+     &\\
+    \hline
+    \multirow{3}{*}{\textbf{Example} }
+	& \\
+	& For Simplicity , Let $n=3$\\
+	&\\
+	& $\qquad\qquad\qquad\implies p(x)=a_0+a_1x+a_2x^{2}+a_3x^{3}$\\
+	&\\
+	& $\qquad\qquad\qquad\implies (\vec{T})p(x)=a_3+a_2x+a_1x^2+a_0x^3$\\
+	&\\
+	& Basis = $\brak{1,x,x^2,x^3}$\\
+	&\\
+    & $\qquad\qquad\vec{T}(1) = 0.0+0.x+0.x^2+1.x^3$\\
+    &\\
+    & $\qquad\qquad\vec{T}(x) = 0.0+0.x+1.x^2+0.x^3$\\
+    &\\
+    & $\qquad\qquad\vec{T}(x^2) = 0.0+1.x+0.x^2+0.x^3$\\
+    &\\
+    & $\qquad\qquad\vec{T}(x^3) = 1.1+0.x+0.x^2+0.x^3$\\
+    &\\
+    & Expressing $\vec{T}$ in matrix form;\\
+    \hline
+    & $\qquad\qquad\qquad\vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{\textbf{Statement 1}:$\vec{T}$ is one to one } & \\
+	& True\\
+	\hline
+	&\\
+	& $\vec{T}:\vec{V}\rightarrow\vec{V}$ be a linear transformation\\
+	&\\
+	& $\vec{T}$ is one-to-one if and only if the nullity of $\vec{T}$ is zero.\\
+	&\\
+	& According to rank-nullity theorem.\\
+    & $\qquad\qquad dim(\vec{V})=rank(\vec{T})+nullity(\vec{T})$\\
+    &\\
+    & $\qquad\qquad\qquad\vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$\\
+	&\\
+	& Here, $\qquad\qquad dim(\vec{V}) = 4$\\
+	&\\
+	& $\qquad\qquad rank(\vec{T})=$ no. of linearly independent column or row $=4$\\.
+	&\\
+	& $\qquad\qquad\implies nullity (\vec{T}) = 0$\\
+	&\\
+	& Thus, we can conclude $\vec{T}$ is one to one .\\
+	  
+	\hline
+	\multirow{3}{*}{\textbf{Statement 2}:$\vec{T}$ is onto}&\\
+    & True\\
+	\hline
+	&\\
+	& A matrix transformation is onto if and only if the matrix has a pivot position in each row, if the number of pivots is equal to the number of rows.\\
+	&\\
+	& $\qquad\qquad\qquad\vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$\\
+	&\\
+	& $\qquad\qquad\implies rank(\vec{T})= 4$ which is equal to no of rows.\\
+	&\\
+	& Thus, we can conclude $\vec{T}$ is onto.\\
+	
+	\hline
+	\multirow{3}{*}{\textbf{Statement 3}:$\vec{T}$ is invertible} &\\
+    & True\\
+	\hline
+	
+   & $\textbf {Theorem}:$ A linear transformation $T : V \rightarrow W$ is $\textbf{invertible}$ if there exists another linear transformation $U: W \rightarrow V$ such that  $UT$ is the $identity$ transformation on $V$ and $TU$ is the $identity$ transformation on $W$ , where $U$ is called Inverse of $\vec{T}.$\\
+			& $\vec{T}$ is $\textbf{invertible}$ if and only if $\vec{T}$ is $one-one$ and $onto$\\
+			\hline
+	&$\qquad\qquad\implies \vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$\\
+	& $\qquad\qquad\qquad\vec{T}^{-1}=\vec{U}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}=\vec{T}$\\
+	&\\
+	& $\vec{U}\vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}=\myvec{1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&0&1}=\vec{I}$\\
+	&\\
+	& Thus, we can conclude $\vec{T}$ is invertible.\\
+	&\\
+	\hline
+	\multirow{3}{*}{\textbf{Statement 4}: $\det{\vec{T}}=\pm1$}&\\
+	& True\\
+	\hline
+	&\\
+		& $\qquad\qquad\qquad\vec{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$ , where $\vec{T}$ is a permutation matrix .\\
+	&\\
+	
+	& A permutation matrix is nonsingular matrix, and determinant is $\pm 1$. Permutation matrix $\vec{A}$ satisfies $\vec{A}{\vec{A}^{T}}=\vec{I}$\\
+	
+	&\\
+	& Here, $\qquad\qquad\vec{T}\vec{T}^{T}=\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}\myvec{0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0}$\\
+	&\\
+	&$\qquad\qquad\qquad\vec{T}\vec{T}^{T}=\myvec{1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1} = \vec{I}$ , also an Involutory matrix .\\
+	&\\
+	& \textbf{Involutory matrix}: an involutory matrix is a matrix that is its own inverse. That is, multiplication by matrix $\vec{A}$ is an involution if and only if               $\vec{A}^{2}=\vec{I}$ and $\textbf{Determinant}$ of an involutory matrix over any field is $\pm1$\\
+	&\\
+	
+	& Since, $\vec{T}^{-1}=\vec{T}$ and $\vec{T}^2=\vec{I}$\\
+	&\\
+	& We can say $\vec{T}$ is also an Involutory matrix.\\
+	& Thus, we can conclude $\det{\vec{T}}=\pm1$\\
+	&\\
+	\hline
+	\caption{Solution Summary}
+    \label{eq:solutions/2015/dec/72/table:2}
+\end{longtable}
+
+\twocolumn

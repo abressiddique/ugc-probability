@@ -1,0 +1,62 @@
+See Table \ref{eq:solutions/2015/june/76/table:1}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\text{Given} & $\vec{A}$ is an invertible real matrix of order $4 \times 4$\\
+\hline
+\text{Solution} & \text{Since given $\vec{A}$ is an invertible matrix, $\vec{A}$ has full rank.}\\
+& \parbox{10cm}{\begin{align}
+    det(\vec{A}) &\neq 0 \label{eq:solutions/2015/june/76/1}\\
+    Rank(\vec{A})&=4 \label{eq:solutions/2015/june/76/s1}
+\end{align}}\\
+& \text{Let $\lambda_1,\lambda_2,\lambda_3$ and $\lambda_4$ be the eigenvalues of matrix $\vec{A}$}.\\
+& We know that determinant of matrix $\vec{A}$ is the product of eigenvalues of $\vec{A}$.\\
+& \parbox{10cm}{\begin{align}
+    \lambda_1\lambda_2\lambda_3\lambda_4 \neq 0 
+\label{eq:solutions/2015/june/76/1new}
+\end{align}}\\
+\hline
+\textbf{Statement 1} & \parbox{10cm}{\begin{align}
+    Rank(\vec{A})&=4\notag
+\end{align}}\\
+\hline
+& \text{Since $\vec{A}$ is an invertible matrix,it has full rank as shown in equation \eqref{eq:solutions/2015/june/76/s1}.}\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline
+\textbf{Statement 2} & \text{For every vector $\vec{b} \in \mathbb{R}$, $\vec{A}\vec{x}=\vec{b}$ has exactly one solution.}\\
+\hline
+& \text{For every $\vec{b}$,}\\
+& \parbox{10cm}{\begin{center}
+    $\vec{x}$=$\vec{A}^{-1}\vec{b}$
+  \end{center}}\\
+& \text{$\vec{x}$ will be unique solution for every $\vec{b}$.}\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline
+\textbf{Statement 3} & \text{dim(nullspace $\vec{A}$)$\geq$ 1.}\\
+\hline
+& Using Rank Nullity Theorem,\\
+& \parbox{10cm}{\begin{align}
+    Rank(\vec{A})+dim(nullspace \vec{A})=n \notag\\
+    \implies 4+dim(nullspace \vec{A})=4 \notag\\
+    \implies dim(nullspace \vec{A})=0 \ngeq 1 \label{eq:solutions/2015/june/76/s3}
+\end{align}}\\
+\hline
+& \text{where n is the number of columns in $\vec{A}$}\\
+& \text{Equation \eqref{eq:solutions/2015/june/76/s3} proves that the given statement is \textbf{NOT True}.}\\
+\hline
+\textbf{Statement 4} & \text{0 is an eigenvalue of $\vec{A}$}\\
+\hline
+& From equation \eqref{eq:solutions/2015/june/76/1}, we could say that no eigenvalue of $\vec{A}$ could be 0.\\
+& \parbox{10cm}{\begin{center}
+\textbf{NOT True Statement }
+\end{center}}\\
+\hline
+\caption{Explanation}
+\label{eq:solutions/2015/june/76/table:1}
+\end{longtable}
+\twocolumn

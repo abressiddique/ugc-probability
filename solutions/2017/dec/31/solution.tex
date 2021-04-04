@@ -1,0 +1,34 @@
+First we derive the Row Reduced Echelon Form (RREF) of the augmented matrix of the system $\vec{AX} = \vec{b}$ as follows,
+\begin{align}
+\myvec{1&-1&1&1\\1&1&1&3\\2&3&\alpha&\beta}&\xleftrightarrow[R_3=R_3-2R_1]{R_2=R_2-R_1}\myvec{1&-1&1&1\\0&2&0&2\\0&5&\alpha-2&\beta-2}\\
+&\xleftrightarrow{R_2=\frac{1}{2}R_2}\myvec{1&-1&1&1\\0&1&0&1\\0&5&\alpha-2&\beta-2}\\
+&\xleftrightarrow{R_1=R_1+R_2}\myvec{1&0&1&2\\0&1&0&1\\0&5&\alpha-2&\beta-2}\\
+&\xleftrightarrow{R_3=R_3-5R_2}\myvec{1&0&1&2\\0&1&0&1\\0&0&\alpha-2&\beta-7}\label{eq:solutions/2017/dec/31/eq}
+\end{align}
+From the RREF of the augmented matrix of the system $\vec{AX} = \vec{b}$ in \eqref{eq:solutions/2017/dec/31/eq} we make the following observations for different values of $\alpha$ and $\beta$ in Table \ref{eq:solutions/2017/dec/31/table}.
+, 
+\begin{table}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Values & Observations\\
+\hline
+& Then the existence of solution and \\
+$\beta \ne 7$ & the number of solutions will entirely \\
+& depend on  value of $\alpha$\\
+\hline
+& Then RREF in \eqref{eq:solutions/2017/dec/31/eq} will contain \\
+$\alpha = 2$ & Zero Row in $R_3$. Moreover solvability\\
+$\beta \ne 7$ & condition will not satisfy. \\
+& $\implies$ system will have Zero solutions\\
+\hline
+& RREF in \eqref{eq:solutions/2017/dec/31/eq} will have all pivots\\
+$\alpha \ne$ 2 & $\implies$ RREF in \eqref{eq:solutions/2017/dec/31/eq} will be fullrank\\
+& $\implies$ $\vec{AX}=\vec{b}$ have unique solution.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{}
+\label{eq:solutions/2017/dec/31/table}
+\end{table}\\
+Hence, if $\alpha \ne 2$ then the system $\vec{AX} = \vec{b}$ has unique solution.

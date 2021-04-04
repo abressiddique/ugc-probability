@@ -1,0 +1,73 @@
+ Let
+ \begin{align}
+    \vec{x} = \myvec{x&y}^T 
+ \end{align}
+ Then
+ \begin{align}
+     B(x,y) = \vec{x}^T\frac{\vec{R}}{2}\vec{x}\label{eq:solutions/2018/dec/32/1} 
+ \end{align}
+ where $\vec{R}$ is the reflection matrix defined as:-
+ \begin{align}
+  \myvec{0 & 1 \\ 1 & 0}
+ \end{align}
+ \eqref{eq:solutions/2018/dec/32/1} represent Quadratic form of B(x,y).  See Table \ref{eq:solutions/2018/dec/32/table1}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Options} & \textbf{Explanation} \\
+\hline
+\text{$B$ is a linear transformation} & 
+Let the transformation be $B: \mathbb{R} \times \mathbb{R} \xrightarrow[]{} \mathbb{R}$ such that, 
+\\& $B(\vec{x}) = xy$ where $\vec{x} = \myvec{x\\y}$
+\\& Now $B(\vec{e}) = ab$ where $\vec{e} = \myvec{a\\b}$ 
+\\& Hence, $B(c\vec{e}) = c^2B(\vec{e})$
+\\& Hence $B$ is not a linear transformation.\\
+& Hence incorrect.
+\\
+\hline
+\text{$B$ is a positive definite bilinear form} & 
+$f: \mathbb{V} \times \mathbb{V} \xrightarrow[]{} \mathbb{F}$ where $\mathbb{V}$ is a vector space and $\mathbb{F}$ is a field\\
+Bilinear Form&$f$ is a bilinear if the following holds true - 
+\\& If one variable is fixed then other should be linear  
+\\&Let's say $x$ is fixed,$x$=c
+\\&$\eqref{eq:solutions/2018/dec/32/1}$ becomes $B(x,y)=cy$,$y$ is linear
+\\&Let's say $y$ is fixed,$y$=c
+\\&$\eqref{eq:solutions/2018/dec/32/1}$ becomes $B(x,y)=cx$,$x$ is linear
+\\& Hence $B$ is a bilinear form.
+\\Symmetric & Again a bilinear form $f$ is symmetric if $f(\alpha,\beta) = f(\beta,\alpha)$
+\\& Here, $B(a,b) = ab$,from $\eqref{eq:solutions/2018/dec/32/1}$
+\\& $B(b,a) = ba$,from $\eqref{eq:solutions/2018/dec/32/1}$
+\\& $ba=ab$,Hence $B$ is symmetric.
+\\Positive Definite& A symmetric bilinear $f$ is positive definite if
+\\& $f(\alpha,\alpha) >0$ $\forall \alpha \ne 0$
+\\& Here, $B(a,a) = a^2$ from $\eqref{eq:solutions/2018/dec/32/1}$
+\\& $a^2 > 0$ $\forall a\ne0$
+\\& \textbf{Conclusion:} $B$ is symmetric and positive definite bilinear form.\\
+& Hence Correct.
+\\
+\hline
+\text{$B$ is symmetric but not positive definite}
+& From previous proof it is obvious that
+\\& $B$ is both symmetric as well as positive definite\\
+& Hence incorrect
+\\
+\hline
+\text{$B$ neither linear nor bilinear}
+& From previous proofs it is obvious that
+\\& $B$ is bilinear.\\
+& Hence incorrect.
+\\
+\hline
+\text{Result}
+& $B$ is symmetric and positive definite bilinear form
+\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Finding Correct Option}
+\label{eq:solutions/2018/dec/32/table1}
+\end{table*}
+
+ 

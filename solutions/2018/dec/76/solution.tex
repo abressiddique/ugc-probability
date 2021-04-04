@@ -1,0 +1,89 @@
+See Tables \ref{eq:solutions/2018/dec/76/0} and \ref{eq:solutions/2018/dec/76/1}
+
+\begin{table*}[htbp]
+        \centering
+	\begin{tabular}{|m{2.0in}|m{5.0in}|} \hline
+		\textbf{Objective} & \textbf{Explanation} \\ \hline
+	Rank of $\vec{M}-\lambda \vec{uu^*}$ & Since 
+	\begin{align}
+	rank\brak{\vec{A}-\vec{B}} \geq rank\brak{\vec{A}}-rank\brak{\vec{B}} \\
+		\implies rank\brak{\vec{M}-\lambda\vec{uu^*}} \geq 
+	rank\brak{\vec{M}}-rank\brak{\vec{uu^*}} \\
+		\implies rank\brak{\vec{M}-\lambda\vec{uu^*}} \geq k-rank\brak{\vec{uu^*}}
+	\end{align} 
+If $\vec{A}$ is a non-zero column vector of order $m\times 1$ and $\vec{B}$ is a non-zero row vector 
+of order $1\times n$ then $rank\brak{AB}=1$. So,
+	\begin{align}
+	rank\brak{\vec{uu^*}}=1 \\
+	\implies rank\brak{\vec{M}-\lambda\vec{uu^*}} \geq k-1 \label{eq:solutions/2018/dec/76/eq1}
+	\end{align}
+Also since,
+	\begin{align}
+	\vec{M}-\lambda\vec{uu^*} = \vec{M}-\vec{Muu^*}=\vec{M}\brak{I-\vec{uu^*}}
+	\end{align}
+and
+	\begin{align}
+	rank\brak{\vec{M}\brak{\vec{I}-\vec{uu^*}}}
+	\leq min\brak{rank\brak{\vec{M}},rank\brak{\vec{I}-\vec{uu^*}}} \\
+	\implies
+	rank\brak{\vec{M}\brak{\vec{I}-\vec{uu^*}}} \leq k \label{eq:solutions/2018/dec/76/eq2}
+	\end{align}
+Thus we have from (\ref{eq:solutions/2018/dec/76/eq1}) and (\ref{eq:solutions/2018/dec/76/eq2}) that
+	\begin{align}
+	rank\brak{\vec{M}-\lambda\vec{uu^*}} = k-1 \ \text{or} \ k
+	\end{align}
+	Consider a matrix 
+	\begin{align}
+		\vec{M}=\myvec{1&0\\0&0}
+	\end{align}
+\end{tabular}
+\caption{}
+\label{eq:solutions/2018/dec/76/0}
+\end{table*}
+
+\begin{table*}[htbp]
+        \centering
+\begin{tabular}{|m{2.0in}|m{5.0in}|} \hline
+		\textbf{Objective} & \textbf{Explanation} \\ \hline
+		&
+	such that $rank\brak{M}=1$. The eigenvalue of $\vec{M}$ is $\lambda=1$ 
+	and the corresponding eigenvector is
+	\begin{align}
+	\vec{u}=\myvec{1\\0}
+	\end{align}
+	Thus we have,
+	\begin{align}
+	\vec{M}-\lambda\vec{uu^*}=\myvec{1&0\\0&0}-\myvec{1\\0}\myvec{1&0} \\
+		=\myvec{1&0\\0&0}-\myvec{1&0\\0&0} \\
+		=\myvec{0&0\\0&0} \\
+		\implies rank\brak{\vec{M}-\lambda\vec{uu^*}}=0
+	\end{align}
+Hence if $rank\brak{\vec{M}}=k$ 
+		then $rank\brak{\vec{M}-\lambda\vec{uu^*}}=k-1$. \\ 
+		& \\ \hline
+	$\brak{\vec{M}-\lambda\vec{uu^*}}^n=\vec{M}^n-\lambda^n\vec{uu^*}$  & 
+		Let the given statement be 
+	P(n):$\brak{\vec{M}-\lambda\vec{uu^*}}^n=\vec{M}^n-\lambda^n\vec{uu^*}$.
+		It can be seen that P(1) is true. Assume P(n) is true for some 
+		$k\in \vec{N}$ such that
+	\begin{align}
+	\brak{\vec{M}-\lambda\vec{uu^*}}^k=\vec{M}^k-\lambda^k\vec{uu^*}
+	\end{align}
+	Now to prove that P(k+1) is true we have
+	\begin{align}
+	\brak{\vec{M}-\lambda\vec{uu^*}}^{k+1}
+	=\brak{\vec{M}-\lambda\vec{uu^*}}\brak{\vec{M}-\lambda\vec{uu^*}}^k \\
+	=\brak{\vec{M}-\lambda\vec{uu^*}}\brak{\vec{M}^k-\lambda^k\vec{uu^*}} \\
+	=\vec{M}^{k+1}-\lambda^k\vec{Muu^*}-\lambda\vec{M}^k\vec{uu^*} + 
+		\lambda^{k+1}\vec{uu^*uu^*} \\
+	=\vec{M}^{k+1}-\lambda^{k+1}\vec{uu^*}-\lambda^{k+1}\vec{uu^*} +
+		\lambda^{k+1}\vec{u}\norm{\vec{u}}^2\vec{u}^* \\
+	=\vec{M}^{k+1}-2\lambda^{k+1}\vec{uu^*}+\lambda^{k+1}\vec{uu^*} \\
+	=\vec{M}^{k+1}-\lambda^{k+1}\vec{uu^*}
+	\end{align}
+	Hence, by the Principle of Mathematical Induction P(n) is true for all 
+	$n$.\\ \hline
+		Answer& (1) and (4) \\ \hline
+\end{tabular}
+        \caption{} \label{eq:solutions/2018/dec/76/1}
+\end{table*}

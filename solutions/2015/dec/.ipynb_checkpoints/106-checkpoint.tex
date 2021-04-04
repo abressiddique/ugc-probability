@@ -1,0 +1,48 @@
+\begin{table}[htp]
+\centering
+    \resizebox{\columnwidth}{20mm}{
+\begin{tabular}{ |c|c|c|} 
+\hline
+\textbf{Symbol} & \textbf{expression/definition} \\
+\hline
+$S_n$ & $\displaystyle \sum_{i=1}^{n}X_i$  \\
+\hline
+$\mu_n$ & $\displaystyle \frac{1}{n} \sum_{i=1}^{n}X_i$  \\
+\hline
+& Independent continuous random\\$X$&variable identical to $X_1,X_2,...,X_n$ \\
+\hline
+\end{tabular}}
+\caption{Variables and their definitions}
+\label{dec2015-106:table1}
+\end{table}
+\begin{enumerate}
+\item 
+Given
+\begin{align}
+\displaystyle S_n=\sum_{i=1}^{n}X_i , n\ge 1
+\end{align}
+Dividing by $n$ on both sides
+\begin{align}
+\dfrac{S_n}{n}=\displaystyle\frac{1}{n} \sum_{i=1}^{n}X_i=\mu_n
+\end{align}
+It can be said that $X_1,X_2,...,X_n$ are the trials of $X$. By definition
+\begin{align}
+E\sbrak{X}&=\displaystyle \lim_{n\to \infty} \frac{\sum_{i=1}^{n}X_i}{n}=\lim_{n\to \infty} \frac{S_n}{n}\\
+&\lim_{n\to \infty} \frac{S_n}{n}=E\sbrak{X}=\frac{1}{2} \label{dec2015-106:eq:mu_value} \\
+\therefore&\lim_{n\to \infty} \frac{S_n}{n\log{n}}=0
+\end{align}
+\item
+Using weak law, \eqref{dec2015-106:eq:mu_value}, and table \eqref{dec2015-106:table1}
+\begin{align}
+\lim_{n\to\infty} \pr{\abs{\mu_n-E\sbrak{X}}>\epsilon}=0, \forall \epsilon >0\\
+\displaystyle \lim_{n\to\infty} \pr{S_n=\frac{n}{2}}=1 \label{dec2015-106:eq:weak_law}
+\end{align}
+It can be easily implied from \eqref{dec2015-106:eq:weak_law} that option B is false.
+\item 
+It is easy to observe from \eqref{dec2015-106:eq:mu_value} that option C is false.
+\item
+Using \eqref{dec2015-106:eq:weak_law}, we get
+\begin{align}
+\pr{\brak{S_n>\frac{n}{3}}\text{occurs for infinitely many n}}=1
+\end{align}
+\end{enumerate}

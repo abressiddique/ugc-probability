@@ -1,0 +1,82 @@
+See Tables 
+\ref{eq:solutions/2015/dec/75/tab:1} and 
+\ref{eq:solutions/2015/dec/75/tab:2}. 
+
+\begin{table*}[h]
+	\begin{tabular}{|m{3cm}|m{14cm}|}
+		\hline
+		&\\
+		$\vec{AB}$ and $\vec{BA}$ always have the same set of eigenvalues.
+		& \textbf{True}. \\
+		& Let  $\lambda$  be an eigenvalue of  $\vec{AB}$, and $\vec{x}$  be a corresponding eigenvector.\\
+		&Then \\
+		& \qquad\qquad\qquad$\vec{AB} \vec{x}$=$\lambda \vec{x}$ \\
+		& Left-multiplying by $\vec{B}$:\\
+		&\qquad\qquad\qquad$\vec{B(AB)}\vec{x}$ = $\vec{B}(\lambda \vec{x})$\\
+		& \qquad\qquad\qquad$\vec{(BA)}\vec{Bx}=\lambda(\vec{B}\vec{x})$  (by associativity of multiplication)\\
+	    & $\implies  \lambda $ is an eigenvalue of  $\vec{BA}$  with  $\vec{B}\vec{x}$  as the corresponding eigenvector, assuming  $\vec{B}\vec{x}$  is not a null vector.\\
+		&If  $\vec{B}\vec{x}$   is null, then  $\vec{B}$   is singular, so that both  $\vec{AB}$ and  $\vec{BA}$ are singular, and  $\lambda=0$. Since both the products are singular,  0  is an eigenvalue of both.\\
+		&\\
+		& Example:\\
+		& Let \\
+		&\qquad\qquad\qquad$\vec{A} = \myvec{1 & 0 \\ 1 & 1}, \vec{B} = \myvec{2 & -2 \\ 2 & -2}$\\
+		&Then\\
+		& \qquad\qquad\qquad$\vec{AB} = \myvec{2 & -2 \\ 4 & -4}, \vec{BA} = \myvec{0 & -2 \\ 0 & -2}$\\
+		& Since $\vec{AB}$ and $\vec{BA}$ results with the same characteristic equation,\\
+		& \qquad\qquad\qquad $\lambda^2 + 2\lambda = 0$\\
+		&they will have same set of eigenvalues that is $\lambda_1 = 0, \lambda_2 = -2$\\
+		& \\
+		\hline
+		&\\
+		If $\vec{AB}$ and $\vec{BA}$ have the same set of eigenvalues then $\vec{AB=BA}$
+		& \textbf{False}. \\
+		&Counter example:\\
+		& Let\\
+		& \qquad\qquad\qquad$\vec{A} = \myvec{1 & 0 \\ 1 & 1}, \vec{B} = \myvec{2 & -2 \\ 2 & -2}$\\
+	    &then\\
+	    & \qquad\qquad\qquad$\vec{AB} = \myvec{2 & -2 \\ 4 & -4}, \vec{BA} = \myvec{0 & -2 \\ 0 & -2}$\\
+        & $\implies$ Same eigenvalues $\brak{\lambda_1 = 0, \lambda_2 = -2}$, but $\vec{AB} \ne \vec{BA}$
+		\\
+		&\\
+		\hline
+			\end{tabular}
+\caption{}
+\label{eq:solutions/2015/dec/75/tab:1}
+	\end{table*}
+\begin{table*}[h]
+	\begin{tabular}{|m{3cm}|m{14cm}|}
+		\hline
+		&\\
+	    If $\vec{A}^{-1}$ exists, then $\vec{AB}$ and $\vec{BA}$ are similar
+		& \textbf{True}. \\
+		& Given that $\vec{A}^{-1}$ exists and hence,\\
+		&\qquad\qquad\qquad $\vec{AB}$ = $\vec{A}^{-1}\vec{(AB)A}$ =  $\vec{(A^{-1}A)}\vec{BA}$ = $\vec{BA}$.\\
+		& Hence, $\vec{AB} \simeq \vec{BA}$ \\
+		&\\
+		&Example:\\
+		& Let\\
+		& \qquad\qquad\qquad$\vec{A} = \myvec{1 & 0 \\ 1 & 1}, \vec{B} = \myvec{2 & -2 \\ 2 & -2}$\\
+		&then\\
+		& \qquad\qquad\qquad$\vec{AB}$\quad= $\myvec{2 & -2 \\ 4 & -4} = \vec{A}^{-1} (\vec{AB})\vec{A}$\\
+		&  \qquad\qquad\qquad  \qquad\qquad\qquad\quad= $\myvec{1 & 0\\ -1 & 1}\myvec{2 & -2 \\ 4 & -4}\myvec{1 & 0 \\ 1 & 1}$\\
+		&  \qquad\qquad\qquad \qquad\qquad\qquad\quad=$\myvec{0 & -2 \\ 0 & -2} $\\
+		&  \qquad\qquad\qquad \qquad\qquad\qquad\quad= $\vec{BA}$\\
+		&\\
+		\hline
+		&\\
+	    The rank of $\vec{AB}$  is always the same as the rank of $\vec{BA}$.
+		& \textbf{False}. \\
+		&Counter example:\\
+		& Let\\
+		& \qquad\qquad\qquad$\vec{A}$ = $\myvec{1 & 0 & 0 \\ 0 &1 & 0\\ 0 & 0 & 0}$ , 
+		$\vec{B}$ = $\myvec{0& 1 & 0 \\ 0 & 0 & 1\\ 0 & 0 & 0}$\\
+		&then\\
+		& \qquad\qquad\qquad$\vec{AB}$ = $\myvec{0 & 1 & 0 \\ 0 & 0 & 1\\ 0 & 0 & 0}$ ,  $\vec{BA}$ = $\myvec{0 & 1  & 0\\ 0 & 0 & 0\\ 0 & 0 & 0}$\\
+		& From the above $\vec{AB}$ and $\vec{BA}$, it is noted that the rank$\brak{\vec{AB}}$ = 2 and rank$\brak{\vec{BA}}$=1. \\
+		& Hence the rank of $\vec{AB}$ need not always be same as rank of $\vec{BA}$.
+		\\
+		\hline
+	\end{tabular}
+\caption{}
+\label{eq:solutions/2015/dec/75/tab:2}
+\end{table*}

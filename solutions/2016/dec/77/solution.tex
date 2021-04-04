@@ -1,0 +1,109 @@
+See Table \ref{eq:solutions/2016/dec/77/table:1}
+
+\onecolumn
+\begin{longtable}{|c|c|}
+\hline
+\multirow{3}{*}{} & \\
+$\textbf{Given}$ & $\vec{W_1}$, $\vec{W_2}$, $\vec{W_3}$\\
+& are 3 distinct subspaces of \\
+& $\vec{R}^{10}$\\
+& \\
+& Each $\vec{W_i}$ has dimension 9\\
+& \\
+& $\vec{W} = \vec{W_1} \cap \vec{W_2} \cap \vec{W_3}$\\
+& \\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Statement1} & $\vec{W}$ may not be a subspace of\\
+& $\vec{R}^{10}$\\
+\hline
+Explanation & As $\vec{W} = \vec{W_1} \cap \vec{W_2}\cap \vec{W_3}$\\
+& and $\vec{W_1}$, $\vec{W_2}$, $\vec{W_3}$ \\
+& are subspaces of $\vec{W}$,then $\vec{W}$\\
+& must be a subspace of $\vec{R}^{10}$.\\
+& So the first option is false.\\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Statement2} & dim $\vec{W} \leq 8$\\
+\hline
+Explanation & As $\vec{W}$ be a subspace of a \\
+& finite dimension vector space $\vec{R}^{10}$ \\
+& and dim $\vec{R}^{10}$= 10, so $\vec{W}$ \\
+& is finite dimension and \\
+& dim $\vec{W} \leq 10$ \\
+& \\
+\hline
+$\textbf{Theorem}$ & dim ($\vec{W_1} \cap \vec{W_2}$)\\
+& = dim($\vec{W_1}$)+dim($\vec{W_2}$)-dim($\vec{W_1}+\vec{W_2}$)\\
+& and \\
+& $\vec{W_1} \cap \vec{W_2}$ is also a subspace of $\vec{R}^{10}$\\
+& \\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Proof} & The minimum dimension of \\
+& $\vec{W} = \vec{W_1} \cap \vec{W_2} \cap \vec{W_3}$ \\
+\hline
+Explanation & Let us consider $\vec{V}=\vec{R}^{10}$ and $dim(\vec{V})=10$\\
+& and $\vec{U} = \vec{W_1} \cap \vec{W_2}$\\
+& So, $dim(\vec{W_1} \cap \vec{W_2} \cap \vec{W_3}$) = $dim(\vec{U}$)\\
+& +$dim(\vec{W_3}$) - $dim(\vec{U}+\vec{W_3}$)\\
+& \\
+& $\textbf{or,}$ $dim(\vec{W_1} \cap \vec{W_2} \cap \vec{W_3}$) = $dim(\vec{W_1}$)\\
+& +$dim(\vec{W_2}$)+$dim(\vec{W_3}$) - $dim(\vec{W_1}+\vec{W_1}$)\\
+& -$dim((\vec{W_1} \cap \vec{W_2})+\vec{W_3}$)\\
+& \\
+\hline
+& \\
+& Now, $(\vec{W_1} \cap \vec{W_2})+\vec{W_3} \subseteq \vec{V}$\\
+& $\implies$ $dim((\vec{W_1} \cap \vec{W_2})+\vec{W_3})\leq dim(\vec{V})$\\
+& $\implies$ -$dim((\vec{W_1} \cap \vec{W_2})+\vec{W_3})\geq -dim(\vec{V})$\\
+& \\
+& Similarly, $(\vec{W_1}+\vec{W_2})\subseteq \vec{V}$\\
+& $\implies$ $dim(\vec{W_1}+\vec{W_2})\leq dim(\vec{V})$\\
+& $\implies$ -$dim(\vec{W_1}+\vec{W_2})\geq -dim(\vec{V})$\\
+& \\
+\hline
+& \\
+& Considering these two inequations,\\
+& -$dim((\vec{W_1} \cap \vec{W_2})+\vec{W_3})$-$dim(\vec{W_1}+\vec{W_2})$\\
+& $\geq -2dim(\vec{V})$\\
+& \\
+& $\textbf{or,}$  $dim(\vec{W_1})+dim(\vec{W_2})+dim(\vec{W_3})$\\
+& -$dim((\vec{W_1} \cap \vec{W_2})+\vec{W_3})$-$dim(\vec{W_1}+\vec{W_2})$\\
+& $\geq dim(\vec{W_1})+dim(\vec{W_2})+dim(\vec{W_3})-2dim(\vec{V})$\\
+& \\
+& $\textbf{or,}$ $dim(\vec{W_1} \cap \vec{W_2} \cap \vec{W_3})$\\
+& $\geq dim(\vec{W_1})+dim(\vec{W_2})+dim(\vec{W_3})-2dim(\vec{V})$\\
+& \\
+& $\implies$ $dim(\vec{W})\geq dim(\vec{W_1})+dim(\vec{W_2})$\\
+& $+dim(\vec{W_3})-2dim(\vec{V})$\\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Statement 3} & dim $\vec{W} \geq 7$ \\
+\hline
+Explanation & As $dim(\vec{W})\geq dim(\vec{W_1})+dim(\vec{W_2})$\\
+& $+dim(\vec{W_3})-2dim(\vec{V})$\\
+& $\implies dim(\vec{W})\geq$ (9+9+9) - (2$\times$10)\\
+& $\implies dim(\vec{W}) \geq $ 7\\
+\hline
+$\textbf{Answer}$ & $7 \leq dim(\vec{W}) \leq 10$\\
+& \\
+\hline
+\caption{$\textbf{Solution summary}$}
+\label{eq:solutions/2016/dec/77/table:1}
+\end{longtable}
+Hence, we can conclude that $dim(\vec{W}) \geq$ 7.
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\numberwithin{equation}{enumi}
+%\item Verification of the above problem using python code.\\
+%\solution The  following Python code verifies the above solution.
+%\begin{lstlisting}
+%codes/multiplication_test.py
+%\end{lstlisting}
+%%%
+%\end{enumerate}
+
+
+
+

@@ -1,0 +1,87 @@
+See Table \ref{eq:solutions/2014/dec/90/table1}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Options} & \textbf{Explanation} \\
+\hline
+\text{$\vec{A^{n}}=\myvec{\cos\theta& \sin\theta\\-\sin\theta& \cos\theta}$$\forall n\geq{1}$} & $\vec{A}=\myvec{x&y\\-y&x}$\\
+where x=$\cos(\frac{\theta}{n})$,y=$\sin(\frac{\theta}{n})$& 
+\\&$\vec{A}=\myvec{\cos(\frac{\theta}{n})&\sin(\frac{\theta}{n})\\-\sin(\frac{\theta}{n})&\cos(\frac{\theta}{n})}$\\
+&\\& $\vec{A^2}=\vec{A}.\vec{A} =\myvec{\cos(\frac{\theta}{n})&\sin(\frac{\theta}{n})\\-\sin(\frac{\theta}{n})&\cos(\frac{\theta}{n})}\myvec{\cos(\frac{\theta}{n})&\sin(\frac{\theta}{n})\\-\sin(\frac{\theta}{n})&\cos(\frac{\theta}{n})}$\\
+&\\&$\vec{A^2}=\myvec{\cos(\frac{2\theta}{n})&\sin(\frac{2\theta}{n})\\-\sin(\frac{2\theta}{n})&\cos(\frac{2\theta}{n})}$\\
+&\\
+&$\vec{A^3}=\vec{A^2}.\vec{A}=\myvec{\cos(\frac{2\theta}{n})&\sin(\frac{2\theta}{n})\\-\sin(\frac{2\theta}{n})&\cos(\frac{2\theta}{n})}\myvec{\cos(\frac{\theta}{n})&\sin(\frac{\theta}{n})\\-\sin(\frac{\theta}{n})&\cos(\frac{\theta}{n})}$\\
+&\\
+& $\vec{A^3}=\myvec{\cos(\frac{3\theta}{n})&\sin(\frac{3\theta}{n})\\-\sin(\frac{3\theta}{n})&\cos(\frac{3\theta}{n})}$\\
+&..\\
+&..\\
+&..\\
+&\\
+&$\vec{A^{n}}=\myvec{\cos(\frac{n\theta}{n})& \sin(\frac{n\theta}{n})\\-\sin(\frac{n\theta}{n})& \cos(\frac{n\theta}{n})}$\\
+&\\& $\vec{A^{n}}=\myvec{\cos\theta& \sin\theta\\-\sin\theta& \cos\theta}$ $\qquad \forall n\geq{1}$\\
+& Hence,correct\\
+\hline
+\text{$trace(\vec{A})\neq 0$} & 
+Let,$x=0,y=1$,Substitute in $\eqref{eq:solutions/2014/dec/90/1}$\\
+& $\vec{A}=\myvec{0&1\\-1&0}$\\
+& $trace(\vec{A})= 0$\\
+& Hence,incorrect\\
+\hline
+\text{$\vec{A^{T}}=\vec{A^{-1}}$}
+&$\vec{A}=\myvec{x&y\\-y&x}$\\
+&$\vec{A^{T}}=\myvec{x&-y\\y&x}$\\
+$\vec{A}\vec{A^{T}}$&$\myvec{x&y\\-y&x}$$\myvec{x&-y\\y&x}$\\
+& $\myvec{x^2+y^2&-xy+xy\\-xy+xy&x^2+y^2}$\\
+& $\myvec{1&0\\0&1}$\\
+& $\vec{A}{A^T}=\vec{I}=\vec{A^T}{A}$\\
+& $\implies \vec{A}=\vec{A^{-1}}$\\
+& $\implies \vec{A}$ is an orthogonal matrix.\\ 
+& Hence,correct.\\
+\hline
+\end{tabular}
+\end{center}
+\end{table*}
+\renewcommand{\thetable}{}
+\begin{table*}[ht!]{1}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Options} & \textbf{Explanation} \\
+\hline
+\text{$\vec{A}$ is similar to a diagonal matrix over $\mathbb{C}$}
+&\\Using Spectral Theorem &  Every real orthogonal matrix is diagonalizable over $\mathbb{C}$\\
+& $\vec{A}$ is orthogonal from above.\\
+& Since,$x,y \in \mathbb{R}$ .So,$\vec{A}$ is a real orthogonal matrix.\\
+&\\
+$\vec{A}=\myvec{x&y\\-y&x}$&$det(\vec{A}-\lambda\vec{I}))=0$\\
+&$(x-\lambda)^2+y^2=0$\\
+&$\lambda_1=x-iy \qquad \lambda_2=x+iy$\\
+& For two eigen values $\lambda_1,\lambda_2$ let heir corresponding eigen vectors be\\& $\vec{V_1},\vec{V_2}$\\
+Finding $\vec{V_1}$  & 
+$(\vec{A}-\lambda_1\vec{I})\vec{V_1}=0$\\
+&$(\vec{A}-\lambda_1\vec{I})=\myvec{iy&y\\-y&iy}$\\
+&By Elementary row operations we get,\\
+&$(\vec{A}-\lambda_1\vec{I})=\myvec{iy&y\\0&0}$\\
+&$\vec{V_1}=\myvec{i\\1}$\\
+Finding $\vec{V_2}$  & 
+$(\vec{A}-\lambda_2\vec{I})\vec{V_2}=0$\\
+&$(\vec{A}-\lambda_2\vec{I})=\myvec{-iy&y\\-y&-iy}$\\
+&By Elementary row operations we get,\\
+&$(\vec{A}-\lambda_2\vec{I})=\myvec{-iy&y\\0&0}$\\
+&$\vec{V_2}=\myvec{-i\\1}$\\
+$\vec{A}=\vec{P}\vec{D}\vec{P^{-1}}$&$\vec{P}$ is a matrix containing eigen vectors of $\vec{A}$\\&,$\vec{D}$ is the diagonal matrix where diagonals are the eigen values of $\vec{A}$\\
+&$\vec{P^{-1}}=\frac{1}{2i}\myvec{1&i\\-1&i}$\\
+&$\vec{A}=\frac{1}{2i}\myvec{i&-i\\1&1}\myvec{x-iy&0\\0&x+iy}\myvec{1&i\\-1&i}$\\
+&\\
+&Hence,$\vec{A}$ is similar to a diagonal matrix over $\mathbb{C}$\\
+&Hence,correct.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Finding Correct Option}
+\label{eq:solutions/2014/dec/90/table1}
+\end{table*}
+
+ 

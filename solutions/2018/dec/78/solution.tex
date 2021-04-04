@@ -1,0 +1,107 @@
+See Tables     \ref{eq:solutions/2018/dec/78/table:1}
+    \ref{eq:solutions/2018/dec/78/table:2}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Matrix representation} 
+	& \\
+	& The Matrix representation of quadratic forms\\
+	&\parbox{10cm}
+	{\begin{align}
+	Q(x,y) = ax^2+2bxy+cy^2=\myvec{x&y}\myvec{a&b\\b&c}\myvec{x\\y} =\vec{X}^{T}\vec{A}\vec{X}\label{eq:solutions/2018/dec/78/eq:1}
+	\end{align}}\\
+	&The symmetric matrix of the quadratic form is\\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{A}=\myvec{a&b\\b&c}
+	\end{align}}\\ 
+	&\\
+	\hline
+	\multirow{3}{*}{Equivalent condition} 
+	&\\
+	& Two quadratic forms $\vec{X}^{T}\vec{A}\vec{X}$ and $\vec{Y}^{T}\vec{B}\vec{Y}$ are called equivalent if their matrices,\\
+	& A and B are congruent.\\
+	&\\
+	& Two real quadratic forms are equivalent over the real field iff they have\\
+	& the same rank and the same index.\\
+	&\\
+    \hline
+    \multirow{3}{*}{Rank} 
+	&\\
+	& The rank of a quadratic form is the rank of its associated matrix.\\
+	&\\
+	\hline
+    \multirow{3}{*}{Index} 
+	&\\
+	& The index of the quadratic form is equal to the number of positive eigen\\ &values of the matrix of quadratic form.\\
+	&\\
+    \hline
+    \caption{Definitions and results used}
+    \label{eq:solutions/2018/dec/78/table:1}
+\end{longtable}
+\begin{table*}[ht]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{} &
+  \textbf{Matrix} &
+  \textbf{Rank} &
+  \textbf{Eigen Values} &
+  \textbf{Index} \\ \hline
+$Q_{1}(x,y)$ &
+  \multicolumn{1}{c|}{$\vec{A}_1=\myvec{0&\frac{1}{2}\\\frac{1}{2}&0}$} &
+  \begin{tabular}[c]{@{}l@{}}
+  $\myvec{0&\frac{1}{2}\\\frac{1}{2}&0}\xleftrightarrow[R_2\leftarrow R_1]{R_1\leftarrow R_2}
+  \myvec{\frac{1}{2}&0\\0&\frac{1}{2}}$\\
+\\
+  $\text{rank}(\vec{A}_1)=2$
+  \\
+  \end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}
+$\quad \quad\mydet{\Vec{A}_1-\lambda\Vec{I}}=0$\\ \\
+$\implies\mydet{-\lambda&\frac{1}{2}\\\frac{1}{2}&-\lambda}=0$\\ \\
+$\implies\brak{\lambda-\frac{1}{2}}\brak{\lambda+\frac{1}{2}}=0$\\
+\\
+$\implies \lambda_1=\frac{1}{2},\lambda_2=-\frac{1}{2}$
+\\  \end{tabular} &
+ $\text{Index of $\vec{A}_1$}  =1$ \\ \hline
+$Q_{2}(x,y)$ &
+  $\vec{A}_2=\myvec{1&1\\1&1}$ &
+  \begin{tabular}[c]{@{}l@{}}
+  $\myvec{1&1\\1&1}\xleftrightarrow[]{R_2\leftarrow R_2-R_1}\myvec{1&1\\0&0}$\\
+  \\
+  $\text{rank}(\vec{A}_2)=1$
+  \\
+  \end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}
+  $\quad \quad\mydet{\Vec{A}_2-\lambda\Vec{I}}=0$\\ \\
+$\implies\mydet{1-\lambda&1\\1&1-\lambda}=0$\\\\
+$\implies\brak{\lambda}\brak{\lambda-2}=0$ \\
+\\$\implies \lambda_1=0,\lambda_2=2$
+\\
+  \end{tabular} &
+  \text{Index of $\vec{A}_2$}=2 \\ \hline
+$Q_{3}(x,y)$ &
+  $\vec{A}_3=\myvec{1&\frac{3}{2}\\\frac{3}{2}&2}$  &
+  \begin{tabular}[c]{@{}l@{}}
+  $\myvec{1&\frac{3}{2}\\\frac{3}{2}&2}
+\xleftrightarrow[]{R_2\leftarrow R_2-\frac{3}{2} R_1}
+\myvec{1&\frac{3}{2}\\0&-\frac{1}{4}}$\\
+  \\
+  $\text{rank}(\vec{A}_3)=2$
+  \\
+  \end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}
+  $\quad\quad\mydet{\Vec{A}_3-\lambda\Vec{I}}=0$\\ \\
+$\implies\mydet{1-\lambda&\frac{3}{2}\\\frac{3}{2}&2-\lambda}=0$\\ \\
+$\implies\brak{\lambda-\frac{\sqrt{10}+3}{2}}\brak{\lambda+\frac{\sqrt{10}-3}{2}}=0$\\ \\
+$\implies \lambda_1=\frac{3+\sqrt{10}}{2},\lambda_2=\frac{3-\sqrt{10}}{2}$\\
+  \end{tabular} &
+   $\text{Index of $\vec{A}_3$}  =1$  \\ \hline
+Conclusion &
+  \multicolumn{4}{l|}{We can say that $Q_{1}(x,y)$ and $Q_{3}(x,y)$ are equivalent as the rank and index are same.} \\ \hline
+\end{tabular}
+\caption{Finding which quadratic forms are equivalent}
+\label{eq:solutions/2018/dec/78/table:2}
+\end{table*}
+\twocolumn

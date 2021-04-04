@@ -1,0 +1,22 @@
+Finding the characteristic equation,
+\begin{align}
+\mydet{\vec{A}-\lambda\vec{I}} =\mydet{1-\lambda&0&2\\1&-2-\lambda&0\\0&0&-3-\lambda}\\
+\implies (1-\lambda)(-2-\lambda)(-3-\lambda)=0\\
+\implies (\lambda^2+\lambda-2)(-3-\lambda)=0\\
+\implies \lambda^3+4\lambda^2+\lambda-6 = 0
+\end{align}
+Using Cayley-Hamilton Theorem we get,
+\begin{align}
+\vec{A}^3+4\vec{A}^2+\vec{A}-6\vec{I}=0\\
+\implies\vec{A}^3+4\vec{A}^2+\vec{A} = 6\vec{I}\\
+\implies\vec{A}(\vec{A}^2+4\vec{A}+\vec{I})= 6\vec{I} \label{eq:solutions/2017/june/31/eq:2}
+\end{align}
+$\mydet{\vec{A}} =6 \neq 0$ hence inverse exists. Hence \eqref{eq:solutions/2017/june/31/eq:2} we get,
+\begin{align}
+6\vec{A}^{-1} = \vec{A}^2+4\vec{A}+\vec{I} \label{eq:solutions/2017/june/31/eq:3}
+\end{align} 
+Comparing \eqref{eq:solutions/2017/june/31/eq:1} and \eqref{eq:solutions/2017/june/31/eq:3} we get,
+\begin{align}
+a=1 \quad b=4 \quad c=1
+\end{align}
+Hence $(a,b,c)= (1,4,1)$  

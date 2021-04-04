@@ -1,0 +1,89 @@
+Given that $\vec{T}: \mathbb R^n \rightarrow \mathbb R^n$ be a linear transformation and B represents a set of linearly independent eigenvectors of $\vec{T}$ given as follows
+\begin{align}
+    \vec{B} = \{\vec{v}_1,\ldots,\vec{v}_n\}
+\end{align}
+So,
+\begin{align}
+    \vec{T}(\vec{v}_i) = \vec{A}\vec{v}_i = \lambda_i\vec{v}_i
+\end{align}
+where $\lambda_i$ represents the eigenvalue corresponding to $\vec{v}_i$. Hence, the matrix $\vec{T}$ with respect to $\vec{B}$ can be represented as
+\begin{align}
+    [\vec{T}]_B = \myvec{\lambda_1 & 0 & \dots & 0\\ 0 & \lambda_2 & \dots & 0\\ \vdots & \ddots &  & \\ 0 & \dots & 0 & \lambda_n}\label{eq:solutions/2015/june/72/eq:T}
+\end{align}
+And,
+\begin{align}
+    (\vec{T}-\vec{S})\vec{v}_i & = \vec{T}(\vec{v}_i) - \vec{S}(\vec{v}_i)\\& = \lambda_i\vec{v}_i - \alpha\vec{v}_i \\ & = (\lambda_i - \alpha)\vec{v}_i
+\end{align}
+Hence, matrix of $\vec{T}-\vec{S}$ with respect to $\vec{B}$ can be represented as
+\begin{align}
+    [\vec{T}-\vec{S}]_B = \myvec{\lambda_1-\alpha & 0 & \dots & 0\\ 0 & \lambda_2-\alpha & \dots & 0\\ \vdots & \ddots &  & \\ 0 & \dots & 0 & \lambda_n-\alpha}\label{eq:solutions/2015/june/72/eq:T-S}
+\end{align}
+\onecolumn
+\begin{longtable}{|l|l|}
+    \hline
+        & \\
+        1. The matrix of $\vec{T}$ & True, as seen\\
+        w.r.t to $\vec{B}$ is diagonal & from \eqref{eq:solutions/2015/june/72/eq:T}\\
+        & \\
+    \hline
+        & \\
+        2. The matrix of $(\vec{T}-\vec{S})$ & True, as seen\\
+        w.r.t $\vec{B}$ is diagonal & from \eqref{eq:solutions/2015/june/72/eq:T-S}\\
+        & \\
+    \hline
+        & \\
+        3. The matrix of $\vec{T}$ with respect & False, as\\
+        to $\vec{B}$ is not necessarily diagonal & already proved\\
+        but is upper triangular & $[\vec{T}]_B$ is diagonal\\
+        & \\
+    \hline
+        & \\
+        4. The matrix of $\vec{T}$ with respect to $\vec{B}$ & False, as\\
+        is diagonal but the matrix of $(\vec{T}-\vec{S})$ & already proved\\
+        with respect to $\vec{B}$ is not diagonal & $[\vec{T}-\vec{S}]_B$\\
+        & is diagonal\\
+        & \\
+    \hline
+    \caption{Verifying the given options}
+    \label{eq:solutions/2015/june/72/tab:proof}
+\end{longtable}
+\twocolumn
+Let $T:\mathbb R^2 \rightarrow \mathbb R^2$ where
+\begin{align}
+    \vec{T}(x) = \vec{A}\vec{x} = \myvec{4 & -2 \\ 3 & -3}\myvec{x_1 \\ x_2}
+\end{align}
+Here, the eigenvalues of the above trasformation matrix are $\lambda_1 = 3, \lambda_2 = -2$. And the corresponding eigenvectors are $\vec{v}_1 = \myvec{2\\1}, \vec{v}_2 = \myvec{1\\3}$. Thus,
+\begin{align}
+    \vec{B} = \{ \vec{v}_1, \vec{v}_2 \}
+\end{align}
+Now,
+\begin{align}
+    \vec{T}(\vec{v}_1) & = \vec{A}\vec{v}_1\\&
+    = \myvec{4 & -2 \\ 3 & -3}\myvec{2\\1} \\ &
+    = \myvec{6\\3} \\&
+    = 3\myvec{2\\1}\\&
+    = \lambda_1\vec{v}_1
+    \intertext{And,}
+    \vec{T}(\vec{v}_2) & = \vec{A}\vec{v}_2\\&
+    = \myvec{4 & -2 \\ 3 & -3}\myvec{1\\3} \\ &
+    = \myvec{-2\\-6} \\&
+    = -2\myvec{1\\3}\\&
+    = \lambda_2\vec{v}_2\\
+\end{align}
+For any vector $\vec{v} \in \mathbb R^2, \vec{v} = c_1\vec{v}_1 + c_2\vec{v}_2$
+\begin{align}
+    [\vec{v}]_B = \myvec{c_1 \\ c_2}\\
+    \vec{T}(\vec{v}) & = \vec{T}(c_1\vec{v}_1 + c_2\vec{v}_2)\\& = c_1\vec{T}(\vec{v}_1) + c_2\vec{T}(\vec{v}_2)\\ & = c_1\lambda_1\vec{v}_1 + c_2\lambda_2\vec{v}_2\\
+    [\vec{T}(\vec{v})]_B & = \myvec{\lambda_1 c_1\\ \lambda_2 c_2} \\&
+    = \myvec{\lambda_1 & 0 \\ 0 & \lambda_2}\myvec{c_1 \\ c_2} \\&
+    = \myvec{\lambda_1 & 0 \\ 0 & \lambda_2} [\vec{v}]_B \\& = \myvec{3 & 0\\0&-2}[\vec{v}]_B \label{eq:solutions/2015/june/72/eq:finalT}\\
+    \vec{S}(\vec{v}) & = \alpha\vec{v}, \alpha \neq 0\\&
+    = \alpha(c_1\vec{v}_1 + c_2\vec{v}_2)\\&
+    = \alpha c_1\vec{v}_1 + \alpha c_2\vec{v}_2
+\end{align}
+\begin{align}
+    [\vec{S}(\vec{v})]_B = \myvec{\alpha c_1\\ \alpha c_2}\\
+    [(\vec{T}-\vec{S})(\vec{v})]_B & = \myvec{\lambda_1 c_1 -\alpha c_1 \\ \lambda_2 c_2 -\alpha c_2}\\ & = \myvec{\lambda_1 -\alpha & 0 \\ 0 & \lambda_2 - \alpha}\myvec{c_1 \\ c_2}\\ &
+    = \myvec{\lambda_1 -\alpha & 0 \\ 0 & \lambda_2 - \alpha}[\vec{v}]_B \\ & = \myvec{3 -\alpha & 0 \\ 0 & -2 - \alpha}[\vec{v}]_B \label{eq:solutions/2015/june/72/eq:finalT-S}
+\end{align}
+Hence, shown from \eqref{eq:solutions/2015/june/72/eq:finalT} and \eqref{eq:solutions/2015/june/72/eq:finalT-S} that the matrix of $\vec{T}$ and of $\vec{T}-\vec{S}$ w.r.t to $\vec{B}$ is diagonal.

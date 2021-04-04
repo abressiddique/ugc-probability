@@ -1,0 +1,81 @@
+Refer Table \ref{eq:solutions/2017/dec/78/table:1}.
+
+
+\begin{table*}[ht!]
+\begin{center}
+\resizebox{\columnwidth}{!}
+{
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Given} & \textbf{Derivation} \\[0.5ex]
+\hline
+\text{Given} & 
+\text{$\vec{A}$ is a $m \times n$ matrix of rank $m$ with $n>m$}. \\
+& A non-zero real number $\alpha$.\\
+& To find eigenvalues of $\vec{A^TA}$.
+\\ [0.5ex]
+\hline
+\text{Eigenvalues of $\vec{AA^T}$} & 
+\text{$\vec{AA^T}$ is a $m \times m$ matrix and $\vec{A^TA}$ is a $n \times n$ matrix.}\\
+& Let, $\lambda$ be a non-zero eigen value of $\vec{A^TA}$.\\
+& \parbox{10cm}{\begin{align}
+    \vec{A^TAv} = \lambda \vec{v} \quad \vec{v} \in \vec{R^n}\\
+    \vec{AA^TAv} = \lambda \vec{Av}\\
+    \text{Let,} \quad \vec{x} = \vec{Av} \quad \vec{x} \in \vec{R^m}\\
+    \vec{AA^Tx} = \lambda \vec{x}\\
+    \vec{x^TAA^Tx} = \lambda \vec{x^Tx}\\
+    \text{Given}, \quad \vec{x^TAA^Tx} = \alpha\vec{x^Tx}\\
+    \implies \alpha\vec{x^Tx} = \lambda \vec{x^Tx} \label{eq:solutions/2017/dec/78/eq:eq18}
+\end{align}} \\
+& From equation \eqref{eq:solutions/2017/dec/78/eq:eq18}, $\lambda = \alpha$ as $\norm{\vec{x}} \not = 0$\\
+& As rank($\vec{A^TA}$) = rank($\vec{A}$) = $m$ and equation \eqref{eq:solutions/2017/dec/78/eq:eq18} satisfies the condition in question.\\
+&Therefore the only non-zero eigen value is $\alpha$\\
+& $\vec{A^TA}$ has an eigenvalue $\alpha$ with multiplicity $m$.
+\\ [0.5ex]
+\hline
+\text{Eigenvalues of $\vec{A^TA}$} & 
+$\vec{A^TA}$ is a $n \times n$ matrix. Given $n > m$, \\\\
+&We know that, $\vec{A^TA}$ and $\vec{AA^T}$ have same number of non-zero eigenvalues\\& and if one of them has more number of eigenvalues than the other \\&then these eigenvalues are zero.\\
+& 1. From above, as $\alpha$ is non-zero, $\vec{A^TA}$ has $\alpha$ as its eigenvalue with multiplicity $m$ \\
+& 2. $\vec{A^TA}$ has $0$ as its eigenvalue with multiplicity $n-m$\\
+& 3. Therefore, the two distinct eigenvalues of $\vec{A^TA}$ are $\alpha$ and $0$.
+\\ [0.5ex]
+\hline
+\end{tabular}
+}
+\end{center}
+
+\caption{Explanation}
+\label{eq:solutions/2017/dec/78/table:1}
+\end{table*}
+
+Refer Table \ref{eq:solutions/2017/dec/78/table:2}.
+
+\begin{table*}[ht]
+\begin{center}
+\resizebox{\columnwidth}{!}
+{
+\begin{tabular}{|c|c|}
+\hline
+& \\
+$\vec{A^TA}$ has exactly two distinct eigenvalues.
+& True statement\\
+\hline
+& \\
+$\vec{A^TA}$ has 0 as an eigenvalue with multiplicity $n-m$
+& True statement\\
+\hline
+& \\
+$\vec{A^TA}$ has $\alpha$ as a non-zero eigenvalue
+&  True statement\\
+\hline
+& \\
+$\vec{A^TA}$ has exactly two non-zero distinct eigenvalues.
+& False statement\\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Solution}
+\label{eq:solutions/2017/dec/78/table:2}
+\end{table*}

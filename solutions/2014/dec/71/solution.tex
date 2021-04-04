@@ -1,0 +1,222 @@
+See Tables \ref{eq:solutions/2014/dec/71/table:1}
+\ref{eq:solutions/2014/dec/71/table:2} and 
+\ref{eq:solutions/2014/dec/71/table:3}.
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+	\multirow{3}{*}{Characteristic Polynomial} 
+	& \\
+	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
+	&\\
+	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Cayley-Hamilton Theorem}
+    &\\
+    & If $p\brak{x}$ is the characteristic polynomial of an $n\times n$ matrix $\vec{A}$, then,\\
+    &\\
+    &$\qquad \qquad \qquad p\brak{\vec{A}}=\vec{0}$\\
+    &\\
+    \hline
+	\multirow{3}{*}{Minimal Polynomial} 
+	&\\
+	& Minimal polynomial $m\brak{x}$ is the smallest factor of\\
+	&characteristic polynomial $p\brak{x}$ such that,\\
+	&\\
+	& $\qquad \qquad \qquad m\brak{\vec{A}}=0$\\
+	& \\
+	& Every root of characteristic polynomial should be the root of\\
+	&minimal polynomial\\
+	&\\
+    \hline
+\end{tabular}
+    \caption{Definitions}
+\label{eq:solutions/2014/dec/71/table:1}
+\end{table*}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement&Solution\\
+\hline
+&\\
+1.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{0&0&1\\0&0&0\\0&0&0}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=0,\lambda_{2}=0,\lambda_{3}=0$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x)^3\\
+    \mbox{Solving }\vec{A}^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Solving }\vec{A}^2&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Since }\vec{A}&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x)^2\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of two block:\\
+&one block of order 2 with principal diagonal value as $\lambda = 0$ and super\\
+&diagonal of the block (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&And one block of order 1 with $\lambda=0$.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{0&1&0\\0&0&0\\0&0&0}
+\end{align*}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore option 1 is true.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+2.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{0&0&1\\0&0&1\\0&0&0}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=0,\lambda_{2}=0,\lambda_{3}=0$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x)^3\\
+    \mbox{Solving }\vec{A}^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Solving }\vec{A}^2&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Since }\vec{A}&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x)^2\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of two block:\\
+&one block of order 2 with principal diagonal value as $\lambda = 0$ and super\\
+&diagonal of the block (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&And one block of order 1 with $\lambda=0$.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{0&1&0\\0&0&0\\0&0&0}
+\end{align*}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore option 2 is true.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+3.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{0&1&1\\0&0&0\\0&0&0}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=0,\lambda_{2}=0,\lambda_{3}=0$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x)^3\\
+    \mbox{Solving }\vec{A}^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Solving }\vec{A}^2&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Since }\vec{A}&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x)^2\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of two block:\\
+&one block of order 2 with principal diagonal value as $\lambda = 0$ and super\\
+&diagonal of the block (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&And one block of order 1 with $\lambda=0$.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{0&1&0\\0&0&0\\0&0&0}
+\end{align*}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore option 3 is true.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+4.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{0&1&1\\0&0&1\\0&0&0}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=0,\lambda_{2}=0,\lambda_{3}=0$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x)^3\\
+    \mbox{Solving }\vec{A}^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Solving }\vec{A}^2&=\myvec{0&0&1\\0&0&0\\0&0&0}\\
+    \mbox{Since }\vec{A}^2&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x)^3\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of only\\
+&one block with principal diagonal values as $\lambda = 0$ and super diagonal\\
+&of the matrix (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{0&1&0\\0&0&1\\0&0&0}
+\end{align*}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore option 4 is false.\\
+&\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2014/dec/71/table:2}
+\end{longtable}
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{1}{*}{For given jordan form:}
+	&\parbox{3cm}{\begin{align*}
+	    \vec{A}&=\myvec{0&1&0\\0&0&0\\0&0&0}
+	\end{align*}}\\
+    We have two blocks:&one block is of order 2.\\
+    &And one block is of order 1.\\
+    &And eigenvalues are all $\lambda=0$\\
+    &$\therefore$ Algebraic Multiplicity of 0 is 3.\\
+    &The rank of the matrix is 1.\\
+    &\parbox{6cm}{\begin{align*}
+        \mbox{Geometric Multiplicity of 0}&=n-\mbox{Rank}(\vec{A}-\lambda\vec{I})\\
+        &=n-\mbox{Rank}(\vec{A})\\
+        &=2
+    \end{align*}}\\
+	&\\
+	\hline
+	&\\
+	1.&The eigenvalue order of 0 in the characteristic polynomial = 3.\\
+	&$\therefore$ Algebraic Multiplicity of 0 is 3.\\
+	&The eigenvalue order of 0 in the minimal polynomial = 2.\\
+    &The rank of the matrix is 1.\\
+    &$\therefore$ The Geometric Multiplicity of 0 = 2.\\
+    &Therefore the matrix gives the same jordan form\\
+	& \\
+	\hline
+	&\\
+	2.&The eigenvalue order of 0 in the characteristic polynomial = 3.\\
+	&$\therefore$ Algebraic Multiplicity of 0 is 3.\\
+	&The eigenvalue order of 0 in the minimal polynomial = 2.\\
+    &The rank of the matrix is 1.\\
+    &$\therefore$ The Geometric Multiplicity of 0 = 2.\\
+    &Therefore the matrix gives the same jordan form\\
+	& \\
+	\hline
+	&\\
+	3.&The eigenvalue order of 0 in the characteristic polynomial = 3.\\
+	&$\therefore$ Algebraic Multiplicity of 0 is 3.\\
+	&The eigenvalue order of 0 in the minimal polynomial = 2.\\
+    &The rank of the matrix is 1.\\
+    &$\therefore$ The Geometric Multiplicity of 0 = 2.\\
+    &Therefore the matrix gives the same jordan form\\
+	& \\
+	\hline
+	&\\
+	4.&The eigenvalue order of 0 in the characteristic polynomial = 3.\\
+	&$\therefore$ Algebraic Multiplicity of 0 is 3.\\
+	&The eigenvalue order of 0 in the minimal polynomial = 3.\\
+    &The rank of the matrix is 2.\\
+    &$\therefore$ The Geometric Multiplicity of 0 = 1.\\
+    &Therefore the matrix gives different jordan form\\
+	\hline
+	\caption{Conclusion of above Results}
+    \label{eq:solutions/2014/dec/71/table:3}
+\end{longtable}
+
+\twocolumn

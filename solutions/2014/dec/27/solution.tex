@@ -1,0 +1,135 @@
+See Table \ref{eq:solutions/2014/dec/27/Table1:}
+
+\onecolumn
+\begin{longtable}{|p{5cm}|p{13cm}|}
+\hline
+\textbf{Statement} &\textbf{Solution}\\
+\hline
+Given Condition&
+\parbox{12cm}{\begin{align}
+BA+ B^2= I-BA^2 \label{eq:solutions/2014/dec/27/eq1}
+\end{align}}\\
+\hline
+Solution by Theory&
+\parbox{12cm}{We will first provide theoretical proof }\\
+\hline
+Theory&
+\parbox{12cm}{\text{As per definition of invertible matrix,A matrix 'B' in our case is defined}\\
+ \text{as invertible if there exists left and right inverse of B such that BC=CB=I } \\
+\text{In that case C is called the two sided inverse of B and B is said to be }\\
+\text{invertible.}\\
+\text{Now refer\eqref{eq:solutions/2014/dec/27/eq1} we get}
+\begin{align}
+ BA+ B^2= I-BA^2\\
+ \implies BA+B^2+BA^2=I\\
+ \implies I=B\brak{A+B+A^2}\label{eq:solutions/2014/dec/27/eqB}\\
+ \end{align}
+ \text{Let C= \brak{A+B+A^2} rewrite \eqref{eq:solutions/2014/dec/27/eqB} as}
+  \begin{align}
+  I=BC\label{eq:solutions/2014/dec/27/eqC}
+  \end{align}
+  \text{Also}\\
+ \begin{align}
+ I=\brak{A+B+A^2}B\label{eq:solutions/2014/dec/27/eqD}
+ \end{align}
+ \text{Let D= \brak{A+B+A^2} rewrite \eqref{eq:solutions/2014/dec/27/eqD} as}\\
+ \begin{align}
+ I=DB\label{eq:solutions/2014/dec/27/eqE}
+ \end{align}
+ \text{Now we can write}
+ \begin{align}
+    D= DI
+   \end{align}
+  \text{ Ref \eqref{eq:solutions/2014/dec/27/eqC}}
+  \begin{align}
+     =D\brak{BC}\\
+    =\brak{DB}C\\
+  \end{align}
+  \text{ Ref \eqref{eq:solutions/2014/dec/27/eqE}}
+  \begin{align}
+      =IC\\
+      =C\\
+      \implies D=C
+  \end{align}
+  \text{Hence by definition stated above we imply that }\\
+  \text{ Left inverse=Right inverse.}\\
+  \text{So by looking at \eqref{eq:solutions/2014/dec/27/eqB},we imply that B has a left and right inverse}\\
+ \begin{align}
+ \implies I=BB^{-1}\\
+ \implies \text{B is invertible}
+ \end{align}
+ \text{$\therefore$ B is non singular.\\Hence Option 2 is correct}
+}
+\\
+\hline
+Solution by examples&
+\parbox{12cm}{We will check each respective options through examples}\\
+\hline
+Option 3&
+\parbox{12cm}{\text{Let us take}
+\begin{align}
+A=\myvec{1&0\\0&1}\\
+B=\myvec{-1&0\\0&-1}
+\end{align}
+\text{ Take L.H.S of \eqref{eq:solutions/2014/dec/27/eq1}}
+\begin{align}
+\myvec{-1&0\\0&-1}\myvec{1&0\\0&1}+\myvec{-1&0\\0&-1}\myvec{-1&0\\0&-1}\\
+=\myvec{0&0\\0&0}\label{eq:solutions/2014/dec/27/eq2}
+\end{align}
+\text{ Take R.H.S of \eqref{eq:solutions/2014/dec/27/eq1}}
+\begin{align}
+ \myvec{1&0\\0&1}-\myvec{-1&0\\0&-1}\myvec{1&0\\0&1}\myvec{1&0\\0&1}\\
+ =\myvec{0&0\\0&0}\label{eq:solutions/2014/dec/27/eq3}
+\end{align}
+\text{ Our assumption satisfies \eqref{eq:solutions/2014/dec/27/eq1}.}
+\text{Now}
+\begin{align}
+    A+B=  \myvec{1&0\\0&1} + \myvec{-1&0\\0&-1}\\
+    = \myvec{0&0\\0&0}
+\end{align}
+\text{$\therefore \mydet{A+B}=0$  the respective option is Singular. Hence Option 3 is incorrect}
+}
+\\
+\hline
+Option 1&
+\parbox{12cm}{\text{ Now let us take} 
+\begin{align}
+ A=\myvec{0&0\\0&0}
+ B=\myvec{-1&0\\0&-1} \label{eq:solutions/2014/dec/27/eq4}
+\end{align}
+\text{Substituting\eqref{eq:solutions/2014/dec/27/eq4} in \eqref{eq:solutions/2014/dec/27/eq1}}\\
+\text{Take L.H.S of \eqref{eq:solutions/2014/dec/27/eq1}}
+\begin{align}
+\myvec{-1&0\\0&-1}\myvec{0&0\\0&0}+\myvec{-1&0\\0&-1}\myvec{-1&0\\0&-1}\\
+ = \myvec{1&0\\0&1}
+\end{align}
+\text{Take R.H.S of \eqref{eq:solutions/2014/dec/27/eq1}}
+\begin{align}
+ \myvec{1&0\\0&1}-\myvec{-1&0\\0&-1}\myvec{0&0\\0&0}\myvec{0&0\\0&0}\\
+ =\myvec{1&0\\0&1}
+%\label{eq:solutions/2014/dec/27/eq3}
+\end{align}
+\text{Our assumption satisfies \eqref{eq:solutions/2014/dec/27/eq1}}\\
+\text{But $\mydet{A}=0$}\\
+\text{$\therefore$  the respective option is Singular. Hence Option 1 is incorrect}
+}
+\\
+\hline
+ Option 4&
+\parbox{12cm}{\text{Similarly} 
+\begin{align}
+AB= \myvec{0&0\\0&0}\myvec{-1&0\\0&-1}\\
+ = \myvec{0&0\\0&0}
+\end{align}
+\text{Here also $\mydet{AB}=0$}\\
+\text{$\therefore$  the AB option is also Singular. Hence Option 4 is incorrect also}
+}
+\\
+\hline
+Correct Answer&
+\parbox{12cm}{\text{So we conclude that Option 2 is correct by eliminating other options}}\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2014/dec/27/Table1:}
+\end{longtable}
+\twocolumn

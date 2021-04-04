@@ -1,0 +1,32 @@
+We know that $\vec{A}$ is a self adjoint matrix and hence $\vec{A}=\vec{A}^{*}$ with eigen values $\lambda_1,\lambda_2,\cdots,\lambda_n$.Now as we are given,
+\begin{align}
+p(\vec{A})=a_0\vec{I}+a_1\vec{A}+\cdots+a_n\vec{A}^n
+\end{align}
+then,
+\begin{align}
+(p(\vec{A}))^{*}=a_0\vec{I}^{*}+a_1\vec{A}^{*}+\cdots+a_n\vec{(A^{*})}^n
+\end{align}
+Since, $\vec{A}=\vec{A}^{*}$ we can state that,
+\begin{align}
+p(\vec{A})(p(\vec{A}))^{*}=(p(\vec{A}))^{*}p(\vec{A})
+\end{align}
+Hence p($\vec{A}$) is a normal matrix. Now using spectral theorem for a normal matrix,
+\begin{align}
+\norm{p(\vec{A})}_{2}=\rho{(p(\vec{A}))}\end{align}
+sup refers to the smallest element that is greater than or equal to every number in the set.Hence, sup of $\norm{p(\vec{A})}_{2}$ will be, 
+\begin{align}
+=\max\cbrak{\vert\alpha\vert: \alpha \text{ is the eigen value of p(A)}}\\
+=\max\{\vert p(\lambda_j)\vert:j=1, 2, \cdots n\}\\
+=\max\{\vert a_0+a_1\lambda_j+\cdots+a_n{\lambda_j}^n\vert: j=1, 2, \cdots n\}
+\end{align}
+Now, to find $sup\norm{p(\vec{A})\vec{X}}_{2}$,\begin{align}
+=max\{\vert a_0+a_1\lambda_j+\cdots+a_n{\lambda_j}^n\vert: j=1, 2, \cdots n\}\norm{\vec{X}}_2
+\end{align}
+Since, we have to find $sup_{\norm{\vec{X}}_{2}=1}$ i.e,
+\begin{align} \norm{\vec{X}}_2=\sqrt{\vert\vec{X}_{1}^{2}\vert+\cdots+\vert\vec{X}_{n}^{2}\vert}=1\end{align} 
+Hence the final answer will be,
+\begin{align}
+=max\{\vert a_0+a_1\lambda_j+\cdots+a_n{\lambda_j}^n\vert: j=1, 2, \cdots n\}
+\end{align}
+
+%

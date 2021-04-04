@@ -1,0 +1,238 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+
+
+\item Consider the vector space $\mathbb{P}_n$  of real polynomials in $x$ of degree  $\le n$. Define
+\begin{align}
+T: \mathbb{P}_2 \to \mathbb{P}_3
+\end{align}
+by
+\begin{align}
+\brak{Tf}(x) = \int_{0}^{x}f(t)\,dt + f^{\prime}(x).
+\end{align}
+%
+Then find the matrix representation of $T$ with respect to the bases
+\begin{align}
+\cbrak{1,x,x^2} \text{ and } \cbrak{1,x,x^2,x^3}
+\end{align}
+%
+\item Let $P_A(x)$ denote the characteristic polynomial of a matrix $A$.  Then for which of the following matrices is
+\begin{align}
+P_A(x)-P_{A^{-1}}(x)
+\end{align}
+a constant?
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\myvec{3 & 3 \\ 2 & 4}$
+\item $\myvec{4 & 3 \\ 2 & 3}$
+\item $\myvec{3 & 2 \\ 4 & 3}$
+\item $\myvec{2 & 3 \\ 3 & 4}$
+\end{multicols}
+\end{enumerate}
+\solution
+\input{solutions/2019/28/solution.tex}
+\item Which of the following matrices is not diagonalizable over $\mathbb{R}$?
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\myvec{2 & 0 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 2}$
+\item $\myvec{1 & 1 \\ 1 & 1}$
+\item $\myvec{2 & 0 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 3}$
+\item $\myvec{1 & -1 \\ 2 & 4}$
+\end{multicols}
+\end{enumerate}
+\item What is the rank of the following matrix?
+\begin{align}
+\myvec
+{
+1 & 1 & 1 & 1 & 1 \\
+1 & 2 & 2 & 2 & 2 \\
+1 & 2 & 3 & 3 & 3 \\
+1 & 2 & 3 & 4 & 4 \\
+1 & 2 & 3 & 4 & 5 
+}
+\end{align}
+\item Let $V$ denote the vector space of real valued continuous functions on the close interval $\sbrak{0,1}$.  Let $W$ be the subspace of $V$ spanned by $\cbrak{\sin x, \cos x, \tan x}$.  Find the dimension of $W$ over $\mathbb{R}$.
+\solution
+\input{solutions/2019/31/solution.tex}
+
+\item Let $V$ be the vector space of polynomials in the variable $t$ of degree at most 2 over $\mathbb{R}$.  An inner product on $V$ is defined by
+\begin{align}
+f^Tg = \int_{0}^{1}f(t)g(t)\,dt, \quad f,g \in V.
+\end{align}
+Let
+\begin{align}
+W = span\cbrak{1-t^2,1+t^2}
+\end{align}
+and $W^{\perp}$  be the orthogonal complement of $W$ in $V$.  Which of the following conditions is satisfied for all $h \in W^{\perp}$?
+\begin{enumerate}
+\item $h$ is an even function
+\item $h$ is an odd function
+\item $h(t) =0$ has a real solution
+\item $h(0) = 0$
+\end{enumerate}
+\item Consider solving the following system by Jacobi iteration scheme
+\begin{align}
+\myvec
+{
+1 & 2m & -2m \\
+n & 1 & n \\
+2m & 2m & 1
+}
+\myvec{x}
+= \myvec{ 1 \\ 2 \\1}
+\end{align}
+where $m,n \in \mathbb{Z}$.  With any initial vector, the scheme converges provided $m,n$ satisfy
+\begin{enumerate}
+\begin{multicols}{2}
+\item $m+n = 3$
+\item $m > n$
+\item $m < n$
+\item $m = n$
+\end{multicols}
+\end{enumerate}
+\item Consider a Markov Chain with state space $\cbrak{0,1,2,3,4}$ and transition matrix
+\begin{align}
+P = 
+%\begin{blockarray}{c@{\hspace{1pt}}rrr@{\hspace{3pt}}}
+%         & 0   & 1   & 2 \\
+%        \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+%    (@{\hspace{1pt}}rrr@{\hspace{1pt}}@{\hspace{1pt}})}
+%        0 & 0.7 & 0.2 & 0.1 \\
+%        1 & 0.3 & 0.5 & 0.2 \\
+%        2 & 0   & 0   & 0   \\
+%        \end{block}
+%    \end{blockarray}
+\begin{blockarray}{c@{\hspace{1pt}}rrrrr@{\hspace{3pt}}}
+         & 0   & 1   & 2 &3 & 4\\
+        \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+    (@{\hspace{1pt}}rrrrr@{\hspace{1pt}}@{\hspace{1pt}})}
+        0 & 1 & 0 & 0 & 0 & 0 \\
+        1 & \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0 & 0 \\
+%
+        2 & 0 & \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0  \\
+        3 & 0 & 0 & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}   \\
+        4 & 0 & 0 & 0 & 0 & 1 \\
+        \end{block}
+    \end{blockarray}
+\end{align}
+Then find 
+\begin{align}
+\lim_{n \to \infty} p_{23}^{\brak{n}}
+\end{align}
+\item Let $L\brak{\mathbb{R}}^n$ be the space of $\mathbb{R}-$linear maps from $\mathbb{R}^n$ to $\mathbb{R}^n$.  If $Ker(T)$ denotes the kernel of $T$ then which of the following are true?
+\begin{enumerate}
+\item There exists $T \in L\brak{\mathbb{R}^5}\ \cbrak{0}$ such that $Range(T) = Ker(T)$
+\item There does not exist $T \in L\brak{\mathbb{R}^5}\ \cbrak{0}$ such that $Range(T) = Ker(T)$
+\item There exists $T \in L\brak{\mathbb{R}^6}\ \cbrak{0}$ such that $Range(T) = Ker(T)$
+\item There does not exist $T \in L\brak{\mathbb{R}^6}\ \cbrak{0}$ such that $Range(T) = Ker(T)$
+\end{enumerate}
+\item Let $V$ be a finite dimensional vector space over $\mathbb{R}$ and $T:V\to V$ be a linear map.   Can you always write $T = T_2 \circ T_1$ for some linear maps
+\begin{align}
+T_1:V\to W, T:W\to V,
+\end{align}
+where $W$ is some finite dimensional vector space such that\begin{enumerate}
+\item both $T_1$ and $T_2$ are onto
+\item both $T_1$ and $T_2$ are one to one
+\item $T_1$ is onto, $T_2$ is one to one
+\item $T_1$ is one to one, $T_2$ is onto
+\end{enumerate}
+\item Let $A = \sbrak{a_{ij}}$ be a $3\times 3$ complex matrix.  Identify the correct statements
+\begin{enumerate}
+\item $det\sbrak{\brak{-1}^{i+j}a_{ij}} = det(A)$
+\item $det\sbrak{\brak{-1}^{i+j}a_{ij}} = -det(A)$
+\item $det\sbrak{\brak{\sqrt{-1}}^{i+j}a_{ij}} = det(A)$
+\item $det\sbrak{\brak{\sqrt{-1}}^{i+j}a_{ij}} = -det(A)$
+\end{enumerate}
+\item Let 
+\begin{align}
+p(x) = a_0 + a_1x + \dots + a_n x^n 
+\end{align}
+be a non-constant polynomial of degree $n \ge 1$.  Consider the polynomial
+\begin{align}
+q(x) = \int_{0}^{x}p(t)\, dt,
+r(x) = \frac{d}{dx}p(x)
+\end{align}
+Let $V$ denote the real vector space of all polynomials in $x$.  Then which of the following are true?
+\begin{enumerate}
+\item $q$ and $r$ are linearly independent in $V$
+\item $q$ and $r$ are linearly dependent in $V$
+\item $x^n$ belongs to the linear span of $q$ and $r$
+\item $x^{n+1}$ belongs to the linear span of $q$ and $r$.
+\end{enumerate}
+\item Let $M_n\brak{\mathbb{R}}$ be the ring of $n \times n$ matrices over $\mathbb{R}$.  Which of the following are true for every $n \ge 2$?
+\begin{enumerate}
+\item there exist matrices $A,B \in M_n\brak{\mathbb{R}}$ such that $AB- BA = I_n$, where $I_n$ denotes the identity matrix.
+\item If $A,B \in M_n\brak{\mathbb{R}}$ and $AB = BA$, then $A$ is diagonalisable over $\mathbb{R}$ if and only if $B$ is diagonalisable over $\mathbb{R}$.
+\item If $A,B \in M_n\brak{\mathbb{R}}$, then $AB$ and $BA$ have the same minimal polynomial.
+\item If $A,B \in M_n\brak{\mathbb{R}}$, then $AB$ and $BA$ have the same eigenvalues in $\mathbb{R}$.
+\end{enumerate}
+\solution
+\input{solutions/2019/75/solution.tex}
+\item Consider a matrix 
+\begin{align}
+A = \sbrak{a_{ij}}, 1 \le i,j \le 5
+\end{align}
+such that
+\begin{align}
+a_{ij} = \frac{1}{n_i+n_j+1}, \quad n_i,n_j \in \mathbb{N}
+\end{align}
+Then in which of the following cases $A$ is a positive definite matrix?
+\begin{enumerate}
+\item $n_i = 1 \forall i = 1,2,3,4,5$.
+\item $n_1 < n_2 < \dots < n_5$.
+\item $n_1 = n_2 = \dots = n_5$.
+\item $n_1 > n_2 > \dots > n_5$.
+\end{enumerate}
+\item For a nonzero $w \in \mathbb{R}^n$, define
+\begin{align}
+T_w: \mathbb{R}^n \to \mathbb{R}^n
+\end{align}
+by
+\begin{align}
+T_w = v - \frac{2v^Tw}{w^Tw}w, \quad v \in \mathbb{R}^n
+\end{align}
+Which of the following are true?
+\begin{enumerate}
+\item $det\brak{T_w} = 1$
+\item $T_w(v_1)^T_w(v_2) = v_1^Tv_2 \forall v_1, v_2 \in \mathbb{R}^n$
+\item  $T_w = T_w ^{-1}$
+\item  $T_{2w} = 2T_{w}$
+\end{enumerate}
+\item Consider the matrix 
+\begin{align}
+A = \myvec{0 & 1 \\ 1 & 0}
+\end{align}
+over the field $\mathbb{Q}$ of rationals.  Which of the following matrices are of the form $P^TAP$ for suitable $2\times 2$ invertible matrix $P$ over $\mathbb{Q}$?
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\myvec{2 & 0 \\ 0 & -2}$
+\item $\myvec{2 & 0 \\ 0 & 2}$
+\item $\myvec{1 & 0 \\ 0 & -1}$
+\item $\myvec{3 & 4 \\ 4 & 5}$
+\end{multicols}
+\end{enumerate}
+\item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
+\begin{align}
+P = 
+\begin{blockarray}{c@{\hspace{1pt}}rrr@{\hspace{3pt}}}
+         & 0   & 1   & 2 \\
+        \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+    (@{\hspace{1pt}}rrr@{\hspace{1pt}}@{\hspace{1pt}})}
+        0 & \frac{1}{4} & \frac{5}{8} & \frac{1}{8}  \\[1mm]
+        1 & \frac{1}{4} & 0 & \frac{3}{4}  \\[1mm]
+        2 &  \frac{1}{2} & \frac{3}{8} & \frac{1}{8}  \\
+        \end{block}
+    \end{blockarray}
+\end{align}
+Then which of the following are true?
+\begin{enumerate}
+\item $\lim_{n \to \infty} p_{12}^{(n)} = 0$
+\item $\lim_{n \to \infty} p_{12}^{(n)} = \lim_{n \to \infty} p_{21}^{(n)}$
+\item $\lim_{n \to \infty} p_{22}^{(n)} = \frac{1}{8}$
+\item $\lim_{n \to \infty} p_{21}^{(n)} = \frac{1}{3}$
+\end{enumerate}
+\end{enumerate}
+

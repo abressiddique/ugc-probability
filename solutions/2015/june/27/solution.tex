@@ -1,0 +1,62 @@
+See Table \ref{eq:solutions/2015/june/27/Table1:}
+
+\onecolumn
+\begin{longtable}{|p{5cm}|p{13cm}|}
+\hline
+\textbf{Statement} &\textbf{Solution}\\
+\hline
+Definition & The trace of an n × n square matrix $\vec{A}$ is defined as:
+\begin{displaymath}tr({\vec{A}}) = \sum_{i=1}^n a_{ii} \end{displaymath}
+
+where $a_{ii}$ denotes the entry on the ith row and ith column of $\vec{A}.$ \\
+\hline
+Properties&
+\parbox{12cm}{\begin{align}\text{The properties of the trace}:
+tr(c{\vec{A}})=c\;tr({\vec{A}})\\
+tr({\vec{A}}^T)=tr({\vec{A}})\\
+tr({\vec{A}}+{\vec{B}})=tr({\vec{B}}+{\vec{A}})\\
+tr({\vec{A}}{\vec{B}})=tr({\vec{B}}{\vec{A}})\label{eq:solutions/2015/june/27/eq}\\
+tr({\vec{A}}^T{\vec{B}})=tr({\vec{A}}{\vec{B}}^T)\\
+tr({\vec{R}}^{-1}{\vec{A}}{\vec{R}})=tr({\vec{R}}^{-1}({\vec{A}}{\vec{R}}))\\
+=tr(({\vec{A}}{\vec{R}}){\vec{R}}^{-1})=tr({\vec{A}})
+\end{align}}\\
+\hline
+Checking $tr$$(\vec{A}^2 \vec{B}^2).$ &
+\parbox{12cm}{\begin{align}
+ \text{Upon rewriting and from \eqref{eq:solutions/2015/june/27/eq}, } tr(\vec{A}^2 \vec{B}^2)=tr(\vec{A}\vec{A} \vec{B}\vec{B})\\
+           = tr(\vec{B}\vec{A} \vec{A}\vec{B})\\
+           = tr(\vec{B}\vec{B} \vec{A}\vec{A})\\
+           = tr(\vec{A}\vec{B} \vec{B}\vec{A})\label{eq:solutions/2015/june/27/eq1}\\
+           = tr(\vec{A}\vec{A} \vec{B}\vec{B})\\
+           = tr(\vec{A}^2 \vec{B}^2)\label{eq:solutions/2015/june/27/eq2}
+\end{align}}\\
+\hline
+Checking ($tr$$(\vec{A} \vec{B}))^2.$&
+\parbox{12cm}{\begin{align}\text{from \eqref{eq:solutions/2015/june/27/eq},}\
+    (tr(\vec{A} \vec{B}))^2=(tr(\vec{B} \vec{A}))^2
+\end{align}}\\
+\hline
+ Checking $tr$$(\vec{A} \vec{B}^2 \vec{A}).$&
+\parbox{12cm}{\begin{align}\text{Rewriting,}
+\  tr(\vec{A} \vec{B}^2 \vec{A}) =tr(\vec{A}\vec{B} \vec{B}\vec{A})\\\text{ from \eqref{eq:solutions/2015/june/27/eq},}\
+ tr(\vec{A} \vec{B}^2 \vec{A})=  tr(\vec{A}\vec{A} \vec{B}\vec{B})\label{eq:solutions/2015/june/27/eql}=tr(\vec{A}^2 \vec{B}^2)  
+\end{align}}\\
+\hline
+Checking $tr$$(\vec{A} \vec{B})^2.$&
+\parbox{12cm}{\begin{align}\text{from \eqref{eq:solutions/2015/june/27/eq},}\
+ tr(\vec{A} \vec{B})^2=tr(\vec{B}\vec{A})^2 
+\end{align}}\\
+\hline
+ Checking $tr$$(\vec{B} \vec{A} \vec{B} \vec{A}).$&
+\parbox{12cm}{\begin{align}\text{from \eqref{eq:solutions/2015/june/27/eq}}\\
+ tr(\vec{B} \vec{A} \vec{B} \vec{A}) =tr(\vec{A}\vec{B} \vec{A}\vec{B})\\
+ =tr(\vec{B}\vec{A} \vec{B}\vec{A})
+ \end{align}}\\
+\hline
+ Conclusion&
+Hence, from \eqref{eq:solutions/2015/june/27/eq}, and \eqref{eq:solutions/2015/june/27/eql} option 2, ie  $tr$$(\vec{A} \vec{B}^2 \vec{A}).$ is the correct answer.\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2015/june/27/Table1:}
+\end{longtable}
+\twocolumn

@@ -1,0 +1,92 @@
+	{\em Theorem}
+	
+	\begin{theorem}\label{eq:solutions/2017/dec/72/thm1}
+		Consider the $m\times n$ system Ax = b, with either b $\neq$ 0 or b = 0. We distinguish the following cases:
+		\begin{enumerate}
+			\item $\textbf{Unique Solution}$: If rank[A,b] = rank(A) = n $\leq$ m, then and only then the system has a unique solution. In this case, indeed as many as $m-n$ equations are redundant. And the solution $\vec{X} = {\vec{A}^{-1}\vec{b}}$. This is called as $\textbf{Exactly Determined}$.
+			\item $\textbf{No Solution}$: If rank[A,b] $>$ rank(A) which necessarily implies $\Vec{b} \neq 0$ and m $>$ rank(A), then and only then the system has no solution. This is called as $\textbf{Overdetermined}$.
+		\end{enumerate}
+	\end{theorem}
+See Table \ref{eq:solutions/2017/dec/72/table}
+%	
+		If the columns of an $m\times n$ matrix $\Vec{A}$ span $\vec{R}^{m}$ then the equation $\vec{A}\vec{x}=\vec{b}$ is consistent for each $\Vec{b}$ in $\vec{R}^{m}$. \\ \\
+	The $\textbf{null space}$ of $\vec{A}$ is defined to be 
+	
+	\begin{align}\label{eq:solutions/2017/dec/72/eq1}
+		Null(\vec{A}) = \{ \vec{x} \in \mathbf{R}^{n} \, \vert \, \vec{A}\vec{x} = 0 \}
+	\end{align}
+%	
+	%	Let $\vec{A}$ be given as
+	
+	\begin{align} \label{eq:solutions/2017/dec/72/eq2}
+		\vec{A} = \myvec{-3&-2&4 \\ 14&8&-18 \\ 4&2&-4}
+	\end{align}
+	
+	Reduced Row Echelon form is
+	
+	\begin{align}
+		RREF\left(\vec{A}\right) = \myvec{1&0&0 \\ 0&1&0 \\ 0&0&1}
+	\end{align}
+	$\therefore$ the only possible nullspace of the matrix $\vec{A}$ is $\myvec{0\\0\\0}$.\\
+	
+	
+	Let $\vec{B}$ be given as
+	
+	\begin{align} \label{eq:solutions/2017/dec/72/eq3}
+		\vec{B} = \myvec{-3&-2&4 \\ 14&8&-18 \\ 4&2&-4 \\ 28&16&-36 \\ 8&4&-8}
+	\end{align}
+	
+	Reduced Row Echelon form is
+	
+	\begin{align}
+		RREF\left(\vec{B}\right) = \myvec{1&0&0 \\ 0&1&0 \\ 0&0&1 \\ 0&0&0 \\ 0&0&0}
+	\end{align}
+	$\therefore$ the rank of matrix $\vec{B} = 3$.
+	
+	\begin{table*}[!ht]
+%\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			Options & Observations\\
+			\hline
+			& \\
+			& The rank of any matrix $\vec{A}$ is the dimension of its column space. When  \\
+			$m = r$&  the number of rows ($m$) is equal to the rank ($r$) of the matrix, then \\
+			&  their linear combination gives us span of $\vec{R}^{m}$.\\
+			& \\
+			& $\therefore$ This statement is $\textbf{True}$. \\
+			& \\
+			\hline 
+			& \\
+			& Any subspace of a vector space $\vec{V}$ other than $\vec{V}$ itself is considered a \\
+			the column & proper subspace of $\vec{V}$. Which means that linear combination of $\vec{A}$\\
+			space of $\vec{A}$ & will span less than $m$. That will make the resultant\\
+			is a proper & $\vec{b}$ span strictly less than $m$.\\ 
+			subspace of & But it is given that $\vec{b} \in \mathbf{R}^{m}$, which is contradicting.\\  
+			$\mathbf{R}^{m}$ & \\
+			& $\therefore$ This statement is $\textbf{False}$. \\
+			& \\
+			\hline
+			& \\
+			the null & From $\eqref{eq:solutions/2017/dec/72/eq2}$ we see that even when $m = n$ then also we are getting a\\ 
+			space of $\vec{A}$ & trivial nullspace. \\
+			is a non-trivial& \\
+			subsapce of $\mathbf{R}^{n}$& \\
+			whenever $m=n$& $\therefore$ This statement is $\textbf{False}$. \\
+			& \\
+			\hline
+			& \\
+			& It is given that the number of rows are greater than the column, and it \\
+			$m \geq n$ & is given that there exists a solution. If we refer to theorem $\eqref{eq:solutions/2017/dec/72/thm1}$ we \\
+			implies & see that the corresponding system will be $\textbf{Exactly Determined}$ system. \\
+			$m=n$ & \\
+			& As an example, it will look like $\eqref{eq:solutions/2017/dec/72/eq3}$.\\
+			& \\
+			& $\therefore$ This statement is $\textbf{True}$. \\
+			& \\
+			\hline
+		\end{tabular}
+\caption{Solution}
+\label{eq:solutions/2017/dec/72/table}
+	\end{table*}
+	

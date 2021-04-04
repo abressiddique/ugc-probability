@@ -1,0 +1,57 @@
+We can represent our matrix as:
+\begin{align}
+    \vec{A}=\myvec{0&1&0&.....&0&0\\0&0&1&.....&0&0\\.\\.\\0&0& 0&.....&0&1\\1&0&0&.....&0&0}\label{eq:solutions/2016/dec/76/1}\\
+    \vec{A^T}=\myvec{0&0&0&.....&0&1\\1&0&0&.....&0&0\\0&1& 0&.....&0&0\\.\\.\\0&0&0&....&1&0}\label{eq:solutions/2016/dec/76/2}
+    \end{align}
+$\vec{A}$ is our given matrix.We know that Characteristic Equation of $\vec{A}$ and $\vec{A^T}$ is same.Consider the minimal polynomial
+\begin{align}
+    x^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+....+a_0\label{eq:solutions/2016/dec/76/4}
+\end{align}
+We can represent it in $n\times n$ matrix with 1's on sub-diagonals and in last column it has negative of the coefficient,and rest all 0.We represent it using $\vec{C}$.It is known as the companion matrix.
+\begin{align}
+     \vec{C}=\myvec{0&0&0&....&0&-a_0\\1&0&0&....&0&-a_1\\0&1& 0&....&0&-a_2\\.\\.\\0&0&0&....&1&-a_{n-1}}\label{eq:solutions/2016/dec/76/3}
+\end{align}
+\eqref{eq:solutions/2016/dec/76/4} is also the characteristic equation of $\vec{C}$\\
+Comparing \eqref{eq:solutions/2016/dec/76/2} with \eqref{eq:solutions/2016/dec/76/3} we get:
+\begin{align}
+    a_0=-1, a_1=a_2=a_3=a_4=...=a_{n-1}=0\label{eq:solutions/2016/dec/76/5}
+\end{align}
+Substituting \eqref{eq:solutions/2016/dec/76/5} into \eqref{eq:solutions/2016/dec/76/4} we get:
+\begin{align}
+    x^n-1=0\label{eq:solutions/2016/dec/76/6}
+\end{align}
+By Cayley-Hamilton Theorem:
+\begin{align}
+    \lambda^n-1=0\\
+\end{align}
+ $\lambda$=$n^{th}$ roots of unity. See Table \ref{eq:solutions/2016/dec/76/table1}.
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Options} & \textbf{Explanation} \\
+\hline
+\text{$\vec{A}$ has 1 as an eigen value} & 
+One value out of the $n^{th}$ roots of unity is 1.So,correct \\
+\hline
+\text{$\vec{A}$ has -1 as an eigen value} & 
+Since,$n$ is odd.So,-1 cannot be one of the value of $n^{th}$ roots of unity.\\& Hence,incorrect \\
+\hline
+\text{$\vec{A}$ has atleast one eigenvalue}\\ with multiplicity $\geq2$& All values of $n^{th}$ roots of unity are distinct.\\
+& So there is no eigenvalue with multiplicity $\geq2$.\\
+& Hence,incorrect.
+\\
+\hline
+\text{$\vec{A}$ has no real eigen values}
+& One of the value is 1,which is real.\\
+& Hence,incorrect.
+\\
+\hline
+\end{tabular}
+\caption{Finding Correct Option}
+\label{eq:solutions/2016/dec/76/table1}
+\end{center}
+\end{table*}
+
+ 

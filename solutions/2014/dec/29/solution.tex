@@ -1,0 +1,111 @@
+See Tables \ref{eq:solutions/2014/dec/29/table:1} and \ref{eq:solutions/2014/dec/29/table:2}
+
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Given} & \\
+& n x n permutation matrix\\
+& $\myvec{ & & & & & &1\\ & & & & &1& \\ & & & &.& & \\ & & &.& & & \\ & &.& & & & \\ &1& & & & & \\1& & & & & &  }$\\
+&\\
+\hline
+\multirow{3}{*}{Proof of row exchange} & \\
+& The given n x n permutation matrix can be converted into \\
+& identity matrix of n x n dimension by doing row exchange\\
+& operations.\\
+& \\
+& Let $\vec{A} = \myvec{a_1\\.\\.\\a_i\\a_j\\.\\.\\a_n}$\\
+& $ \begin{vmatrix}
+a_1\\.\\.\\a_i+a_j\\a_i+a_j\\.\\.\\a_n 
+\end{vmatrix} = 0$\\
+& since determinant of a any matrix will be zero,\\
+& if it has dependent rows.\\
+& Expanding the above using linear property of determinants\\
+& $ \begin{vmatrix} a_1\\.\\.\\a_i\\a_i\\.\\.\\a_n \end{vmatrix} +
+\begin{vmatrix} a_1\\.\\.\\a_j\\a_i\\.\\.\\a_n \end{vmatrix} +
+\begin{vmatrix} a_1\\.\\.\\a_i\\a_j\\.\\.\\a_n \end{vmatrix} +
+\begin{vmatrix} a_1\\.\\.\\a_j\\a_j\\.\\.\\a_n \end{vmatrix} = 0$\\
+& $\implies 0 +
+\begin{vmatrix} a_1\\.\\.\\a_j\\a_i\\.\\.\\a_n \end{vmatrix} +
+\begin{vmatrix} a_1\\.\\.\\a_i\\a_j\\.\\.\\a_n \end{vmatrix} +
+0 = 0$\\
+& $\implies \begin{vmatrix} a_1\\.\\.\\a_j\\a_i\\.\\.\\a_n \end{vmatrix} = 
+(-1)\begin{vmatrix} a_1\\.\\.\\a_i\\a_j\\.\\.\\a_n \end{vmatrix}$\\
+& Hence it is proved that the exchange of rows $a_i \  and \  a_j$ changes the \\
+& sign of the determinant.\\
+& \\
+& $\therefore$ for every row exchange in given permutation matrix\\
+& the determinant gets multiplied by -1.\\
+& \\
+\hline
+\multirow{3}{*}{finding no of exchanges} & \\
+& Let $\vec{A}= \myvec{a_1&.&a_i&a_{i+1}.&a_n}$\\
+& if n is even number then the elements $a_1 \  to \  a_i$ will be exchanged with\\
+& $a_{i+1} \  to \ a_n$  where $i = \frac{n}{2} =  \lfloor \frac{n}{2} \rfloor $.\\
+& if n is odd, the center element will be $a_{i+1}$ where $i+1 = \lceil \frac{n}{2} \rceil$\\
+& then $i = \lfloor \frac{n}{2} \rfloor$  and the elements $a_1 \  to \  a_i$ will be exchanged with\\
+& $a_{i+2} \  to \ a_n$.\\
+& $\therefore$ The given n x n matrix requires $\lfloor \frac{n}{2} \rfloor$\\
+& row exchanges to become identity matrix.\\
+& \\
+\hline
+\multirow{3}{*}{finding determinant} & \\
+& from the above results the determinant of given permutation matrix is\\
+& $(-1)^{\lfloor \frac{n}{2} \rfloor}\begin{vmatrix}1& & & & & & \\ &1& & & & & \\ & &.& & & & \\ & & &.& & & \\ & & & &.& & \\ & & & & &1& \\ & & & & & &1  \end{vmatrix}$\\
+& we know that the determinant of identity matrix, $det(\vec{I})=1$\\
+& $\therefore$ the determinant of given n x n permutation matrix = $(-1)^{\lfloor \frac{n}{2} \rfloor}$\\
+&\\
+\hline
+\multirow{3}{*}{Conclusion} & \\
+& Option-2 is the right solution\\
+&\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2014/dec/29/table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Example-1} & \\
+& Let $\vec{A}$ is 5 x 5 permutation matrix, then\\
+& $det(\vec{A})= \begin{vmatrix} & & & &1\\ & & &1& \\ & &1& & \\ &1& & & \\1& & & &    \end{vmatrix}$\\
+& $ = \xleftrightarrow[]{R_1 \leftrightarrow R_5}
+(-1)\begin{vmatrix}
+1& & & & \\ & & &1& \\ & &1& & \\ &1& & & \\ & & & &1 
+\end{vmatrix}$\\
+& $ = \xleftrightarrow[]{R_2 \leftrightarrow R_4}
+(-1)(-1)\begin{vmatrix}
+1& & & & \\ &1& & & \\ & &1& & \\ & & &1& \\ & & & &1 
+\end{vmatrix}$\\
+& $ = 1$\\
+& \\
+& substituting n = 5 in the solution\\
+& $(-1)^{\lfloor \frac{5}{2} \rfloor} = 1$\\
+& \\
+\hline
+\multirow{3}{*}{Example-2} & \\
+& Let $\vec{A}$ is 6 x 6 permutation matrix, then    \\
+& $det(\vec{A})= \begin{vmatrix} & & & & &1\\ & & & &1& \\ & & &1& & \\ & &1& & & \\ &1& & & & \\1& & & & &    \end{vmatrix}$\\
+& $ = \xleftrightarrow[]{R_1 \leftrightarrow R_6}
+(-1)\begin{vmatrix}
+1& & & & & \\ & & & &1& \\ & & &1& & \\ & &1& & & \\ &1& & & & \\ & & & & &1 
+\end{vmatrix}$\\
+& $ = \xleftrightarrow[]{R_2 \leftrightarrow R_5}
+(-1)(-1)\begin{vmatrix}
+1& & & & & \\ &1& & & & \\ & & &1& & \\ & &1& & & \\ & & & &1& \\ & & & & &1 
+\end{vmatrix}$\\
+& $ = \xleftrightarrow[]{R_3 \leftrightarrow R_4}
+(-1)(-1)(-1)\begin{vmatrix}
+1& & & & & \\ &1& & & & \\ & &1& & & \\ & & &1& & \\ & & & &1& \\ & & & & &1 
+\end{vmatrix}$\\
+& $ = -1$\\
+& \\
+& substituting n = 6 in the solution\\
+& $(-1)^{\lfloor \frac{6}{2} \rfloor} = -1$\\
+& \\
+& Hence the proved that the solution is correct.\\
+& \\
+\hline
+\caption{Example}
+\label{eq:solutions/2014/dec/29/table:2}
+\end{longtable}
+\twocolumn

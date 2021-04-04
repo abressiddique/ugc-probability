@@ -1,0 +1,136 @@
+See Table \ref{eq:solutions/2017/dec/75/table:1}.
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement 1. & A  is necessarily diagonalizable over $\vec{R}$\\
+\hline
+& \\
+False statement& Matrix A is diagonalizable if and only if there is a basis of $\vec{R}^3 $consisting of\\
+& eigenvectors of A.\\
+Example:&Consider a matrix\\&\parbox{12cm}{\begin{align}
+ \myvec{
+1 &1 &0\\
+0&1&1\\
+0&0&4}\end{align}}\\
+&Eigen values are:\\
+&\parbox{12cm}{\begin{align}
+ \myvec{
+1 -\lambda &1 &0\\
+0&1-\lambda&1\\
+0&0&4-\lambda}=0.
+\implies\lambda_1=1,\lambda_2=4\end{align}}\\
+&\parbox{12cm}{\begin{align}
+  \lambda_1=1\text { has eigen vector}
+ \myvec{1\\0\\0} \text{and} 
+  \lambda_2=4 \text{ has eigen vector}
+\myvec{1\\3\\9}
+\end{align}}\\
+ & We have found only two linearly independent eigenvectors for A,not diagonalisable
+\\
+\hline
+\multirow{3}{*}&\\
+Statement 2. & If A has distinct real  eigen values
+ than  it is diagonalizable over$\vec{R}$\\
+\hline
+&\\
+True statement& Distinct real eigenvalues implies linearly independent eigenvectors .\\
+& and if a matrix has n linearly independent vectors than it is  diagonalizable.\\
+\hline
+Proof  1:& \textbf{Distinct eigen values implies linearly independent vectors that spans entire space.}\\&Consider 2 eigen vectors $\vec{v}$,$\vec{w}$  with eigen values $\lambda$,$\mu$ respectively.\\
+& such that $\lambda\neq\mu$\\
+ &\parbox{12cm}{\begin{align}
+    \alpha(\vec{v})+\beta(\vec{w})=0\label{eq:solutions/2017/dec/75/eq2}\\
+     \alpha A(\vec{v})+\beta A(\vec{w})=0\\
+     \alpha \lambda\vec{v}+\beta\mu\vec{w}=0\label{eq:solutions/2017/dec/75/eq3}
+     \end{align}}\\
+     & Multiplying $\eqref{eq:solutions/2017/dec/75/eq2}$with -$\lambda$ and subtracting from $\eqref{eq:solutions/2017/dec/75/eq3}$ we have,\\
+   & \parbox{12cm}{\begin{align}  
+  \beta(\mu-\lambda)\vec{w}=0 \label{eq:solutions/2017/dec/75/eq1}
+  \end{align}}\\
+  & eigen values are distinct $(\mu-\lambda)\neq 0$ .
+  From equation$\eqref{eq:solutions/2017/dec/75/eq1}$ we have, $\beta=0$\\
+  & substituting $\beta=0$ in  equation $\eqref{eq:solutions/2017/dec/75/eq2}$we have,$\alpha=0$.As, $\vec{v}\neq 0$\\
+  & \textbf{which proves that vectors are linearly independent}.\\
+  
+  Proof 2:
+ & \textbf{If a matrix has n linearly independent vectors than it is diagonalizable}\\
+ & If\myvec{
+\vec{p_1} &\vec{p_2}&\cdots&\vec{p_n} 
+}are n independent eigen vectors then,
+ $A\vec{p_1}=\lambda \vec{p_1},\cdots ,A\vec{p_n}=\lambda \vec{p_n}$\\
+&\parbox{12cm}{\begin{align}{D}=\myvec{\lambda_1&0&\cdots&0\\
+0&\lambda_2&\cdots&0\\
+\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&\lambda_n}
+ \and{P}=\myvec{
+\vec{P_1}& \vec{P_2}&\cdots& \vec{P_n}
+}\end{align}}\\
+& Now, $A\vec{P_i}=\lambda_i\vec{P_i}$ $\implies$ ${A}{P}={P}{D}$\\
+& so,${P^{-1}}{AP}={D}$ is a diagonal matrix.\\
+    \hline
+\multirow{3}{*} & \\ 
+Statement 3.  & If A has distinct real  eigen values
+ than  it is diagonalizable over$\vec{C}$\\
+\hline
+&\\
+True statement& If A is an $N \times N$ complex matrix with n distinct eigenvalues, then any set of\\
+& n corresponding eigenvectors form a basis for $\vec{C}^n$\\ .
+&\\
+Proof: &It is sufficient to prove that the set of eigenvectors is linearly independent \\
+&which is proved in statement 2.\\
+ Example:&\parbox{12cm}{\begin{align}A=\myvec{
+4& 0 &-2\\
+2& 5 &4\\
+0& 0 &5
+}\end{align}}\\
+& Eigen values of A are:\\
+& \parbox{12cm}{\begin{align}\lambda_1=2,\lambda_2=3 , \lambda_3=6\end{align}}\\
+\hline
+& Eigen vectors are:\\&\parbox{12cm}{\begin{align}x_1=\myvec{
+-1\\1\\0
+},
+x_ 2=\myvec{
+1\\1\\1
+},
+x_3=\myvec{
+-1\\ - 1\\ 2
+}\end{align}}
+\\
+ & Matrix A is diagonalizable because there is a basis of $\vec{C}^3 $consisting of\\
+& eigenvectors of A.\\
+\hline
+\multirow{3}{*}&\\
+Statement 4. & If all eigen values are non zero than it is diagonalizable over $\vec{C}$\\
+\hline
+& \\
+False Statement:& Matrix would be diagonalizable if and only if it has linearly independent eigenvectors .\\
+\hline
+Example:&Consider a matrix\\&\parbox{12cm}{\begin{align}
+ \myvec{
+1 &1 &0\\
+0&1&1\\
+0&0&4}\end{align}}\\
+&Eigen values are:\\
+&\parbox{12cm}{\begin{align}
+ \myvec{
+1 -\lambda &1 &0\\
+0&1-\lambda&1\\
+0&0&4-\lambda}=0.
+\implies\lambda_1=1,\lambda_2=4\neq 0\end{align}}\\
+&\parbox{12cm}{\begin{align}
+  \lambda_1=1\text { has eigen vector}
+ \myvec{1\\0\\0} \text{and} 
+  \lambda_2=4 \text{ has eigen vector}
+\myvec{1\\3\\9}
+\end{align}}\\
+ & We have found only two linearly independent eigenvectors for A,not diagonalisable.\\
+ &\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2017/dec/75/table:1}
+\end{longtable}
+
+   
+

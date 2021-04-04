@@ -1,0 +1,88 @@
+%
+A matrix is real symmetric implies its eigen values are real and eigen vectors are orthogonal,that is its eigen value decomposition is
+\begin{align}
+ \vec{A}=\vec{P}\vec{D}\vec{P}^T
+\end{align}
+$\vec{D}$ is the diagonal matrix containing the real eigen values of $\vec{A}$\\
+$\vec{P}$ has the corresponding eigen vectors
+\begin{align}
+    \vec{P}\vec{P}^T=\vec{P}^T\vec{P}=\vec{I}
+\end{align}
+A real matrix is positive definite if 
+\begin{align}
+    \vec{x}^T\vec{A}\vec{x}>0\\
+    \implies  \vec{x}^T\lambda\vec{x}>0\\
+    \implies \lambda \vec{x}^T\vec{x}>0\\
+    \implies \lambda>0
+\end{align}
+In other words, all the eigen values of $A$ are positive
+See Table \ref{eq:solutions/2017/dec/77/table:0}
+
+Let $\vec{A}$ be
+\begin{align}
+    \vec{A}=\vec{P}\vec{D}\vec{P}^T\\
+    \vec{D}=\myvec{\lambda_1&0&0&0\\0&\lambda_2&0&0\\0&0&\lambda_3&0\\0&0&0&\lambda_4}
+\end{align}
+
+
+
+\begin{table*}[!t]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+
+    \textbf{OPTIONS} & \textbf{DERIVATIONS}\\
+    \hline
+     Choice 1 & 
+      \parbox{12cm}{\begin{align}
+         p\vec{I}+\vec{A}=\vec{P}(p\vec{I})\vec{P}^T+\vec{P}\vec{D}\vec{P}^T\\
+   = \vec{P}\vec{D}_1\vec{P}^T\\
+    \vec{D}_1=\myvec{\lambda_1+p&0&0&0\\0&\lambda_2+p&0&0\\0&0&\lambda_3+p&0\\0&0&0&\lambda_4+p}
+    \end{align}}\\
+     & Some of the eigen values of $\vec{A}$ may be negative.\\
+     & All the eigen values in $\vec{D}_1$ are positive only if \\
+     & \parbox{12cm}{\begin{align}
+          p>|\lambda_i|\text{  } \forall i \in [1,4]
+     \end{align}}\\
+      
+      \hline
+      Choice 2 & 
+       \parbox{12cm}{\begin{align}
+          \vec{A}^2=\vec{A}\vec{A}\\
+    =(\vec{P}\vec{D}\vec{P}^T)(\vec{P}\vec{D}\vec{P}^T)\\
+    =\vec{P}\vec{D}^2\vec{P}^T\\
+    \text{Similarly, }\vec{A}^p=\vec{P}\vec{D}^p\vec{P}^T\\
+    \vec{D}^p=\myvec{\lambda_1^p&0&0&0\\0&\lambda_2^p&0&0\\0&0&\lambda_3^p&0\\0&0&0&\lambda_4^p}
+       \end{align}}\\
+       & $\vec{A}^{p}$ is positive definite only if $p$ is even.\\
+       \hline
+      Choice 3& 
+        \parbox{12cm}{\begin{align}
+           \vec{A}^{-p}=\vec{P}\vec{D}^{-p}\vec{P}^T\\
+    \vec{D}^{-p}=\myvec{\lambda_1^{-p}&0&0&0\\0&\lambda_2^{-p}&0&0\\0&0&\lambda_3^{-p}&0\\0&0&0&\lambda_4^{-p}}
+       \end{align}}\\
+       & $\vec{A}^{-p}$ is positive definite only if $p$ is even.\\
+       \hline
+      Choice 4 &
+        \parbox{12cm}{\begin{align}
+          \text{exp}(p\vec{A})=\sum_{k=0}^\infty \frac{(p\vec{A})^k}{k!}\\
+     \implies  \text{exp}(p\vec{A})-\vec{I}=\vec{P} \text{exp}(p\vec{D})\vec{P}^T-\vec{P}\vec{I}\vec{P}^T\\
+     =\vec{P}( \text{exp}(p\vec{D})-\vec{I}) \vec{P}^T\\
+     \text{exp}(p\vec{D})-\vec{I}=\myvec{e^{\lambda_1}-1&0&0&0\\0&e^{\lambda_2}-1&0&0\\0&0&e^{\lambda_3}-1&0\\0&0&0&e^{\lambda_4}-1}
+       \end{align}}\\
+       & $\vec{A}$ is non-singular\\
+        & \parbox{12cm}{\begin{align}
+   \implies \forall i \in [1,4], \lambda_i\neq0\\
+   e^{\lambda_i}<1
+\end{align}}\\
+ & So, exp$(p\vec{A})-\vec{I}$ is not positive definite.\\
+       \hline
+    \end{tabular}
+    \caption{Solution}
+\label{eq:solutions/2017/dec/77/table:0}
+\end{table*}
+ From the table,the choices would be option 1,2,3
+
+
+
+

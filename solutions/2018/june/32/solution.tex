@@ -1,0 +1,35 @@
+Given, $\vec {v_1, v_2,..., v_n}$ are orthonormal and form basis.\\
+So, when they form column vectors of matrix $\vec A $, we can say that $\vec A$ is also orthonormal.
+\begin{align}
+    \therefore \quad & \vec {A^T A} =\vec I\\
+    \implies & \vec{A^T A A^{-1}}= \vec {I A^{-1}}\\
+    \implies & \vec {A^T} = \vec {A^{-1}}
+\end{align}
+Clearly, option 3 is the correct answer.
+Let us consider an orthonormal basis for $\vec R^2$.\\[1em]
+We can check that $\vec S$= \{ $\myvec{\frac{1}{\sqrt{5}}\\ \frac{2}{\sqrt{5}}}$, $\myvec{-\frac{2}{\sqrt{5}}\\ \frac{1}{\sqrt{5}}}$ \} forms an orthonormal basis.\\
+Thus the matrix
+\begin{align}
+    \vec Q = \myvec{\frac{1}{\sqrt{5}} & -\frac{2}{\sqrt{5}}\\ \frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}} }
+\end{align}
+is the orthonormal matrix whose column vectors are the basis of $\vec R^2$.
+For an orthonormal matrix $\vec A$,
+\begin{align}
+    & \vec{A^TA} =\vec I\\
+    \implies &\det \brak{\vec{A^TA}}=\det\brak{ \vec I}\\
+    \implies & \det \brak{\vec A^T} \det\brak{\vec A}= 1\\
+    \implies & {\det\brak{\vec A}}^2 = 1 \quad \because \det\brak{\vec A}= \det\brak{\vec{A^T}}\\
+    \implies & \det\brak{\vec A} =\pm 1
+\end{align}
+Also, here a contradictory example:\\
+Let,
+\begin{align}
+    \vec R = \myvec{-\frac{1}{\sqrt{5}} & -\frac{2}{\sqrt{5}}\\ -\frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}}}
+\end{align}
+Clearly, $\vec R$  is an orthonormal matrix and the column vectors of it form an orthonormal basis of $\vec R^2$.
+But,
+\begin{align}
+    \det {\vec R} &= \mydet {-\frac{1}{\sqrt{5}} & -\frac{2}{\sqrt{5}}\\ -\frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}}}\\
+    &= -1
+\end{align}
+From the above two arguments it is clear that option 4 cannot be true.

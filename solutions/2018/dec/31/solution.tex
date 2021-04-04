@@ -1,0 +1,153 @@
+See Tables     \ref{eq:solutions/2018/dec/31/table:1}
+    \ref{eq:solutions/2018/dec/31/table:2} and 
+    \ref{eq:solutions/2018/dec/31/table:3}
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+	\multirow{3}{*}{Orthonormal Basis} 
+	& \\
+	& $B$ = $\{u_1,u_2,...,u_n\}$ is the Orthonormal basis for $C^n$ if it generates every vector $C^n$\\
+	& and the inner product $<u_i,u_j>$ = $0$ if $i$ $\ne$ $j$.\\
+	& That is the vectors are mutually perpendicular\\
+	& and $<u_i,u_j>$ = $1$ otherwise. \\
+	&\\
+	\hline
+	\multirow{3}{*}{Trace} 
+	&\\
+	& Trace of a square matrix $A$, denoted by $\Vec{tr(A)}$ is defined to be the sum of elements\\
+	& on the main diagonal(from the upper left to lower right) of $A$\\
+	& Some useful properties of Trace : \\
+	&  $\Vec{tr(AB)}$ =  $\Vec{tr(BA)}$, where $A$ is the $m$ $\times$ $n$ matrix and $B$ is the $n$ $\times$ $m$ matrix\\  
+	&\\
+	\hline
+	\multirow{3}{*}{Basis Theorem} 
+	&\\
+	& A nonempty subset of nonzero vectors in $R^n$ is called an orthogonal set\\
+	& if every pair of distinct vectors in the set is orthogonal. Any Orthogonal sets\\
+	&  of vectors are automatically linearly independent and if $A$ matrix columns are\\
+	& linearly independent,then it is invertible.\\
+	&\\
+    \hline
+\end{tabular}
+    \caption{Definitions}
+\label{eq:solutions/2018/dec/31/table:1}
+\end{table*}
+\onecolumn
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{Rank($\vec{MP{M}^*}$) = $\vec{k}$} 
+	& \\
+	& Consider orthogonal vectors,\\
+	& $\vec{u_1}$ = \myvec{1\\0\\0\\0}; $\vec{u_2}$ = \myvec{0\\1\\0\\0}\\
+	& $\vec{u_3}$ = \myvec{0\\0\\1\\0}; $\vec{u_4}$ = \myvec{0\\0\\0\\1}\\
+	& Consider $\vec{k}$ = 2, then \\
+	& $\vec{M}$ = $\myvec{u_1&u_2}$ = $\myvec{1&0\\0&1\\0&0\\0&0}$\\
+	& $\vec{M^*}$ = $\myvec{1&0&0&0\\0&1&0&0}$\\
+	& $\vec{P}$ = $\myvec{\alpha_1&0\\0&\alpha_2}$\\
+	& $\vec{MPM^{*}}$ = $\myvec{\alpha_1&0&0&0\\
+	                       0&\alpha_2&0&0\\
+	                       0&0&0&0\\
+	                       0&0&0&0}$\\
+	& $\implies$ Rank($\vec{MPM^{*}}$) $\le$ 2 (which is the value of $k$)\\
+	& (It depends on diagonal values $\alpha_1$ and $\alpha_2$)\\
+	& Rank($\vec{MPM^{*}}$) is not always $k$. \\
+	& It can be less than k if any of the entries in $\alpha_1,\alpha_2,....,\alpha_k$ is 0.\\
+	& Thus, Rank($\vec{MP{M}^*}$) $\ne$ $\vec{k}$\\
+	& Thus, the given statement is false\\
+	&\\
+	\hline
+	\multirow{3}{*}{Trace($\vec{MP{M}^*}$) = $\sum_{i=1}^{k}\alpha_i$} & \\
+	& Consider $\vec{MP}$ = $\vec{A}$ and $\vec{M^{*}}$ = $\vec{B}$\\
+	& Using Properties, Trace$\vec{\brak{AB}}$ = Trace$\vec{\brak{BA}}$\\
+	& We can say, Trace($\vec{MP{M}^*}$) = Trace($\vec{{M}^*MP}$)\\
+	& $\vec{M}$ = $\myvec{u_1&u_2&u_3&....&u_k}$ \\
+	& $\vec{M^*}$ = $\myvec{\Bar{u_1}\\\Bar{u_2}\\\Bar{u_3}\\.\\.\\.\\\Bar{u_k}}$ \\
+	&\\
+	& $\vec{M^{*}M}$ = $\myvec{\Bar{u_1}u_1&0&0&...&0\\
+	                           0&\Bar{u_2}u_2&0&...&0\\
+	                           0&0&\Bar{u_3}u_3&...&0\\
+	                           .&.&.&...&.\\
+	                           0&0&0&...&\Bar{u_k}u_k}$\\
+	 & (Refer to Properties mentioned in Orthonormal Basis in Definition section\\
+	 & that is $<u_i,u_j>$ = $0$ if $i$ $\ne$ $j$)\\
+	 & \\
+	 & $\vec{M^{*}M}$ = $\myvec{1&0&0&...&0\\
+	                           0&1&0&...&0\\
+	                           0&0&1&...&0\\
+	                           .&.&.&...&.\\
+	                           0&0&0&...&1}$\\
+	& (Refer to Properties mentioned in Orthonormal Basis in Definition section\\
+	& that is $<u_i,u_j>$ = $1$ if $i$ = $j$)\\
+    & $\vec{M^*M}$ = $\vec{I^{k}}$\\
+    & $\vec{M^*MP}$ = $\vec{I^{k}P}$ = $\vec{P}$\\
+    & Trace($\vec{{M}^*MP}$) = Trace($\vec{I^{k}P}$) =  Trace($\vec{P}$) = $\sum_{i=1}^{k}\alpha_i$\\
+    & (Refer Definition section of Trace, it is sum of elements on the main diagonal)\\
+    & So, the given statement is true \\
+	& \\
+	\hline
+	\multirow{3}{*}{Rank($\vec{{M}^*N}$) = min($k$,$n-k$)} 
+	& \\
+	& $\vec{M}$ = $\{u_1,u_2,...,u_k\}$ and $\vec{N}$ = $\{u_{k+1},u_{k+2},...,u_n\}$ \\
+	& Consider orthogonal vectors,\\
+	& $\vec{u_1}$ = \myvec{1\\0\\0\\0}; $\vec{u_2}$ = \myvec{0\\1\\0\\0}\\
+	& $\vec{u_3}$ = \myvec{0\\0\\1\\0}; $\vec{u_4}$ = \myvec{0\\0\\0\\1}\\
+	& Consider $k$ = 2, then \\
+	& $\vec{M}$ = $\myvec{u_1&u_2}$ = $\myvec{1&0\\0&1\\0&0\\0&0}$\\
+	& $\vec{M^*}$ = $\myvec{1&0&0&0\\0&1&0&0}$\\
+	& $\vec{N}$ = $\myvec{u_3&u_4}$ = $\myvec{0&0\\0&0\\1&0\\0&1}$\\
+	& $\vec{M^*N}$ = $\myvec{0&0\\0&0}$\\
+	& Rank($\vec{M^*N}$) = 0\\
+	& But, min($k$,$n-k$) = \brak{2,2} = 2 \\
+	& And, this is clear from above that Rank($\vec{{M}^*N}$) $\ne$ min($k$,$n-k$)\\
+	& Thus, above statement is false \\
+	&\\
+	\hline
+	\multirow{3}{*}{Rank($\vec{M{M}^*}+\vec{N{N}^*}$) $<$ $n$} 
+	& \\
+	& Rank($\vec{M}$) = Rank($\vec{M^*}$)\\
+	& Rank($\vec{N}$) = Rank($\vec{N^*}$)\\
+	& Rank($\vec{M}$+$\vec{N}$) $\le$ Rank($\vec{M}$) + Rank($\vec{N}$)\\
+	& $\vec{M}$ = $\{u_1,u_2,...,u_k\}$ and $\vec{N}$ = $\{u_{k+1},u_{k+2},...,u_n\}$ \\
+	& Consider orthogonal vectors,\\
+	& $\vec{u_1}$ = \myvec{1\\0\\0\\0}; $\vec{u_2}$ = \myvec{0\\1\\0\\0}\\
+	& $\vec{u_3}$ = \myvec{0\\0\\1\\0}; $\vec{u_4}$ = \myvec{0\\0\\0\\1}\\
+	& Consider $k$ = 2, then \\
+	& $\vec{M}$ = $\myvec{u_1&u_2}$ = $\myvec{1&0\\0&1\\0&0\\0&0}$\\
+	& Rank($\vec{M}$) = $2$ = $k$\\
+	& $\vec{N}$ = $\myvec{u_3&u_4}$ = $\myvec{0&0\\0&0\\1&0\\0&1}$\\
+	& Rank($\vec{N}$) = $2$ = $n-k$\\
+	& Thus, Rank($\vec{M{M}^*}+\vec{N{N}^*}$) = Rank($\vec{M}+\vec{N}$) = 4 = $n$\\
+	& Thus, above statement is false \\
+	&\\
+	\hline
+	\caption{Finding of True and False Statements}
+    \label{eq:solutions/2018/dec/31/table:2}
+\end{longtable}
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{Rank($\vec{MP{M}^*}$) = $\vec{k}$} 
+	& \\
+	& False \\
+	&\\
+	\hline
+	\multirow{3}{*}{{Trace($\vec{MP{M}^*}$) = $\sum_{i=1}^{k}\alpha_i$}} 
+	& \\
+	& True \\
+	& \\
+	\hline
+	\multirow{3}{*}{Rank($\vec{{M}^*N}$) = min($k$,$n-k$)} 
+	& \\
+	& False \\
+	& \\
+	\hline
+	\multirow{3}{*}{Rank($\vec{M{M}^*}+\vec{N{N}^*}$) $<$ $n$} 
+	& \\
+	& False \\
+	& \\
+	\hline
+	\caption{Conclusion of above Solutions}
+    \label{eq:solutions/2018/dec/31/table:3}
+\end{longtable}
+\twocolumn

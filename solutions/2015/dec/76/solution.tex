@@ -1,0 +1,105 @@
+See Table \ref{eq:solutions/2015/dec/76/table:1}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Option 1} & \\
+&Suppose $\mathbb{V}$ is the vector space defined as $\mathbb{V}=\{\vec{x}:\vec{A}\vec{x}=\vec{b}$ , $\mathbb{R}^n\xrightarrow{}\mathbb{R}^m\}$\\
+&\\
+& $\vec{v}$ and $\vec{u}$ are the solution to the equation $\vec{A}\vec{x}=\vec{b}$  such that $\vec{u}$ and  $\vec{v}\in \mathbb{V}$\\
+&\\
+&$\vec{A}\vec{u}=\vec{b}\quad\vec{A}\vec{v}=\vec{b}$\\
+&\\
+&Checking Closure under vector addition\\
+&\\
+&$\vec{A}\brak{\vec{u+v}}=\vec{A}\vec{u}+\vec{A}\vec{v}=\vec{b}+\vec{b}=2\vec{b}\neq\vec{b}$\\
+&\\
+&Which is enclosed under vector addition if and only if $\vec{b}=\vec{0}$.But here given $\vec{b}\neq0$ means $\vec{0} \not\in \mathbb{V}$\\
+&\\
+&Hence does not satisfy requirements of vector space.\\
+&\\
+&Hence option 1 is incorrect.\\
+&\\
+\hline
+&\\
+Option 2 &$\textbf{Proof 1:}$\\
+&\\
+&If $\vec{u}$ and $\vec{v}$ are the two solution of $\vec{A}x=\vec{b}$ \\
+&\\
+&$\vec{A}\vec{u}=\vec{b}\quad\vec{A}\vec{v}=\vec{b}$\\
+&\\
+&For $\lambda \vec{u}  +\brak{1-\lambda}\vec{v}$ to be a solution of $\vec{A}x=\vec{b}$ ,it must satisfy this equation.\\
+&\\
+& $\vec{A}\brak{\lambda\vec{u}  +\brak{1-\lambda}\vec{v}}=\vec{b} \implies\vec{A}\lambda\vec{u} + \vec{A}\brak{1-\lambda}\vec{v}=\vec{b}\implies\vec{A}\lambda\vec{u}+\vec{A}\vec{v}-\vec{A}\lambda\vec{v}=\vec{b}$\\
+&\\
+&$\vec{b}\lambda + \vec{A}\vec{v} -\vec{b}\lambda=\vec{b}\implies\vec{A}\vec{v}=\vec{b}$\\
+&\\
+&Which satisfies the equation therefore $\lambda \vec{u}  +\brak{1-\lambda}\vec{v}$ is the solution of $\vec{A}x=\vec{b}$ for any $\lambda$\\
+&\\
+&Since the $\lambda$ term cancels out therefore vaild for $\lambda\in\mathbb{R}$.\\
+&\\
+&$\textbf{Proof 2 (Through affine Subspace with an Example)}$:-\\
+&\\
+&Let us suppose the two solution $\vec{u}$ and $\vec{v}$ be the points on the line given by the equation $\vec{A}x=\vec{b}$\\
+&\\
+&Let the Line joining these two points is given as\\
+&\\
+&$\vec{l}=\vec{u}-\vec{v}$ is line parallel to the given line $\vec{A}x=\vec{b}$\\
+&\\
+&Therefore $\vec{v}$ belongs to solution set and is independent to other linearly independent vectors of $\vec{l}$\\
+&\\
+&$\vec{x}=\vec{v}+\lambda\vec{l}$ for $\lambda\in\mathbb{R}$ on substuting $\vec{l}$\\
+&\\
+&$\vec{x}=\vec{v}+\lambda\brak{\vec{u}-\vec{v}}=\vec{v}+\lambda\vec{u}-\lambda\vec{v}=\vec{v}\brak{1-\lambda}+\lambda\vec{u}$\\
+&\\
+&Hence $\vec{v}\brak{1-\lambda}+\lambda\vec{u}$ is also the solution of the equation $\vec{A}\vec{x}=\vec{b}$ for $\lambda\in\mathbb{R}$.\\
+&\\
+&Hence Option 2 is correct.\\
+&\\
+\hline
+&\\
+Option 3 &Since in Option 2 we have proved that $\vec{v}\brak{1-\lambda}+\lambda\vec{u}$  is a solution for $\vec{A}\vec{x}=\vec{b}$  for any $\lambda\in\mathbb{R}$\\
+&\\
+&therefore $\lambda$ can be any real value but in option 3 there is restriction on $\lambda$ which is incorrect.\\
+&\\
+&Hence option 3 is incorrect\\
+\hline
+&\\
+Option 4
+&$\vec{A}_{mxn}\vec{x}_{nx1}=\vec{b}_{mx1}$\\
+&\\
+&If $\vec{A}$ has Full column rank$\brak{\vec{A}}=n$ then there exist one pivot in each columns \\
+&\\
+&and there exists no free variables thus $\vec{N\brak{A}}=\vec{0}$ so the only solution to $\vec{A}\vec{x}=\vec{0}$ is $\vec{x}=\vec{0}$.\\ 
+&\\
+&So the solution to $\vec{A}\vec{x}=\vec{b}$\\
+&\\
+&$\vec{x}=\vec{x_p}$ unique solution exists if it exist.It can be either 0 or 1.\\
+&\\
+&Hence at most 1 solution is possible .\\
+&\\
+&\textbf{Proof with example}\\
+&\\
+&Let $\vec{A}=\myvec{1&3\\2&1\\6&1\\5&1}_{4x2}\xleftrightarrow{RREF}\myvec{1&0\\0&1\\0&0\\0&0}$ Hence $n=2$ pivot columns at both column position \\ 
+&\\
+&$\myvec{1&0\\0&1\\0&0\\0&0}\myvec{x_1\\x_2}=\myvec{b_1\\b_2\\b_3\\b_4}$ Hence no solution possible  as no combination of $\vec{x}$ can gives the solution except\\
+&\\
+&$\vec{x}=\myvec{0\\0}$ only if $\vec{b}=\vec{0} \implies \myvec{1&3\\2&1\\6&1\\5&1}\myvec{0\\0}=\myvec{0\\0\\0\\0}$ \textbf{OR}\\
+&\\
+&$\vec{x}=\myvec{1\\1}$ only if $\vec{b}$ is addition of columns of $\vec{A}$ $\implies \myvec{1&3\\2&1\\6&1\\5&1}\myvec{1\\1}=\myvec{4\\3\\7\\6}$\\
+&\\
+&Hence either no solution possible or one solution possile.\\&Therefore we say at most one solution possible.\\
+&\\
+&Option 4 is correct.\\
+&\\
+\hline
+&\\
+Answers & Option 2 and Option 4 are correct\\
+&\\
+\hline
+\caption{Solution}
+\label{eq:solutions/2015/dec/76/table:1}
+\end{longtable}
+\twocolumn
+
+

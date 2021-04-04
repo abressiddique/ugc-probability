@@ -1,0 +1,149 @@
+See Tables \ref{eq:solutions/2018/dec/74/table:1} and \ref{eq:solutions/2018/dec/74/table:2}
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+	\multirow{3}{*}{Characteristic Polynomial} 
+	& \\
+	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
+	&\\
+	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Cayley-Hamilton Theorem}
+    &\\
+    & If $p\brak{x}$ is the characteristic polynomial of an $n\times n$ matrix $\vec{A}$, then,\\
+    &\\
+    &$\qquad \qquad \qquad p\brak{\vec{A}}=\vec{0}$\\
+    &\\
+    \hline
+	\multirow{3}{*}{Minimal Polynomial} 
+	&\\
+	& Minimal polynomial $m\brak{x}$ is the smallest factor of\\
+	&characteristic polynomial $p\brak{x}$ such that,\\
+	&\\
+	& $\qquad \qquad \qquad m\brak{\vec{A}}=0$\\
+	& \\
+	& Every root of characteristic polynomial should be the root of\\
+	&minimal polynomial\\
+	&\\
+    \hline
+\end{tabular}
+    \caption{Definitions}
+\label{eq:solutions/2018/dec/74/table:1}
+\end{table*}
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement&Solution\\
+\hline
+&\\
+1.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{1&0&0\\0&1&2\\0&0&1}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=1,\lambda_{2}=1,\lambda_{3}=1$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x-1)^3\\
+    \mbox{Soving }(\vec{A}-\vec{I})^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Soving }(\vec{A}-\vec{I})^2&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Soving }\vec{A}-\vec{I}&=\myvec{0&0&0\\0&0&2\\0&0&0}\\
+    \mbox{Since }\vec{A}-\vec{I}&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x-1)^2\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of two block:\\
+&one block of order 2 with principal diagonal value as $\lambda = 1$ and super\\
+&diagonal of the block (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&And one block of order 1 with $\lambda=1$.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{1&1&0\\0&1&0\\0&0&1}
+\end{align*}}\\
+&A matrix is diagonalizable iff its jordan form is a diagonal matrix.\\
+&Since $\vec{J}$ is not diagonizable therefore $\vec{A}$ is not diagonizable.\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+2.&\\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Let }\vec{A}&=\myvec{1&2&0\\0&1&2\\0&0&1}\\
+\end{align*}}\\
+&Since $\vec{A}$ is upper triangular matrix, $\therefore \lambda_{1}=1,\lambda_{2}=1,\lambda_{3}=1$ \\
+&\parbox{6cm}{\begin{align*}
+    \mbox{Therefore, }p(x)&=(x-1)^3\\
+    \mbox{Soving }(\vec{A}-\vec{I})^3&=\myvec{0&0&0\\0&0&0\\0&0&0}\\
+    \mbox{Soving }(\vec{A}-\vec{I})^2&=\myvec{0&0&4\\0&0&0\\0&0&0}\\
+    \mbox{Since }(\vec{A}-\vec{I})^2&\neq \vec{0}\\
+    \mbox{Therefore, }m(x)&=(x-1)^3\\
+\end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of only\\
+&one block with principal diagonal values as $\lambda_1 = 1$ and super diagonal\\
+&of the matrix (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{1&1&0\\0&1&1\\0&0&1}
+\end{align*}}\\
+&Since $\vec{J}$ is not diagonizable therefore $\vec{A}$ is not diagonizable.\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
+&\\
+3.&\\
+&\parbox{10cm}{\begin{align*}
+    \mbox{Give that, }p(x)\mbox{ of }\vec{A}&=(x-1)^3\\
+    \mbox{Hence the eigen values of }\vec{A}&=1,1,1\\
+    \mbox{Hence the eigen values of }\vec{A}^2&=1^2,1^2,1^2\mbox{ or } 1,1,1\\
+    \mbox{Therefore }p(x)\mbox{ of }\vec{A}^2&=(x-1)^3
+\end{align*}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is True.\\
+&\\
+\hline
+\pagebreak
+\hline
+&\\
+4.&\\
+&We know that jordan form of a matrix is similar to the original matrix\\
+&Let $\vec{J}$ be the jordan form of the matrix $\vec{A}$ then,\\
+&\parbox{6cm}{\begin{align*}
+    \vec{A}&=\vec{P}\vec{J}\vec{P}^{-1}\\
+    \vec{A}-\vec{I}&=\vec{P}\vec{J}\vec{P}^{-1}-\vec{I}\\
+    \vec{A}-\vec{I}&=\vec{P}(\vec{J}-\vec{I})\vec{P}^{-1}\\
+    (\vec{A}-\vec{I})^2&=\vec{P}(\vec{J}-\vec{I})\vec{P}^{-1}\vec{P}(\vec{J}-\vec{I})\vec{P}^{-1}\\
+    (\vec{A}-\vec{I})^2&=\vec{P}(\vec{J}-\vec{I})^2\vec{P}^{-1}
+\end{align*}}\\
+&Therefore $(\vec{A}-\vec{I})^2$ is similar to $(\vec{J}-\vec{I})^2$\\
+&Since $\vec{A}$ has exactly two jordan blocks and order of $\vec{A}$ is 3.\\
+&\parbox{6cm}{\begin{align*}
+    \therefore \vec{J}&=\myvec{1&1&0\\0&1&0\\0&0&1}\\
+    \vec{J}-\vec{I}&=\myvec{0&1&0\\0&0&0\\0&0&0}\\
+    (\vec{J}-\vec{I})^2&=\myvec{0&0&0\\0&0&0\\0&0&0}
+\end{align*}}\\
+&Since $(\vec{J}-\vec{I})^2$ is diagonal matrix.\\
+&Therefore $(\vec{A}-\vec{I})^2$ is diagonalizable.\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is True.\\
+&\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2018/dec/74/table:2}
+\end{longtable}
+
+\twocolumn

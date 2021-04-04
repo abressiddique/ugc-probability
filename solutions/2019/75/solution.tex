@@ -1,0 +1,46 @@
+If A, B are two matrices of same size and k is any scalar, then we know that 
+\begin{align}
+    trace(A+B) &= trace(A) + trace(B)\\
+    trace(kA) &= k \times trace(A) \\
+    trace(AB) &= trace(BA)
+\end{align}
+\begin{enumerate}
+    \item Consider option 1 is true. It means that there exists matrices A, B such that $AB - BA = I_n$.
+    \begin{align}
+        \implies tr(AB - BA) &= tr(I_n) \\
+        \implies tr(AB) - tr(BA) &= n \\
+        \implies 0 &= n
+    \end{align}
+    But it is given that $n \geq 2$. This contradicts our assumption. Hence, option 1 is FALSE. 
+    
+    \item   Let A be a zero matrix of order n and B be any non-diagonalizable matrix of order n. We know that a zero matrix is always diagonalizable. 
+    \begin{align}
+        \intertext{As, A = $0_{ n\times n }$}
+        AB = 0 = BA 
+    \end{align}
+    We can observe here that when $AB = BA$, matrix A is diagonalizable even though matrix B is not diagonalizable. Hence, option 2 is FALSE.
+    
+    \item The minimal polynomial m(x), of a matrix A, is the polynomial P of minimum degree such that P(A) = 0.
+    \begin{align}
+        \text{Let } A &= \myvec{0 & 1 \\ 0 & 0} \text{ and } B = \myvec{0 & 0 \\ 0 & 1} \\
+        \implies AB &= \myvec{0 & 0 \\ 0 & 1} \text{ and } BA = \myvec{0 & 0 \\ 0 & 0}
+    \end{align}
+    We can observe here that 
+    \begin{align}
+        m_{BA}(x) &= x \text{ while } \\
+        m_{AB}(x) &= x^2
+    \end{align}
+    As minimal polynomial of AB and BA are not same, option 3 is also FALSE. 
+    
+    \item Let $\lambda$ be an eigen value of AB, it implies that there is some $x \neq 0$ such that,
+    \begin{align}
+        ABx = \lambda x \label{eq:solutions/2019/75/eq1}
+    \end{align}
+    Let y = Bx. Then $y \neq 0$. Otherwise we would get from \eqref{eq:solutions/2019/75/eq1} that $\lambda = 0$ or $x = 0$. Now we have,
+    \begin{align}
+        BAy &= BABx = B(ABx)  \nonumber \\
+         = B(\lambda x) &= \lambda Bx = \lambda y \nonumber
+    \end{align}
+    It follows that $\lambda$ is an eigen value of BA. Hence, option 4 is TRUE.
+\end{enumerate}
+

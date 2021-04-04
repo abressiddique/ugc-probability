@@ -1,0 +1,32 @@
+Linearly Dependent vectors: The vectors in a subset $S$ = $\{v_1, v_2, v_3, ...., v_k\}$ of a vector space $V$ are said to be linearly dependent if $\exists$ scalars $a_1, a_2, ...., a_k$ not all zero such that 
+\begin{align}
+    a_1v_1 + a_2v_2 + .... + a_kv_k = 0
+\end{align}
+It is given that 
+\begin{align}
+    W =\langle sin(x), cos(x), tan(x) \rangle
+\end{align}
+As $W$ is spanned by three vectors, we can see that dimension($W$) $\leq$ 3.
+
+Let us assume that the spanning set is linearly dependent $ \implies$  $\exists$  $a,b,c \in \mathbb{R}$ not all zero, such that
+\begin{align}
+    asinx + bcosx + ctanx = 0,  \forall x \in [0, 1]. 
+\end{align}
+\begin{enumerate}
+    \item let $x = 0$: 
+    \begin{align}
+        a\times0 + b\times1 + c\times0 = 0 \\
+        \implies b = 0.
+    \end{align}
+    \item $x = \frac{\pi}{6}$:
+    \begin{align}
+        \frac{a}{2} + \frac{c}{\sqrt{3}} = 0 \label{eq:solutions/2019/31/eq1}
+    \end{align}
+    \item $x = \frac{\pi}{4}$:
+    \begin{align}
+        \frac{a}{\sqrt{2}} + c = 0 \label{eq:solutions/2019/31/eq2}
+    \end{align}
+\end{enumerate}
+From \eqref{eq:solutions/2019/31/eq1} and \eqref{eq:solutions/2019/31/eq2}, we can observe that a = 0 and c = 0, which contradicts our assumption that the spanning set is linearly dependent. So, $W$ is linearly independent which implies that the dimensions of $W$ over $\mathbb{R}$ = 3. 
+
+Hence option 3 is correct.

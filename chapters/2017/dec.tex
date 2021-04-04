@@ -1,0 +1,174 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $\vec{A}$ be a real symmetric matrix and  $\vec{B}=\vec{I}+i\vec{A}$, where $i^2=-1$. Then choose the correct option.
+\begin{enumerate}
+	\item  $\vec{B}$ is invertible if and only if $\vec{A}$ is invertible.
+	\item All Eigenvalues of $\vec{B}$ are necessarily real.
+	\item $\vec{B}-\vec{I}$ is necessarily invertible.
+	\item $\vec{B}$ is necessarily invertible.
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/29/solution.tex}
+\twocolumn
+\item Let $\vec{A}=\myvec{0&1\\-1&1}$. Then the smallest positive integer n such that $\vec{A}^n=\vec{I}$ is
+%
+\\
+\solution
+\input{./solutions/2017/dec/30/solution.tex}
+%
+\item Let $\vec{A} = \myvec{1&-1&1\\1&1&1\\2&3&\alpha}$ and $\vec{b}= \myvec{1\\3\\\beta}$. Then the system $\vec{AX}=\vec{b}$ over the real numbers has\\
+\begin{enumerate}
+    \item No solution when $\beta \ne 7$
+    \item Infinite number of solutions when $\alpha \ne 2$
+    \item Infinite number of solutions when $\alpha = 2$ and $\beta \ne 7$
+    \item A unique solution if $\alpha \ne 2$
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/31/solution.tex}
+%
+\item Consider a Markov chain $\{X_n \: | \: n \geq 0\}$ with state space $\{1,2,3\}$ and transition matrix
+\begin{align}
+    \vec{P} = \myvec{0 & \frac{1}{2} & \frac{1}{2} \\
+    \frac{1}{2} & 0 & \frac{1}{2} \\
+    \frac{1}{2} & \frac{1}{2} & 0} \nonumber
+\end{align}
+Then, $P(X_3 = 1 \: | \: X_0 = 1)$ equals
+%
+\\
+\solution
+\input{./solutions/2017/dec/51/solution.tex}
+%
+%\item 
+%
+%\\
+%\solution
+%\input{./solutions/2017/dec/70/solution.tex}
+\item 	Let $\vec{A}$ be an $m\times n$ matrix with rank $r$. If the linear system $\vec{A}\vec{X} = \vec{b}$ has a solution for each $\vec{b} \in \mathbf{R}^{m}$, then
+	\begin{enumerate}
+		\item $m=r$
+		\item the column space of $\vec{A}$ is a proper subspace of $\mathbf{R}^{m}$ 
+		\item the null space of $\vec{A}$ is a non-trivial subspace of $\mathbf{R}^{n}$ whenever $m=n$
+		\item $m\geq n$ implies $m=n$
+	\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/72/solution.tex}
+\item Let $\vec{M}$ =$\cbrak{\myvec{a&b\\c&d} : a,b,c,d \in \mathbb{Z} \text{ and eigen values of} \vec{A} \in \mathbb{Q}}$ \label{main}
+\begin{enumerate}
+    \item $\vec{M}$ is empty
+    \item $\vec{M}$ =\cbrak{\myvec{a&b\\c&d} : a,b,c,d \in \mathbb{Z}}
+    \item If $\vec{A}$ $\in$ $\vec{M}$ then the eigen values of $\vec{A}$ $\in$ $\mathbb{Z}$
+    \item If $\vec{A}$,$\vec{B}$ $\in$ $\vec{M}$ such that $\vec{A} \vec{B}$=$\vec{I}$ then $\mydet{\vec{A}}$ $\in$ \{+1,-1\}
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/74/solution.tex}
+%
+\item Let A be a $3\times 3$  matrix  with real entries.Identify  the correct statements.
+\begin{enumerate}
+
+\item A  is necessarily diagonalizable over $\vec{R}$
+
+\item If A has distinct real  eigen values than  it is diagonalizable over$\vec{R}$
+
+\item If A has distinct eigen values than  it is diagonalizable over $\vec{C}$
+
+\item If all eigen values are non zero than it is diagonalizable over $\vec{C}$
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/75/solution.tex}
+\twocolumn
+\item Let $V$ be a vector space over $C$ of all the polynomials in a variable $X$ of degree atmost 3. Let $D:V \xrightarrow{} V$ be the linear operator given by differentiation with respect to $X$. Let $A$ be the matrix of $D$ with respect to some 
+basis for $V$. Which of the following are true? \\
+\begin{enumerate}
+\item A is nilpotent matrix \\
+\item A is diagonalizable matrix \\ 
+\item the rank of A is 2 \\
+\item the Jordan canonical form of A is
+\begin{align}\nonumber
+    \myvec{0&1&0&0\\
+       0&0&1&0\\
+       0&0&0&1\\
+       0&0&0&0}
+\end{align}
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/76/solution.tex}
+\item For every $4 \times 4$ real symmetric non-singular matrix $\vec{A}$ there 
+exists a positive integer $p$ such that
+
+    \begin{enumerate}
+        \item $p\vec{I}+\vec{A}$ is positive definite
+        \item $\vec{A}^p$ is positive definite
+        \item $\vec{A}^{-p}$ is positive definite
+        \item $\text{exp}(p\vec{A})-\vec{I}$ is positive definite
+        \end{enumerate}
+\solution
+\input{./solutions/2017/dec/77/solution.tex}
+\item Let $\vec{A}$ be an $m \times n$ matrix of rank $m$ with $n>m$. If for some non-zero real number $\alpha$, we have $\vec{x^TAA^Tx} = \alpha\vec{x^Tx}$, for all $x \in \vec{R^m}$, then $\vec{A^TA}$ has,
+\begin{enumerate}
+
+\item  exactly two distinct eigenvalues.
+
+\item  0 as an eigenvalue with multiplicity $n-m$.
+
+\item  $\alpha$ as a non-zero eigenvalue.
+
+\item  exactly two non-zero distinct eigenvalues.
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/78/solution.tex}
+\item %
+Consider a Markov chain with five states $\{1,2,3,4,5\}$ and transition matrix
+\begin{align}
+    P=\myvec{\frac{1}{2} & 0 & 0 & \frac{1}{2} & 0\\
+            0 & \frac{1}{7} & 0 & 0&\frac{6}{7}\\
+              \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5} & \frac{1}{5}\\ \frac{1}{3} & 0 & 0 & \frac{2}{3} & 0 \\
+              0 & \frac{5}{8} & 0 & 0 & \frac{3}{8}}
+\end{align}
+Which of the following are true?
+\begin{enumerate}
+\item 3 and 1 are in the same communicating class
+\item 1 and 4 are in the same communicating class
+\item 4 and 2 are in the same communicating class
+\item 2 and 5 are in the same communicating class
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/105/solution.tex}
+
+
+%\item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
+%\begin{align}
+%P = 
+%\begin{blockarray}{c@{\hspace{1pt}}rrr@{\hspace{3pt}}}
+%         & 0   & 1   & 2 \\
+%        \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+%    (@{\hspace{1pt}}rrr@{\hspace{1pt}}@{\hspace{1pt}})}
+%        0 & \frac{1}{2} & \frac{1}{2} & 0  \\
+%        1 & 0 &\frac{1}{2}  & \frac{3}{4}  \\
+%%
+%        2 &  \frac{1}{3} & \frac{1}{3} & \frac{1}{3}  \\
+%        \end{block}
+%    \end{blockarray}
+%\end{align}
+%For any two states $i$ and $j$, let $p_{ij}^{(n)}$ denote the $n$-step transition probability of going from $i$ to $j$.  Identify correct statements.
+%\begin{enumerate}
+%\item $\lim_{n \to \infty} p_{11}^{(n)} = \frac{2}{9}$
+%\item $\lim_{n \to \infty} p_{21}^{(n)} = 0$
+%\item $\lim_{n \to \infty} p_{32}^{(n)} = \frac{1}{3}$
+%\item $\lim_{n \to \infty} p_{13}^{(n)} = \frac{1}{3}$
+%\end{enumerate}
+
+\end{enumerate}

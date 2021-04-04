@@ -1,0 +1,121 @@
+See Tables \ref{eq:solutions/2014/dec/78/table:1}
+and \ref{eq:solutions/2014/dec/78/table:2}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Given} & \\
+& $\vec{A}$ is 4 x 7 real matrix\\
+& $\vec{B}$ is 7 x 4 real matrix\\
+& $\vec{AB} =\vec{I}_4 $\\
+&\\
+\hline
+\multirow{3}{*}{Option-1} & \\
+& since $\vec{I}_4$ is a 4 x 4 identity matrix, $rank(\vec{I}_4) = 4 = rank(\vec{AB})$\\
+& \\
+& from the properties of matrices\\
+& $rank(\vec{A}) \leq min\lbrace \# cloumns, \#rows \rbrace$\\
+& $rank(\vec{A}) \leq 4$\\
+& \\
+& and\\
+& \\
+& $rank(\vec{AB}) \leq rank(\vec{A})$\\
+& $ 4 \leq rank(\vec{A})$\\
+& \\
+& $\therefore rank(\vec{A}) = 4$\\
+& Hence Option-1 is True. \\
+& \\
+\hline
+\multirow{3}{*}{Option-2} & \\
+& Similarly from the properties of matrices\\
+& $rank(\vec{B}) \leq min\lbrace \# cloumns, \#rows \rbrace$\\
+& $rank(\vec{B}) \leq 4$\\
+& \\
+& and\\
+& \\
+& $rank(\vec{AB}) \leq rank(\vec{B})$\\
+& $ 4 \leq rank(\vec{B})$\\
+& \\
+& $\therefore rank(\vec{B}) = 4$\\
+& Hence Option-2 is False. \\
+& \\
+\hline
+\multirow{3}{*}{Option-3} & \\
+& Since $rank(\vec{B}) = 4$, and $\vec{B}$ is a 7 x 4 matrix in \\
+& finite dimensional vector space $\mathbb{V}$.\\
+& the column space,$C(\vec{B})$ will form the basis.\\
+& $\implies range(\vec{B}) = dim(\mathbb{V}) = 4$\\
+& \\
+& from rank-nullity theorem\\
+& $ rank(\vec{B}) + nullity(\vec{B}) = dim(\mathbb{V})$\\
+& by substituting above values\\
+& $ nullity(\vec{B}) = 0$\\
+& Hence Option-3 is True.\\
+& \\
+\hline
+\multirow{3}{*}{Option-4} & \\
+& Given $\vec{BA} = \vec{I}_7$\\
+& $rank(\vec{I}_7) = 7 = rank(\vec{BA})$\\
+& \\
+& from the properties of matrices\\
+& $rank(\vec{BA}) \leq rank(\vec{B})$\\
+& $7 \leq rank(\vec{B})$\\
+& the above conditioned can not be satisfied since we know\\
+& $rank(\vec{B}) =4$.\\
+& Hence Option-4 is False. \\
+&\\
+\hline
+\multirow{3}{*}{Conclusion} & \\
+& Option-1 and 3 are True\\
+& Option-2 and 4 are False\\
+&\\
+\hline
+\caption{Proof}
+\label{eq:solutions/2014/dec/78/table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Example} & \\
+& Proving the above results with example in lower dimensions as follows.\\
+& Let $\vec{A}$ be a 2 x 3 matrix in vector space $\mathbb{V}$ and\\
+& consider $\vec{A} = \myvec{1&2&0\\0&2&-4}$\\
+& and $\vec{B}$ be a 3 x 2 matrix in vector space $\mathbb{V}$ and\\
+& consider $\vec{B} = \myvec{1&0\\0&0\\0&-\frac{1}{4}}$\\
+& so that $\vec{AB} = \vec{I} = \myvec{1&0\\0&1}$ is a 2 x 2 matrix\\
+& \\
+\hline
+\multirow{3}{*}{Option-1} & \\
+& row reduced echelon form of $\vec{A}$ is\\
+& $rref(\vec{A}) = \myvec{1&0&4\\0&1&-2}$\\
+& $\implies rank(\vec{A}) = 2$\\
+& Hence Option-1 is True\\
+&\\
+\hline
+\multirow{3}{*}{Option-2} & \\
+& row reduced echelon form of $\vec{B}$ is\\
+& $rref(\vec{B}) = \myvec{1&0\\0&1\\0&0}$\\
+& $\implies rank(\vec{B}) = 2$\\
+& Hence Option-2 is False\\
+&\\
+\hline
+\multirow{3}{*}{Option-3} & \\
+& from the above rref form of $\vec{B}$\\
+& the $range(\vec{B}) = \myvec{1&0\\0&0\\0&-\frac{1}{4}}$\\
+& $\implies dim(\mathbb{V}) = 2$\\
+& $nullspace(\vec{B}) = \myvec{0\\0}$\\
+& $\therefore$ from rank-nullity theorem\\
+& $nullity(\vec{B}) = 0$\\
+& Hence Option-3 is True\\
+&\\
+\hline
+\multirow{3}{*}{Option-4} & \\
+& $\vec{BA} = \myvec{1&2&0\\0&0&0\\0&-\frac{1}{2}&1}$\\
+& $\implies \vec{BA} \neq \vec{I}$\\
+& $rank(\vec{BA}) = \vec{I} = 2$\\
+& Hence Option-4 is False\\
+&\\
+\hline
+\caption{Example}
+\label{eq:solutions/2014/dec/78/table:2}
+\end{longtable}
+\twocolumn

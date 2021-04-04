@@ -1,0 +1,56 @@
+See Table \ref{eq:solutions/2014/dec/32/table1}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Options} & \textbf{Explanation} \\
+\hline
+\text{REAL} & \\
+Counter Example & $\vec{P}=\myvec{i&0\\0&i}$\\
+&\\
+&$\vec{P}^\theta=\myvec{-i&0\\0&-i}$\\
+&\\
+&$\vec{P}^\theta\vec{P}=\myvec{1&0\\0&1}=\vec{I}$\\
+& Eigen values of $\vec{P}$ are $i,i$ which are not real\\
+& Hence,incorrect.\\
+\hline
+\text{Complex Conjugates of each other.} & 
+From above,$(i,i)$ are not complex conjugate\\& of each other\\
+&\\
+&Hence,incorrect.\\
+\hline
+\text{Reciprocals of each other}
+& Reciprocal of $i=\frac{1}{i}=\frac{i^4}{i}=i^3\neq i$\\
+&\\
+& Hence,incorrect.\\
+\hline
+
+\text{of modulus 1}&\\
+Proof&$\vec{P}\vec{V}=\lambda\vec{V}$\\
+&where,$\vec{V}$ is eigen vector of $\vec{P}$ and \\&$\lambda$ is eigen value of $\vec{P}$ \\
+&\\
+&Taking conjugate transpose on both sides,we get\\
+&$\vec{V}^\theta \vec{P}^\theta=\lambda^\theta\vec{V}^\theta$\\
+&\\
+&$\vec{V}^\theta \vec{P}^\theta\vec{P}\vec{V}=\lambda^\theta\vec{V}^\theta\lambda\vec{V}\qquad,\because \vec{P}\vec{V}=\lambda\vec{V}$\\
+&\\
+&$\vec{V}^\theta \vec{I}\vec{V}=\lambda^\theta\lambda\vec{V}^\theta\vec{V}\qquad,\because \vec{P^\theta}\vec{P}=\vec{I}$\\
+&\\
+&$(1-\lambda^\theta\lambda)\vec{V}^\theta\vec{V}=0$\\
+&Since,$\vec{V}$ is not zero.\\
+&$(1-\lambda^\theta\lambda)=0$\\
+&$\lambda^\theta\lambda=1$\\
+&\\
+&$\norm{\lambda}^2=1$\\
+&\\
+&$\lambda=1$\\
+&\\
+&Hence,correct.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Finding Correct Option}
+\label{eq:solutions/2014/dec/32/table1}
+\end{table*}
+ 

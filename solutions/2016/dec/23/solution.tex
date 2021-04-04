@@ -1,0 +1,31 @@
+Let $f_1= x^2$ and $f_2= y^2+\sin x$.\\
+Begin by finding the derivative of f(x,y)
+\begin{align}
+D f(x,y)=\myvec{Df_1x& Df_1y\\Df_2x&Df_2y}\\
+=\myvec{2x&0\\\cos x&2y}
+\end{align}
+So option 1 is correct.\\
+Now to prove that   Derivatives is a linear transformation we dwell on the definition of linear transformation that it satisfies two properties i.e additivity and homogeneity as $\mathbb{R}^n\xrightarrow{}\mathbb{R}^m$
+\begin{align}
+ D\brak{cf}=cD\brak{f}\label{eq:solutions/2016/dec/23/eq1}\\
+ D\brak{f+g}=D\brak{f}+D\brak{g}\label{eq:solutions/2016/dec/23/eq2}
+\end{align}
+Now refer \eqref{eq:solutions/2016/dec/23/eq1} we proceed as
+\begin{align}
+ D\brak{cf}=\myvec{Dcf_1& Dcf_1\\Dcf_2&Dcf_2}\\
+ =c\myvec{Df_1& Df_1\\Df_2&Df_2}\\
+ =cD\brak{f}\label{eq:solutions/2016/dec/23/eq3}
+\end{align}
+Now refer \eqref{eq:solutions/2016/dec/23/eq2} we proceed as
+\begin{align}
+  D\brak{f+g}=\myvec{D\brak{f_1+g_1}&D\brak{f_1+g_1}\\D\brak{f_2+g_2}&D\brak{f_2+g_2}}\\
+  \myvec{Df_1& Df_1\\Df_2&Df_2}+\myvec{Dg_1& Dg_1\\Dg_2&Dg_2}\\
+  =D\brak{f}+D\brak{g}
+\end{align}
+Hence both properties are satisfied so we can say that it is a linear transformation
+
+
+
+
+
+

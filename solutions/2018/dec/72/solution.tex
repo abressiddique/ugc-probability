@@ -1,0 +1,76 @@
+See Table \ref{eq:solutions/2018/dec/72/eq:table:1}
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\text{Given} & \parbox{10cm}{\begin{align}
+    \vec{M}=\myvec{2 & 0 & 3 & 2 & 0 & -2\\0 & 1 & 0& -1 & 3 &4\\0 & 0 & 1 & 0 & 4 &4 \\ 1 & 1 & 1 & 0 & 1 & 1} , \vec{b_{1}}=\myvec{5\\1\\1\\4} , \vec{b_{2}}=\myvec{5\\1\\3\\3}
+\end{align}}\\
+\hline
+\text{Solution} & \text{Solving for $\vec{M}\vec{x}=\vec{b_{1}}$,  Row Reducing the augmented matrix }\\
+& \parbox{10cm}{\begin{align}
+ \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 1 \\ 1 & 1& 1& 0 & 1 & 1 & 4}\\ \xleftrightarrow[R_4\leftarrow R_4-2R_2] {R_4\leftarrow 2R_4-R_1} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 1 \\ 0 & 0& -1& 0 & -4 & -4 & 1}\\
+ %\xleftrightarrow[R_4\leftarrow R_4-2R_2]
+ \xleftrightarrow{R_4\leftarrow R_4 + R_3} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 1 \\ 0 & 0& 0& 0 & 0 & 0 & 2}\\
+\implies Rank\myvec{M}= 3, Rank\brak{\vec{M|}\vec{b_{1}}}= 4\\
+  \implies Rank\myvec{M} \ne Rank\brak{\vec{M|}\vec{b_{1}}}\label{eq:solutions/2018/dec/72/A}
+\end{align}}\\
+\hline
+& \text{ Solving for $\vec{M}\vec{x}=\vec{b_{2}}$, Row Reducing the augmented matrix }\\
+& \parbox{10cm}{\begin{align}
+ \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 3 \\ 1 & 1& 1& 0 & 1 & 1 & 3}\\ \xleftrightarrow[R_4\leftarrow R_4+2R_2] {R_4\leftarrow 2R_4-R_1} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 3 \\ 0 & 0& -1& 0 & -4 & -4 & -1}\\
+ %\xleftrightarrow[R_4\leftarrow R_4-2R_2]
+ \xleftrightarrow{R_4\leftarrow R_4 + R_3} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 5\\ 0 & 1 & 0 & -1 & 3 &4 & 1\\ 0 & 0 & 1 & 0& 4 & 4 & 3 \\ 0 & 0& 0& 0 & 0 & 0 & 2}\\
+ \implies Rank\myvec{M}= 3, Rank\brak{\vec{M|}\vec{b_{2}}}= 4\\
+  \implies Rank\myvec{M} \ne Rank\brak{\vec{M|}\vec{b_{2}}}\label{eq:solutions/2018/dec/72/B}
+\end{align}}\\
+\hline
+& \text{Solving for $\vec{M}\vec{x}=\brak{\vec{b_{1}- b_{2}}}$ , Row Reducing the augmented matrix }\\
+& \parbox{10cm}{\begin{align}
+ \myvec{2 & 0 & 3 & 2 & 0 & -2 & 0\\ 0 & 1 & 0 & -1 & 3 & 4 & 0\\ 0 & 0 & 1 & 0& 4 & 4 & -2 \\ 1 & 1& 1& 0 & 1 & 1 & 1}\\ \xleftrightarrow[R_4\leftarrow R_4-2R_2] {R_4\leftarrow 2R_4-R_1} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 0\\ 0 & 1 & 0 & -1 & 3 &4 & 0\\ 0 & 0 & 1 & 0& 4 & 4 & -2\\ 0 & 0& -1 & 0 & -4 & -4 & 2}\\
+ %\xleftrightarrow[R_4\leftarrow R_4-2R_2]
+ \xleftrightarrow{R_4\leftarrow R_4 + R_3} \myvec{2 & 0 & 3 & 2 & 0 & -2 & 0\\ 0 & 1 & 0 & -1 & 3 &4 & 0\\ 0 & 0 & 1 & 0& 4 & 4 & -2\\ 0 & 0& 0& 0 & 0 & 0 & 0}\\
+ \implies Rank\myvec{M}= 3, Rank\brak{\vec{M|}\brak{\vec{b_{1}-b_{2}}}}= 3\\
+  \implies Rank\myvec{M} = Rank\brak{\vec{M|}\brak{\vec{b_{1}-b_{2}}}}\label{eq:solutions/2018/dec/72/C}
+\end{align}}\\
+\hline
+\textbf{Statement 1} & \text{Both systems $\vec{M}\vec{x}=\vec{b_{1}}$ and $\vec{M}\vec{x}=\vec{b_{2}}$ are inconsistent}\\
+\hline
+& \parbox{10cm}{\begin{align}
+  Eq.\eqref{eq:solutions/2018/dec/72/A} \text{ and } \eqref{eq:solutions/2018/dec/72/B} \text{ violate the condition of consistency}
+\end{align}}\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline
+\textbf{Statement 2} & \text{Both systems $\vec{M}\vec{x}=\vec{b_{1}}$ and $\vec{M}\vec{x}=\vec{b_{2}}$ are consistent}\\
+\hline
+\hline
+& \parbox{10cm}{\begin{align}
+  Eq.\eqref{eq:solutions/2018/dec/72/A} \text{ and } \eqref{eq:solutions/2018/dec/72/B} \text{ violate the condition of consistency}
+\end{align}}\\
+& \parbox{10cm}{\begin{center}
+\textbf{False Statement }
+\end{center}}\\
+\hline
+\textbf{Statement 3} & \text{Systems $\vec{M}\vec{x}=\vec{b_{1}-b_{2}}$ are consistent}\\
+\hline
+& \parbox{10cm}{\begin{align}
+  Eq.\eqref{eq:solutions/2018/dec/72/C} \text{ satisfy the condition of consistency}
+\end{align}}\\
+& \parbox{10cm}{\begin{center}
+\textbf{True Statement }
+\end{center}}\\
+\hline
+\textbf{Statement 4} & \text{Systems $\vec{M}\vec{x}=\vec{b_{1}-b_{2}}$ are inconsistent}\\
+\hline
+& \parbox{10cm}{\begin{align}
+  Eq.\eqref{eq:solutions/2018/dec/72/C} \text{ satisfy the condition of consistency}
+\end{align}}\\
+& \parbox{10cm}{\begin{center}
+\textbf{False Statement }
+\end{center}}\\
+\hline
+\caption{Explanation}
+\label{eq:solutions/2018/dec/72/eq:table:1}
+\end{longtable}
+\twocolumn

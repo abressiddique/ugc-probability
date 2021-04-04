@@ -1,0 +1,49 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item $X_1,X_2,\ldots,X_n$ are independent and identically
+distributed as $N(\mu, \sigma^2)$, $-\infty < \mu < \infty$, $\sigma^2 > 0$. Then
+\begin{enumerate}
+    \item $\sum_1^n\frac{(X_i-\bar{X})^2}{n-1}$ is the Minimum Variance Unbiased Estimate of $\sigma^2$\\
+    \item $\sqrt{\sum_1^n\frac{(X_i-\bar{X})^2}{n-1}}$ is the Minimum Variance Unbiased Estimate of $\sigma$\\
+    \item $\sum_1^n\frac{(X_i-\bar{X})^2}{n}$ is the Maximum Likelihood Estimate of $\sigma^2$\\
+    \item $\sqrt{\sum_1^n\frac{(X_i-\bar{X})^2}{n}}$ is the Maximum Likelihood \qquad Estimate of $\sigma$
+\end{enumerate}
+%
+\solution
+\input{solutions/2016/dec/109.tex}
+%
+\item There are two boxes. Box-$1$ contains $2$ red balls and $4$ green balls. Box-$2$ contains $4$ red balls and $2$ green balls. A box is selected at random and a ball is chosen randomly from the selected box. If the ball turns out to be red, what is the probability that Box-$1$ had been selected?
+%
+\solution
+\input{solutions/2016/dec/49.tex}
+
+
+%\item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
+%\begin{align}
+%P = 
+%\begin{blockarray}{c@{\hspace{1pt}}rrr@{\hspace{3pt}}}
+%         & 0   & 1   & 2 \\
+%        \begin{block}{r@{\hspace{3pt}}@{\hspace{1pt}}
+%    (@{\hspace{1pt}}rrr@{\hspace{1pt}}@{\hspace{1pt}})}
+%        0 & \frac{1}{2} & \frac{1}{2} & 0  \\
+%        1 & 0 &\frac{1}{2}  & \frac{3}{4}  \\
+%%
+%        2 &  \frac{1}{3} & \frac{1}{3} & \frac{1}{3}  \\
+%        \end{block}
+%    \end{blockarray}
+%\end{align}
+%For any two states $i$ and $j$, let $p_{ij}^{(n)}$ denote the $n$-step transition probability of going from $i$ to $j$.  Identify correct statements.
+%\begin{enumerate}
+%\item $\lim_{n \to \infty} p_{11}^{(n)} = \frac{2}{9}$
+%\item $\lim_{n \to \infty} p_{21}^{(n)} = 0$
+%\item $\lim_{n \to \infty} p_{32}^{(n)} = \frac{1}{3}$
+%\item $\lim_{n \to \infty} p_{13}^{(n)} = \frac{1}{3}$
+%\end{enumerate}
+
+\end{enumerate}

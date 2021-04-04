@@ -1,0 +1,69 @@
+See Table \ref{eq:solutions/2017/dec/29/table:1}.
+
+\onecolumn
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{} & \\
+Statement 1. &$\vec{B}$ is invertible if and only if $\vec{A}$ is  invertible.\\
+\hline
+& \\
+False statement& Matrix $\vec{B}$ is invertible even if $\vec{A}$ is non invertible.\\
+\hline
+Example:&Consider a matrix \\&\parbox{12cm}{\begin{align}
+ \vec{A}=\myvec{
+1 &0 \\
+0&0}\label{eq:solutions/2017/dec/29/eq1}\end{align}}\\& a real non invertible,symmetric matrix.\\&\parbox{12cm}{\begin{align}
+&\implies\vec{B}=\myvec{1 & 0\\ 0 & 1}+i\myvec{1 & 0\\ 0 & 0}=\myvec{1+i & 0\\ 0 & 1  }\label{eq:solutions/2017/dec/29/eq2}\end{align}}\\ 
+
+&is invertible even if $\vec{A}$ is non invertible.\\
+\hline
+
+%\pagebreak
+%\hline
+\multirow{3}{*}&\\
+Statement 2. & All Eigenvalues of $\vec{B}$ are necessarily real.\\
+\hline
+&\\
+False statement& Matrix $\vec{B}$ can have complex Eigenvalues.\\
+\hline
+Proof  :& Eigen values of $\vec{B}$ = Eigen values of     
+($\vec{I}$) + i (Eigen values of $\vec{A}$).
+\\&Clearly from \eqref{eq:solutions/2017/dec/29/eq2} above Eigen values of $\vec{B}$ are  $1$ and $1+i$   respectively.\\
+& Hence $\vec{B}$ can also have complex Eigen value.\\
+     \hline
+\multirow{3}{*} & \\ 
+Statement 3.  & $\vec{B}-\vec{I}$ is necessarily invertible.\\
+\hline
+&\\
+False statement& $\vec{B}-\vec{I}=i\vec{A}$ will be invertible if $\vec{A}$, is invertible.\\\hline
+&\\
+Proof: & We have $\vec{B}-\vec{I}=i\vec{A}$\\
+&$\implies \vec{B-I}=i\vec{A}=\myvec{i & 0\\ 0 & 0}$,from \eqref{eq:solutions/2017/dec/29/eq1}\\
+ &Hence $\vec{B-I}$ is not invertible,unless $\vec{A}$ is invertible. \\
+\hline
+\multirow{3}{*}&\\
+Statement 4. & $\vec{B}$ is necessarily invertible.\\
+\hline
+& \\
+Correct Statement:& Matrix $\vec{B}$ has non zero Eigen values corresponding to Eigenvector $X$ .\\
+\hline
+Proof:& Let $X$ be an Eigen vector of $\vec{A}$ corresponding to Eigen value $\lambda$\\
+&\\
+&also,$\lambda\epsilon \mathbb{R}$\\
+&\\
+&$\implies$ $\vec{A}$$X$=$\lambda X $\\
+&\\
+&$\therefore$ $\vec{B}$$X=(\vec{I}+i\vec{A})X$= $\vec{I}$$X$+i$\vec{A}$$X$= $X$+$i\lambda$$X$\\
+&\\
+& $\implies$$\vec{B}$$X$ = $(1+i\lambda)$$X$\\
+& Therefore, $1+i\lambda$ is an Eigen value of $\vec{B}$,\\
+& corresponding to Eigen vector $X$,which are non zero.\\
+& Hence, $\vec{B}$ is necessarily invertible.\\
+\hline
+\caption{Solution summary}
+\label{eq:solutions/2017/dec/29/table:1}
+\end{longtable}
+
+
+
+

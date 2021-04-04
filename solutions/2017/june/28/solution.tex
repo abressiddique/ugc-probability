@@ -1,0 +1,64 @@
+See Tables     \ref{eq:solutions/2017/june/28/tab:my_label}
+and     \ref{eq:solutions/2017/june/28/tab:my_label1}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|m{2cm}|m{6cm}|}\hline
+        Definition & Matrix $\vec{A}$ is said to be similar to matrix $\vec{B}$ if there exists matrix $\vec{P}$\\& such that $\vec{A}$ = $\vec{P}\vec{B}\vec{P}^{-1}$\\
+        \hline
+        Properties& Similar matrices have same eigenvalues\\&
+        Sum of eigenvalue of a matrix equals its trace\\&
+        From above two properties we can conclude that similar matrices have same trace\\
+        \hline
+\end{tabular}
+\end{center}
+\caption{Similar matrices and Properties}
+\label{eq:solutions/2017/june/28/tab:my_label}
+\end{table*}
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|m{2.2cm}|m{6.3cm}|}\hline
+        trace($\vec{A}$) = 0 trace($\vec{B}$) = 0 & From $\eqref{eq:eq:solutions/2017/june/28/eq1}$ we have {\begin{align*}
+            \vec{AB} &= -\vec{BA}\\
+            \implies\vec{A} &= \vec{B}(-\vec{A})\vec{B}^{-1}
+        \end{align*}}So, matrix $\vec{A}$ and (-$\vec{A}$) are similar.$\therefore$ {\begin{align*}
+            trace(\vec{A}) &= trace(-\vec{A})\\
+            \implies trace(\vec{A}) &= 0
+        \end{align*}}Similarly From $\eqref{eq:eq:solutions/2017/june/28/eq1}$ we have {\begin{align*}
+            \vec{AB} &= -\vec{BA}\\
+            \implies\vec{B} &= \vec{A}^{-1}(-\vec{B})\vec{A}
+        \end{align*}}So, matrix $\vec{B}$ and (-$\vec{B}$) are similar.$\therefore$ {\begin{align*}
+            trace(\vec{B}) &= trace(-\vec{B})\\
+            \implies trace(\vec{B}) &= 0
+        \end{align*}} So this statement is true \\
+        \hline
+        trace($\vec{A}$) = 1 trace($\vec{B}$) = 1 & From $\eqref{eq:eq:solutions/2017/june/28/eq1}$ we have {\begin{align*}
+            \vec{AB} &= -\vec{BA}\\
+            \implies\vec{A} &= \vec{B}(-\vec{A})\vec{B}^{-1}
+        \end{align*}}So, matrix $\vec{A}$ and (-$\vec{A}$) are similar.$\therefore$ {\begin{align*}
+            trace(\vec{A}) &= trace(-\vec{A})\\
+            \implies trace(\vec{A}) &= 0.
+            \end{align*}} As trace($\vec{A}$) = 0 this statement is false\\
+        \hline
+        trace($\vec{A}$) = 0 trace($\vec{B}$) = 1 & From $\eqref{eq:eq:solutions/2017/june/28/eq1}$ we have {\begin{align*}
+            \vec{AB} &= -\vec{BA}\\
+            \implies\vec{B} &= \vec{A}^{-1}(-\vec{B})\vec{A}
+        \end{align*}}So, matrix $\vec{B}$ and (-$\vec{B}$) are similar.$\therefore$ {\begin{align*}
+            trace(\vec{B}) &= trace(-\vec{B})\\
+            \implies trace(\vec{B}) &= 0.
+            \end{align*}} As trace($\vec{B}$) = 0 this statement is false\\
+        \hline
+        trace($\vec{A}$) = 1 trace($\vec{B}$) = 0 & From $\eqref{eq:eq:solutions/2017/june/28/eq1}$ we have {\begin{align*}
+            \vec{AB} &= -\vec{BA}\\
+            \implies\vec{A} &= \vec{B}(-\vec{A})\vec{B}^{-1}
+        \end{align*}}So, matrix $\vec{A}$ and (-$\vec{A}$) are similar.$\therefore$ {\begin{align*}
+            trace(\vec{A}) &= trace(-\vec{A})\\
+            \implies trace(\vec{A}) &= 0.
+            \end{align*}} As trace($\vec{A}$) = 0 this statement is false\\
+        \hline
+        
+    \end{tabular}
+    \end{center}
+    \caption{Calculation of trace}
+    \label{eq:solutions/2017/june/28/tab:my_label1}
+\end{table*}

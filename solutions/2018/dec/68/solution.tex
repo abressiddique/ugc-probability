@@ -1,0 +1,154 @@
+See Tables     \ref{eq:solutions/2018/dec/68/table:1}
+and     \ref{eq:solutions/2018/dec/68/table:2}
+
+\onecolumn
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Invertible} 
+	& \\
+	& A square matrix is invertible if and only if it does not have a zero eigenvalue.\\ 
+	& So, from the definition of eigen vector we can write that \\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{A}\vec{x} \neq 0 \label{eq:solutions/2018/dec/68/eq:1}
+	\end{align}}\\ 
+	&The transpose of an invertible matrix is also invertible with inverse $(\vec{A}^{-1})^T$.\\
+	&\parbox{10cm}
+	{\begin{align}
+	\vec{A}\vec{A}^{-1}=\vec{I}
+	\implies(\vec{A}^{-1})^T\vec{A}^T=\vec{I}^T=\vec{I}\\
+	\text{So,similarly we can say that} \nonumber \\
+	\vec{A}^T\vec{y} \neq 0 \label{eq:solutions/2018/dec/68/eq:1.1}
+	\end{align}}\\ 
+	\hline
+	\multirow{3}{*}{Derivative of F} 
+	&\\
+	& Suppose F: $\mathbb{R}^n\rightarrow\mathbb{R}^m$,the derivative of a function F is given by the\\
+	&Jacobian matrix\\
+	&\parbox{10cm}
+	{\begin{align}
+	 \myvec{\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} &\dots & \frac{\partial f_1}{\partial x_n} \\
+	 \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} &\dots & \frac{\partial f_2}{\partial x_n} \\
+    \vdots &\vdots& \ddots & \vdots\\
+    \frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} &\dots & \frac{\partial f_m}{\partial x_n}} \label{eq:solutions/2018/dec/68/eq:2}
+	\end{align}}\\ 
+	&\\
+	\hline
+	\multirow{3}{*}{Inner product} 
+	&\\
+	& The inner product of $\vec{x}$ and $\vec{y}$ is given by\\
+    &\parbox{10cm}
+	{\begin{align}
+	\langle \vec{x},\vec{y} \rangle =\vec{x}^T\vec{y}=\vec{y}^T\vec{x}  
+	\end{align}}\\ 
+	&\\
+    \hline
+    \caption{Definition and Properties used}
+    \label{eq:solutions/2018/dec/68/table:1}
+\end{longtable}
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Given}
+	&\\
+    &\parbox{10cm}
+	{\begin{align}
+	F(\vec{x},\vec{y})=\langle \vec{A}\vec{x},\vec{y} \rangle 
+	\end{align}}\\
+    \hline
+	\multirow{3}{*}{using inner product definition}
+	& \\
+	&\parbox{10cm}
+	{\begin{align}
+	F(\vec{x},\vec{y})=(\vec{A}\vec{x})^T\vec{y}=\vec{x}^T\vec{A}^T\vec{y}\\
+	F(\vec{x},\vec{y})=\vec{y}^T\vec{A}\vec{x}
+	\end{align}}\\
+	&\\
+	\hline
+	\multirow{3}{*}{Derivative of F}
+	&\\
+	&using \eqref{eq:solutions/2018/dec/68/eq:2}, We can write that\\
+	&\parbox{10cm}
+	{\begin{align}
+	DF(\vec{x},\vec{y})=\myvec{\frac{\partial F}{\partial x}&\frac{\partial F}{\partial y}}
+	=\myvec{\vec{y}^T\vec{A} & \vec{x}^T\vec{A}^T} \label{eq:solutions/2018/dec/68/eq:main}
+	\end{align}}\\
+	&\\
+	\hline
+	\multirow{3}{*}{If $\vec{x} \neq 0$,then $DF(\vec{x},0 ) \neq 0$}
+	&\\
+	&using \eqref{eq:solutions/2018/dec/68/eq:main},\\
+	&\parbox{10cm}
+	{\begin{align}
+	DF(\vec{x},0)=\myvec{0 & \vec{x}^T\vec{A}^T} \\
+	\text{From $\eqref{eq:solutions/2018/dec/68/eq:1}$,we know that} \nonumber \\
+	\vec{A}\vec{x} \neq 0\\
+	\implies \vec{x}^T\vec{A}^T \neq 0
+	\end{align}}\\
+	&So, We can say that \\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(\vec{x},0)\neq 0 \label{eq:solutions/2018/dec/68/option1}
+	\end{align}}\\
+	&\\
+    \hline
+    \multirow{3}{*}{If $\vec{y} \neq 0$,then $DF(0,\vec{y} ) \neq 0$}
+	&\\
+	&using \eqref{eq:solutions/2018/dec/68/eq:main},\\
+	&\parbox{10cm}
+	{\begin{align}
+	DF(0,\vec{y})=\myvec{\vec{y}^T\vec{A}  & 0} \\
+	\text{From $\eqref{eq:solutions/2018/dec/68/eq:1.1}$,we know that} \nonumber \\
+	\vec{A}^T\vec{y} \neq 0\\
+	\implies \vec{y}^T\vec{A} \neq 0
+	\end{align}}\\
+	&So, We can say that \\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(0,\vec{y}) \neq 0 \label{eq:solutions/2018/dec/68/option2}
+	\end{align}}\\
+	&\\
+	 \hline
+    \multirow{3}{*}{If $(\vec{x},\vec{y}) \neq 0$,then $DF(\vec{x},\vec{y} ) \neq 0$}
+	&\\
+	&using \eqref{eq:solutions/2018/dec/68/eq:main},\\
+	&\parbox{10cm}
+	{\begin{align}
+	DF(\vec{x},\vec{y}) =\myvec{\vec{y}^T\vec{A} & \vec{x}^T\vec{A}^T}\\
+	\text{As $(\vec{x},\vec{y}) \neq 0,DF(\vec{x},\vec{y}) = 0 $ iff $\vec{A}$=0 }\nonumber \\
+	\text{From $\eqref{eq:solutions/2018/dec/68/eq:1}$,we know that} \nonumber \\
+	\vec{A} \neq 0
+	\end{align}}\\
+	&So, We can say that \\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(\vec{x},\vec{y}) \neq 0\label{eq:solutions/2018/dec/68/option3}
+	\end{align}}\\
+	&\\
+    \hline
+    \multirow{3}{*}{If $\vec{x} = 0$ or $\vec{y}=0$,then $DF(\vec{x},\vec{y})= 0$}
+	&\\
+	&From \eqref{eq:solutions/2018/dec/68/option2},\\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(0,\vec{y}) \neq 0  
+	\end{align}}\\
+	&From \eqref{eq:solutions/2018/dec/68/option1},\\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(\vec{x},0)\neq 0 
+	\end{align}}\\
+	&So, if $\vec{x} = 0$ or $\vec{y}=0$,\\
+	&\parbox{10cm}
+	{\begin{align}
+    DF(\vec{x},\vec{y}) \neq 0
+	\end{align}}\\
+    &\\
+    \hline
+	\multirow{3}{*}{Conclusion} & \\
+	& From above,we can say that options 1),2),3) are correct.\\
+    &\\
+	\hline
+	\caption{Finding derivative of linear transformation}
+    \label{eq:solutions/2018/dec/68/table:2}
+\end{longtable}
+\twocolumn

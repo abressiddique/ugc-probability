@@ -1,0 +1,225 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 16}
+\author{AVVARU BHARAT - EE20MTECH11008}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/Bharat437/Matrix_Theory/tree/master/Assignment16
+\end{lstlisting}
+\section{\textbf{Problem}}
+(UGC,JUNE 2014,75) : \\
+%
+Let $\vec{A}$ be $5\times5$ matrix and let $\vec{B}$ be obtained by changing one element of $\vec{A}$. Let $r$ and $s$ be the ranks of $\vec{A}$ and $\vec{B}$ respectively. Which of the following statements is/are correct?
+\begin{enumerate}
+    \item $s\leq r+1$
+    \item $r-1\leq s$
+    \item $s=r-1$
+    \item $s\neq r$
+\end{enumerate}
+\section{\textbf{Explanation}}
+\renewcommand{\thetable}{1}
+\begin{longtable}{|l|l|}
+\hline
+\endhead
+\textbf{Theorem}&If $\vec{M}$ and $\vec{N}$ are two matrices whose ranks are $rank(\vec{M})$ and $rank(\vec{N})$ respectively. Then\\&\parbox{14cm}{\begin{align}
+    rank(\vec{M}+\vec{N})\leq rank(\vec{M})+rank(\vec{N})\label{prop}
+\end{align}}\\
+\hline
+\caption{Definitions and theorem used}
+\label{deftab}
+\end{longtable}
+\section{\textbf{Solution}}
+\renewcommand{\thetable}{2}
+\begin{longtable}{|l|l|l|}
+\hline
+\endhead
+\textbf{Option}&\textbf{Solution}&\textbf{True/}\\&&\textbf{False}\\
+\hline
+1.&Given matrix $\vec{A}$ has rank $r$ and $\vec{B}$ has rank s.&\\&Also given matrix $\vec{B}$ is obtained by changing only one element of $\vec{A}$.&\\&Lets assume another matrix $\vec{P}$ whose addition to matrix $\vec{A}$ results to matrix $\vec{B}$&\\&as below.&\\&\parbox{14cm}{\begin{align}
+    \vec{A}+\vec{P}=\vec{B}\label{APB}
+\end{align}}&\\&Since matrix $\vec{P}$ consists only single element we can say that $rank(\vec{P})=1$&True\\&From \eqref{prop}, \eqref{APB}, we get&\\&\parbox{14cm}{\begin{align}
+    rank(\vec{A}+\vec{P})&\leq rank(\vec{A})+rank(\vec{P})\\
+    \implies rank(\vec{B})&\leq rank(\vec{A})+rank(\vec{P})\\
+    \implies s&\leq r+1\label{p1}
+\end{align}}&\\&\textbf{Example:}&\\&Let matrices $\vec{A}$ and $\vec{B}$ be as below&\\&\parbox{14cm}{\begin{align}
+    \vec{A}=\myvec{2&-3&6&2&5\\-2&3&-3&-3&-4\\4&-6&9&5&9\\-2&3&3&-4&1\\6&-9&12&8&13}\label{A}\\
+    \vec{B}=\myvec{2&-3&6&2&5\\-2&3&-3&-3&4\\4&-6&9&5&9\\-2&3&3&-4&1\\6&-9&12&8&13}\label{B}
+\end{align}}&\\&lets calculate rank of matrix $\vec{A}$&\\&\parbox{14cm}{\begin{align}
+    &\myvec{2&-3&6&2&5\\-2&3&-3&-3&-4\\4&-6&9&5&9\\-2&3&3&-4&1\\6&-9&12&8&13}\xleftrightarrow[R_3\leftarrow R_3-2R_1]{R_2\leftarrow R_2+R_1}\myvec{2&-3&6&2&5\\0&0&3&-1&1\\0&0&-3&1&-1\\-2&3&3&-4&1\\6&-9&12&8&13}\\&\xleftrightarrow[R_5\leftarrow R_5-3R_1]{R_4\leftarrow R_4+R_1}\myvec{2&-3&6&2&5\\0&0&3&-1&1\\0&0&-3&1&-1\\0&0&9&-2&6\\0&0&-6&2&-2}\xleftrightarrow[R_5\leftarrow R_5-2R_3]{R_4\leftarrow R_4+3R_3}\myvec{2&-3&6&2&5\\0&0&3&-1&1\\0&0&-3&1&-1\\0&0&0&1&3\\0&0&0&0&0}\\&\xleftrightarrow[]{R_3\leftarrow R_3+R_1}\myvec{2&-3&6&2&5\\0&0&3&-1&1\\0&0&0&0&0\\0&0&0&1&3\\0&0&0&0&0}\xleftrightarrow[]{R_3\leftrightarrow R_4}\myvec{2&-3&6&2&5\\0&0&3&-1&1\\0&0&0&1&3\\0&0&0&0&0\\0&0&0&0&0}
+\end{align}}&\\&\parbox{14cm}{\begin{align}
+    \implies rank(\vec{A})=3=r\label{ra}
+\end{align}}&\\&Now lets calculate rank of matrix $\vec{B}$&\\&\parbox{14cm}{\begin{align}
+    &\myvec{2&-3&6&2&5\\-2&3&-3&-3&4\\4&-6&9&5&9\\-2&3&3&-4&1\\6&-9&12&8&13}\xleftrightarrow[R_3\leftarrow R_3-2R_1]{R_2\leftarrow R_2+R_1}\myvec{2&-3&6&2&5\\0&0&3&-1&9\\0&0&-3&1&-1\\-2&3&3&-4&1\\6&-9&12&8&13}\\
+    &\xleftrightarrow[R_5\leftarrow R_5-3R_1]{R_4\leftarrow R_4+R_1}\myvec{2&-3&6&2&5\\0&0&3&-1&9\\0&0&-3&1&-1\\0&0&9&-2&6\\0&0&-6&2&-2}\xleftrightarrow[R_5\leftarrow R_5-2R_3]{R_4\leftarrow R_4+3R_3}\myvec{2&-3&6&2&5\\0&0&3&-1&9\\0&0&-3&1&-1\\0&0&0&1&3\\0&0&0&0&0}
+\end{align}}&\\&\parbox{14cm}{\begin{align}
+    \implies rank(\vec{B})=4=s\label{rb}
+\end{align}}&\\&Now matrix $\vec{P}$ will be&\\&\parbox{14cm}{\begin{align}
+    \vec{P}&=\vec{B}-\vec{A}\\
+    \implies\vec{P}&=\myvec{0&0&0&0&0\\0&0&0&0&8\\0&0&0&0&0\\0&0&0&0&0\\0&0&0&0&0}\label{P}\\
+    \implies rank(\vec{P})&=1
+\end{align}}&\\&Now we will see equation \eqref{p1} is satisfied or not&\\&\parbox{14cm}{\begin{align}
+    s\leq r+1\implies4\leq3+1\implies4\leq4
+\end{align}}&\\&Hence satisfied&\\
+\hline2.&From \eqref{APB}, If $\vec{P}=-\vec{Q}$ then we can get as below&\\&\parbox{14cm}{\begin{align}
+    \vec{A}-\vec{Q}=\vec{B}\\
+    \implies\vec{B}+\vec{Q}=\vec{A}\label{BQP}
+\end{align}}&\\&Since matrix $\vec{Q}$ also consists only single element we can say that $rank(\vec{Q})=1$&True\\&From \eqref{prop}, \eqref{BQP}, we get&\\&\parbox{14cm}{\begin{align}
+    rank(\vec{B}+\vec{Q})&\leq rank(\vec{B})+rank(\vec{Q})\\
+    \implies rank(\vec{A})&\leq rank(\vec{B})+rank(\vec{Q})\\
+    \implies r&\leq s+1\\
+    \implies r-1&\leq s\label{p2}
+\end{align}}&\\&\textbf{Example:}&\\&Let matrix $\vec{A}$ and $\vec{B}$ are considered same as in \eqref{A}, \eqref{B}&\\&From \eqref{ra} and \eqref{rb} we got&\\&\parbox{14cm}{\begin{align}
+    rank(\vec{A})=r=3\\
+    rank(\vec{B})=s=4\\
+\end{align}}&\\&Here matrix $\vec{Q}$ will be&\\&\parbox{14cm}{\begin{align}
+    \vec{Q}&=\vec{A}-\vec{B}\\
+    \implies\vec{Q}&=\myvec{0&0&0&0&0\\0&0&0&0&-8\\0&0&0&0&0\\0&0&0&0&0\\0&0&0&0&0}\implies\vec{Q}=-\vec{P}\\
+    \implies rank(\vec{Q})&=1
+\end{align}}&\\&Now we will see equation \eqref{p2} is satisfied or not&\\&\parbox{14cm}{\begin{align}
+    r-1\leq s\implies3-1\leq4\implies2\leq4
+\end{align}}&\\&Hence satisfied&\\
+\hline
+3.&Let matrix $\vec{A}$ be identity matrix then $rank(\vec{A})$ is 5 and matrix $\vec{B}$ can be&\\&\parbox{14cm}{\begin{align}
+    \vec{A}=\vec{I}_{5\times5}\label{eq1}\\
+    \vec{B}=\myvec{1&1&0&0&0\\0&1&0&0&0\\0&0&1&0&0\\0&0&0&1&0\\0&0&0&0&1}\label{eq2}
+\end{align}}&False\\&Then $rank(\vec{B})$ is also 5.Therefore $s=r-1$ is always not true.&\\
+\hline
+4.&Similarly from \eqref{eq1},\eqref{eq2} we can say that $s\neq r$ is not true always.&False\\&&\\
+\hline
+\caption{Solution}
+\label{deftab}
+\end{longtable}
+\end{document}

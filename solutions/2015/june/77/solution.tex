@@ -1,0 +1,245 @@
+See Table \ref{eq:solutions/2015/june/77/table:solutions0} \ref{eq:solutions/2015/june/77/table:solutions}
+
+\onecolumn
+	%
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Kernel and Nullity} 
+		& \\
+		& Given a linear transformation $L : \vec{V} \rightarrow \vec{W}$ between wo vector spaces $\vec{V}$ and \\ 
+		& $\vec{W}$, the kernel of $L$ is the set of all vectors $\vec{v}$ of $\vec{V}$ for which $L(\vec{v}) = \vec{0}$, \\
+		& where $\vec{0}$ denotes the zero vector in $\vec{W}$. i.e.\\
+		& \\
+		& \qquad \qquad \qquad $Ker(L) = \{\vec{v} \in \vec{V} \ |\ L(\vec{v}) = 0\}$ \\
+		& \\
+		& Nullity of the linear transformation is the dimension of the kernel of the linear \\
+		& transformation i.e. \\
+		& \\
+		& \qquad \qquad \qquad $nullity(L) = dim(Ker(L))$ \\
+		& \\
+		\hline
+		\multirow{3}{*}{Range and Rank} 
+		& \\
+		& Given a linear transformation $L : \vec{V} \rightarrow \vec{W}$ between wo vector spaces $\vec{V}$ and \\ 
+		& $\vec{W}$, the range of $L$ is the set of all vectors $\vec{w}$ in $\vec{W}$ given as \\
+		& \\
+		& \qquad \qquad \qquad $Range(L) = \{\vec{w} \in \vec{W} \ |\ \vec{w} = L(\vec{v}), \vec{v} \in \vec{V}\}$ \\
+		& \\
+		& The rank of a linear transformation $L$ is the dimension of it's range, i.e. \\
+		& \\
+		& \qquad \qquad \qquad $rank(L) = dim(Range(L))$ \\
+		& \\
+		& \\
+		\hline
+		\multirow{3}{*}{Rank-Nullity Theorem} 
+		& \\
+		& Let $\vec{V}$, $\vec{W}$ be vector spaces, where $\vec{V}$ is finite dimensional. Let $L:\vec{V} \rightarrow \vec{W}$ be a \\
+		& linear transformation. Then \\
+		& \\
+		&  \qquad \qquad  \qquad$rank(L) + nullity(L) = dim(\vec{V})$ \\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2015/june/77/table:solutions0}
+	\end{longtable}
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Inference from }   
+		& \\ 
+		& $Ker(\phi_1) = \{0\}$ \\the Given Data
+		& \\
+		& $\implies nullity(\phi_1) = 0$ \\
+		& \\
+		& \\
+		& $Range(\phi_1) = Ker(\phi_2)$ \\
+		& \\
+		& $\implies rank(\phi_1) = nullity(\phi_2)$ \\
+		& \\
+		& \\
+		& $Range(\phi_2) = Ker(\phi_3)$ \\
+		& \\
+		& $\implies rank(\phi_2) = nullity(\phi_3)$ \\
+		& \\
+		& \\
+		& $Range(\phi_3) = \vec{V_4}$ \\
+		& \\
+		& $\implies rank(\phi_3) = dim(\vec{V_4})$ \\
+		& \\
+		& Now talking about the linear transformations we can use rank-nullity theorem to \\ & determine the corresponding dimensions of the vector space. \\
+		& \\
+		& \\
+		& $\phi_1 : \vec{V_1} \rightarrow \vec{V_2}$ \\
+		& \\
+		& $\implies rank(\phi_1) + nullity(\phi_1) = dim(\vec{V_1})$ \\ 
+		& $\implies rank(\phi_1) = dim(\vec{V_1})$ \qquad \qquad \qquad \qquad ($\because nullity(\phi_1) = 0$) \\
+		& \\
+		& \\
+		& $\phi_2 : \vec{V_2} \rightarrow \vec{V_3}$ \\
+		& \\
+		& $\implies rank(\phi_2) + nullity(\phi_2) = dim(\vec{V_2})$ \\
+		& $\implies rank(\phi_2) + rank(\phi_1) = dim(\vec{V_2})$ \qquad \qquad ($\because  rank(\phi_1) = nullity(\phi_2)$) \\
+		& $\implies rank(\phi_2) + dim(\vec{V_1}) = dim(\vec{V_2})$ \qquad \qquad ($\because  rank(\phi_1) = dim(\vec{V_1})$) \\
+		& \\
+		& \\
+		& $\phi_3 : \vec{V_3} \rightarrow \vec{V_4}$ \\
+		& \\
+		& $\implies rank(\phi_3) + nullity(\phi_3) = dim(\vec{V_3})$ \\
+		& $\implies rank(\phi_3) + rank(\phi_2) = dim(\vec{V_3})$ \qquad \qquad ($\because  rank(\phi_2) = nullity(\phi_3)$) \\
+		& $\implies rank(\phi_3) + dim(\vec{V_2}) - dim(\vec{V_1}) = dim(\vec{V_3})$     ($\because  rank(\phi_2) + dim(\vec{V_1}) = dim(\vec{V_2})$) \\
+		& $\implies dim(\vec{V_4}) + dim(\vec{V_2}) - dim(\vec{V_1}) = dim(\vec{V_3})$ \qquad ($\because  rank(\phi_3) = dim(\vec{V_4})$) \\
+		& \\
+		& From the above equation we can infer that \\
+		& \\
+		& \qquad \qquad $dim(\vec{V_4}) + dim(\vec{V_2}) - dim(\vec{V_1}) - dim(\vec{V_3}) = 0$ \\
+		& \\
+		\hline
+		\multirow{3}{*}{Option 1  } & \\
+		& It is given that \\
+		& \\
+		& $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} = 0$ \\
+		& \\
+		& $\implies - dim(\vec{V_1}) + dim(\vec{V_2}) - dim(\vec{V_3}) + dim(\vec{V_4}) = 0$ \\
+		& \\
+		& This statement we already proved above. \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{True}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 2} & \\
+		& It is given that \\
+		& \\
+		& $\sum_{i=2}^{4} \ (-1)^{i} \ dim \ \vec{V_i} > 0$ \\
+		& \\
+		& $\implies dim(\vec{V_2}) - dim(\vec{V_3}) + dim(\vec{V_4}) > 0$ \\
+		& \\
+		& Our original derived equation is \\
+		& \\
+		& \qquad \qquad $dim(\vec{V_4}) + dim(\vec{V_2}) - dim(\vec{V_1}) - dim(\vec{V_3}) = 0$ \\
+		& \qquad $\implies$ $dim(\vec{V_2}) - dim(\vec{V_3}) + dim(\vec{V_4}) = dim(\vec{V_1})$ \\
+		& \\
+		& It is given in the question that the vector spaces are non-zero in nature. \\
+		& \\
+		& $\implies dim(\vec{V_1}) > 0$ \\
+		& \\ 
+		& \qquad \qquad $\therefore$ $dim(\vec{V_2}) - dim(\vec{V_3}) + dim(\vec{V_4}) > 0$\\
+		& \\
+		& $\therefore$ this statement is $\mathbf{True}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 3} & \\
+		& It is given that \\
+		& \\
+		& $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} < 0$ \\
+		& \\
+		& $\implies - dim(\vec{V_1}) + dim(\vec{V_2}) - dim(\vec{V_3}) +  dim(\vec{V_4}) < 0$ \\
+		& \\
+		& This is contrary to our original derived equation i.e. \\
+		& \\
+		& \qquad \qquad $dim(\vec{V_4}) + dim(\vec{V_2}) - dim(\vec{V_1}) - dim(\vec{V_3}) = 0$ \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{False}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Option 4} & \\
+		& It is given that \\
+		& \\
+		& $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} \neq 0$ \\
+		& \\
+		& $\implies - dim(\vec{V_1}) + dim(\vec{V_2}) - dim(\vec{V_3}) +  dim(\vec{V_4}) \neq 0$ \\
+		& \\
+		& This is contrary to our original derived equation i.e. \\
+		& \\
+		& \qquad \qquad $dim(\vec{V_4}) + dim(\vec{V_2}) - dim(\vec{V_1}) - dim(\vec{V_3}) = 0$ \\
+		& \\
+		& $\therefore$ this statement is $\mathbf{False}$. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Conclusion} & \\
+		& From our observation we see that \\
+		&\\
+		& Options 1) and 2) are True.\\
+		& \\
+		\hline
+	\end{longtable}
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Linear Transforms }   
+		& \\ 
+		& Let $\phi_1 : \vec{R}^{2} \rightarrow \vec{R}^{3}$ defined as \\ Example
+		& \qquad \qquad \qquad $\phi_1 \left\{ \myvec{x_1 \\ x_2}\right\} = \myvec{x_1 - x_2 \\ x_1 + x_2 \\ x_2}$ \qquad \qquad \\
+		& \\
+		& \qquad \qquad $\implies$ $\phi_1 \left\{ \myvec{x_1 \\ x_2}\right\} = \myvec{1&-1 \\ 1&1 \\ 0&1}\myvec{x_1 \\ x_2}$\\
+		& \\
+		& For the above transformation $\phi_1$ the kernel and the range are \\
+		& \\
+		& \qquad \qquad $Ker(\phi_1) = \left\{ \myvec{0 \\ 0}\right\}$ \qquad $\implies nullity(\phi_1) = 0$\\
+		& \\
+		& \qquad \qquad $Range(\phi_1) = \left\{ \myvec{1 \\ 1 \\ 0}, \myvec{-1 \\ 1 \\ 1}\right\}$ \qquad $\implies rank(\phi_1) = 2$ \\
+		& \\
+		& We can verify the rank-nullity theorem here as \\
+		& \\
+		& \qquad \qquad \qquad $nullity(\phi_1) + rank(\phi_1)$ \\
+		& \qquad \qquad $\implies 0 + 2$ \\
+		& \qquad \qquad $\implies 2 = dim(\vec{R}^{2})$ \\
+		& \\
+		& \\
+		& Let $\phi_2 : \vec{R}^{3} \rightarrow \vec{R}^{3}$ defined as \\ 
+		& \qquad \qquad \qquad $\phi_2 \left\{ \myvec{x_1 \\ x_2 \\ x_3}\right\} = \myvec{x_1 - x_2 + 2x_3 \\ 2x_1 - 2x_2 + 4x_3 \\ 3x_1 - 3x_2 + 6x_3}$ \qquad \qquad \\
+		& \\
+		& \qquad \qquad $\implies$ $\phi_2 \left\{ \myvec{x_1 \\ x_2 \\ x_3}\right\} = \myvec{1&-1&2 \\ 2&-2&4 \\ 3&-3&6}\myvec{x_1 \\ x_2 \\ x_3}$\\
+		& \\
+		& For the above transformation $\phi_2$ the kernel and the range are \\
+		& \\
+		& \qquad \qquad $Ker(\phi_2) = \left\{ \myvec{1 \\ 1 \\ 0}, \myvec{-1 \\ 1 \\ 1}\right\}$ \qquad $\implies nullity(\phi_2) = 2$\\
+		& \\
+		& \qquad \qquad $Range(\phi_2) = \left\{\myvec{1 \\ 2 \\ 3}\right\}$  \qquad $\implies rank(\phi_2) = 1$\\
+		& \\
+		& We can verify the rank-nullity theorem here as \\
+		& \\
+		& \qquad \qquad \qquad $nullity(\phi_2) + rank(\phi_2)$ \\
+		& \qquad \qquad $\implies 2 + 1$ \\
+		& \qquad \qquad $\implies 3 = dim(\vec{R}^{3})$ \\
+		& \\
+		& \\
+		& In the above two transformations $\phi_1$ and $\phi_2$, we can see the following \\
+		& conditions being satisfied \\
+		& \\
+		& \qquad \qquad \qquad $Ker(\phi_1) = \{0\}$, $Range(\phi_1) = Ker(\phi_2)$ \\
+		& \\
+		& \\
+		& Let $\phi_3 : \vec{R}^{3} \rightarrow \vec{R}^{2}$ defined as \\ 
+		& \qquad \qquad \qquad $\phi_3 \left\{ \myvec{x_1 \\ x_2 \\ x_3}\right\} = \myvec{x_1 + x_2 - x_3 \\ 2x_1 + \frac{1}{2}x_2 - x_3}$ \qquad \qquad \\
+		& \\
+		& \qquad \qquad $\implies$ $\phi_2 \left\{ \myvec{x_1 \\ x_2 \\ x_3}\right\} = \myvec{1&1&-1 \\ 2&\frac{1}{2}&-1}\myvec{x_1 \\ x_2 \\ x_3}$\\
+		& For the above transformation $\phi_3$ the kernel and the range are \\
+		& \\
+		& \qquad \qquad $Ker(\phi_3) = \left\{\myvec{1 \\ 2 \\ 3}\right\}$ \qquad $\implies nullity(\phi_3) = 1$\\
+		& \\
+		& \qquad \qquad $Range(\phi_3) = \left\{\myvec{1 \\ 2}, \myvec{1 \\ \frac{1}{2}}\right\}$ \qquad $\implies rank(\phi_3) = 2$\\
+		& \\
+		& We can verify the rank-nullity theorem here as \\
+		& \\
+		& \qquad \qquad \qquad $nullity(\phi_3) + rank(\phi_3)$ \\
+		& \qquad \qquad $\implies 1 + 2$ \\
+		& \qquad \qquad $\implies 3 = dim(\vec{R}^{3})$ \\
+		& \\
+		& \\
+		& With the above $\phi_3$ transformation we were able to satisfy the other \\
+		& conditions as well i.e.\\
+		& \\
+		& \qquad \qquad \qquad  $Range(\phi_2) = Ker(\phi_3)$, $Range(\phi_3) = \vec{V_4}$\\
+		& \\
+		& Now, when we can check whether the derived equation statisfies or \\
+		& not. That is, \\
+		& \qquad \qquad \qquad $- dim(\vec{V_1}) + dim(\vec{V_2}) - dim(\vec{V_3}) + dim(\vec{V_4}) $ \\
+		& \qquad \qquad $\implies - dim(\vec{R}^{2}) + dim(\vec{R}^{3}) - dim(\vec{R}^{3}) + dim(\vec{R}^{2}) $ \\
+		& \qquad \qquad $\implies - 2 + 3 - 3 + 2  = 0$ \\
+		& \\
+		& $\therefore$ the condition is getting satisfied.\\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2015/june/77/table:solutions}
+	\end{longtable}
+		
+\twocolumn

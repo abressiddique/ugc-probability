@@ -1,0 +1,31 @@
+Let $X_i\in\cbrak{0,1}$ represent the ith trip where 1 denotes a ticketless traveller is caught.
+Given,
+\begin{align}
+     \pr{X_i=1}&=p=0.1 \label{dec2015-3:a}
+\end{align}
+Let,
+\begin{align}
+    X=\sum_{i=1}^n X_i
+\end{align}
+where n is the number of trips and X has a binomial distribution.
+\begin{align}
+    p_X(k)&=
+    \begin{cases}
+     \comb{n}{k}\,p^K(1-p)^{n-k}, & 0\le k\le n
+     \\
+    0, & otherwise
+    \end{cases}\label{dec2015-3:z}
+\end{align}
+As he/she makes 4 trips in total, Using \eqref{dec2015-3:a} and
+\eqref{dec2015-3:z},
+\begin{align}
+    \pr{X=0}&=p_X(0)\\
+    &=\comb{4}{0}\,p^0(1-p)^4\\
+    \pr{X=0}&=(0.9)^4\label{dec2015-3:2}
+\end{align}
+Then probability of being caught in atleast one trip is,(Using \eqref{dec2015-3:2})
+\begin{align}
+    \pr{X\ge1}&=1-\pr{X<1}\\
+    &=1-\pr{X=0}\label{dec2015-3:1}\\
+    &=1-(0.9)^4
+\end{align}

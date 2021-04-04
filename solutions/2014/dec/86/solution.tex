@@ -1,0 +1,42 @@
+{Eigen values of a real symmetric matrix are real.}
+Proof: \\
+Here $\vec A^T=\vec A$. Therefore matrix $\vec A$ is a symmetric matrix. Also $\vec A$ is a real matrix.\\
+Let $\lambda$ be a complex eigen value. Then the eigen vector $\vec x$ will have one or more complex elements.
+We have,
+\begin{align}
+    \vec {Ax} =\lambda\vec x \label{eq:solutions/2014/dec/86/eq:1}
+\end{align}
+$\implies \vec {Ax}$ and $\lambda \vec x $ are complex respectively.\\
+$\implies$ their complex conjugates are also equal.\\
+Let the conjugates of $\lambda$ and $\vec x $ be $\Bar{\lambda}$ and $\Bar{\vec x}$ respectively.
+\begin{align}
+    &\therefore \vec{A\Bar{x}}=\Bar{\lambda}\bar{\vec x}\label{eq:solutions/2014/dec/86/eq:2}\\
+    &\sbrak{\because \bar{\vec{Ax}}= \Bar{\lambda \vec{x}}
+    \implies \vec{\Bar{A}\bar{x}} = \bar{ \lambda}\bar{\vec x}
+    \implies \vec {A\Bar{x}}= \Bar{\lambda}\bar{\vec x}}
+\end{align}
+Multiplying \eqref{eq:solutions/2014/dec/86/eq:1} by $\bar{\vec x}^T$ and \eqref{eq:solutions/2014/dec/86/eq:2} by $\vec x^T$ and subtracting,
+\begin{align}
+    \vec{\bar{x}^TAx}-\vec{x^TA\bar{x}}=\brak{\lambda-\bar{\lambda}}\vec{\bar{x}^Tx}\label{eq:solutions/2014/dec/86/eq:3}
+\end{align}
+Each term on the LHS of \eqref{eq:solutions/2014/dec/86/eq:3} is scalar and $\vec A$ is symmetric
+\begin{align}
+    \therefore \vec{\bar{x}^TAx - x^TA\bar{x}} =0\label{eq:solutions/2014/dec/86/eq:4}
+\end{align}
+From \eqref{eq:solutions/2014/dec/86/eq:3} and \eqref{eq:solutions/2014/dec/86/eq:4}, 
+\begin{align}
+    \brak{\lambda- \bar{\lambda}}\vec{\bar{x}^Tx} =0
+\end{align}
+where $\vec{\bar{x}^Tx} = $ sum of products of complex numbers times their conjugates.
+\begin{align}
+    \because \vec{\bar{x}^Tx} \neq 0\\
+    \therefore \brak{ \lambda-\bar{\lambda}}= 0\\
+    \implies \lambda= \bar{\lambda}
+\end{align}
+This implies $\lambda$ is real.\\
+$\therefore$ The eigen values are real. \brak{proved}.\\
+Thus, we can eliminate option 3 and 4.\\
+The sum of eigen values of a matrix is equal to the trace of the matrix.\\
+From \eqref{eq:solutions/2014/dec/86/eq:matrix}, trace of $\vec A = 0$, which is only possible if the eigen values are +1 and -1.\\
+Therefore, option 1 and 2 are the correct choices.
+

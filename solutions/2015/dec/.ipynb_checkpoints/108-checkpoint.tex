@@ -1,0 +1,79 @@
+The following result shall be useful later. For $n \in N$
+\begin{align}
+    \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = 
+    \begin{cases}
+    0 & n\; is\; odd\\
+    (n-1)\times...\times3\times1 & n\; is\; even
+    \end{cases}
+\end{align}
+The proof for the above can be found at the end of the solution.
+\begin{align}
+    Corr(X,Y) = \cfrac{\sigma_{XY}^2}{\sigma_X\sigma_Y}
+    \label{dec2015-108:correlationofxy}
+\end{align}
+We know $X \sim N(0,1)$. Thus,
+\begin{align}
+    f_X(x) &= \dfrac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}\\
+    E(X) &= 0\\
+    \sigma_X^2 &= 1
+\end{align}
+\begin{align}
+    \sigma_Y^2 = E(Y^2) - E(Y)^2
+    \label{dec2015-108:varianceofy}
+\end{align}
+\begin{align}
+    E(Y) &= \int_{-\infty}^{\infty}E(Y|X=x)f_X(x)dx\\
+         &= \int_{-\infty}^{\infty}\dfrac{x^3 e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+         &= 0
+\end{align}
+\begin{align}
+    E(Y^2) &= \int_{-\infty}^{\infty}E(Y^2|X=x)f_X(x)dx\\
+           &= \int_{-\infty}^{\infty}\dfrac{x^6 e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+           &= 15
+\end{align}
+Substituting in \eqref{dec2015-108:varianceofy}
+\begin{align}
+    \sigma_Y^2 = 15
+\end{align}
+\begin{align}
+    \sigma_{XY}^2 = E(XY) - E(X)E(Y)
+    \label{dec2015-108:covarianceofxy}
+\end{align}
+\begin{align}
+    E(XY) &= \int_{-\infty}^{\infty}E(XY|X=x)f_X(x)dx\\
+          &= \int_{-\infty}^{\infty}E(xY|X=x)f_X(x)dx\\
+          &= \int_{-\infty}^{\infty}xE(Y|X=x)f_X(x)dx\\
+          &= \int_{-\infty}^{\infty}\dfrac{x^4 e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+          &= 3
+\end{align}
+Substituting in \eqref{dec2015-108:covarianceofxy}
+\begin{align}
+    \sigma_{XY}^2 = 3
+\end{align}
+Substituting in \eqref{dec2015-108:correlationofxy}
+\begin{align}
+    Corr(X,Y) = \cfrac{3}{\sqrt{15}} > 0
+\end{align}
+Since $Corr(X,Y) \ne 0$, X and Y are dependent. Thus option 2 is the only correct option.
+\textbf{Proof for the integral:}
+If n is odd, $\dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}$ is an odd function, thus
+\begin{align}
+    \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = 0
+\end{align}
+If n is even, 
+\begin{align}
+    \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = \int_{-\infty}^{\infty} (x^{n-1}) (\dfrac{x e^{\frac{-x^2}{2}}}{\sqrt{2\pi}})dx
+\end{align}
+Using integration by parts,
+\begin{multline}
+    \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = \left(x^{n-1}\int \dfrac{x e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\right)\biggr \vert_{-\infty}^{\infty}\\
+       - (n-1)\int_{-\infty}^{\infty}x^{n-2}\left(\int \dfrac{x e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\right) dx
+\end{multline}
+\begin{align}
+    &= \left(x^{n-1}(-\dfrac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}})\right)\biggr \vert_{-\infty}^{\infty}
+           - (n-1)\int_{-\infty}^{\infty}x^{n-2}(-\dfrac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}) dx\\
+    &= (n-1)\int_{-\infty}^{\infty} \dfrac{x^{n-2} e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+    &= (n-1)(n-3)\int_{-\infty}^{\infty} \dfrac{x^{n-4} e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+    &= (n-1)\times...\times3\times1\int_{-\infty}^{\infty} \dfrac{x^0 e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
+    &= (n-1)\times...\times3\times1
+\end{align}

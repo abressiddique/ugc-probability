@@ -1,0 +1,158 @@
+See Tables \ref{eq:solutions/2018/dec/106/table0} and \ref{eq:solutions/2018/dec/106/table1}
+
+
+\onecolumn
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Irreducible Markov Chain} 
+		& \\
+		& A Markov chain is $\textbf{irreducible}$ if all the states communicate with each other,\\
+		& i.e., if there is only one communication class.\\
+		&\\
+		\hline
+		\multirow{3}{*}{Aperiodic Markov Chain} & \\
+		& If there is a self-transition in the chain ($p^{ii}>0$ for some i), then the chain is\\
+		& called as $\textbf{aperiodic}$\\
+		& \\
+		\hline
+		\multirow{3}{*}{Stationary Distribution} & \\
+		& A stationary distribution of a Markov chain is a probability distribution that\\
+		& remains unchanged in the Markov chain as time progresses. Typically, it is\\
+		& represented as a row vector $\Vec{\pi}$ whose entries are probabilities summing to 1,\\ 
+		& and given transition matrix $\textbf{P}$, it satisfies\\
+		& \\
+		&  \qquad \qquad  \qquad$\Vec{\pi} = \Vec{\pi} \textbf{P}$\\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2018/dec/106/table0}
+	\end{longtable}
+	\begin{longtable}{|l|l|}
+		\hline
+		\multirow{3}{*}{Drawing Transition diagram} 
+		& \\
+		& 
+		
+		$\begin{tikzpicture}[shorten >=1pt,node distance=2cm, scale =3, auto]
+			\tikzstyle{every state}=[fill={rgb:black,1;white,10}]
+			
+			\node[state]   (q_1)                          {$1$};
+			\node[state]   (q_2)  [right of=q_1]          {$2$};
+			\node[state]   (q_3)  [below right of=q_1]          {$3$};
+			
+			\path[->]
+			(q_1) edge [loop above] node {$\frac{1}{2}$}    (   )
+			edge [bend left]  node {$\frac{1}{2}$}    (q_2)
+			(q_2) edge [bend left]  node {$\frac{1}{2}$}    (q_3)
+			edge [loop above] node {$\frac{1}{2}$}    ()
+			(q_3) edge [bend left]  node {$\frac{1}{3}$}    (q_2)
+			edge [bend left]  node {$\frac{1}{3}$}    (q_1)
+			edge [loop below] node {$\frac{1}{3}$}    ();
+		\end{tikzpicture}$
+		
+		\\  
+		&\\
+		&\\
+		\hline
+		\multirow{3}{*}{Checking whether the  } & \\
+		& Here,\\chain is Irreducible
+		& All the states are accessible to one another. \\and Aperiodic
+		& $\implies$ They are in the same communication class. So, it is Irreducible.\\
+		& \\
+		& There exists the non- zero self-transition, which means that the chain \\
+		& is Aperiodic.\\
+		&\\ 
+		& We know that if the Markov Chain is irreducible and aperiodic then \\
+		& \qquad \qquad \qquad $\Vec{\pi}_{j} = \lim_{n \to \infty}P\{X_{n} = j\}$, $j = 1,...,N$ \\
+		& These are the stationary probabilities. \\
+		&\\
+		\hline
+		\multirow{3}{*}{Finding the Stationary} & \\
+		& Stationary Probability can be represented as\\Probability Distributions
+		& \qquad \qquad \qquad $\Vec{\pi} = \Vec{\pi} \vec{P}$\\
+		& \\
+		& \qquad $\implies$ $\myvec{v_{1}&&v_{2}&&v_{3}} = \myvec{v_{1}&&v_{2}&&v_{3}}\vec{P}$ \\
+		& \\
+		& Equating the above equation we get \\
+		& \\
+		& \qquad \qquad \qquad $\frac{1}{2}v_{1}-\frac{1}{3}v_{3} = 0$ $\label{eq:solutions/2018/dec/106/eq}$\\
+		& \\
+		& \qquad \qquad \qquad $\frac{1}{2}v_{1}-\frac{1}{2}v_{2} + \frac{1}{3}v_{3} = 0$\\
+		& \\
+		& \qquad \qquad \qquad $\frac{1}{2}v_{2}-\frac{2}{3}v_{3} = 0$\\
+		& \\\
+		& We see that summation of second and the third equation gives us the \\
+		& first equation only. \\
+		& And we know that the probability distribution will sum up to 1. \\
+		& \\
+		& \qquad \qquad \qquad $v_{1}+v_{2}+v_{3} = 1$ \\
+		& \\
+		& Therefore, we get the equation form as \\
+		& \\
+		& \qquad \qquad \qquad $\myvec{1&1&1\\\frac{1}{2}&0&\frac{-1}{3}\\\frac{1}{2}&\frac{-1}{2}&\frac{1}{3}}\myvec{v_{1}\\v_{2}\\v_{3}} = \myvec{1\\0\\0}$ \\
+		& \\
+		\hline
+		\multirow{3}{*}{Solving the linear} & \\
+		& The above linear equation can be solved using Gauss-Jordan method as\\equtions
+		& \\
+		& \qquad \qquad \qquad $\myvec{1&1&1&\vrule&1\\\frac{1}{2}&0&\frac{-1}{3}&\vrule&0\\\frac{1}{2}&\frac{-1}{2}&\frac{1}{3}&\vrule&0}$\\
+		& \\
+		& \qquad $\xleftrightarrow[]{R_2 \leftarrow R_2 - \frac{1}{2}R_1}$
+		$\myvec{1&1&1&\vrule&1\\0&\frac{-1}{2}&\frac{-5}{6}&\vrule&\frac{-1}{2}\\\frac{1}{2}&\frac{-1}{2}&\frac{1}{3}&\vrule&0}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_3 \leftarrow R_3 - \frac{1}{2}R_1}$
+		$\myvec{1&1&1&\vrule&1\\0&\frac{-1}{2}&\frac{-5}{6}&\vrule&\frac{-1}{2}\\0&-1&\frac{-1}{6}&\vrule&\frac{-1}{2}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_2 \leftarrow \frac{-1}{2}R_2}$
+		$\myvec{1&1&1&\vrule&1\\0&1&\frac{5}{3}&\vrule&1\\0&-1&\frac{-1}{6}&\vrule&\frac{-1}{2}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_3 \leftarrow R_3 + R_2}$
+		$\myvec{1&1&1&\vrule&1\\0&1&\frac{5}{3}&\vrule&1\\0&0&\frac{3}{2}&\vrule&\frac{1}{2}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_3 \leftarrow \frac{3}{2}R_3}$
+		$\myvec{1&1&1&\vrule&1\\0&1&\frac{5}{3}&\vrule&1\\0&0&1&\vrule&\frac{1}{3}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_2 \leftarrow R_2 - \frac{5}{3}R_3}$
+		$\myvec{1&1&1&\vrule&1\\0&1&0&\vrule&\frac{4}{9}\\0&0&1&\vrule&\frac{1}{3}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_1 \leftarrow R_1 - R_3}$
+		$\myvec{1&1&0&\vrule&\frac{2}{3}\\0&1&0&\vrule&\frac{4}{9}\\0&0&1&\vrule&\frac{1}{3}}$\\
+		&\\
+		& \qquad $\xleftrightarrow[]{R_1 \leftarrow R_1 - R_2}$
+		$\myvec{1&0&0&\vrule&\frac{2}{9}\\0&1&0&\vrule&\frac{4}{9}\\0&0&1&\vrule&\frac{1}{3}}$\\
+		&\\
+		& $\therefore$, stationary probability distribution $\pi$ is given by \\
+		& \qquad \qquad $\pi = \myvec{\frac{2}{9} & \frac{4}{9} & \frac{1}{3}}$ \\
+		& \\
+		\hline
+		\multirow{3}{*}{Observations} & \\
+		
+		
+		& Since the given transition probability matrix $\vec{P}$ is irreducible and aperiodic, \\
+		& then $\lim_{n \to \infty} \vec{P}^{n}$ converges to a matrix with all rows identical and equal to $\vec{\pi}$. \\
+		& \\
+		& We were able to find $\vec{\pi}$ as $\myvec{\frac{2}{9} & \frac{4}{9} & \frac{1}{3}}$ \\
+		& \\
+		& $\lim_{n \to \infty} \vec{P}^{n} = \myvec{\frac{2}{9}&\frac{4}{9}&\frac{1}{3}\\\frac{2}{9}&\frac{4}{9}&\frac{1}{3}\\\frac{2}{9}&\frac{4}{9}&\frac{1}{3}}$\\
+		& \\
+		& From the above matrix, we get \\
+		& \\
+		& $\lim_{n \to \infty} \vec{P}^{n}_{11} = \frac{2}{9}$ \\
+		&\\
+		& $\lim_{n \to \infty} \vec{P}^{n}_{21} = \frac{2}{9}$ \\
+		&\\
+		& $\lim_{n \to \infty} \vec{P}^{n}_{32} = \frac{4}{9}$ \\
+		&\\
+		& $\lim_{n \to \infty} \vec{P}^{n}_{13} = \frac{1}{3}$ \\
+		&\\
+		\hline
+		\multirow{3}{*}{Conclusion} & \\
+		& From our observation we see that \\
+		&\\
+		& Options 1) and 4) are True.\\
+		& \\
+		\hline
+\caption{}
+\label{eq:solutions/2018/dec/106/table1}
+	\end{longtable}
+\twocolumn

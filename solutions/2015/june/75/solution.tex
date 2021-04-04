@@ -1,0 +1,57 @@
+A subspace $\vec{S}$ of a vector space is defined as a non-empty subset that is closed under addition and scalar multiplication, i.e
+\begin{enumerate}
+  \item All possible linear combinations of the vectors in $\vec{S}$ lie in the subspace.
+  \item Any vector in $\vec{S}$ scaled by a scalar $c$ lies in the subspace.
+\end{enumerate}
+We define any vector $\vec{V} \in \vec{S}$ for each of the subspaces defined in the options as:
+\begin{align}
+  \vec{V} = \myvec{x \\ y \\ z}
+\end{align}
+
+{Option 1:}
+Let $\vec{A} = \myvec{x_1 \\ y_1 \\ z_1}$ and $\vec{B} = \myvec{x_1 \\ y_1 \\ z_2} \in \vec{S}$, and $k_1$ and $k_2$ be some scalars. As per definition:
+\begin{align}
+  \myvec{1 & 1 & 0}\vec{A} = \myvec{1 & 1 & 0}\vec{B} = 0
+\end{align}
+Verifying the property of the subspace by using the linear combination of $\vec{A}$ and $\vec{B}$:
+\begin{multline}
+    \myvec{1 & 1 & 0}\lcbrak{k_1\vec{A}} + \rcbrak{k_2\vec{B}} = \\ \myvec{1 & 1 & 0}k_1\vec{A} + \myvec{1 & 1 & 0}k_2\vec{B}
+\end{multline}
+\begin{align}
+  \implies  k_1\myvec{1 & 1 & 0}\vec{A} + k_2\myvec{1 & 1 & 0}\vec{B} = 0
+\end{align}
+It is also evident from above that
+\begin{align}
+  \myvec{1 & 1 & 0}c\vec{A} = c\myvec{1 & 1 & 0}\vec{A} = 0
+\end{align}
+for some scalar c. Therefore, option 1 is a subspace of $\mathbb{R}^3$. \\
+It can also be proven that option 2 is also a valid subspace of $\mathbb{R}^3$ as:
+\begin{align}
+  \myvec{1 & -1 & 0}(c\vec{A}) = c\myvec{1 & -1 & 0}\vec{A} = 0
+\end{align}
+From the definition that $x-y = 0$
+\begin{multline}
+    \implies \myvec{1 & -1 & 0}\lcbrak{k_1\vec{A}} + \rcbrak{k_2\vec{B}} = \\
+    \myvec{1 & -1 & 0}(k_1\vec{A}) + \myvec{1 & -1 & 0}(k_2\vec{B}) = 0\in \vec{S}
+\end{multline} for some scalars $c, k_1$ and $k_2$ and vectors $\vec{A}$ and $\vec{B} \in \vec{S}$.
+{Option 3:}
+Option 3 is not a valid subspace of $\mathbb{R}^3$ as it can be shown that for some scalars $k_1$ and $k_2$, $\vec{A}$ and $\vec{B} \in \vec{S}$ in the option:
+\begin{multline}
+    \implies \myvec{1 & 1 & 0}\lcbrak{k_1\vec{A}} + \rcbrak{k_2\vec{B}} = \\
+    k_1\myvec{1 & 1 & 0}\vec{A} + k_2\myvec{1 & 1 & 0}\vec{B} = k_1 + k_2 \neq 1
+\end{multline}
+Because
+\begin{align}
+  \myvec{1 & 1 & 0}\vec{A} = \myvec{1 & 1 & 0}\vec{B} = 1
+\end{align} from definition.
+
+Similarly option 4 is also not a valid subspace of $\mathbb{R}^3$ as it can be be shown in similar manner that
+\begin{multline}
+    \myvec{1 & -1 & 0}\lcbrak{k_1\vec{A}} + \rcbrak{k_2\vec{B}} = \\
+    \myvec{1 & -1 & 0}(k_1\vec{A}) + \myvec{1 & -1 & 0}(k_2\vec{B}) = \\
+    k_1 + k_2 \neq 1
+\end{multline}
+\begin{align}
+  \myvec{1 & -1 & 0}\vec{A} = \myvec{1 & -1 & 0}\vec{B} = 1
+\end{align}
+Therefore, Options 1 and 2 are valid subspaces of the vector space $\mathbb{R}^3$
