@@ -1,0 +1,82 @@
+For a discrete random variable $X$ with P.D.F. $f(x)$ and which can take values from a set $\mathbb{S}$,
+\begin{align} \label{june2013-75:eq-1}
+    E(X)= \sum_{x \in \mathbb{S}}xf(x)
+\end{align}
+And,
+\begin{align} \label{june2013-75:eq-2}
+    E(X^2) =\sum_{x \in \mathbb{S}}x^2f(x)
+\end{align}
+Also, as $f(x)$ is the P.D.F.,
+\begin{align} \label{june2013-75:eq-3}
+    \sum_{x \in \mathbb{S}}f(x) = 1
+\end{align}
+Given, for $x \in \mathbb{S}=\{0,1,2,...n\}$,
+\begin{align} \label{june2013-75:eq-4}
+    (x+1)f(x+1)=(\alpha + \beta x)f(x)
+\end{align}
+Summing both sides for $x \in \mathbb{S}$ we get,
+\begin{align}
+    \sum_{x=0}^n(x+1)f(x+1)=\sum_{x=0}^n(\alpha +\beta x)f(x)
+\end{align}
+Replacing $x+1$ with $x$ in L.H.S. we get, 
+\begin{align}
+    \sum_{x=1}^{n+1}xf(x)=\sum_{x=0}^n(\alpha +\beta x)f(x)
+\end{align}
+Rewriting LHS, we get,
+\begin{align}
+    \sum_{x=0}^nxf(x)+(n+1)f(n+1)=\sum_{x=0}^n(\alpha +\beta x)f(x)
+\end{align}
+But as $x \in \{0,1,2...n\}$, $f(n+1)=0$. So the equation becomes
+\begin{align}
+    \sum_{x=0}^nxf(x)=\alpha \sum_{x=0}^nf(x) + \beta \sum_{x=0}^nxf(x)
+\end{align}
+Using \eqref{june2013-75:eq-1} and \eqref{june2013-75:eq-3}, we get,
+\begin{align} 
+    E(X)=\alpha(1) + \beta E(X)
+\end{align}
+So,
+\begin{align} \label{june2013-75:eq-5}
+    E(X)=\dfrac{\alpha}{1-\beta}
+\end{align}
+Now in \eqref{june2013-75:eq-4}, multiplying both sides by $(x+1)$, we get,
+\begin{align}
+    (x+1)^2f(x+1)=(\alpha + \beta x)(x+1)f(x)
+\end{align}
+Summing both sides for $x \in \mathbb{S}$ we get,
+\begin{align}
+    \sum_{x=0}^n(x+1)^2f(x+1)=\sum_{x=0}^n(\alpha +\beta x)(x+1)f(x)
+\end{align}
+Replacing $x+1$ with $x$ in L.H.S. we get, 
+\begin{align}
+    \sum_{x=1}^{n+1}x^2f(x)=\sum_{x=0}^n(\beta x^2f(x) + (\alpha+\beta)xf(x) + \alpha f(x))
+\end{align}
+Rewriting LHS similarly as before, we get,
+\begin{align}
+    \sum_{x=0}^nx^2f(x)=\beta \sum_{x=0}^nx^2f(x) + \nonumber \\
+    (\alpha + \beta)\sum_{x=0}^nxf(x) + \alpha \sum_{x=0}^nf(x)
+\end{align}
+Using \eqref{june2013-75:eq-1}, \eqref{june2013-75:eq-2} and \eqref{june2013-75:eq-3}, we get,
+\begin{align}
+    E(X^2)=\beta E(X^2) + (\alpha + \beta)E(X) + \alpha (1) 
+\end{align}
+Using \eqref{june2013-75:eq-5}
+\begin{align}
+    E(X^2)(1-\beta)=\dfrac{\alpha(\alpha+\beta)}{1-\beta} + \alpha
+\end{align}
+So,
+\begin{align} \label{june2013-75:eq-6}
+    E(X^2)=\dfrac{\alpha^2+\alpha}{(1-\beta)^2}
+\end{align}
+Now,
+\begin{align}
+    Var(X)=E(X^2)-(E(X))^2
+\end{align}
+Using \eqref{june2013-75:eq-5} and \eqref{june2013-75:eq-6},
+\begin{align}
+    Var(X)=\dfrac{\alpha^2+\alpha}{(1-\beta)^2}-\dfrac{\alpha^2}{(1-\beta)^2}
+\end{align}
+So,
+\begin{align}
+    Var(X)=\dfrac{\alpha}{(1-\beta)^2}
+\end{align}
+So, options 1 and 4 are correct.

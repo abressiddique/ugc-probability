@@ -31,7 +31,36 @@ Then the hazard function of $X$ for some choices of $\alpha$ and $\beta$ can be
 \solution
 \input{solutions/2018/dec/118/Assignment7.tex}
 %
-
+\item Suppose n units are drawn from a population of N units sequentially as follows. A random sample
+\begin{align}
+    U_1, U_2, ... U_N \text{ of size N, drawn from }U\brak{0, 1} 
+\end{align} 
+The k-th population unit is selected if 
+\begin{align}
+    U_k<\frac{n - n_k}{N-k+1}, k = 1, 2, ..N. \text{where, } n_1=0, n_k = 
+\end{align}
+number of units selected out of first k-1 units for each k = 2, 3, ..N. Then,
+\begin{enumerate}
+    \item The probability of inclusion of the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n}{N}
+    \end{align}
+    \item The probability of inclusion of the first and the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{n-1}}{N \brak{N-1}}
+    \end{align}
+    \item The probability of not including the first and including the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{N-n}}{N \brak{N-1}}
+    \end{align}
+    \item The probability of including the first and not including the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{n-1}}{N \brak{N-1}}
+    \end{align}
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/116.tex}
 
 % \item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
 % \begin{align}

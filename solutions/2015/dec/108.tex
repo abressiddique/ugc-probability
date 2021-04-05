@@ -77,3 +77,26 @@ Using integration by parts,
     &= (n-1)\times...\times3\times1\int_{-\infty}^{\infty} \dfrac{x^0 e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx\\
     &= (n-1)\times...\times3\times1
 \end{align}
+
+Alternative proof for the integral:
+
+If n is odd, $\dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}$ is an odd function, thus
+\begin{align}
+    \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = 0
+\end{align}
+If n is even, let $n = 2k$. We differentiate the following identity k times w.r.t. $\alpha$.
+\begin{align}
+    \int_{-\infty}^{\infty}e^{-\alpha x^2}dx = \sqrt{\left( \dfrac{\pi}{\alpha}\right)}
+\end{align}
+On differentiating k times, we get
+\begin{align}
+    \int_{-\infty}^{\infty}x^{2k}e^{-\alpha x^2} = \dfrac{1\times3\times...\times(2k-1)}{2^k}  \sqrt{\left(\dfrac{\pi}{\alpha^{2k+1}}\right)}
+\end{align}
+On substituting $\alpha = \dfrac{1}{2}$, we get
+\begin{align}
+    \int_{-\infty}^{\infty}x^{n}e^{-\frac{x^2}{2}} = 1\times3\times...\times(n-1) \sqrt{2 \pi}
+\end{align}
+Thus
+\begin{align}
+     \int_{-\infty}^{\infty} \dfrac{x^n e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}dx = (n-1)\times...\times3\times1
+\end{align}

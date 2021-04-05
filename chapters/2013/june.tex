@@ -1,0 +1,21 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+%
+\item Let $X$ be a non-negative integer valued random variable with probability mass function $f(x)$ satisfying $(x+1)f(x+1)=(\alpha + \beta x)f(x)$, $x=0,1,2,...$; $\beta \neq 1$. You may assume that $E(X)$ and $Var(X)$ exist. Then which of the following statements are true?
+
+\begin{enumerate}
+    \item $E(X)=\dfrac{\alpha}{1-\beta}$ \vspace{0.2cm}
+    \item $E(X)=\dfrac{\alpha^2}{(1-\beta)(1+\alpha)}$ \vspace{0.2cm}
+    \item $Var(X)=\dfrac{\alpha^2}{(1-\beta)^2}$ \vspace{0.2cm}
+    \item $Var(X)=\dfrac{\alpha}{(1-\beta)^2}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/75.tex}
+
+\end{enumerate}

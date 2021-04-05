@@ -1,0 +1,132 @@
+Let $X \in \{1,2,3,4,5,6\}$ represent the random variable which represents the outcome of the first throw of a dice. Similarly, $Y \in \{1,2,3,4,5,6\}$ represents the random variable which represents the outcome of the second throw of a dice.
+\begin{align}
+    n(X=i) = 1, \quad i \in \{1, 2, 3, 4, 5, 6\}
+\end{align}
+\begin{align}
+    \Pr(X=i) = 
+	\begin{cases}
+	\frac{1}{6}   &  i \in \{1, 2, 3, 4, 5, 6\}\\ ~\\[-1em]
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+Similarly, 
+\begin{align}
+    \Pr(Y=i) = 
+	\begin{cases}
+	\frac{1}{6}   &  i \in \{1, 2, 3, 4, 5, 6\}\\ ~\\[-1em]
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+\begin{align}
+    Z &= X+Y
+    \\ \text{Let } z &\in \{1, 2, \hdots, 11, 12\}
+    \\\Pr{(Z=z)} &= \Pr{(X+Y = z)}
+    \\ &= \sum_{x=0}^z \Pr{(X=x)}\Pr{(Y=z-x)}
+    \\ &= (6 - \abs{z-7}) \times\frac{1}{6}\times\frac{1}{6}
+    \\ &= \frac{6 - \abs{z-7}}{36}
+    \\\Pr(Z=z) &= 
+	\begin{cases}
+	\frac{6 - \abs{z-7}}{36}   &  z \in \{1, 2, \hdots, 11, 12\}\\ ~\\[-1em]
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+$U$ is the remainder obtained when $Z$ is divided by 6.
+\begin{align}
+    \text{Let } u &\in \{0, 1, 2, 3, 4, 5\}
+    \\\Pr{(U=u)} &= \sum_{k=0}^2\Pr{(Z = 6k+u)}
+    \\\Pr{(U=0)} &= \Pr{(Z = 0)} + \Pr{(Z = 6)} + \Pr{(Z = 12)}
+    \\ &= 0 + \frac{5}{36} + \frac{1}{36} = \frac{1}{6}
+    \\ \text{for } u &\in \{1, 2, 3, 4, 5\}
+    \\\Pr{(U=u)} &= \Pr{(Z = 0+u)} + \Pr{(Z = 6+u)}
+    \\&= \frac{6 - \abs{u-7}}{36} +  \frac{6 - \abs{6+u-7}}{36}
+    \\&= \frac{6 - (7-u)}{36} +  \frac{6 - (u-1)}{36}
+    \\&= \frac{u - 1 + 7 - u}{36} = \frac{6}{36}
+    \\&=\frac{1}{6}
+    \\\Pr(U=u) &= 
+	\begin{cases}
+    \frac{1}{6}   &  u \in \{0, 1, 2, 3, 4, 5\}\\ ~\\[-1em]
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+Now, for checking each option,
+\begin{enumerate}
+    
+\item Checking if $X$ and $Z$ are independent
+\begin{align}
+    p_1 &= \Pr{(Z=z, X=x)}
+    \\ &= \Pr{(Y=z-x, X=x)}
+    \\ &= \Pr{(Y=z-x)} \times \Pr{(X=x)}
+    \\ &= \begin{cases}
+        \frac{1}{36} & z-x \in \{1, 2, 3, 4, 5, 6\}\\ ~\\[-1em]
+        0 & \text{otherwise}
+    \end{cases}
+\end{align}
+\begin{align}
+    \Pr{(Z=z)}\times \Pr{(X=x)} &= \frac{6 - \abs{z-7}}{36} \times \frac{1}{6}
+    \\&= \frac{6 - \abs{z-7}}{216}
+    \\\Pr{(Z=z)}\Pr{(X=x)} &\neq \Pr{(Z=z, X=x)}  \label{dec2016-103:equation 1}
+\end{align}
+$X$ and $Z$ are not independent from \eqref{dec2016-103:equation 1} and hence option \eqref{dec2016-103:option 1} is false.
+\item Checking if $X$ and $U$ are independent
+\begin{align}
+    p_2 = \Pr{(U=u, X=x)}
+\end{align}
+\begin{multline}
+    p_2 = \Pr{((Z=u) + (Z=6+u)}
+    \\+ (Z=12+u), X=x)
+\end{multline}
+\begin{multline}
+    p_2 = \Pr{((Y=u-x) + (Y=6+u-x)}
+    \\+ (Y=12+u-x), X=x)
+\end{multline}
+\begin{align}
+    p_2 &= \frac{1}{6} \times \frac{1}{6}
+    \\&= \frac{1}{36}
+\end{align}
+\begin{align}
+    \Pr{(U=u)}\times \Pr{(X=x)} &= \frac{1}{6} \times \frac{1}{6}
+    \\&= \frac{1}{36}
+    \\\Pr{(U=u)}\Pr{(X=x)} &= \Pr{(U=u, X=x)}  \label{dec2016-103:equation 2}
+\end{align}
+$X$ and $U$ are independent from \eqref{dec2016-103:equation 2} and hence option \eqref{dec2016-103:option 2} is true.
+\item Checking if $Z$ and $U$ are independent
+\begin{align}
+    p_3 &= \Pr{(Z=z| U=u)}
+    \\p_3 &= 
+    \begin{cases}
+        1 & u=1 \text{ and } z=7\\ ~\\[-1em]
+        \frac{1}{2} & u=0 \text{ and } z\in\{6,12\}\\ ~\\[-1em]
+        \frac{1}{2} & u\in\{2,3,4,5\}  \text{ and } \\&z=u \text{ or } z=6+u\\ ~\\[-1em]
+        0 & \text{otherwise}
+    \end{cases}
+    \\\Pr{(Z=z)} &= \frac{6 - \abs{z-7}}{36}
+\end{align}
+If $Z$ and $U$ are independent, then
+\begin{align}
+    \Pr{(Z=z| U=u)} &= \frac{\Pr{(Z=z, U=u)}}{\Pr{(U=u)}}
+    \\&= \frac{\Pr{(Z=z)}\Pr{(U=u)}}{\Pr{(U=u)}}
+    \\&= \Pr{(Z=z)}
+\end{align}
+But,
+\begin{align}
+    \Pr{(Z=z| U=u)} \neq \Pr{(Z=z)} \label{dec2016-103:equation 3}
+\end{align}
+$X$ and $U$ are not independent from \eqref{dec2016-103:equation 3} and hence option \eqref{dec2016-103:option 3} is false.
+\item Checking if $Y$ and $Z$ are independent
+\begin{align}
+    p_1 &= \Pr{(Z=z, Y=y)}
+    \\ &= \Pr{(X=z-y, Y=y)}
+    \\ &= \Pr{(X=z-y)} \times \Pr{(Y=y)}
+    \\ &= \begin{cases}
+        \frac{1}{36} & z-y \in \{1, 2, 3, 4, 5, 6\}\\ ~\\[-1em]
+        0 & \text{otherwise}
+    \end{cases}
+\end{align}
+\begin{align}
+    \Pr{(Z=z)}\times \Pr{(Y=y)} &= \frac{6 - \abs{z-7}}{36} \times \frac{1}{6}
+    \\&= \frac{6 - \abs{z-7}}{216}
+    \\\Pr{(Z=z)}\Pr{(Y=y)} &\neq \Pr{(Z=z, Y=y)}  \label{dec2016-103:equation 4}
+\end{align}
+$X$ and $Z$ are not independent from \eqref{dec2016-103:equation 4} and hence option \eqref{dec2016-103:option 4} is true.
+\end{enumerate}
+Thus, options \eqref{dec2016-103:option 2} and \eqref{dec2016-103:option 4} are true.
