@@ -1,0 +1,63 @@
+Let us consider Tails as a failure and Heads as a success, then $X$ and $Y$, both, can be seen to be \underline{geometric random variables}, with $p = \frac{1}{2}$ and:
+\begin{align}
+    \pr{X = k} = \pr{Y = k} = (1-p)^k p  
+    \label{dec2015-105:formula}
+\end{align}
+\begin{enumerate}
+    \item \underline{Option 1:}\\
+    
+    Substituting the value of $p$ in \eqref{dec2015-105:formula}:
+{\small
+\begin{align}
+    \pr{X = k} = \pr{Y = k} = \frac{1}{2^{k+1}} = 2^{-(k+1)}
+\end{align}
+}
+To test for independence of $X$ and $Y$, we calculate $\pr{X = k, Y = k}$, which means obtaining $k$ tails, 1 head, $k$ tails, and one head, in order. Thus,
+{\small
+\begin{align}
+    \pr{X = k,Y = k} = (1-p)^k p \times (1-p)^k p\\
+    =\pr{X = k}\pr{Y = k}
+    \label{dec2015-105:independence}
+    \end{align}
+    }
+    Thus, $X$ and $Y$ are independent, and hence, \textbf{Option 1 is correct}\\
+    \item \underline{Option 2:}\\
+    
+    From \eqref{dec2015-105:formula} and \eqref{dec2015-105:independence}, we get:
+\begin{align}
+    \pr{N = k} = \pr{X+Y = k}\\
+    = \sum_{i=0}^k\pr{X = i, Y = k-i} \\
+    = \sum_{i=0}^k\pr{X = i} \pr{Y = k-i}\\
+    =\sum_{i=0}^k (1-p)^i p (1-p)^{k-i} p\\
+    = p^2(1-p)^k (k+1)\\
+    =(k+1) 2^{-(k+2)}
+\end{align}
+Hence, \textbf{Option 2 is incorrect}\\
+ \item \underline{Option 3:}\\
+ 
+ We know, if a conditional distribution is independent, then:
+\begin{align}
+    \pr{X = x,Y=y | Y=y} = \pr{X=x}
+\end{align}
+Thus, the conditional distribution of $X$ given $N=n$:\\
+{\small
+\begin{align}
+    \pr{X=k|N=n} = \frac{\pr{X=k,X+Y=n}}{\pr{N=n}}\\
+    =\frac{\pr{X=k,Y=n-k}}{\pr{N=n}}\\
+    =\frac{2^{-(k+1)}2^{-(n-k+1)}}{(n+1) 2^{-(n+2)}}\\
+    = \frac{1}{n+1} 
+    \label{dec2015-105:option4}\\
+    \neq \pr{X = k}
+\end{align}
+}
+Similarly,
+\begin{align}
+    \pr{Y=k|N=n} = \frac{1}{n+1}\\
+    \neq \pr{Y=k}
+\end{align}
+Thus, the condition for independence fails and hence, \textbf{Option 3 is incorrect}\\
+\item \underline{Option 4:}\\
+From \eqref{dec2015-105:option4}, we see that \textbf{Option 4 is correct}\\
+    
+\end{enumerate}
+The correct options are \textbf{(1)} and \textbf{(4)}

@@ -1,0 +1,104 @@
+\begin{figure}[h!]
+    \caption{Markov chain}
+    \resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[font=\sffamily]
+        % Setup the style for the states
+        \tikzset{node style/.style={state, 
+                                    minimum width=2.5cm,
+                                    line width=1mm,
+                                    fill=gray!20!white}}
+        % Draw the states
+        \node[node style] at (0, 0)     (A)     {X=5 or X=6};
+        \node[node style] at (6, 0)     (B)     {X=2};
+        \node[node style] at (6, -5.196) (end) {End};
+        \node[node style] at (0, -5.196) (C) {X=1 or X=3 or X=4};
+        % Connect the states with arrows
+        \draw[every loop,
+              auto=right,
+              line width=1mm,
+              >=latex,
+              draw=orange,
+              fill=orange]
+              (A) edge[bend left=0] node {$\frac{1}{2}$} (C)
+              (C) edge[bend left=0] node {1} (end)
+              (A) edge[loop left] node {$\frac{1}{3}$} (A)
+            (A)     edge[bend right=0, auto=left] node {$\frac{1}{6}$} (B)
+            (B)     edge[bend left=0, auto=left] node {1} (end);
+    \end{tikzpicture}
+    }
+    \end{figure}
+Let us assume the following table.
+\begin{table}[h!]
+\centering
+\caption{}
+\label{june2018-49:table:1}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    state 1&state 2 &state 3 &state 4\\
+    \hline
+$X=5$ or $X=6$&$X=2$&$X=1$ or $X=3$ or $X=4$ &end \\    
+    \hline
+\end{tabular}}
+\end{table}
+Let us represent the markov chain diagram in a matrix.Let $P_{ij}$ represent the element of a matrix which is in $i^{th}$ row and $j^{th}$ column.The value of $P_{ij}$ is equal to probability of transition from state $i$ to state $j$
+\begin{equation}
+P=\begin{bmatrix}
+\frac{1}{3}&\frac{1}{6}&\frac{1}{2}&0\\
+0&0&0&1\\
+0&0&0&1\\
+0&0&0&0\\
+\end{bmatrix}
+\end{equation}
+We need the probability that $X=2$.Hence required probability is
+\begin{equation}
+    P_{12}+(P_{12})^{2}+\cdots+\infty \label{june2018-49:eq:reqprob}
+\end{equation}
+where $P_{12}^{n}$ represents the 1st row ,2nd column element in the $P^{n}$
+\begin{align}
+P^2&=\begin{bmatrix}
+\frac{1}{3}&\frac{1}{6}&\frac{1}{2}&0\\
+0&0&0&1\\
+0&0&0&1\\
+0&0&0&0\\
+\end{bmatrix} \times
+\begin{bmatrix}
+\frac{1}{3}&\frac{1}{6}&\frac{1}{2}&0\\
+0&0&0&1\\
+0&0&0&1\\
+0&0&0&0\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+\frac{1}{9}&\frac{1}{18}&\frac{1}{6}&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+\end{bmatrix}
+\end{align}
+\begin{align}
+    P^3&=(P^2)(P^1)\\
+    &=\begin{bmatrix}
+\frac{1}{9}&\frac{1}{18}&\frac{1}{6}&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+\end{bmatrix}\times
+\begin{bmatrix}
+\frac{1}{3}&\frac{1}{6}&\frac{1}{2}&0\\
+0&0&0&1\\
+0&0&0&1\\
+0&0&0&0\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+\frac{1}{27}&\frac{1}{54}&\frac{1}{18}&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+\end{bmatrix}
+\end{align}
+From above we can notice that each time $P_{12}$ reduces by $\frac{1}{3}$.Hence from \eqref{june2018-49:eq:reqprob},
+\begin{equation}
+    \sum_{i=0}^{\infty}\brak{\frac{1}{3}}^i \frac{1}{6}
+\end{equation}
+From Geometric progression we can write ,required probability =$\frac{1}{4}$
+$\therefore$ \textbf{option C is correct}

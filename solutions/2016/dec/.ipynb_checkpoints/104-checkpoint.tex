@@ -1,0 +1,186 @@
+Given, a fair coin is tossed till heads turns up.
+\begin{align}
+\tag{104.1}
+\label{dec2016-104eq:0}
+    p=\dfrac{1}{2},q=\dfrac{1}{2}
+\end{align}
+Let's define a Markov chain $\{X_{n},n=0,1,2,\dots\}$, where $X_{n}\in S=\{1,2,3,4,5\}$, such that
+\begin{table}[h!]
+\centering
+\caption{States and their notations}
+\label{dec2016-104table:1}
+\begin{tabular}{|c|c|}
+    \hline
+    Notation & State \\
+    \hline
+    $S=1$ & $A$'s turn\\[1ex]
+    \hline
+    $S=2$ & $B$'s first turn\\[1ex]
+    \hline
+    $S=3$ & $B$'s second turn\\[1ex]
+    \hline
+    $S=4$ & $A$ wins\\[1ex]
+    \hline
+    $S=4$ & $B$ wins\\[1ex]
+    \hline
+\end{tabular}
+\end{table}
+The state transition matrix for the Markov chain is
+\begin{align}
+\tag{104.2}
+\label{dec2016-104eq:p}
+    P=\begin{blockarray}{cccccc}
+&1 & 2 & 3 & 4 & 5 \\
+\begin{block}{c[ccccc]}
+  1 & 0 & 0.5 & 0 & 0.5 & 0 \\
+  2 & 0 & 0 & 0.5 & 0 & 0.5 \\
+  3 & 0.5 & 0 & 0 & 0 & 0.5 \\
+  4 & 0 & 0 & 0 & 1 & 0 \\
+  5 & 0 & 0 & 0 & 0 & 1 \\
+\end{block}
+\end{blockarray}
+\end{align}
+Clearly, the states $1,2,3$ are transient, while $4,5$ are absorbing. The standard form of a state transition matrix is
+\begin{align}
+\tag{104.3}
+\label{dec2016-104eq:std}
+    P=\begin{blockarray}{ccc}
+&A & N \\
+\begin{block}{c[cc]}
+  A & I & O  \\
+  N & R & Q \\
+\end{block}
+\end{blockarray}
+\end{align}
+where,
+\begin{table}[h!]
+\centering
+\caption{Notations and their meanings}
+\label{dec2016-104table:2}
+\begin{tabular}{|c|c|}
+    \hline
+    Notation & Meaning \\
+    \hline
+    $A$ & All absorbing states\\[1ex]
+    \hline
+    $N$ & All non-absorbing states\\[1ex]
+    \hline
+    $I$ & Identity matrix\\[1ex]
+    \hline
+    $O$ & Zero matrix\\[1ex]
+    \hline
+    $R,Q$ & Other submatices\\[1ex]
+    \hline
+\end{tabular}
+\end{table}
+Converting \eqref{dec2016-104eq:p} to standard form, we get
+\begin{align}
+\tag{104.4}
+\label{dec2016-104eq:pstd}
+    P=\begin{blockarray}{cccccc}
+&4 & 5 & 1 & 2 & 3 \\
+\begin{block}{c[ccccc]}
+  4 & 1 & 0 & 0 & 0 & 0 \\
+  5 & 0 & 1 & 0 & 0 & 0 \\
+  1 & 0.5 & 0 & 0 & 0.5 & 0 \\
+  2 & 0 & 0.5 & 0 & 0 & 0.5 \\
+  3 & 0 & 0.5 & 0.5 & 0 & 0 \\
+\end{block}
+\end{blockarray}
+\end{align}
+From \eqref{dec2016-104eq:pstd},
+\begin{align}
+\tag{104.5}
+\label{dec2016-104eq:r,q}
+    R=\begin{bmatrix}
+    0.5 & 0\\
+    0 & 0.5\\
+    0 & 0.5\\
+    \end{bmatrix},
+    Q=\begin{bmatrix}
+    0 & 0.5 & 0\\
+    0 & 0 & 0.5\\
+    0.5 & 0 & 0\\
+    \end{bmatrix}
+\end{align}
+\newpage
+The limiting matrix for absorbing Markov chain is
+\begin{align}
+\tag{104.6}
+\label{dec2016-104eq:pbar}
+    \bar P=\begin{bmatrix}
+    I & O\\
+    FR & O\\
+    \end{bmatrix}
+\end{align}
+where,
+\begin{align}
+\tag{104.7}
+\label{dec2016-104eq:f}
+    F=(I-Q)^{-1}
+\end{align}
+is called the fundamental matrix of $P$. \\
+On solving, we get
+\begin{align}
+\tag{104.8}
+\label{dec2016-104eq:ans}
+    \bar P=\begin{blockarray}{cccccc}
+&4 & 5 & 1 & 2 & 3 \\
+\begin{block}{c[ccccc]}
+    4 & 1 & 0 & 0 & 0 & 0 \\
+    5 & 0 & 1 & 0 & 0 & 0 \\
+    1 & 0.5714 & 0.4285 & 0 & 0 & 0 \\
+    2 & 0.1428 & 0.8571 & 0 & 0 & 0 \\
+    3 & 0.2857 & 0.7142 & 0 & 0 & 0 \\
+   \end{block}
+\end{blockarray}
+\end{align}
+A element $\bar p_{ij}$ of $\bar P$ denotes the absorption probability in state $j$, starting from state $i$. Then,
+\begin{enumerate}
+    \item $Pr(A$ wins)=$\bar p_{14}\approx0.5714$
+    \item $Pr(B$ wins)=$\bar p_{15}\approx0.4285$
+\end{enumerate}
+\begin{align}
+\tag{104.9}
+\therefore \bar p_{14} > \bar p_{15}
+\end{align}
+Also, in $\bar P$, all the terms in every row should sum to 1.
+\begin{align}
+\tag{104.10}
+\Rightarrow \bar p_{14} + \bar p_{15}+ 0+0+0=1\\
+\tag{104.11}
+\therefore \bar p_{14}=1-\bar p_{15}
+\end{align}
+Therefore, options $3),4)$ are correct.\\
+\begin{figure}[h]
+\caption*{\textbf{Markov chain diagram}}
+\centering
+\begin{tikzpicture}
+    % Setup the style for the states
+        \tikzset{node style/.style={state, 
+                                    minimum width=1.5cm,
+                                    line width=1mm,
+                                    fill=gray!20!white}}
+        % Draw the states
+        \node[node style] at (3, -4)      (bull)     {1};
+        \node[node style] at (0, -8)      (bear)     {2};
+        \node[node style] at (6, -8) (stagnant) {3};
+        \node[node style] at (3, 0) (over1) {4};
+        \node[node style] at (3, -12) (over2) {5};
+        % Connect the states with arrows
+        \draw[every loop,
+              auto=right,
+              line width=0.7mm,
+              >=latex,
+              draw=orange,
+              fill=orange]
+            (stagnant)     edge[bend right=20]            node {$\dfrac{1}{2}$} (bull)
+            (stagnant)     edge[bend left=20]            node {$\dfrac{1}{2}$} (over2)
+            (bull)     edge[bend right=20] node {$\dfrac{1}{2}$} (bear)
+            (bull)     edge node {$\dfrac{1}{2}$} (over1)
+            (bear)     edge[bend right=20] node {$\dfrac{1}{2}$} (over2)
+            (bear)     edge node {$\dfrac{1}{2}$} (stagnant)
+            (over1) edge[loop above]             node  {1} (over1)
+            (over2) edge[loop below]             node  {1} (over2);
+\end{tikzpicture}
+\end{figure}

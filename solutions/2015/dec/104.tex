@@ -1,0 +1,14 @@
+ To obtain a second red ball at the fifth draw, the first 4 trials should involve drawing only 1 red ball out of the 3 and 3 black balls out of the 6. Probability of this happening:
+ \begin{align}
+  \frac{\comb{3}{1}\comb{6}{3}}{\comb{9}{4}}
+     \end{align}
+The probability of the fifth ball turning out to be red is:
+\begin{align}
+    \frac{\comb{2}{1}}{\comb{5}{1}}
+\end{align}
+By Multiplication rule, total probability:
+\begin{align}
+    \frac{\comb{3}{1}\comb{6}{3}\comb{2}{1}}{\comb{5}{1}\comb{9}{4}}
+    = \frac{3!\times 6!\times2!\times4!\times4!\times5!}{2!\times3!\times3!\times5!\times9!}\\ 
+    =4\brak{\frac{4!6!}{9!}}
+\end{align}

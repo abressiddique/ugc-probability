@@ -1,0 +1,51 @@
+Given PDF of X,
+\begin{align}
+    f(x)=\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^{\alpha}}\label{june2014-71:3}
+\end{align}
+\textbf{Important property}(using in \eqref{june2014-71:1} as $x>\mu$):
+Given $x-y>0$ and $-\infty<y<\infty$, then
+\begin{align}
+    \lim_{x \to -\infty} x-y=0
+\end{align}
+CDF of X,
+\begin{align}
+    F(x)&=\int_{-\infty}^x{f(x)\;dx}\\
+    &=\int_{-\infty}^x{\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^{\alpha}}dx}\\
+    &=\int_{-\infty}^x{e^{-(x-\mu)^{\alpha}}d(x-\mu)^{\alpha}}\\
+    &=\sbrak{\frac{e^{-(x-\mu)^{\alpha}}}{-1}}_{-\infty}^x\\
+    &=-e^{-(x-\mu)^{\alpha}}-\lim_{x \to -\infty} \frac{e^{-(x-\mu)^{\alpha}}}{-1}\label{june2014-71:1}\\
+    &=-e^{-(x-\mu)^{\alpha}}+ {e^{-(0)^{\alpha}}}\\
+   F(x) &=1-e^{-(x-\mu)^{\alpha}}\label{june2014-71:2}
+\end{align}
+Hazard function $\beta(x)$,(using \eqref{june2014-71:3} and \eqref{june2014-71:2})
+\begin{align}
+    \beta(x)&=\frac{f(x)}{1-F(x)}\\
+    &=\frac{\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^{\alpha}}}{1-(1-e^{-(x-\mu)^{\alpha}})}\\
+    &=\frac{\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^{\alpha}}}{e^{-(x-\mu)^{\alpha}}}\\
+    \beta(x)&=\alpha(x-\mu)^{\alpha-1}
+\end{align}
+\begin{enumerate}
+    \item $\beta(x)$ is not constant for all $\alpha$
+    \item $\beta(x)=\alpha(x-\mu)^{\alpha-1}$ is an increasing function for $\alpha<0 \;or\; \alpha>1$ as given $x-\mu>0$ for all x.
+    
+    \textbf{Proof: }
+    Using first derivative test, A function is increasing iff its first derivative is positive for all x. 
+    \begin{align}
+        \dfrac{d}{dx} \beta(x)&=  \dfrac{d}{dx} \alpha(x-\mu)^{\alpha-1}\\
+        &= \alpha(\alpha-1)(x-\mu)^{\alpha-2}\label{june2014-71:0}
+    \end{align}
+    For \eqref{june2014-71:0} to be positive, (As given $x-\mu>0$)
+    \begin{align}
+        \alpha(\alpha-1)(x-\mu)^{\alpha-2}&>0\\
+        \alpha(\alpha-1)&>0\\
+        \implies \alpha \in \brak{-\infty,0}\cup \brak{1,\infty}
+    \end{align}
+    $\therefore \beta(x)$ an increasing function for some $\alpha$
+    \item $\beta(x)$ is dependent of $\alpha$
+    \item when $\alpha=1$,
+\begin{align}
+    \beta(x)&=\alpha(x-\mu)^{0}=\alpha
+\end{align}
+Therefore the hazard function is independent of $\mu$ when $\alpha=1$.
+\end{enumerate}
+\textbf{ANSWER: (2) and (4)}

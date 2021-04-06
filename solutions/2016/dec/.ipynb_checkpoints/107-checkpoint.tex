@@ -1,0 +1,124 @@
+Expected value\brak{E\brak{X}}:
+It is nothing but weighted average
+Median\brak{median\brak{X}}:
+It is the value separating the higher half from the lower half of a data sample
+Variance\brak{V\brak{X}}:
+It is the expectation of the squared deviation of a random variable from its mean
+\begin{enumerate}
+    \item Let's consider $X$ has an exponential distribution.
+    \begin{align}
+        X \sim Exp\brak{\lambda}
+    \end{align}
+    where $\lambda$ is rate parameter.
+    
+    Probability function of exponential distribution,
+    \begin{align}
+        f_X\brak{x}=
+        \begin{cases}
+            \lambda e^{-\lambda x} & x\geq0\\
+            0 & x<0
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim Exp\brak{\lambda}$,
+    \begin{align}
+        E\brak{X}=\frac{1}{\lambda}
+    \end{align}
+    The median of $X \sim Exp\brak{\lambda}$,
+    \begin{align}
+        median\brak{X}=\frac{\ln{2}}{\lambda}
+    \end{align}
+    \begin{align}
+        \ln{2}<1\\
+        \frac{\ln{2}}{\lambda}<\frac{1}{\lambda}\\
+         median\brak{X}<E\brak{X}
+    \end{align}
+    Hence, option $1$ is correct.
+    
+    \item Let's consider $X$ has a uniform distribution in interval $[a,b]$,
+    \begin{align}
+        X \sim U\brak{a,b}
+    \end{align}
+    where,
+    $a=$ lower limit
+    
+    $b=$ upper limit
+    
+    Probability function of uniform distribution,
+    \begin{align}
+        f_X\brak{k}=
+        \begin{cases}
+            \frac{1}{b-a} & a\leq x\leq b\\
+            0 & x < a, x > b
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim U\brak{a,b}$,
+    \begin{align}
+        E\brak{X}=\frac{1}{2}\brak{a+b}
+    \end{align}
+    The median of $X \sim U\brak{a,b}$,
+    \begin{align}
+        median\brak{X}=\frac{1}{2}\brak{a+b}
+    \end{align}
+    \begin{align}
+        E\brak{X}=median\brak{X}
+    \end{align}
+    Hence, option $2$ is incorrect.
+    
+    \item Let's consider $X$ has a binomial distribution,
+    \begin{align}
+        X \sim B\brak{n,p}
+    \end{align}
+    where,
+    $n=$ no. of trails
+    
+    $p=$ success parameter
+    
+    Probability function of binomial distribution,
+    \begin{align}
+        f_X\brak{k}=
+        \begin{cases}
+            {^n C_k}p^k(1-p)^{n-k} & 0\leq k\leq n\\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim B\brak{n,p}$,
+    \begin{align}
+        E\brak{X}=np
+    \end{align}
+    The variance of $X \sim B\brak{n,p}$,
+    \begin{align}
+        V\brak{X}=\sigma^2=n p(1-p)
+    \end{align}
+    \begin{align}
+        1-p\leq1\\
+        n p(1-p)\leq n p\\
+        V\brak{X}\leq E\brak{X}
+    \end{align}
+    Hence, option $3$ is incorrect.
+    
+    \item Let's consider $X$ has a normal distribution,
+    \begin{align}
+        X \sim N\brak{\mu,\sigma^2}
+    \end{align}
+    where,
+    $\mu=$ mean of distribution
+    
+    $\sigma^2=$ variance
+    
+    Probability function of normal distribution,
+    \begin{align}
+        f_X\brak{k}=\frac{1}{\sigma\sqrt{2\pi}}e^{-\brak{\frac{x-\mu}{2\sigma}}^2}
+    \end{align}
+    The expected value of $X \sim N\brak{\mu,\sigma^2}$,
+    \begin{align}
+        E\brak{X}=\mu
+    \end{align}
+    The variance of $X \sim N\brak{\mu,\sigma^2}$,
+    \begin{align}
+        V\brak{X}=\sigma^2
+    \end{align}
+    $E\brak{X}$ and $V\brak{X}$ are user defined. So, they can take any value.
+    
+    Hence, option $4$ is incorrect.
+    \end{enumerate}
+    

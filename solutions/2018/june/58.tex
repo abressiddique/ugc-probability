@@ -1,0 +1,88 @@
+Let N be the population size so, N=120. The given sample size is n.
+\textbf{Notations :}
+y : student under consideration.
+$y_i$ : Maths marks of $i^{th}$ student in the sample.
+Y : student of class.
+$Y_i$ : Maths marks of $i^{th}$ student in the class.
+$\overline{y}=\dfrac{1}{n}\sum_{i=1}^{n}y_i$ : Average of sample class.
+$\overline{Y}=\dfrac{1}{N}\sum_{i=1}^{N}Y_i$ : Average of whole class.
+$S^2 = \dfrac{1}{N-1} \sum_{i=1}^{N} (Y_i-\bar{Y})^2$ : S=Std dev of the class.
+$\sigma^2=\dfrac{1}{N} \sum_{i=1}^{N} (Y_i-\bar{Y})^2$ : Variance of the class.
+Standard error of sample mean $SE_{mean}=\dfrac{s}{\sqrt{n}}$.\\
+Where 
+\begin{align*}
+s & = \text{standard deviation of sample mean.}\\
+n & = \text{sample class size.}
+\end{align*}
+\textbf{Variance of the $\overline{y}$}
+\begin{align}
+& V(\overline{y})= E(\overline{y}-\overline{Y})^2\\
+& = E\left[\dfrac{1}{n} \sum_{i=1}^{n}(y_i-\overline{Y})\right]^2\\
+& = E\left[\dfrac{1}{n^2} \sum_{i=1}^{n} (y_i-\overline{Y})^2 + \dfrac{1}{n^2} \underset{1\leq i\neq j\leq n}{\sum\sum}\, (y_i-\overline{Y})(y_j-\overline{Y})\right]\\
+& = \dfrac{1}{n^2}\sum_{i=1}^{n} E(y_i-\overline{Y})^2+\dfrac{1}{n^2} \underset{1\leq i\neq j\leq n}{\sum\sum}\, E(y_i-\overline{Y})(y_j-\overline{Y})\\
+& \text{Let } K=\underset{1\leq i\neq j\leq n}{\sum\sum}\, E(y_i-\overline{Y})(y_j-\overline{Y})\\
+& = \dfrac{1}{n^2}\sum_{i=1}^{n} \sigma^2 + \dfrac{K}{n^2}\\
+& = \dfrac{1}{n^2} n \sigma^2 +\dfrac{K}{n^2}\\
+& = \dfrac{N-1}{Nn} S^2+\dfrac{K}{n^2}\label{june2018-58:eq_1}
+\end{align}
+Finding the value of K in case of Simple random sampling with repetition (SRSWR)and Simple random sampling without repetition(SRSWOR) allows us to calculate the variance of mean.
+\vspace{0.5 cm}
+\textbf{K value in case of SRSWOR}
+\begin{align*}
+&K=\underset{1\leq i\neq j\leq n}{\sum\sum}\, E(y_i-\overline{Y})(y_j-\overline{Y})
+\end{align*}
+Consider
+\begin{multline*}
+E(y_i-\overline{Y})(y_j-\overline{Y})= \\
+\dfrac{1}{N(N-1)}\underset{1\leq k\neq l\leq n}{\sum\sum}\, E(y_k-\overline{Y})(y_l-\overline{Y})
+\end{multline*}
+Since
+\begin{multline*}
+\left[\sum_{k=1}^N(y_k-\overline{Y})\right]^2=\sum_{i=1}^{N}(y_k-\overline{Y})^2+\\
+\underset{1\leq k\neq l\leq n}{\sum\sum}\, E(y_k-\overline{Y})(y_l-\overline{Y})
+\end{multline*}
+\begin{align*}
+&\implies 0 = (N-1)S^2+\underset{1\leq k\neq l\leq n}{\sum\sum}\, E(y_k-\overline{Y})(y_l-\overline{Y})\\
+& \implies E(y_i-\overline{Y})(y_j-\overline{Y})=\dfrac{1}{N(N-1)}(N-1)(-S^2)\\
+& \implies K = n(n-1)\dfrac{(-S^2)}{N}
+\end{align*}
+Putting this value in (\ref{june2018-58:eq_1}) gives us 
+\begin{align}
+V(\overline{y})_{WOR} & = \dfrac{N-1}{Nn} S^2+ \dfrac{n-1(-S^2)}{Nn}\\
+& = \dfrac{N-n}{Nn} S^2 \label{june2018-58:eq_2}
+\end{align}
+\textbf{K value in case of SRSWR}
+\begin{align*}
+&K=\underset{1\leq i\neq j\leq n}{\sum\sum}\, E(y_i-\overline{Y})(y_j-\overline{Y})
+\end{align*}
+Since we are selecting the samples with replacements choosing $i^{th}$ and $j^{th}$ sample is independent of each other. So,
+\begin{align*}
+K&=\underset{1\leq i\neq j\leq n}{\sum\sum}\, E(y_i-\overline{Y})E(y_j-\overline{Y})\\
+& = 0\\
+& \text{(Since deviation about mean is 0)}
+\end{align*}
+Putting K=0 in (\ref{june2018-58:eq_1}) we get 
+\begin{align}
+V(\overline{y})_{WR} & = \dfrac{N-1}{Nn} S^2\label{june2018-58:eq_3}
+\end{align}
+From equation \eqref{june2018-58:eq_2}  standard error of mean of sample class without repetition
+\begin{align}
+{SE}_{WOR} & = \dfrac{s}{\sqrt{n}}\\
+& = \sqrt{\dfrac{V(\overline{y})_{WOR}}{n}}\\
+& = \sqrt{\dfrac{N-n}{Nn^2}}S \label{june2018-58:eq_4}
+\end{align} 
+From equation \eqref{june2018-58:eq_3}  standard error of mean of sample class with repetition
+\begin{align}
+{SE}_{WR} & = \sqrt{\dfrac{V(\overline{y})_WR}{n}}\\
+& = \sqrt{\dfrac{N-1}{Nn^2}}S \label{june2018-58:eq_5}
+\end{align}
+Given to find the value of n if $2 \times {SE}_{WOR} =  {SE}_{WR}$.
+From \eqref{june2018-58:eq_4} and \eqref{june2018-58:eq_5} we can write 
+\begin{align}
+& 2\sqrt{\dfrac{N-n}{Nn^2}}S= \sqrt{\dfrac{N-1}{Nn^2}}S\\
+\implies & 4(N-n) = N-1\\
+\implies & 4N+1-N=4n\\
+\implies & 4n=3(125)+1\\
+\implies & n=94
+\end{align}
+Therefore the sample size for the given condition to be met is n=94.(\textbf{Option D})

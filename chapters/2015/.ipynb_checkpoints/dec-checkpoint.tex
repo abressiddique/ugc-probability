@@ -36,5 +36,54 @@
 \solution
 \input{solutions/2015/dec/106.tex}
 %
-
+\item A fair coin is tossed repeatedly. Let $X$ be the number of tails before the first heads occurs. Let $Y$ denote the number of tails between the first and second heads. Let $X+Y = N$. Then which of the following are true?
+\begin{enumerate}
+    \item X and Y are independent random variables with
+    {\footnotesize
+    \begin{align}
+        \pr{X = k} = \pr{Y = k} =
+        \begin{cases}
+            2^{-(k+1)} & k=0,1,2 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    }
+    \item $N$ has a probability mass function given by
+    {\small
+     \begin{align}
+        \pr{N = k} =
+        \begin{cases}
+            (k-1)2^{-k} & k=2,3,4 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    }
+    \item Given $N = n$, the conditional distribution of X and Y are independent
+    \item Given $N = n$
+     \begin{align}
+        \pr{X = k} =
+        \begin{cases}
+            \frac{1}{n+1} & n=0,1,2 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+\end{enumerate}
+%
+\item An urn has 3 red and 6 black balls. Balls are drawn at random one by one without replacement. The probability that second red ball appears on fifth draw is: \\
+\begin{enumerate}
+    \item $\frac{1}{9!}$
+    \newline
+    \item $\frac{4!}{9!}$
+    \newline
+    \item $4\brak{\frac{6!4!}{9!}}$
+    \newline
+    \item $\frac{6!4!}{9!}$
+\end{enumerate}
+%
+%
+\solution
+\input{solutions/2015/dec/104.tex}
 \end{enumerate}

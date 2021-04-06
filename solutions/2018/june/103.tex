@@ -1,0 +1,56 @@
+\begin{enumerate}
+    \item 
+The marginal PDF of X is given by
+\begin{align}
+    f_X(x)&=\displaystyle\int\limits_{y=-\infty}^{y=\infty} f_{XY}(x,y) dy\\
+          &=\displaystyle\int\limits_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}}\cfrac{1}{\pi} dy\\
+          &=\cfrac{2\sqrt{1-x^2}}{\pi}
+\end{align}
+The marginal PDF of Y is given by
+\begin{align}
+    f_Y(x)&=\displaystyle\int\limits_{x=-\infty}^{x=\infty} f_{XY}(x,y) dx\\
+          &=\displaystyle\int\limits_{x=-\sqrt{1-y^2}}^{x=\sqrt{1-y^2}}\cfrac{1}{\pi} dx\\
+          &=\cfrac{2\sqrt{1-y^2}}{\pi}
+\end{align}
+Now,
+\begin{align}
+    f_X(x)\times f_Y(x) &=\cfrac{2\sqrt{1-x^2}}{\pi} \times\cfrac{2\sqrt{1-y^2}}{\pi}\\
+    &= \cfrac{4(1-x^2)(1-y^2)}{\pi^2}\\
+    &\neq \cfrac{1}{\pi}\\
+    &\neq f_{XY}(x,y)
+\end{align}
+Therefore, X and Y are not independent.\\
+\item
+Now,
+\begin{align}
+    \pr{X>0}&=\displaystyle\int\limits_{x=0}^{x=\infty}f_X(x)dx\\
+    &=\displaystyle\int\limits_{x=0}^{x=1}\cfrac{2\sqrt{1-x^2}}{\pi} dx\\
+    &=\brak{\frac{\arcsin{(x)}+x\sqrt{1-x^2}}{\pi}}_{0}^{1}\\
+    &=\cfrac{1}{2}
+\end{align}
+Therefore, option(2) is correct.\\
+\item
+Now,
+\begin{align}
+    E\sbrak{Y}&=\displaystyle\int\limits_{y=-\infty}^{y=\infty}yf_Y(y)dy\\
+    &=\displaystyle\int\limits_{y=-1}^{y=1}\cfrac{2y\sqrt{1-y^2}}{\pi}dy\\
+    &=\brak{\frac{-2(1-y^2)^{\frac{3}{2}}}{3\pi}}_{-1}^{1}\\
+    &=0
+\end{align}
+Therefore, option(3) is also correct.\\
+\item
+Now,
+\begin{align}
+    E\sbrak{XY}&=\displaystyle\int\limits_{x}\displaystyle\int\limits_{y}xyf_{XY}(x,y)dydx\\
+    &=\displaystyle\int\limits_{x=-1}^{x=1}\displaystyle\int\limits_{y=-\sqrt{1-x^2}}^{y=\sqrt{1-x^2}}\cfrac{xy}{\pi}dydx\\
+    &=\cfrac{x}{\pi} \displaystyle\int\limits_{x=-1}^{x=1}\brak{\cfrac{y^2}{2}}_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}dx\\
+    &=0
+\end{align}
+Now,
+\begin{align}
+    Cov(X,Y)&=E\sbrak{XY}-E\sbrak{X}E\sbrak{Y}\\
+    &=0-E\sbrak{X}\times0\\
+    &=0
+\end{align}
+Therefore, option(4) is also correct.\\
+\end{enumerate}

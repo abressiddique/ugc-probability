@@ -1,7 +1,8 @@
+Defining random variable
 \begin{align}
-\text{Defining random variable }X\in\cbrak{0, 1, 2, ..N}
-\\\text{Where, } X = i \text{ when ith unit is included.}
+X\in\cbrak{0, 1, 2, ..N}
 \end{align}
+Where, X = i when ith unit is included.
 The first unit in the sample is included if
 \begin{align}
     U_1 < \frac{n-n_1}{N-1+1}  
@@ -22,7 +23,7 @@ The first unit in the sample is included if
 \pr{X=1, X=2} 
 \begin{align}
      = \pr{X=2 \mid X=1} &\times \pr{X=1}
-    \\\therefore \pr{X=1, X=2} &= \frac{n \brak{n-1}}{N \brak{N-1}} \label{dec2018-116:eq1}
+    \\\therefore \pr{X=1, X=2} &= \frac{n \brak{n-1}}{N \brak{N-1}}
 \end{align}
 \begin{align}
     n_2 = 0 \text{ when, first unit is not included.}
@@ -37,19 +38,19 @@ The first unit in the sample is included if
     \therefore \pr{X\neq1,X=2} = \brak{1-\frac{n}{N}}\times\frac{n}{N-1}
 \end{align}
 \begin{align}
-    \therefore \pr{X\neq1,X=2} = \frac{n \brak{N-n}}{N \brak{N-1}} \label{dec2018-116:eq2}
+    \therefore \pr{X\neq1,X=2} = \frac{n \brak{N-n}}{N \brak{N-1}}
 \end{align}
-From \eqref{dec2018-116:eq1} and \eqref{dec2018-116:eq2}
+From \brak{0.0.16} and \brak{0.0.22}
 \begin{align}
     \pr{X=2} = \frac{n \brak{n-1}}{N \brak{N-1}} + \frac{n \brak{N-n}}{N \brak{N-1}} = \frac{n}{N}
 \end{align}
 Hence, option 1 is correct.
-\item From \eqref{dec2018-116:eq1}
+\item From \brak{0.0.16} 
 \begin{align}
     \pr{X=1, X=2} = \frac{n \brak{n-1}}{N \brak{N-1}}
 \end{align}
 Hence, option 2 is correct.
-\item From \eqref{dec2018-116:eq2}
+\item From \brak{0.0.22} 
 \begin{align}
     \pr{X\neq1,X=2} = \frac{n \brak{N-n}}{N \brak{N-1}}
 \end{align}
@@ -59,5 +60,5 @@ Hence, option 3 is correct.
 \pr{X=1, X\neq2} = \frac{n}{N} \times \brak{1-\frac{n}{N}} = \frac{n \brak{N-n}}{N^2}
 \end{align}
 Hence, option 4 is incorrect.
-\end{enumerate}
 Therefore, Options 1, 2, 3 are correct
+\end{enumerate}
