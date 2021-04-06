@@ -1,0 +1,20 @@
+Let $X$ and $Y$ be Poisson random variables, with the values X takes being the number of men joining the queue in an arbitrary time $t$, and the values Y takes being the number of women joining the queue in an arbitrary time $t$.
+\begin{align}
+    Pr\brak{X=i}&=\frac{\lambda_1^i\cdot e^{-\lambda_1}}{i!}\\
+    Pr\brak{Y=i}&=\frac{\lambda_2^i\cdot e^{-\lambda_2}}{i!}
+\end{align}
+For 2 independent Poisson distributions with means $\lambda_1$ and $\lambda_2$, the simultaneous distribution can be represented by:
+\begin{align}
+    Pr\brak{X+Y=i}=\frac{(\lambda_1+\lambda_2)^i\cdot e^{-(\lambda_1+\lambda_2})}{i!}
+\end{align}
+Now we take conditional probability that if only one person entered the queue within a certain time t, then the probability of them being a man and not a woman is given by:
+\begin{align}
+    Pr\brak{X=1|(X+Y)=1}&=\frac{Pr\brak{(X=1) + (Y=0)}}{Pr\brak{X+Y=1}}\\
+\end{align}
+Since X and Y are independent, 
+\begin{align}
+    Pr\brak{X=1|(X+Y)=1}&=\frac{Pr\brak{X=1}\cdot Pr\brak{Y=0}}{Pr\brak{X+Y=1}}\\
+    &=\frac{\frac{\lambda_1^1\cdot e^{-\lambda_1}}{1!}\cdot \frac{\lambda_2^0\cdot e^{-\lambda_2}}{0!}}{\frac{(\lambda_1+\lambda_2)^1\cdot e^{-(\lambda_1+\lambda_2})}{1!}}\\
+    &=\frac{\lambda_1}{\lambda_1+\lambda_2}
+\end{align}
+ The probability that the first person to arrive in the queue is a man is option A, i.e $\frac{\lambda_1}{\lambda_1+\lambda_2}$
