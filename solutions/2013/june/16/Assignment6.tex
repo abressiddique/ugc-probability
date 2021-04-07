@@ -1,0 +1,52 @@
+\section*{\textbf{solution}}
+Let $X \in \{0,1\}$ be a random variable such that X=0 means we choose a point lying in sector OAB and X=1 means that we choose a point lying outside sector OAB and inside the circle.\\
+
+Area of a sector subtending an angle $\theta$ at the centre of circle with radius a is given by :
+\begin{equation}
+    A = \frac{1}{2}a^2\theta
+\end{equation}
+where $\theta$ is in radians.\\
+
+Let the radius of circle shown in figure be r. It is given that  sector  OAB subtends an angle of x radians at the centre of the circle.\\
+
+Probability that the chosen point lies in sector OAB is:
+\begin{align}
+    \pr{X=0} =& \frac{\text{Area of sector OAB}}{\text{Area of circle}}\\
+       =& \frac{\frac{1}{2} r^2 x}{\pi r^2}\\
+       =& \frac{x}{2\pi}
+\end{align}
+
+$\therefore$The correct answer is \textbf{option (3)} $\frac{x}{2\pi}$.
+
+\section*{\textbf{alternate solution}}
+The joint pdf is given by:
+\begin{equation}
+ \texorpdfstring{f\textsubscript{r$\theta$}}{f r $\theta$}(r,\theta)= \begin{cases}
+                        \dfrac{r}{\pi R^2}  & \text{if 0 $<$ r $<$ R , 0 $<$ $\theta$ $<$ 2$\pi$ }\\
+                        0  & \text{otherwise}
+                        \end{cases}
+\end{equation}
+
+Let A $\equiv$ (R,  $\theta _2$) and B $\equiv$ (R,  $\theta _1$). \\
+Hence,
+\begin{equation}
+(\theta _2 - \theta _1)= x    
+\end{equation}
+
+We want $\theta$ $\in$ ($\theta _1$ , $\theta _2$) and r $\in$ (0,R) for point to lie in the sector.
+Let the point to be chosen be (r, $\theta$).\\
+
+So, Required probability is:
+\begin{align}
+ \nonumber  \pr{\theta_1<\theta<\theta_2 , 0<r<R}\\
+    =& \Int_{\theta_1}^{\theta_2} \Int_{0}^{R} \dfrac{r}{\pi R^2} \,dr\,d\theta \\
+    =& \Int_{\theta_1}^{\theta_2} \dfrac{1}{\pi R^2} \dfrac{r^2}{2} \Bigg|_0^R \\
+    =& \Int_{\theta_1}^{\theta_2} \dfrac{R^2}{2\pi R^2} \,d\theta  \displaybreak  \\
+    =& \Int_{\theta_1}^{\theta_2} \dfrac{1}{2\pi} \,d\theta\\
+    =& \dfrac{\theta}{2\pi} \Bigg|_{\theta_1}^{\theta_2} \\
+    =& \dfrac{\theta_2 - \theta_1}{2\pi} \\
+    =& \dfrac{x}{2\pi}
+\end{align}
+    
+$\therefore$The correct answer is \textbf{option (3)} \Large $\frac{x}{2\pi}$.
+
