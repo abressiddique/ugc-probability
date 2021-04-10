@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.13)  8 APR 2021 10:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.13)  10 APR 2021 20:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1640,98 +1640,98 @@ Package: blkarray 2015/02/27 v0.07 Block array (dpc)
 (./gvv_ugc_prob.aux)
 \openout1 = `gvv_ugc_prob.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 92.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 93.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-92.
+93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 93.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-92.
+93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 93.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-92.
+93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 93.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 92.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 93.
 
 -- Lines per column: 50 (exact).
-LaTeX Info: Redefining \celsius on input line 92.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 92.
+LaTeX Info: Redefining \celsius on input line 93.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 93.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 92.
-Package gensymb Info: Using \Omega for \ohm on input line 92.
+LaTeX Info: Redefining \ohm on input line 93.
+Package gensymb Info: Using \Omega for \ohm on input line 93.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1778,7 +1778,7 @@ Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box153
-Package hyperref Info: Link coloring OFF on input line 92.
+Package hyperref Info: Link coloring OFF on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1791,9 +1791,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count400
 )
-LaTeX Info: Redefining \ref on input line 92.
-LaTeX Info: Redefining \pageref on input line 92.
-LaTeX Info: Redefining \nameref on input line 92.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
 
 (./gvv_ugc_prob.out) (./gvv_ugc_prob.out)
 \@outlinefile=\write4
@@ -1804,52 +1804,52 @@ LaTeX Info: Redefining \nameref on input line 92.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 92.
+ on input line 93.
 
 \c@lstlisting=\count401
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 92
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 93
 .
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txss on input line 
-92.
+93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txss.fd
 File: ot1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 92.
+(Font)              scaled to size 11.39996pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 92.
+(Font)              scaled to size 7.59998pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 92.
+(Font)              scaled to size 5.69998pt on input line 93.
 LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-92.
+93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -1860,19 +1860,43 @@ File: ot1txtt.fd 2000/12/15 v3.1
 \c@lemma=\count405
 \c@example=\count406
 \c@rem=\count407
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 253.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 254.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 253.
+(Font)              scaled to size 13.29996pt on input line 254.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 9.30992pt on input line 253.
+(Font)              scaled to size 9.30992pt on input line 254.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 253.
+(Font)              scaled to size 6.64998pt on input line 254.
 
 (./gvv_ugc_prob.toc)
 \tf@toc=\write5
 \openout5 = `gvv_ugc_prob.toc'.
 
- (./chapters/2018/dec.tex
+ (./chapters/2019.tex
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 21.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 21.
+ (./solutions/2019/58.tex
+LaTeX Font Info:    Trying to load font information for OMS+txr on input line 6
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 6.
+
+
+LaTeX Warning: Reference `eq:eq2' on page 1 undefined on input line 6.
+
+
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+])) (./chapters/2018/dec.tex
 Underfull \hbox (badness 2799) in paragraph at lines 8--10
 []\OT1/txr/m/n/12 Let X and Y be i.i.d ran-dom vari-ables
  []
@@ -1882,30 +1906,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 \OT1/txr/m/n/12 uni-formly dis-tributed on (0,4).Then
  []
 
-(./solutions/2018/dec/50.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.m
-ap}
-
-
-]) (./solutions/2018/dec/118/Assignment7.tex
+(./solutions/2018/dec/50.tex) (./solutions/2018/dec/118/Assignment7.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<solutions/2018/dec/118/figures/plot.png, id=94, 383.4325pt x 279.0425pt>
+ [2]
+<solutions/2018/dec/118/figures/plot.png, id=138, 383.4325pt x 279.0425pt>
 File: solutions/2018/dec/118/figures/plot.png Graphic file (type png)
 <use solutions/2018/dec/118/figures/plot.png>
 Package pdftex.def Info: solutions/2018/dec/118/figures/plot.png  used on input
  line 25.
 (pdftex.def)             Requested size: 252.0pt x 183.39368pt.
 )
-Underfull \vbox (badness 4479) has occurred while \output is active []
+Underfull \vbox (badness 2790) has occurred while \output is active []
 
- [2 <./solutions/2018/dec/118/figures/plot.png>] (./solutions/2018/dec/116.tex
+
+(./solutions/2018/dec/116.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [3 <./solutions/2018/dec/118/figures/plot.png>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-(./solutions/2014/dec/106/LaTex/Assignment_7.tex)) (./chapters/2018/june.tex
+
+(./solutions/2014/dec/106/LaTex/Assignment_7.tex) (./solutions/2018/dec/2.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+$\OML/txmi/m/it/12 R[]$\OT1/txr/m/n/12 =rank of $\OMS/txsy/m/n/12 j\OML/txmi/m/
+it/12 X[]\OMS/txsy/m/n/12 j$ \OT1/txr/m/n/12 in the
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 99--102
+\OT1/txr/m/n/12 set\OMS/txsy/m/n/12 f$j\OML/txmi/m/it/12 X[]\OMS/txsy/m/n/12 j\
+OML/txmi/m/it/12 ; \OMS/txsy/m/n/12 j\OML/txmi/m/it/12 X[]\OMS/txsy/m/n/12 j\OM
+L/txmi/m/it/12 ; ::; \OMS/txsy/m/n/12 j\OML/txmi/m/it/12 X[]\OMS/txsy/m/n/12 j$
+g\OT1/txr/m/n/12 .Which of the fol-low-ing
+ []
+
+(./solutions/2018/dec/111.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (16.76048pt too wide) detected at line 21
+[][] [] [] \OT1/txr/m/n/12 = ^^E[] [] []
+ []
+
+)) (./chapters/2018/june.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
@@ -1925,19 +1969,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--18
 
  []
 
+) [5pdfTeX warning (ext4): destination with the same identifier (name{equation.
+44.1}) has been already used, duplicate ignored
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.24 \setlength
+               \itemsep{1em}pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.44.1}) has been already used, duplicate ignored
 
-)
-LaTeX Font Info:    Trying to load font information for OMS+txr on input line 2
-0.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 20.
-
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.24 \setlength
+               \itemsep{1em}]
 Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
@@ -1952,10 +1996,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-(./solutions/2018/june/49.tex [4])
+(./solutions/2018/june/49.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [6]
 (./solutions/2018/june/103.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
@@ -1964,7 +2011,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
@@ -1982,11 +2029,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [7])
 (./solutions/2018/june/58.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
+
 Underfull \hbox (badness 1400) in paragraph at lines 27--31
 \OT1/txr/m/n/12 Finding the value of K in case of Sim-
  []
@@ -1999,10 +2046,10 @@ Underfull \hbox (badness 1394) in paragraph at lines 27--31
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7])
+)
 (./solutions/2018/june/50/Assignment_3.tex
 Underfull \hbox (badness 3907) in paragraph at lines 101--1
 []\OT1/txr/m/n/12 Let X and Y be two in-de-pen-dent and
@@ -2046,7 +2093,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<solutions/2018/june/50/Assignment_3_Fig_1.png, id=299, 390.45876pt x 262.9825p
+ [9]
+<solutions/2018/june/50/Assignment_3_Fig_1.png, id=373, 390.45876pt x 262.9825p
 t>
 File: solutions/2018/june/50/Assignment_3_Fig_1.png Graphic file (type png)
 <use solutions/2018/june/50/Assignment_3_Fig_1.png>
@@ -2056,18 +2104,46 @@ Package pdftex.def Info: solutions/2018/june/50/Assignment_3_Fig_1.png  used on
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<solutions/2018/june/50/Assignment_3_Fig_2.png, id=331, 390.45876pt x 262.9825p
+<solutions/2018/june/50/Assignment_3_Fig_2.png, id=375, 390.45876pt x 262.9825p
 t>
 File: solutions/2018/june/50/Assignment_3_Fig_2.png Graphic file (type png)
 <use solutions/2018/june/50/Assignment_3_Fig_2.png>
 Package pdftex.def Info: solutions/2018/june/50/Assignment_3_Fig_2.png  used on
  input line 129.
 (pdftex.def)             Requested size: 252.0pt x 169.72873pt.
+[10 <./solutions/2018/june/50/Assignment_3_Fig_1.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./solutions/2018/june/108.tex
+Overfull \hbox (8.7393pt too wide) in paragraph at lines 37--55
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./solutions/2018/june/50/Assignment_3_Fig_2.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (3.79527pt too wide) in paragraph at lines 100--118
+[][] 
+ []
+
+[12]
+Overfull \hbox (3.26729pt too wide) in paragraph at lines 142--160
+[][] 
+ []
+
 )) (./chapters/2016/dec.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 []$[][] []$ \OT1/txr/m/n/12 is the Min-i-mum Vari-ance
@@ -2078,8 +2154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[9 <./solutions/2018/june/50/Assignment_3_Fig_1.png> <./solutions/2018/june/50/
-Assignment_3_Fig_2.png>]
+
 Underfull \hbox (badness 6825) in paragraph at lines 13--14
 []$[]$ \OT1/txr/m/n/12 is the Min-i-mum Vari-ance
  []
@@ -2102,14 +2177,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 (./solutions/2016/dec/109.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [13])
 (./solutions/2016/dec/49.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
@@ -2117,46 +2196,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
  []
 
 ) (./solutions/2016/dec/51.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2409) has occurred while \output is active []
 
- [11])
+ [14])
 (./solutions/2016/dec/103.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [16])
 (./solutions/2016/dec/107.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14])
+ [17])
 (./solutions/2016/dec/104.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 5388) in paragraph at lines 6--29
 \OT1/txr/m/n/12 Let's de-fine a Markov chain $\OMS/txsy/m/n/12 f\OML/txmi/m/it/
 12 X[]; n \OT1/txr/m/n/12 =
  []
 
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 42.
-[15])
+
+Underfull \vbox (badness 6332) has occurred while \output is active []
+
+ [18])
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./chapters/2016/june.tex (./solutions/2016/june/104.tex
+) (./chapters/2016/june.tex [19] (./solutions/2016/june/104.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16])
-<solutions/2016/june/118/Figures/circuits.png, id=585, 179.67125pt x 237.38687p
+)
+<solutions/2016/june/118/Figures/circuits.png, id=686, 179.67125pt x 237.38687p
 t>
 File: solutions/2016/june/118/Figures/circuits.png Graphic file (type png)
 <use solutions/2016/june/118/Figures/circuits.png>
@@ -2171,7 +2254,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 2753) has occurred while \output is active []
 
-
+ [20]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2180,27 +2263,27 @@ Overfull \hbox (18.30771pt too wide) in paragraph at lines 63--94
 [] 
  []
 
-[17 <./solutions/2016/june/118/Figures/circuits.png>])
-(./solutions/2016/june/107/main.tex
-<solutions/2016/june/107/figures/norm.png, id=608, 462.528pt x 346.896pt>
+) (./solutions/2016/june/107/main.tex [21 <./solutions/2016/june/118/Figures/ci
+rcuits.png>]
+<solutions/2016/june/107/figures/norm.png, id=726, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/norm.png Graphic file (type png)
 <use solutions/2016/june/107/figures/norm.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/norm.png  used on inpu
 t line 48.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<solutions/2016/june/107/figures/expon.png, id=609, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/expon.png, id=727, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/expon.png Graphic file (type png)
 <use solutions/2016/june/107/figures/expon.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/expon.png  used on inp
 ut line 54.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<solutions/2016/june/107/figures/uniform.png, id=610, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/uniform.png, id=728, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/uniform.png Graphic file (type png)
 <use solutions/2016/june/107/figures/uniform.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/uniform.png  used on i
 nput line 60.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<solutions/2016/june/107/figures/binom.png, id=611, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/binom.png, id=729, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/binom.png Graphic file (type png)
 <use solutions/2016/june/107/figures/binom.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/binom.png  used on inp
@@ -2214,28 +2297,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
 
-LaTeX Warning: Text page 19 contains only floats.
 
-(./solutions/2015/dec/3.tex [19 <./solutions/2016/june/107/figures/norm.png> <.
-/solutions/2016/june/107/figures/expon.png> <./solutions/2016/june/107/figures/
-uniform.png> <./solutions/2016/june/107/figures/binom.png>])
-(./solutions/2015/dec/108.tex
+LaTeX Warning: Text page 22 contains only floats.
+
+[22 <./solutions/2016/june/107/figures/norm.png> <./solutions/2016/june/107/fig
+ures/expon.png> <./solutions/2016/june/107/figures/uniform.png>]
+(./solutions/2015/dec/3.tex) (./solutions/2015/dec/108.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [23 <./solutions/2016/june/107/figures/binom.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20])
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [24]
 Overfull \hbox (1.68398pt too wide) in paragraph at lines 31--32
 []$[] [] \OT1/txr/m/n/12 =
  []
 
-(./solutions/2015/dec/106.tex [21])
+(./solutions/2015/dec/106.tex)
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 54.
 
@@ -2261,15 +2343,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 (./solutions/2015/dec/104.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-))
-(./chapters/2013/june.tex (./solutions/2013/june/75.tex [22]
+ [25]))
+(./chapters/2014/dec.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+
+ []
+
+(./solutions/2014/dec/106/LaTex/Assignment_7.tex)) (./chapters/2013/june.tex
+(./solutions/2013/june/75.tex
+Underfull \vbox (badness 6016) has occurred while \output is active []
+
+ [26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./solutions/2013/june/71.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
 Underfull \hbox (badness 10000) in paragraph at lines 19--21
 \OT1/txr/m/n/12 Hazard func-tion $\OML/txmi/m/it/12 ^^L\OT1/txr/m/n/12 (\OML/tx
 mi/m/it/12 x\OT1/txr/m/n/12 )$,(using [] and
@@ -2278,7 +2366,7 @@ mi/m/it/12 x\OT1/txr/m/n/12 )$,(using [] and
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [27])
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
@@ -2288,47 +2376,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 (./solutions/2013/june/16/Assignment6.tex
 LaTeX Font Info:    Font shape `OT1/txr/b/sc' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/sc' tried instead on input line 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 10--11
-[]\OT1/txr/m/n/12 Let the ra-dius of cir-cle shown in fig-ure
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
+(Font)              Font shape `OT1/txr/bx/sc' tried instead on input line 17.
+ [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Font Info:    Calculating math sizes for size <17> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <17> on input line 44.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 16.14995pt on input line 51.
+(Font)              scaled to size 16.14995pt on input line 44.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 11.3049pt on input line 51.
+(Font)              scaled to size 11.3049pt on input line 44.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.07497pt on input line 51.
+(Font)              scaled to size 8.07497pt on input line 44.
 )
 Underfull \hbox (badness 2653) in paragraph at lines 59--61
 []\OT1/txr/m/n/17 Let $\OML/txmi/m/it/17 X$ \OT1/txr/m/n/17 and $\OML/txmi/m/it
@@ -2368,6 +2432,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 73.
 (./solutions/2013/june/70/assignment8.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
 Underfull \hbox (badness 10000) in paragraph at lines 7--12
 []\OT1/txr/m/n/17 Given $\OML/txmi/m/it/17 X$ \OT1/txr/m/n/17 and $\OML/txmi/m/
 it/17 Y$ \OT1/txr/m/n/17 are two
@@ -2381,13 +2448,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 120--122
 \OT1/txr/m/n/17 Solving [] us-ing
  []
@@ -2408,61 +2472,132 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [31]
 Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
-<solutions/2013/june/70/figures/assignment8pdf.png, id=934, 387.4475pt x 279.04
-25pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<solutions/2013/june/70/figures/assignment8pdf.png, id=1055, 387.4475pt x 279.0
+425pt>
 File: solutions/2013/june/70/figures/assignment8pdf.png Graphic file (type png)
 
 <use solutions/2013/june/70/figures/assignment8pdf.png>
 Package pdftex.def Info: solutions/2013/june/70/figures/assignment8pdf.png  use
 d on input line 196.
 (pdftex.def)             Requested size: 252.0pt x 181.49469pt.
-<solutions/2013/june/70/figures/assignment8cdf.png, id=935, 393.47pt x 279.0425
-pt>
+<solutions/2013/june/70/figures/assignment8cdf.png, id=1056, 393.47pt x 279.042
+5pt>
 File: solutions/2013/june/70/figures/assignment8cdf.png Graphic file (type png)
 
 <use solutions/2013/june/70/figures/assignment8cdf.png>
 Package pdftex.def Info: solutions/2013/june/70/figures/assignment8cdf.png  use
 d on input line 202.
 (pdftex.def)             Requested size: 252.0pt x 178.71431pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 76--79
+\OT1/txr/m/n/17 and iden-ti-cally dis-tributed
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 76--79
+\OT1/txr/m/n/17 ran-dom vari-ables each hav-ing
+ []
+
+
+Overfull \hbox (46.50853pt too wide) in paragraph at lines 76--79
+\OT1/txr/m/n/17 Then,$[][] [] []$ 
+ []
+
+[32 <./solutions/2013/june/70/figures/assignment8pdf.png> <./solutions/2013/jun
+e/70/figures/assignment8cdf.png>] (./solutions/2013/june/59.tex
+Underfull \hbox (badness 3449) in paragraph at lines 10--12
+\OT1/txr/m/n/17 Expected value of $\OML/txmi/m/it/17 M[]$ \OT1/txr/m/n/17 (us-i
+ng
+ []
+
+
+Overfull \hbox (21.49449pt too wide) in paragraph at lines 17--17
+[] 
+ []
+
+
+Overfull \hbox (56.91489pt too wide) in paragraph at lines 24--24
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (23.23903pt too wide) in paragraph at lines 32--32
+[] 
+ []
+
+
+Overfull \hbox (24.35303pt too wide) in paragraph at lines 42--42
+[] 
+ []
+
+
+Overfull \hbox (27.18636pt too wide) in paragraph at lines 48--48
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+(./solutions/2013/june/60.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 40--63
+\OT1/txr/m/n/17 The pos-si-ble pairs $[]$ for
+ []
+
 )) (./chapters/2012/dec.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-(./solutions/2012/dec/104.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28 <./solutions/2013/june/70/figures/assignment8pdf.png> <./solutions/2013/ju
-ne/70/figures/assignment8cdf.png>])
+[34] (./solutions/2012/dec/104.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 26--20
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 (./solutions/2012/dec/60.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)) [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+ [35]))
+[36
 
-(./gvv_ugc_prob.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+ (./gvv_ugc_prob.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
 Package rerunfilecheck Info: File `gvv_ugc_prob.out' has not changed.
-(rerunfilecheck)             Checksum: 5516F4CC2630684807D1309ACC036E42;324.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+(rerunfilecheck)             Checksum: CF3497EBB9ACF0ABADEDD61B82A05914;416.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
  ) 
 Here is how much of TeX's memory you used:
- 53607 strings out of 481239
- 1330532 string characters out of 5920377
- 1867886 words of memory out of 5000000
- 67051 multiletter control sequences out of 15000+600000
- 651935 words of font info for 288 fonts, out of 8000000 for 9000
+ 53837 strings out of 481239
+ 1333955 string characters out of 5920377
+ 1863615 words of memory out of 5000000
+ 67126 multiletter control sequences out of 15000+600000
+ 664727 words of font info for 324 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  75i,19n,98p,734b,2342s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2479,10 +2614,10 @@ tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_ugc_prob.pdf (29 pages, 316254 bytes).
+Output written on gvv_ugc_prob.pdf (36 pages, 348103 bytes).
 PDF statistics:
- 1185 PDF objects out of 1200 (max. 8388607)
- 1088 compressed objects within 11 object streams
- 708 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1390 PDF objects out of 1440 (max. 8388607)
+ 1284 compressed objects within 13 object streams
+ 838 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

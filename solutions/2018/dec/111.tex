@@ -1,0 +1,39 @@
+
+A sequence $\{X_{i}\}$ is an Independent and identical if and only if 
+$F_{X_{n}}(x)=F_{X_{k}}(x)$
+$\forall$ n,k,x and any subset of terms of the sequence is a set of mutually independent random variables.
+Where F is the probability density function.
+\begin{enumerate}
+\item As the probability distribution function of $\{X_{i}\}$ is symmetric about origin we can say that 
+\begin{equation}
+\tag{2.1}
+  F_{X_{i}}(-x)=F_{X_{i}}(x)    \forall x \in R  
+\end{equation}
+and the mean of the distribution($\mu$)
+\begin{equation}
+    \tag{2.2}
+    \mu=0
+\end{equation}
+The sequence $S_{i}$ depend on $X_{i}$ as mention in \ref{eq1}, as each $S_{i}$ depend only on $X_{i}$ we can say that sequence $S_{i}$ is independent.
+\begin{equation}
+    \tag{2.3}
+\pr{S_{1}=1,S_{2}=1,...,S_{n}=1}=\Pi_{i=1}^{n}\pr{S_{i}=1}
+\end{equation}
+Any subset of terms of sequence $\{S_{i}\}$ is a set of mutually independent random variables and its distribution is identical. 
+\begin{align}
+    \tag{2.4}
+    F_{S_{n}}(s)=F_{S_{k}}(s) \hspace{0.5cm} \forall s,k,n
+\end{align}
+So, the sequence $\{S_{i}\}$ is independent and identical.
+\item 
+\textbf{Ranking} refers to the data transformation in which the numerical or ordinary values are replaced by the rank of numerical value when compared to a list of other values.Usually we follow increasing order for ranking.\\
+Ranking of a sequence depend on every elements of the sequence.Let $\{R_{i}\}$ be the output sequence of the ranking function of $\{|X_{i}|\}$.
+\begin{equation}
+    \tag{2.5}
+    R_{k}=\text{rank of $|X_{k}|$ in the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}}
+\end{equation}
+As $R_{k}$ depend not only on $|X_{k}|$ but on the rest of the elements of the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}. So the sequence $R_{i}$ is not independent. Hence $R_{i}$ is not an independent and identical distribution.
+\item 
+As the $i^{th}$ element of sequence R depends only on set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}, we can say that sequence S and R are independent.
+\end{enumerate}
+Answer:A,C

@@ -1,0 +1,40 @@
+Let $P_{i}(j)$ represent the probability for selecting unit (j) as second unit after selecting  unit (i) 
+\begin{align}
+    P_{i}(j)&=\frac{p_{j}}{1-p_{i}}
+    \label{2019-58:eq:eq2}
+\end{align}
+Let  $\pr{i,j}$ be probability of selecting sample \{i,j\} ,using \eqref{eq:eq2}  is 
+\begin{align}
+    \pr{i,j}&=P_{i}(j)+P_{j}(i)
+    \\
+    &=\brak{p_{i}\times \frac{p_{j}}{1-p_{i}}} + \brak{p_{j}\times \frac{p_{i}}{1-p_{j}}}
+    \label{2019-58:eq:eq3}
+\end{align}
+Total samples(Size $n=2$)are 
+\definecolor{green}{RGB}{0 150, 22}
+\definecolor{Red}{RGB}{200,60,40}
+\definecolor{mycolor}{RGB}{0, 60, 240}
+\begin{table}[h!]
+\resizebox{\columnwidth}{0.95cm}{%
+  \begin{tabular}{|c ||c ||c |c | c| c| c|}
+    \hline
+    \textcolor{green}{Case }&  \textcolor{Red}{1} & \textcolor{Red}{2} & \textcolor{Red}{3} & \textcolor{Red}{4} & \textcolor{Red}{5} & \textcolor{Red}{6}\\
+    \hline
+    \textcolor{green}{Sample(size $n=2$)} & \textcolor{mycolor}{\brak{1,2}} & \textcolor{mycolor}{\brak{1,3} }& \textcolor{mycolor}{\brak{1,4} }& \textcolor{mycolor}{\brak{2,3}} & \textcolor{mycolor}{\brak{2,4}}& \textcolor{mycolor}{\brak{3,4}}\\
+    \hline
+  \end{tabular}%
+} 
+  \caption{ list of samples}
+  \label{2019-58:tab:label1_test}
+\end{table}
+Let $P_{i}$ be the probability of inclusion of unit (i) in the sample(size $n=2$),Now i will calculate $P_{1}$ ,Favourable cases for inclusion of unit(1) are case (\textcolor{red}{1,2,3}),So
+\begin{align}
+    P_{1}&=\pr{1,2} +\pr{1,3}+\pr{1,4}
+\end{align}
+using \eqref{2019-58:eq:eq3} and $p_{i}$ from question ,
+\begin{align}
+    P_{1}&=\frac{7}{30} + \frac{7}{30} + \frac{7}{30}
+    \\
+    &=0.7
+\end{align}
+Therefore Option (3) is correct.

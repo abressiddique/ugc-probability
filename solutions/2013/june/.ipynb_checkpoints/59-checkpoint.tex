@@ -1,0 +1,61 @@
+We use Weak law for large numbers to solve this problem. 
+Let the collection of identically distributed random variables $U_1,U_2\dots,U_n$
+have a finite mean $\mu$ and finite variance $\sigma^2$.
+\begin{align}
+    \mu = \mean{U_i} \hspace{0.3cm}\text{for i $\in$ (1,2,3\dots,n)}\label{june2013-59:0.0.1}
+\end{align}
+Since the distribution is uniform on (0,1), $\mu$ = 0.5. Let $M_n$ be the sample mean
+\begin{align}
+     M_n = \frac{U_1+U_2+U_3\dots+U_n}{n}\label{june2013-59:0.0.2}
+\end{align}
+Expected value of $M_n$ (using \eqref{june2013-59:0.0.2} and \eqref{june2013-59:0.0.1})is
+\begin{align}
+    \mean{M_n} = &\frac{\mean{U_1+U_2+U_3+\dots+U_n}}{\mean{n}}\\[0.3cm]
+     = &\frac{\mean{U_1}+\mean{U_2}+\dots+\mean{U_n}}{n}\\
+     = &\frac{n\times\mu}{n}\\
+     = & \mu
+\end{align}
+Variance of M
+\begin{align}
+    Var(M_n) =& \frac{Var(U_1+U_2+U_3\dots+U_n)}{n^2}\\[0.3cm]
+    =& \frac{Var(U_1) + Var(U_2)\dots+Var(U_n)}{n^2}\\
+    =& \frac{n\times{\sigma^2}}{n^2}\\[0.3cm]
+    =& \frac{\sigma^2}{n} \label{june2013-59:0.0.10}
+\end{align}
+From Chebyshev inequality, for any $\epsilon > 0$
+\begin{align}
+    \pr{\abs{M_n-\mu}\geq \epsilon} \hspace{0.2cm} \leq \hspace{0.2cm} \frac{Var(M_n)}{\epsilon^2}
+\end{align}
+From \eqref{june2013-59:0.0.1} and \eqref{june2013-59:0.0.10}
+\begin{align}
+    \pr{\abs{\frac{U_1+U_2\dots+U_n}{n} - \mu} \geq \epsilon} \leq \frac{\sigma^2}{n\times\epsilon^2}\notag
+\end{align}
+\begin{align}
+    \begin{split}
+    \lim_{n \to \infty} \pr{\abs{\frac{U_1+U_2\dots+U_n}{n} - \mu} \geq \epsilon}\\
+    \leq \lim_{n \to \infty} \frac{\sigma^2}{n\times\epsilon^2} \leq 0 \hspace{0.2cm} \text{for fixed $\epsilon > 0$}
+    \end{split}
+\end{align}
+But since Probabilities are always non-negative,
+\begin{align}
+    \lim_{n \to \infty} \pr{\abs{\frac{U_1+U_2\dots+U_n}{n} - \mu} \geq \epsilon} \to 0 \label{june2013-59:0.0.13}
+\end{align}
+This is known as the weak law of large numbers\\
+The inverse of \eqref{june2013-59:0.0.13} is also true
+\begin{align}
+    &\lim_{n \to \infty} \pr{\abs{\frac{U_1+U_2\dots+U_n}{n} - \mu} \leq \epsilon} \to 1 \\[0.3cm]
+    &\abs{\frac{U_1+U_2\dots+U_n}{n} - \mu} \leq \epsilon \hspace{0.2cm}\text{as  n $\to$ $\infty$} 
+\end{align}
+From $\epsilon$, n definition of limits, it is clear that 
+\begin{align}
+    &\frac{U_1+U_2\dots+U_n}{n} \to \mu\\
+    &U_1+U_2\dots U_n \to n\times\mu \hspace{0.2cm}\text{as  n $\to$ $\infty$}
+\end{align}
+Since $\mu = \frac{1}{2}$,
+\begin{align}
+    \lim_{n \to +\infty} U_1+U_2\dots U_n = \frac{1}{2}n < \frac{3}{4}n
+\end{align}
+So 
+\begin{align}
+    \lim_{n \to +\infty} \pr{U_1+U_2\dots,U_n\leq \frac{3}{4}n} = 1
+\end{align}

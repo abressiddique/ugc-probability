@@ -73,5 +73,16 @@ A point is chosen at random from a circular disc shown below. What is the probab
 \solution
 \input{solutions/2013/june/70/assignment8.tex}
 %
+\item Let $U_1,U_2\dots,U_n$ be independent and identically distributed random variables each
+having a uniform distribution on (0,1). Then,$$\lim_{n \to +\infty} \pr{U_1+U_2\dots,U_n\leq \frac{3}{4}n}$$
+\begin{enumerate}
+    \item does not exist
+    \item exists and equals 0
+    \item exists and equals 1
+    \item exists and equals $\frac{3}{4}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/59.tex}
 
 \end{enumerate}

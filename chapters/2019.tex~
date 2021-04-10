@@ -5,7 +5,6 @@
 \numberwithin{figure}{enumi}
 
 
-
 \item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
 \begin{align}
 P = 
@@ -26,34 +25,5 @@ Then which of the following are true?
 \item $\lim_{n \to \infty} p_{22}^{(n)} = \frac{1}{8}$
 \item $\lim_{n \to \infty} p_{21}^{(n)} = \frac{1}{3}$
 \end{enumerate}
-%
-\item A sample of size $n =2$ is drawn from a population of size $N=4$ using probability proportional to size without replacement scheme , Where the probabilities proportional to size are
-\begin{table}[h!]
-\resizebox{\columnwidth}{0.6cm}{%
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    i: & 1 & 2 & 3 & 4\\
-    \hline
-    $p_{i}$ & 0.4 & 0.2 & 0.2 & 0.2\\
-    \hline
-  \end{tabular}%
-} 
-   \caption*{Table : Probability vs Size}
-\end{table}  
-The probability of inclusion of unit (1) in the sample is 
-\begin{enumerate}
-\begin{multicols}{4}
-\setlength\itemsep{2em}
-\item $0.4$
-\item $0.6$
-\item $0.7$
-\item $0.75$
-\end{multicols}
-%
-
-\end{enumerate}
-%
-\solution
-\input{solutions/2019/58.tex}
 \end{enumerate}
 

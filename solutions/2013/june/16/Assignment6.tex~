@@ -1,5 +1,5 @@
 
-
+\section*{\textbf{solution}}
 Let $X \in \{0,1\}$ be a random variable such that X=0 means we choose a point lying in sector OAB and X=1 means that we choose a point lying outside sector OAB and inside the circle.\\
 Area of a sector subtending an angle $\theta$ at the centre of circle with radius a is given by :
 \begin{equation}

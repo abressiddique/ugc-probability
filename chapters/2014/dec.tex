@@ -5,155 +5,42 @@
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
 
-\item Let A,B be $n \times n$ matrices such that $BA+ B^2= I-BA^2$ where I is the $n\times n$ identity matrix. Which of the following is always correct
-\begin{enumerate}
-    \item A is non singular
-    \item B is non singular
-    \item A+B is non singular
-    \item AB is non singular
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/27/solution.tex}
-\item Which of the following matrices has the same row space as the matrix $\myvec{4&8&4\\3&6&1\\2&4&0}$?
-\begin{enumerate}
-    \item \myvec{1&2&0\\0&0&1}
-    \item \myvec{1&1&0\\0&0&1}
-    \item \myvec{0&1&0\\0&0&1}
-    \item \myvec{1&0&0\\0&1&0}
-\end{enumerate}
-%
-%\solution
-%\input{solutions/2014/dec/28/solution.tex}
-\item The determinant of n x n permutation matrix\\
-$\myvec{ & & & & & &1\\ & & & & &1& \\ & & & &.& & \\ & & &.& & & \\ & &.& & & & \\ &1& & & & & \\1& & & & & &  }$
-\begin{enumerate} %[label = (\alph*)]
-\item $(-1)^n $
-\item $(-1)^{\lfloor \frac{n}{2} \rfloor} $
-\item $-1 $
-\item $1$ 
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/29/solution.tex}
-\item Let $\vec{P}$ be a $2\times 2$ complex matrix such that
-\begin{align}
-\vec{P}^\theta \vec{P} =\vec{I}
-\end{align}
-where $\vec{P}^\theta$ is the conjugate transpose of $\vec{P}$.Then the eigen values of $\vec{P}$ are
-\begin{enumerate}
-\item{real}
-\item{complex conjugates of each othe}
-\item{reciprocals of each other}
-\item{of modulus 1}
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/32/solution.tex}
-\item Let $\vec A$ be a real n x n orthogonal matrix, that is, $\vec{A^TA=AA^T=I_n}$, the n x n identity matrix. which of the following statements are necessarily true?
-\begin{enumerate}
-    \item $ \vec{<Ax,Ay> =  <x,y>}\quad \forall \vec{x,y}\in \vec R^n $
-    \item All eigen values of $\vec A $ are either +1 or -1.
-    \item The rows of $\vec A$ form an orthonormal basis of $\vec R^n.$
-    \item $\vec A$ is diagonalizable over $\vec R.$ 
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/70/solution.tex}
-\item Which of the following matrices have Jordan canonical form equal to
-\begin{align*}
-        \myvec{0&1&0\\0&0&0\\0&0&0}?
-\end{align*}
-\begin{align*}
-    \mbox{1. }\myvec{0&0&1\\0&0&0\\0&0&0}&&\mbox{2. }\myvec{0&0&1\\0&0&1\\0&0&0}\\
-    \mbox{3. }\myvec{0&1&1\\0&0&0\\0&0&0}&&\mbox{4. }\myvec{0&1&1\\0&0&1\\0&0&0}
-\end{align*}
-%
-\solution
-\input{solutions/2014/dec/71/solution.tex}
-\item Let $f$ be a non-zero symmetric bilinear form on $\mathbb{R}^3$.Suppose that there exist linear transformations $T_i:\mathbb{R}^3\xrightarrow[]{}\mathbb{R}$,$i=1,2$ such that for all $\alpha,\beta\in\mathbb{R}^3$, $f\brak{\alpha,\beta}=T_1\brak{\alpha}T_2\brak{\beta}$. Then
-\begin{enumerate}
-    \item rank $f=1$
-    \item dim $\{\beta\in\mathbb{R}^3:f\brak{\alpha,\beta}=0$ for all $\alpha\in\mathbb{R}^3\}=2$
-    \item $f$ is positive semi-definite or negative semi-definite
-    \item $\{\alpha:f\brak{\alpha,\alpha}=0\}$ is a linear subspace of dimension 2
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/73/solution.tex}
-\item %
-Let $\vec{A}$ be $5\times5$ matrix and let $\vec{B}$ be obtained by changing one element of $\vec{A}$. Let $r$ and $s$ be the ranks of $\vec{A}$ and $\vec{B}$ respectively. Which of the following statements is/are correct?
-\begin{enumerate}
-    \item $s\leq r+1$
-    \item $r-1\leq s$
-    \item $s=r-1$
-    \item $s\neq r$
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/75/solution.tex}
-\item For arbitrary subspaces, $U$, $V$ and $W$ of a finite dimensional vectorspace, which of the following hold :
-\begin{enumerate}
-    \item $U \cap (V+W) \subset (U \cap V) + (U \cap W)$
-    \item $U \cap (V+W) \supset (U \cap V) + (U \cap W)$
-    \item $(U \cap V) + W \subset (U+W) \cap (V+W)$
-    \item $(U \cap V) + W \supset (U+W) \cap (V+W)$
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/77/solution.tex}
-\item Let $\vec{A}$ be a 4 x 7 real matrix and $\vec{B}$ be a 7 x 4 real matrix such that $\vec{AB} = \vec{I}_4$, where $\vec{I}_4$ is the 4 x 4 identity matrix. Which of the following is/are always true?
-\begin{enumerate} %[label = (\alph*)]
-\item $rank(\vec{A}) = 4 $
-\item $rank(\vec{B}) = 7 $
-\item $nullity(\vec{B}) = 0 $
-\item $\vec{BA} = \vec{I}_7 $, where $\vec{I}_7$ is the 7 x 7 identity matrix
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/78/solution.tex}
-\item Which of the following are eigen values of the matrix
-\begin{align}
-    \vec A
-=\myvec{0 &0 &0 &1 &0 &0\\0 &0 &0 &0 & 1 &0
-\\ 0& 0&0 &0 &0 &1\\1& 0 &0 &0 &0 &0\\ 0& 1 &0 &0 &0 &0\\0 &0 &1 &0 &0 &0}?
-\label{eq:solutions/2014/dec/86/eq:matrix}  
-\end{align}
-\begin{enumerate}
-    \item $+1$
-    \item $-1$
-    \item $+i$
-    \item $-i$ 
-\end{enumerate}
-%
-\solution
-\input{solutions/2014/dec/86/solution.tex}
-\item Let
-\begin{align}
-    \vec{A}=\myvec{x&y\\-y&x}\label{eq:solutions/2014/dec/90/1}
-\end{align}
-where x,y $\in \mathbb{R}$ such that
-\begin{align}
-    x^{2}+y^{2}=1
-\end{align}
-Then,we must have:
-\begin{enumerate}
-\item{$\vec{A^{n}}=\myvec{\cos\theta& \sin\theta\\-\sin\theta& \cos\theta}$$\forall n\geq{1}$\\ where x=$\cos(\frac{\theta}{n})$,y=$\sin(\frac{\theta}{n})$}
-\item{$trace(\vec{A})\neq 0$}
-\item{$\vec{A^{T}}=\vec{A^{-1}}$}
-\item{$\vec{A}$ is similar to a diagonal matrix over $\mathbb{C}$}
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2014/dec/90/solution.tex}
+\item  $N,A_1,A_2\cdots$ are independent real valued random variables such that 
+    \begin{align}
+        \pr{N=k}=(1-p)p^k,k=0,1,2,3\cdots
+    \end{align}
+    where $0<p<1$ and $\{A_i:i=1,2,\cdots\}$ is a sequence of independent and identically distributed bounded random variables. Let 
+    \begin{align}
+        X(w) = 
+        \begin{cases}
+        0  & \text{if } N(w)=0\\
+        \sum_{j=1}^{k} A_j & \text{if } N(w)=k,k=1,2,3\cdots 
+        \end{cases}
+    \end{align}
+    Which of the following are necessarily correct?\\
+    \begin{enumerate}
+        \item $X$ is a bounded random variable. 
+        \item Moment generating function $m_X$ of $X$ is
+        \begin{align}
+            m_X(t)=\dfrac{1-p}{1-pm_A(t)}, t\in \mathbb{R},
+        \end{align}
+        where $m_A$ is moment generating function of $A_1$.
+        \item Characteristic function $\varphi_X$ of $X$ is
+        \begin{align}
+            \varphi_X(t)=\dfrac{1-p}{1-p\varphi_A(t)},t\in \mathbb{R},
+        \end{align}
+        where $\varphi_A$ is the characteristic function of $A_1$.
+        \item $X$ is symmetric about 0.
+    \end{enumerate}
 
+
+\item Consider a Markov chain with state space {1,2,....,100}. Suppose states 2i and 2j communicate with each other and states 2i-1 and 2j-1 communicate with each other for every i,j = 1,2,...,50. Further suppose that $p^{(2)}_{3,3}$ > 0,$p^{(3)}_{4,4}$ > 0 and $p^{(7)}_{2,5}$ > 0. Then 
+\begin{enumerate}
+\item The Markov chain is irreducible.
+\item The Markov chain is aperiodic.
+\item State 8 is recurrent.
+\item State 9 is recurrent.
+\end{enumerate}
+\solution
+\input{solutions/2014/dec/106/LaTex/Assignment_7.tex}
 \end{enumerate}
