@@ -1,0 +1,119 @@
+\begin{definition}[Almost sure convergence]
+A sequence of random variables $\cbrak{X_n}_{n\in N}$ is said to converge almost surely or with probability 1 (denoted by a.s or w.p 1) to X if \label{dec2018-104:with prob 1}
+\begin{equation}
+    \Pr(\omega |X_n(\omega) \to X(\omega))=1
+\end{equation}
+\end{definition}
+\begin{definition}[Convergence in probability]
+A sequence of random variables $\cbrak{X_n}_{n\in N}$ is said to converge in probability (denoted by i.p) to X if
+\begin{equation}
+    \lim_{n \to \infty} \Pr(\left| X_{n}-X\right|>\epsilon)=0 ,\forall \epsilon>0
+\end{equation}\label{dec2018-104:in prob}
+\end{definition}
+\begin{theorem}[Weak law of large numbers]
+\label{dec2018-104:theorem}
+Let $X_1,X_2,\cdots $ be i.i.d random variables with same expectation($\mu$) and finite variance($\sigma^2$).Let $S_{n}=X_1+X_2+\cdots X_n$,Then as $n \to \infty$
+\begin{equation}
+    \frac{S_n}{n} \xrightarrow{i.p}  \mu,
+\end{equation}
+in probability
+\end{theorem}
+\begin{theorem}[Strong law of large numbers]
+\label{dec2018-104:theorem2}
+Let $X_1,X_2,\cdots $ be i.i.d random variables with same expectation($\mu$) and finite variance($\sigma^2$).Let $S_{n}=X_1+X_2+\cdots X_n$,Then as $n \to \infty$
+\begin{equation}
+    \frac{S_n}{n} \xrightarrow{a.s}  \mu,
+\end{equation}
+almost surely.
+\end{theorem}
+\begin{theorem}[Central limit theorem]
+\label{dec2018-104:theorem3}
+The Central limit theorem states that the distribution of the sample approximates a normal distribution as the sample size becomes larger,given that all the samples are equal in size,regardless of the distribution of the individual samples.
+\end{theorem}
+Given $X_1,X_2, \cdots$ follow normal distribution with mean 0 and variance 1.
+\begin{equation}
+    f_{X_i}(x)=\frac{1}{\sqrt{2}\pi}e^{-\frac{x^2}{2}} ,i \in \cbrak{1,2,\cdots}
+\end{equation}
+As $X_1,X_2,\cdots $ are i.i.d random variables therefore $X_{1}^2,X_
+{2}^2,\cdots$ are also identical and independent.
+We can write
+\begin{equation}
+    E(X^2)=Var(X) \label{dec2018-104:eq:x2}
+\end{equation}
+\begin{enumerate}
+\item \begin{align}
+    E\brak{\frac{S_{n}-n}{\sqrt{2}}}&=E\brak{\frac{\sum_{i}{(X_{i}^{2}-1)}}{\sqrt{2}}}\\
+    &={\frac{\sum_{i}E{(X_{i}^{2}-1)}}{\sqrt{2}}}\label{dec2018-104:eq:expectation}
+\end{align}
+From \eqref{dec2018-104:eq:x2} we can write
+\begin{equation}
+    E\brak{\frac{S_{n}-n}{\sqrt{2}}}=0
+\end{equation}
+\begin{align}
+    Var\brak{\frac{S_{n}-n}{\sqrt{2}}}&=Var\brak{\frac{\sum_{i}{(X_{i}^{2}-1)}}{\sqrt{2}}}\\
+    &={\frac{\sum_{i}Var{(X_{i}^{2}-1)}}{\sqrt{2}}}
+\end{align}
+\begin{align}
+    Var(X_{i}^2-1)&=\int_{-\infty}^{\infty}(X_{i}^2-1)^2 f_{X_{i}}(x)dx\\
+    &=\int_{-\infty}^{\infty}(X_{i}^4+1-2X_{i}^{2}) f_{X_{i}}(x)dx\\
+    &=2\label{dec2018-104:eq:var}
+\end{align}
+\begin{align}
+    Var\brak{\frac{S_{n}-n}{\sqrt{2}}}&=n\sqrt{2}    
+\end{align}
+Hence from theorem \ref{dec2018-104:theorem2} as $n \to \infty$
+\begin{equation}
+    \brak{\frac{S_{n}-n}{\sqrt{2}}}\sim N(0,n\sqrt{2})
+\end{equation}
+Hence \textbf{Option A is false.}
+\item Given 
+\begin{equation}
+    S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1
+\end{equation}
+Hence from theorem \ref{dec2018-104:theorem} we can write 
+\begin{align}
+    \frac{S_n}{n} \xrightarrow{i.p} Var(X)
+\end{align}
+\begin{equation}
+    \implies \frac{S_n}{n} \xrightarrow{i.p} 1
+\end{equation}
+in probability.From definition \ref{dec2018-104:in prob} we can write,
+\begin{equation}
+    \implies \Pr{\brak{\left|\frac{S_n}{n}-1\right|>\epsilon}}\to 0,\forall \epsilon>0
+\end{equation}
+Hence \textbf{Option B is false .}
+\item Given 
+\begin{equation}
+    S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1
+\end{equation}
+Hence from theorem \ref{dec2018-104:theorem} we can write 
+\begin{align}
+    \frac{S_n}{n} \xrightarrow{i.p} Var(X)
+\end{align}
+\begin{equation}
+    \implies \frac{S_n}{n} \xrightarrow{a.s} 1
+\end{equation}
+almost surely.From definition \ref{dec2018-104:with prob 1} we can write,
+\begin{equation}
+    \frac{S_{n}}{n} \xrightarrow{w.p.1} 1
+\end{equation}
+with probability 1.
+Hence \textbf{Option C is true}.
+\item Consider,
+\begin{equation}
+    E\brak{\frac{S_{n}-n}{\sqrt{n}}}=0
+\end{equation}
+using \eqref{dec2018-104:eq:x2} and \eqref{dec2018-104:eq:expectation}.
+\begin{align}
+     Var\brak{\frac{S_{n}-n}{\sqrt{n}}}&=\frac{2n}{\sqrt{n}}\\
+     &=2\sqrt{n}.
+\end{align}
+using \eqref{dec2018-104:eq:var}.From theorem \ref{dec2018-104:theorem3} we can write,
+\begin{equation}
+    \brak{\frac{S_{n}-n}{\sqrt{n}}} \sim N(0,2 \sqrt{n})\label{dec2018-104:eq:D}
+\end{equation}
+\begin{equation}
+     \Pr{\brak{\frac{S_{n}-n}{\sqrt{n}} \leq x}}= \Pr{\brak{S_{n} \leq n+\sqrt{n}x}}
+\end{equation}
+Hence using \eqref{dec2018-104:eq:D}, \textbf{Option D is false.}
+\end {enumerate}

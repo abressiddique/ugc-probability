@@ -1,0 +1,37 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $X_1,X_2,X_3,....,X_n$ be i.i.d observations from a distribution with continuous probability density function f which is symmetric around $\theta$ i.e
+\begin{align}
+    f\brak{x-\theta}=f\brak{\theta -x}
+\end{align}
+for all real x.Consider the test $H_0: \theta =0$ vs $H_1:  \theta >0$ and the sign test statistic
+\begin{align}
+    S_n = \sum_{i=1}^{n} sign(X_i)
+\end{align}
+where
+\begin{align}
+    sign(x) =
+    \begin{cases}
+    1  & x>0\\
+    0  & x=0\\
+    -1 & x<0
+    \end{cases}
+\end{align}
+Let $z_\alpha$ be the upper $100(1-\alpha)^{th}$ percentile of the standard normal distribution where $0<\alpha <1$. Which of the following is/are correct?
+\begin{enumerate}
+    \item If $\theta =0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =1 $\\
+    \item If $\theta =0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =\alpha $\\
+    \item If $\theta >0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} = 1 $\\
+    \item If $\theta >0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =\alpha $
+\end{enumerate}
+%
+\solution
+\input{solutions/2012/june/112.tex}
+
+\end{enumerate}

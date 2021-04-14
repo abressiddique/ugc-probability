@@ -1,0 +1,45 @@
+Let $X= X_1 +X_2 + \dots + X_n $,
+as $X_i 's$ are symmetric about 0.
+The mean of X is given by,
+\begin{align}
+E[X]=0 \label{dec2015-53:a}
+\end{align}
+the variance of X is given by,
+\begin{align}
+var[X]&= \sum_{i=1}^{n}(2i -1)\\
+   &= \frac{2n(n+1)}{2} - n\\
+   &= n^{2}
+\end{align}
+the standard deviation,
+\begin{align}
+\sigma_X = n \label{dec2015-53:b}
+\end{align}
+Applying Chebyshev's Inequality for the random variable X, for any $k>0$
+\begin{align}
+\pr{\abs{X-E[X]}> k\sigma_X} \leq \frac{1}{k^{2}} \label{dec2015-53:c}
+\end{align}
+let $k=\log{n} $ ,
+using \eqref{dec2015-53:a} and \eqref{dec2015-53:b} in \eqref{dec2015-53:c},
+\begin{align}
+\pr{\abs{X}> n\log{n}} \leq \frac{1}{(\log{n})^{2}}\\
+\pr{X> n\log{n}} + \pr{X< -n\log{n}} \leq \frac{1}{(\log{n})^{2}} \label{dec2015-53:e}
+\end{align}
+As, X is symmetric about 0,
+\begin{align}
+\pr{X> n\log{n}} =\pr{X< -n\log{n}} \label{dec2015-53:f}
+\end{align}
+using \eqref{dec2015-53:f} in \eqref{dec2015-53:e},
+\begin{align}
+2\pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}}\\
+\pr{X> n\log{n}} \leq \frac{1}{2(\log{n})^{2}}
+\end{align}
+as any probability is greater than 0,
+\begin{align}
+0< \pr{X> n\log{n}} \leq \frac{1}{2(\log{n})^{2}} \label{dec2015-53:d}
+\end{align}
+applying sandwich principle to \eqref{dec2015-53:d},
+\begin{align}
+\lim_{n \to \infty} 0< \lim_{n \to \infty} \pr{X> n\log{n}} \leq \lim_{n \to \infty} \frac{1}{2(\log{n})^{2}}\\
+\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n\log{n}} = 0
+\end{align}
+Hence the option.4 is correct.

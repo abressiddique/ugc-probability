@@ -73,5 +73,81 @@ A point is chosen at random from a circular disc shown below. What is the probab
 \solution
 \input{solutions/2013/june/70/assignment8.tex}
 %
+\item Let $U_1,U_2\dots,U_n$ be independent and identically distributed random variables each
+having a uniform distribution on (0,1). Then,$\lim_{n \to +\infty} \pr{U_1+U_2\dots,U_n\leq \frac{3}{4}n}$
+\begin{enumerate}
+    \item does not exist
+    \item exists and equals 0
+    \item exists and equals 1
+    \item exists and equals $\frac{3}{4}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/59.tex}
+%
+\item  Consider the quadratic equation $x^2+2U x+V=0$ where $U$ and $V$ are chosen independently and randomly from $\{1,2,3\}$ with equal probabilities. Then probability that the equation has both roots real
+\begin{enumerate}
+    \item $\frac{2}{3}$
+    \item $\frac{1}{2}$
+    \item $\frac{7}{9}$
+    \item $\frac{1}{3}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/60.tex}
+%
+\newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
+  \def\tikz@AngleOfLine(#1)(#2)#3{%
+  \pgfmathanglebetweenpoints{%
+    \pgfpointanchor{#1}{center}}{%
+    \pgfpointanchor{#2}{center}}
+  \pgfmathsetmacro{#3}{\pgfmathresult}%
+  }
+
+\item A point is chosen at random from a circular disc shown below. What is the probability that the point lies in the sector OAB?\\
+\begin{tikzpicture}[
+    colorstyle/.style={
+       circle, draw=black,fill=black,
+       thick, inner sep=0pt, minimum size=2 mm,
+       outer sep=0pt
+        },
+    scale=2]
+\draw (0,0) circle (2cm);
+\node at (0,0) [colorstyle,label=below:O]{};
+\node at (1,1.732) [colorstyle,label=above:A]{};
+\node at (1.732,1) [colorstyle,label=above right:B]{};
+\draw (0,0) -- (1,1.732);
+\draw (0,0) -- (1.732,1);
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,1.732);
+\coordinate (B) at (1.732,1);
+\tikzAngleOfLine(O)(B){\AngleStart}
+    \tikzAngleOfLine(O)(A){\AngleEnd}
+    \draw[red,<->] (O)+(\AngleStart:1cm) arc (\AngleStart:\AngleEnd:1 cm);
+    \node[circle,fill=green] at ($(O)+({(\AngleStart+\AngleEnd)/2}:1.5 cm)$) {x};
+\end{tikzpicture}\\
+( where $\angle$AOB = x radians )
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\frac{2x}{\pi}$
+        \item $\frac{x}{\pi}$
+        \item $\frac{x}{2\pi}$
+        \item $\frac{x}{4\pi}$
+    \end{enumerate}
+\end{multicols}
+%
+\solution
+\input{solutions/2013/june/16.tex}
+%
+\item Consider a parallel system with two components. The lifetimes of the two components are independent and identically distributed random variables each following an exponential distribution with mean 1. The expected lifetime of the system is:
+\begin{enumerate}[label=\Alph*)]
+    \item $1$\\[0.5pt]
+    \item $\dfrac{1}{2}$\\
+    \item $\dfrac{3}{2}$\\
+    \item $2$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/42/Assignment7.tex}
 
 \end{enumerate}

@@ -73,7 +73,51 @@ number of units selected out of first k-1 units for each k = 2, 3, ..N. Then,
 \solution
 \input{solutions/2014/dec/106/LaTex/Assignment_7.tex}
 %
-\item 
+\item Out of 6 unbiased coins, 5 are tossed independently and they all result in heads. If the 6th coin is now independently tossed, the probability of getting head is:
+\begin{enumerate}[label=(\alph*)]
+\item 1
+\item 0
+\item $\frac{1}{2}$
+\item $\frac{1}{6}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/2.tex}
+%
+\item Let $X_{1},X_{2},X_{3},..,X_{n}$ be independent random variables follow a common continuous distribution \textbf{F}, which is symmetric about 0. For i=1,2,3,..n, define 
+\begin{align}
+\tag{1.1}
+\label{eq1}
+S_{i} = 
+\begin{cases}
+1 & if \hspace{0.2cm}X_{i}>0
+\\
+-1 & if\hspace{0.2cm} X_{i}<0 \hspace{0.2cm} and
+\\
+0 & if \hspace{0.2cm}X_{i}=0
+\end{cases}
+\end{align}
+$R_{i}$=rank of $|X_{i}|$ in the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}.Which of the following statements are correct?
+\begin{enumerate}
+\item $S_{1},S_{2},..,S_{n}$ are independent and identically distributed.
+\item $R_{1},R_{2},..,R_{n}$ are independent and identically distributed.
+\item $S=\brak{S_{1},S_{2},..,S_{n}}$ and $R=\brak{ R_{1},R_{2},..,R_{n}}$ are independent.
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/111.tex}
+%
+\item Let $X_1,X_2, \cdots$ be i.i.d. $N(0,1)$ random variables.Let $S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1.$Which of the following statements are correct?
+\begin{enumerate}
+\setlength\itemsep{1em}
+\item $\frac{S_{n}-n}{\sqrt{2}}\sim N(0,1)$ for all $n\geq 1$
+\item For all $\epsilon > 0$,$\Pr{\brak{\left|\frac{S_n}{n}-2\right|>\epsilon}}\to 0$ as $n \to \infty$
+\item $\frac{S_{n}}{n} \to 1$ with probability 1
+\item $\Pr({S_{n} \leq n+\sqrt{n}x}) \to \Pr({Y \leq x}) \forall x\in R$ ,where $Y \sim N(0,2)$
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/104.tex}
 
 
 % \item Consider a Markov Chain with state space $\cbrak{0,1,2}$ and transition matrix
