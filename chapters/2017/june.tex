@@ -4,181 +4,19 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 
-\item 	Let $\vec{A}$ be a $4 \times 4$ matrix. Suppose that the null space $N(\vec{A})$ of $\vec{A}$ is
-	\begin{align}
-		\cbrak{(x,y,z,w) \in \vec{R}^4 : x + y + z = 0 , x + y + w = 0}
-	\end{align}
-Then which one of the following is correct
-\begin{enumerate}
-\item  dim(column space$(\vec{A})) = 1$ 
-\item dim(column space$(\vec{A})) = 2$
-\item rank$(\vec{A}) = 1$
-\item $\vec{S}= \cbrak{(1, 1, 1, 0), (1, 1, 0, 1)}$ is a basis of $N(\vec{A})$
-\end{enumerate}
 %
-%
-\solution
-\input{./solutions/2017/june/27/solution.tex}
-\item Let $\vec{A}$ and $\vec{B}$ be real invertible matrices such that 
+\item X and Y are independent random variables each having the density
 \begin{align}
-    \vec{AB}=-\vec{BA}\label{eq:eq:solutions/2017/june/28/eq1}.
+    f(t) = \displaystyle\frac{1}{\pi} \frac{1}{1+{t}^2} -\infty < t < +\infty
 \end{align}
-Then
-\begin{enumerate}
-    \item trace{$\vec{A}$} = trace($\vec{B}$) = 0
-    \item trace{$\vec{A}$} = trace($\vec{B}$) = 1
-    \item trace{$\vec{A}$} = 0, trace($\vec{B}$) = 1
-    \item trace($\vec{A}$) = 1, trace($\vec{B}$) = 0
+Then the density function of $\displaystyle\frac{X+Y}{3}$ for \\$-\infty <$ t $< +\infty$ is\bigskip
+    \begin{enumerate}\itemsep0.5cm
+        \item $\displaystyle\frac{6}{\pi} \frac{1}{4+9{t}^2}$
+        \item $\displaystyle\frac{6}{\pi} \frac{1}{9+4{t}^2}$
+        \item $\displaystyle\frac{3}{\pi} \frac{1}{1+9{t}^2}$
+        \item $\displaystyle\frac{3}{\pi} \frac{1}{9+{t}^2}$
+    \end{enumerate}
 \end{enumerate}
 %
 \solution
-\input{./solutions/2017/june/28/solution.tex}
-\item Let $\vec{A}$ be an n $\times$ n self-adjoint matrix with eigenvalues $\lambda_1, \cdots, \lambda_2$.
-Let,\begin{align} \norm{\vec{X}}_2=\sqrt{\vert\vec{X}_{1}^{2}\vert+\cdots+\vert\vec{X}_{n}^{2}\vert}\end{align} for $\vec{X}$=$(\vec{X}_{1},\cdots,\vec{X}_{n})\in \mathbb{C}^n$. If \begin{align}
-p(\vec{A})=a_0\vec{I}+a_1\vec{A}+\cdots+a_n\vec{A}^n
-\end{align}
-then $sup_{\norm{\vec{X}}_{2}=1}\norm{p(\vec{A})\vec{X}}_2$ is equal to
-%
-\\
-\solution
-\input{./solutions/2017/june/29/solution.tex}
-\item Let $p \brak{x}= \alpha x^2+\beta x + \gamma$ be a polynomial, where $\alpha,\beta,\gamma \epsilon R$. Fix $X_0 \epsilon R$. Let $S=\{\brak{a,b,c}  \epsilon R^3: p \brak{x}= a \brak{x-x_0}^2+b \brak{x-x_0}+ c\}$ for all $x\epsilon R$. Find the number of elements in S is
-\begin{enumerate}
-    \item 0
-    \item 1
-    \item Strictly greater than 1 but finite
-    \item Infinite
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/30/solution.tex}
-\item Let
-\begin{align}
-\vec{A}=\myvec{1&0&2\\1&-2&0\\0&0&-3}
-\end{align}
-and $\vec{I}$ be the $3\times3$ identity matrix. If 
-\begin{align}
-6\vec{A}^{-1}=a\vec{A}^2+b\vec{A}+c\vec{I} \label{eq:solutions/2017/june/31/eq:1}
-\end{align} for $a,b,c \in \mathbb{R}$ then (a,b,c) equals
-\begin{enumerate}
-\item (1,2,1)\\
-\item (1,-1,2)\\
-\item (4,1,1)\\
-\item (1,4,1)
-\end{enumerate}
-\solution
-\input{./solutions/2017/june/31/solution.tex}
-
-%
-\item Find the Eigenvalues of the matrix,
-\begin{align}
-\vec{A} = \myvec{1 & 1 & 2 \\ 1 & -2 & 5 \\ 2 & 5 & -3 }\label{eq:solutions/2017/june/32/eq:1}
-\end{align}
-\begin{enumerate}
-\item -4, 3, -3
-\item 4, 3, 1
-\item 4, -4$\pm\sqrt{13}$
-\item 4, -2$\pm\sqrt{7}$
-\end{enumerate}
-%
-%
-\solution
-\input{./solutions/2017/june/32/solution.tex}
-\item Consider the vector space V of real polynomials of degree less than or equal to n. Fix distinct real numbers $a_0, a_1, \cdots, a_k$. For $p \in V$
-\begin{align}
-    max\cbrak{\abs{p(a_j)}: 0\leq j \leq k}
-\end{align}
-defines a norm on V
-\begin{enumerate}
-    \item only if $k<n$
-    \item only if $k\ge n$
-    \item if $ k+1\leq n$ 
-    \item if $k \ge n+1$
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/70/solution.tex}
-\item Let \textbf{V} be the vector space of polynomials of degree at most 3 in a variable x with coefficients in $\mathbb{R}$. Let \textbf{T}=d/dx be the linear transformation of \textbf{V} to itself given by differentiation.\\
-
-Which of the following are correct?\\
-\begin{enumerate}
-\item $\vec{T}$ is invertible
-\item 0 is an eigenvalue of $\vec{T}$
-\item There is a basis with respect to which the matrix of \textbf{T} is nilpotent.
-\item The matrix of \textbf{T} with respect to the basis \myvec{1,1+x,1+x+x^2,1+x+x^2+x^3} is diagonal.
-\end{enumerate}
-\solution
-\input{./solutions/2017/june/71/solution.tex}
-\item Let $m,n,r$ be natural numbers. Let $A$ be an $m\times n$ matrix with real entries such that $(AA^t)^r = I$, where $I$ is the $m \times m$ is identity matrix and $A^t$ is the transpose of the matrix $A$. We can conclude that\\
-\begin{enumerate}
-\item
-$m = n$\\
-\item
-$AA^t$ is invertible\\
-\item
-$A^tA$ is invertible\\
-\item
-if $m=n$, then $A$ is invertible
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/72/solution.tex}
-\item Let $\vec{A}$ be a $n\times n$ real matrix with $\vec{A}^2=\vec{A}$. Then
-\begin{enumerate}
-	\item the eigenvalues of $\vec{A}$ are either 0 or 1
-	\item $\vec{A}$ is a diagonal matrix with diagonal entries 0 or 1
-	\item $rank(\vec{A})=trace(\vec{A})$
-	\item if $rank(\vec{I-A})=trace(\vec{I-A})$
-\end{enumerate}
-%
-%
-\solution
-\input{./solutions/2017/june/73/solution.tex}
-\item For any $n\times n$ matrix $B$, let $N(B)=\{X\in \mathbb{R}^n:BX=0\}$ be the null space of $B$. Let $A$ be a $4\times 4$ matrix with $dim(N(A-4I))=2, dim(N(A-2I))=1$ and $rank(A)=3$
-Which of the following are true?
-\begin{enumerate}
-\item 0,2 and 4 are eigenvalues of A
-\item determinant(A)=0
-\item A is not diagonalizable
-\item trace(A)=8
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/74/solution.tex}
-\item Which of the following 3x3 matrices are diagonizable over $\mathbb{R}?$\\
-\begin{enumerate}
-    \item \myvec{1&2&3\\0&4&5\\0&0&6}
-    \item \myvec{0&1&0\\-1&0&0\\0&0&1}
-    \item \myvec{1&2&3\\2&1&4\\3&4&1}
-    \item \myvec{0&1&2\\0&0&1\\0&0&0}
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/75/solution.tex}
-\twocolumn
-\item Let $\vec{A} = \myvec{3 & 1 & 2 \\ 1 & 2 & 3 \\ 2 & 3 & 1  }$ and $\vec{Q(X) = X^TAX}$ for $\vec{X} \in \mathbb{R}^{3}$. Then
-\begin{enumerate}
-	\item $\vec{A}$ has exactly two positive eigen values.
-	\item all the eigen values of $\vec{A}$ are positive.
-	\item $\vec{Q(X)} \geq 0 $ $\forall$ $\vec{X}$ $\in$ $\mathbb{R}^3$
-	\item $\vec{Q(X)} < 0 $ for some $\vec{X}$ $\in$ $\mathbb{R}^3$
-\end{enumerate}
-%
-%
-\solution
-\input{./solutions/2017/june/77/solution.tex}
-\item Consider the matrix
-\begin{align}
-A(x) = \myvec{1+x^2&7&11\\3x&2x&4\\8x&17&13} & ;x\in \vec{R}.
-\end{align}
-Then,
-\begin{enumerate}
-\item A(x) has eigenvalue 0 for some $x\in \vec{R}$.
-\item 0 is not an eigenvalue of A(x) for any $x\in \vec{R}$.
-\item A(x) has eigenvalue 0 $\forall x\in \vec{R}$.
-\item A(x) is invertible $\forall x\in \vec{R}$.
-\end{enumerate}
-%
-\solution
-\input{./solutions/2017/june/78/solution.tex}
-\end{enumerate}
+\input{./solutions/2017/june/52.tex}

@@ -1,0 +1,26 @@
+Let us consider the random variables X and Y.
+    The Characteristic function of the probability density $f(t)$ is
+    \begin{align}
+        g(w) =\hspace{0.2cm} & \int_{-\infty}^{\infty}  f(t) {e}^{iwt} dt                                         \\[0.2cm]
+        =\hspace{0.2cm}      & \int_{-\infty}^{\infty}  \displaystyle\frac{1}{\pi} \frac{1}{1+{t}^2} {e}^{iwt} dt \\[0.2cm]
+        =\hspace{0.2cm}      & e^{-\abs{w}}\hspace{0.2cm}, -\infty<w<\infty
+    \end{align}
+    The product of the Characteristic function of \\probability density of X and Y is
+    \begin{align}
+        h(w) = g_1(w) \times g_2(w) = {e}^{-2\abs{w}}
+    \end{align}
+    To get the probability density of X+Y, we find the inverse characteristic function of h(w). But since there is a one to one correspondence between a function and its fourier transform and
+$h(w) = g(2w)$
+    \begin{align}
+        F_{X+Y}(t) =\hspace{0.2cm} & \frac{1}{2}f\brak{\frac{t}{2}}                                        \\[0.2cm]
+        =\hspace{0.2cm}            & \frac{1}{2\pi} \frac{4}{4+{t}^2} \hspace{0.2cm},-\infty<t<\infty
+    \end{align}
+    We know that if a random variable M has a\\probability density $f_M(x)$, then the probability \\density of random variable kM is
+    \begin{align}
+        f_{kM}\brak{x} = \frac{1}{\abs{k}} f_M\brak{\frac{x}{\abs{k}}}
+    \end{align}
+    Probability density of $Z = \displaystyle\frac{X+Y}{3}$ given $F_{X+Y}(t)$ is
+\begin{align}
+    F_{Z}(t) = & 3\times \displaystyle f_{X+Y}(3t) \\
+    =          & \frac{6}{\pi} \frac{1}{4+9{t}^2}
+\end{align}

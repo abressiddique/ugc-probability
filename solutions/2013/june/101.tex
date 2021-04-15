@@ -1,0 +1,109 @@
+\newcommand{\Integral}[2]{\ensuremath{\int\limits_{#1}^{#2}}}
+PDF of $X_i$ is
+\begin{align}
+    f_{X_i}(x)=\begin{cases}\lambda_i e^{-\lambda_i x}, &x\geq 0\\
+                0, &x<0\nonumber
+    \end{cases}    
+\end{align} 
+Mean of $X_i$ is expressed as
+\begin{align}
+    \mean{X_i}&=\Integral{-\infty}{\infty}x f_{X_i}(x) dx\nonumber\\
+              &=\Integral{-\infty}{0}0 dx + \Integral{0}{\infty}x \lambda_i e^{-\lambda_i x}\nonumber\\
+              &=\frac{1}{\lambda_i}\label{june/2013/101a}
+\end{align}
+From \eqref{june/2013/101a}and $\mean{X_i}=1$, we have $\lambda_i=1 \forall  i \geq1$
+Now, for some constant $c\geq0$
+\begin{align}
+    \pr{X_n>c}&=\Integral{c}{\infty}f_{X_n}(x)dx\nonumber\\
+              &=\Integral{c}{\infty}e^{-x}dx\nonumber\\
+              %&=-e^{-x}\Big|_c^{\infty}\nonumber\\
+              &=e^{-c}\label{june/2013/101b}
+\end{align}
+\textbf{Borel-Cantelli Lemma}:\\
+Let $E_1$,$E_2$,... be a sequence of events in some probability space. The Borel–Cantelli lemma states that, if the sum of the probabilities of the events $E_n$ is finite
+\begin{align}
+    \sum_{n=1}^{\infty}\pr{E_n}&<\infty
+\end{align}
+then the probability that infinitely many of them occur is 0
+\begin{align}
+    \pr{\lim_{n \rightarrow \infty}\sup E_n}&=0
+\end{align}
+\textbf{Second Borel-Cantelli Lemma}:\\
+If the events $E_n$ are independent and the sum of the probabilities of the $E_n$ diverges to infinity, then the probability that infinitely many of them occur is 1.
+If for independent events $E_1,E_2,...$
+\begin{align}
+    \sum_{n=1}^{\infty}\pr{E_n}&=\infty
+\end{align}
+Then
+\begin{align}
+    \pr{\lim_{n \rightarrow \infty}\sup E_n}&=1
+\end{align}
+\bigskip
+\begin{enumerate}
+    \item \textbf{Option 1:} 
+    We can say the events $X_n>\log n$ are independent $\forall n\geq 1$ as $X_n$ are independent random variable.
+    
+    From \eqref{june/2013/101b}
+    \begin{align}
+        \sum_{n=1}^{\infty}\pr{X_n > \log n} &=\sum_{n=1}^{\infty}e^{-\log n}\nonumber\\ &=\sum_{n=1}^{\infty}\frac{1}{n}\nonumber\\
+                                            &= \infty  \text{ (Cauchy's Criterion)}\nonumber
+    \end{align}
+    Now, from second Borel-Cantelli lemma
+    \begin{align}
+        &\pr{X_n>\log n \text{ for infinitely many }n\geq1}\nonumber\\
+        &=\pr{\lim_{n \rightarrow \infty}\sup X_n>\log n}\nonumber\\
+        &=1\nonumber
+    \end{align}
+    $\therefore$ Option 1 is correct. 
+    
+    \item\textbf{Option 2:} We can say the events $X_n>2$ are independent $\forall n\geq 1$ as $X_n$ are independent random variable.
+    
+    From \eqref{june/2013/101b}
+    \begin{align}
+        \sum_{n=1}^{\infty}\pr{X_n > 2} &= \sum_{n=1}^{\infty}e^{-2}\nonumber\\
+                                            &= \infty\nonumber
+    \end{align}
+    Now, from second Borel-Cantelli lemma
+    \begin{align}
+        &\pr{X_n>2 \text{ for infinitely many }n\geq1}\nonumber\\
+        &=\pr{\lim_{n \rightarrow \infty}\sup X_n>2}\nonumber\\
+        &=1\nonumber
+    \end{align}
+    $\therefore$ Option 2 is correct.
+    
+    \item \textbf{Option 3:} We can say the events $X_n>\frac{1}{2}$ are independent $\forall n\geq 1$ as $X_n$ are independent random variable.
+    
+    From \eqref{june/2013/101b}
+    \begin{align}
+        \sum_{n=1}^{\infty}\pr{X_n > \frac{1}{2}} &= \sum_{n=1}^{\infty}e^{-\frac{1}{2}}\nonumber\\
+                                            &= \infty\nonumber
+    \end{align}
+    Now, from second Borel-Cantelli lemma
+    \begin{align}
+        &\pr{X_n>\frac{1}{2} \text{ for infinitely many }n\geq1}\nonumber\\
+        &=\pr{\lim_{n \rightarrow \infty}\sup X_n>\frac{1}{2}}\nonumber\\
+        &=1\nonumber
+    \end{align}
+    $\therefore$ Option 3 is incorrect.
+    \item \textbf{Option 4:} We can say the events $X_n>\log n$ are independent $\forall n\geq 1$ as $X_n$ are independent random variable.
+    
+    Let the event $X_n > \log n,X_{n+1}>\log (n+1)$ be represented by $E_n$'
+    
+    From \eqref{june/2013/101b}
+    \begin{align}
+        &\sum_{n=1}^{\infty}\pr{E_n}\nonumber\\
+        &= \sum_{n=1}^{\infty}\pr{X_n>\log n}\pr{X_{n+1}>\log (n+1)}\nonumber\\
+        &=\sum_{n=1}^{\infty}e^{-\log n}e^{-\log (n+1)}\nonumber\\
+        &=\sum_{n=1}^{\infty}\frac{1}{n(n+1)}\nonumber\\
+        &=\sum_{n=1}^{\infty}\frac{1}{n}-\frac{1}{n+1}\nonumber\\
+        &=1
+    \end{align}
+    Now, from Borel-Cantelli lemma
+    \begin{align}
+        &\pr{E_n\text{ for infinitely many }n\geq1}\nonumber\\
+        &=\pr{\lim_{n \rightarrow \infty}\sup ( X_n>\log n,X_{n+1}>\log (n+1))}\nonumber\\
+        &=0\nonumber
+    \end{align}
+    $\therefore$ Option 4 is correct.
+\end{enumerate}
+\vspace{0.5cm}\centering \boxed{\solution{\text{Options 1, 2, 4}}}
