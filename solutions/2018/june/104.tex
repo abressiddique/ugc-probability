@@ -1,0 +1,77 @@
+\begin{equation}
+    E(X^2) = Var(X)+(E(X))^2 = 18
+\end{equation}
+Similarly,
+\begin{equation}
+    E(Y^2) = Var(Y)+(E(Y))^2 = 8
+\end{equation}
+We can use the Covariance inequality for this question,
+\begin{equation}
+  ({Cov(X,Y)})^2\leq Var(X)Var(Y)
+\end{equation}
+The proof of this inequality is as shown,
+\begin{align}
+\nonumber    Var\brak{\dfrac{X}{\sigma_X}\pm\dfrac{Y}{\sigma_Y}} &= Var\brak{\dfrac{X}{\sigma_X}}+Var\brak{\dfrac{\pm Y}{\sigma_Y}}\\[6pt]
+    &+2Cov\brak{\dfrac{X}{\sigma_X},\dfrac{\pm Y}{\sigma_Y}}\\
+\nonumber    &=\dfrac{1}{{\sigma_X}^2}Var(X)+\dfrac{1}{{\sigma_Y}^2}Var(Y)\\[6pt]
+    &+2 Cov\brak{\dfrac{X}{\sigma_X},\dfrac{\pm Y}{\sigma_Y}}\\[6pt]
+    &=2\pm2\dfrac{Cov(X,Y)}{{\sigma_X}{\sigma_Y}}
+\end{align}
+Since Variance is always positive,
+\begin{align}
+    Var\brak{\dfrac{X}{\sigma_X}\pm\dfrac{Y}{\sigma_Y}}\geq 0
+    \\[6pt]
+    2\pm2\dfrac{Cov(X,Y)}{{\sigma_X}{\sigma_Y}} \geq 0
+    \\[6pt]
+    1\pm1\dfrac{Cov(X,Y)}{{\sigma_X}{\sigma_Y}}\geq 0
+    \\[6pt]
+    \abs{({Cov(X,Y)})}\leq (\sigma_X)(\sigma_Y)
+    \\
+    ({Cov(X,Y)})^2\leq Var(X)Var(Y)
+\end{align}
+\begin{enumerate}
+\item
+Substituting values of variance we get,
+\begin{equation}\label{june/2018/104cov}
+    -6\leq{Cov(X,Y)}\leq 6
+\end{equation}
+\textbf{Therefore, option A is incorrect}.\\
+\item
+From equation \eqref{june/2018/104cov},
+\begin{equation}
+    {Cov(X,Y)}=E(XY)-E(X)E(Y)
+\end{equation}
+\begin{align}
+    -6\leq E(XY)-E(X)E(Y)\leq 6
+\end{align}
+\begin{equation}\label{june/2018/104exy}
+    0\leq E(XY)\leq12
+\end{equation}
+Also, if X and Y are independent,
+\begin{equation}
+    E(XY)=E(X)E(Y)=6
+\end{equation}
+\textbf{Therefore, Option B is incorrect.}\\
+\item
+Now,
+\begin{align}
+    Var(X+Y)&=Var(X)+Var(Y)+2Cov(X,Y)\\
+    &=13+2Cov(X,Y)
+\end{align}
+From equation \eqref{june/2018/104cov},
+\begin{equation}
+    1\leq Var(X+Y)\leq 25
+\end{equation}
+\textbf{Therefore, Option C is correct.}\\
+\item
+Now,
+\begin{align}
+    E(X+Y)^2 &= E(X^2)+E(Y^2)+2E(XY)\\
+    E(X+Y)^2 &= 26+2E(XY)
+\end{align}
+From equation \eqref{june/2018/104exy},
+\begin{equation}
+    26\leq E(X+Y)^2\leq50
+\end{equation}
+\textbf{Therefore, Option D is correct.}\\
+\end{enumerate}

@@ -1,0 +1,40 @@
+For a Poisson variable X,
+\begin{align}
+\pr{X=k} = \frac{\lambda^{k}e^{-\lambda}}{k!}
+\end{align}
+Since $\pr{X_1=2} = \pr{X_1=1}$,
+\begin{align}
+\frac{{\lambda_1}^{2}e^{-{\lambda_1}}}{2!} &= \frac{{\lambda_1}^{1}e^{-{\lambda_1}}}{1!} \\
+\lambda_1 &= 2!/1! = 2
+\end{align}
+Similarly, as $\pr{X_2=2} = \pr{X_2=3}$,
+\begin{align}
+\frac{{\lambda_2}^{2}e^{-{\lambda_2}}}{2!} &= \frac{{\lambda_2}^{3}e^{-{\lambda_2}}}{3!} \\
+\lambda_2 &= 3!/2! = 3
+\end{align}
+Also we know for a Poisson variable X, the following holds true:
+\begin{align}
+\E[X] &= \lambda \\
+\Var[X] &= \lambda \label{june/2017/108/eq1} \\
+\Var[X] &= \E[X^2] - (\E[X])^2 \label{june/2017/108/eq2} 
+\end{align}
+Now, for the variance of $(X_1 - 2X_2)$
+\begin{align}
+\Var[X_1 - 2X_2] &= \E[(X_1 - 2X_2)^2] - (\E[X_1 - 2X_2])^2 \nonumber \\
+&= \E[X_1^2 + 4X_2^2 - 4X_1X_2] \nonumber \\
+&- (\E[X_1] - 2\E[X_2])^2 \nonumber \\
+&= \E[X_1^2] - (\E[X_1])^2 + 4\E[X_2^2] \nonumber \\
+& -4(\E[X_2])^2) + 4\E[X_1X_2] \nonumber \\
+& + 4\E[X_1]\E[X_2]
+\end{align}
+Since the variables are independent:
+\begin{align}
+\E[X_1X_2] = \E[X_1]\E[X_2]
+\end{align}
+Substituting equations \eqref{june/2017/108/eq1} and \eqref{june/2017/108/eq2}, we get:
+\begin{align}
+\Var[X_1 - 2X_2] &= \Var[X_1] + 4(\Var[X_2]) \nonumber \\
+&- 4\E[X_1][X_2] + 4\E[X_1][X_2] \nonumber \\
+&= \lambda_1 + 4\lambda_2 = 2 + 4(3) = 14
+\end{align}
+Hence option (a) 14 is correct.

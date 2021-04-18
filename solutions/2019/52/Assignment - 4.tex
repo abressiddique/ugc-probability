@@ -1,0 +1,46 @@
+Consider a continuous random variable X so that the function \textit{f} can be probability density function if and only if it satisfies the condition 
+\begin{align}
+    \int_{-\infty}^{\infty}f_{X}(u)du = 1 \label{june/2019/52/equation 1}
+\end{align}
+Hence by applying the \eqref{june/2019/52/equation 1} for the function \textit{f} we get
+\begin{align}
+    \int_{-\infty}^{\infty}ce^{-u^{4}}du = 1\\
+    2c\int_{0}^{\infty}e^{-u^{4}}du = 1\label{june/2019/52/equation 2}\\
+    2c\int_{0}^{\infty}e^{-t}\frac{dt}{4t^{\frac{3}{4}}} = 1\\
+    \frac{c}{2}\int_{0}^{\infty}e^{-t}t^{-\frac{3}{4}}dt = 1\label{june/2019/52/equation 3}
+\end{align}
+We know that gamma function for any real positive $\alpha$
+\begin{align}
+    \Gamma(\alpha) = \int_0^\infty x^{\alpha - 1} e^{-x} dx \label{june/2019/52/gammafunction}
+\end{align}
+Hence by using \eqref{june/2019/52/gammafunction} in \eqref{june/2019/52/equation 3} we get
+\begin{align}
+    \frac{c}{2}\Gamma(1/4) = 1\\
+    c=\frac{2}{\Gamma(1/4)}
+\end{align}
+Hence $c = \displaystyle\frac{2}{\Gamma(1/4)}$ and option \eqref{june/2019/52/option 1} is correct.\newline\newline
+The CDF of \textit{f} by using \eqref{june/2019/52/gammafunction} when x is positive we get
+\begin{align}
+    F_{X}(x) &= \int_{-\infty}^{x}f(u)du\\
+             &= \frac{2}{\Gamma(\frac{1}{4})}\int_{-\infty}^{0}e^{-u^{4}}du+\frac{2}{\Gamma(\frac{1}{4})}\int_{0}^{x}e^{-u^{4}}du\\
+             &= \frac{2}{4\Gamma(\frac{1}{4})}\int_{0}^{\infty}e^{-t}{t^{\frac{-3}{4}}}dt+\frac{2}{4\Gamma(\frac{1}{4})}\int_{0}^{x^{4}}e^{-t}{t^{\frac{-3}{4}}}dt\\
+             &=\frac{1}{2\Gamma(\frac{1}{4})}\Gamma\brak{\frac{1}{4}}+ \frac{1}{2\Gamma(\frac{1}{4})}\int_{0}^{x^{4}}e^{-t}{t^{\frac{-3}{4}}}dt\\
+             &=\frac{1}{2}+ \frac{1}{2\Gamma(\frac{1}{4})}\brak{\Gamma\brak{\frac{1}{4}}-\Gamma\brak{\frac{1}{4},x^{4}}}\\
+             &=\frac{1}{2}+ \frac{1}{2\Gamma(\frac{1}{4})}\gamma\brak{\frac{1}{4},x^{4}}
+\end{align}
+The CDF of \textit{f} by using \eqref{june/2019/52/gammafunction} when x is negative we get
+\begin{align}
+    F_{X}(x) &=\int_{-\infty}^{x}f(u)du\\
+             &=\int_{-\infty}^{x}\frac{2}{\Gamma(1/4)}e^{-u^{4}}du\\
+             &=\frac{2}{4\Gamma\brak{\frac{1}{4}}}\int_{x^{4}}^{\infty}e^{-t}t^{\frac{-3}{4}}dt\\
+             &=\frac{1}{2\Gamma\brak{\frac{1}{4}}}\int_{x^{4}}^{\infty}e^{-t}t^{\frac{-3}{4}}dt\\
+             &=\frac{1}{2\Gamma\brak{\frac{1}{4}}}\Gamma\brak{\frac{1}{4},x^{4}}
+\end{align}
+Hence the CDF of \textit{f} is 
+\begin{align}
+    F_{X}(x)=
+    \begin{cases}
+      \displaystyle\frac{1}{2}+ \frac{1}{2\Gamma(\frac{1}{4})}\gamma\brak{\frac{1}{4},x^{4}}  &\text{if x$>$=0} \\\\
+      \displaystyle\frac{1}{2\Gamma\brak{\frac{1}{4}}}\Gamma\brak{\frac{1}{4},x^{4}} & \text{if x$<$0}
+    \end{cases}
+\end{align}

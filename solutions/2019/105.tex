@@ -1,0 +1,91 @@
+This is a Markov Chain ,Where the state space consists of the integers $(i=0,\pm1,\pm2,\pm3,...)$ and transition  probability is given as
+\begin{align}
+   P_{i,i+1} &= p =\frac{1}{2}
+   \\
+   P_{i,i-1} & =q =\frac{1}{2}
+\end{align}
+\begin{tikzpicture}
+    
+    \node[state]  (p) {i-1};
+    \node[state,right=of p]  (q) {i};
+    \node[state,right=of q]  (r) {i+1};
+    \draw[every loop]
+    (p) edge[bend right] node {$p $} (q)
+    (q) edge[bend right] node {$q $} (p)
+    (q) edge[bend right] node {$p$} (r)
+    (r) edge[bend right] node {$q $} (q);
+   
+\end{tikzpicture}
+Let $P_{i,j}^{n}$ denotes the probability of being in state j after nth transition starting from state i.
+\begin{enumerate}
+    \item We know that for state j in Markov chain to be \textbf{aperiodic} ,Then their  exist k such that $P_{j,j}^{n} > 0$ for all $n \geq k$. but for to return to same state j after n transitions  ,Number of forward steps should be equal to Backward steps , i.e for odd n in (2m +1)form
+    \begin{align}
+        P_{j,j}^{2m+1}&=0  
+        \label{2019/105/eq:eq1}
+    \end{align}
+    when n is even in 2m form
+    \begin{align}
+        P_{j,j}^{2m}&=\binom{2m}{m}p^{m}q^{m}
+     \\
+     &=\frac{(2m)!}{m!.m!}p^{m}q^{m}
+     \label{2019/105/eq:eq2}
+    \end{align}
+    ,As for odd n $P_{j,j}^{n} = 0$ ,$P_{j,j}^{n} > 0$ for all $n \geq k$ is not possible .which implies  all states are \textbf{Periodic}
+  
+    Option (1) is \textbf{incorrect}. 
+    \item 
+In a Markov Chain for state j to be recurrent then it should satisfy following condition
+\begin{align}
+     \lim_{t\to\infty}\sum_{n=1}^t P_{j,j}^{n}&=\infty
+\end{align}
+using Stirling approximation in equation \eqref{2019/105/eq:eq2} 
+\begin{align}
+    P_{j,j}^{2m} &=\frac{((2m)^{2m +\frac{1}{2}}).e^{-2m}.(2\pi)^{\frac{1}{2}}}{m^{m+\frac{1}{2}}.e^{-m}.m^{m+\frac{1}{2}}.e^{-m}.2\pi}.p^{m}q^{m}
+    \\
+    &=\frac{(4pq)^{2m}}{(m\pi)^{\frac{1}{2}}}
+    \label{2019/105/eq:eq3}
+\end{align}
+In this question $p =\frac{1}{2}=q$,then using \eqref{2019/105/eq:eq1} and \eqref{2019/105/eq:eq3}
+\begin{align}
+    \lim_{t\to\infty}\sum_{n=1}^t P_{j,j}^{n}&=\sum_{n=2k,k=1}^{\infty}\frac{1}{(\frac{n}{2}\pi)^{\frac{1}{2}}}
+\end{align}
+Since $\frac{1}{n^{\frac{1}{2}}}$ is divergent,
+\begin{align}
+     \lim_{t\to\infty}\sum_{n=1}^t P_{j,j}^{n}& = \infty
+\end{align}
+Therefore state j is recurrent ,as what we calculated is independent of j ,all states are \textbf{recurrent }.
+The first-passage-time probability, $f_{i,j}(n)$, of a Markov chain is the probability,given as 
+\begin{equation}
+\resizebox{.9\hsize}{!}{$f_{i,j}(n)=\pr{X_{n}=j,X_{n-1}\neq j,X_{n-2}\neq j,\dots X_{1}\neq j|X_{0}=i}$}
+\end{equation}
+The first-passage time $T_{j,j}$from a state j back to itself is of particular importance. It has the PMF $f_{j,j}(n)$ amd Distribution function $F_{j,j}(n)$
+\begin{align}
+    F_{j,j}(n)&=\sum_{k=0}^n f_{j,j}(k)
+    \label{2019/105/eq:eq4}
+\end{align}
+We Know that all states are recurrent .Now i will find whether they are null recurrent or positive recurrent .
+For positive recurrent 
+\begin{align}
+    \overline{T_{j,j}}& < \infty
+\end{align}
+For null recurrent 
+\begin{align}
+    \overline{T_{j,j}}& = \infty
+\end{align}
+Where $\overline{T_{j,j}}$ is mean time to enter state j starting from j.
+Now calculating $\overline{T_{j,j}}$ using below formula,
+\begin{align}
+    \overline{T_{j,j}}&=1 + \sum _{k=0}^n (1 - F_{j,j}(k))
+    \label{2019/105/eq:eq5}
+\end{align}
+Using \eqref{2019/105/eq:eq5} and \eqref{2019/105/eq:eq4},We get 
+\begin{align}
+    \overline{T_{j,j}}& = \infty
+\end{align}
+Therefore all states are null recurrent.
+Option(3) is \textbf{correct}
+ \item
+    Since all states are recurrent,they communicate with each other ,therefore Markov chain is irreducible , option (2) is \textbf{correct}
+ \item As all states are null recurrent , option (4) is \textbf{incorrect} 
+\end{enumerate}
+Therefore correct options are \textbf{2,3}
