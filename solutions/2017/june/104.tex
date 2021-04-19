@@ -1,0 +1,51 @@
+We using convergence in almost surely and Strong law of large number (SLLN)
+\begin{enumerate}
+\item {\em Almost sure convergence : }Let $X_{1}, X_{2}, \ldots$ be an infinite sequence of random variables. We shall say that the sequence $\left\{X_{i}\right\}$ converges with probability 1 (or converges almost surely (a.s.)) to a random variable $Y$, if 
+\begin{align}
+\pr{\lim _{n \rightarrow \infty} X_{n}=Y}=1 \\ 
+\text{and we write}, X_{n} \stackrel{a . s .}{\rightarrow} Y
+\end{align} 
+\item {\em SLLN : }Let $X_{n}$ be i.i.d with $\mathbf{E}\left[\left|X_{1}\right|\right]<\infty$. Then, as $n \rightarrow \infty$ , we have
+\begin{align}
+\dfrac{S_{n}}{n} \stackrel{\text { a.s. }}{\rightarrow} \mathbf{E}\left[X_{1}\right]\implies \dfrac{S_{n}}{n} \stackrel{\text { P }}{\rightarrow} \mathbf{E}\left[X_{1}\right]\\
+,\text{where} \, S_n = X_1 + \cdots + X_n
+\end{align}   
+also,
+\begin{align}
+X_i \stackrel{a.s.}{\rightarrow} X \implies g(X_i) \stackrel{a.s.}{\rightarrow} g(X)
+\label{june/2017/104Eq}  
+\end{align}
+\end{enumerate}
+\begin{enumerate}[label=\alph*)]
+\item\begin{align}
+\dfrac{1}{n}\left(X_{1}+\cdots+X_{n}\right) \rightarrow E(X)\in(-1,2)\\
+\text{as} \, n\rightarrow\infty,
+\end{align}
+according to strong law of large numbers (SLLN).\\
+So, option $(\mathrm{A})$ is incorrect.
+\item using this \ref{june/2017/104Eq} , we solve as
+\begin{align}
+\left\{\dfrac{1}{2 n} \sum_{i=1}^{n} X_{2 i}-\dfrac{1}{2 n} \sum_{i=1}^{n} X_{2 i-1}\right\}&\stackrel{a.s.}{\rightarrow}\left\{\dfrac{nX}{2 n}-\dfrac{nX}{2 n}\right\}\\
+&=0
+\end{align}
+option $(\mathrm{B})$ is correct.
+\item  Similarly, Let $M=\sup (S) .$ Then,
+\begin{align}
+x \leq M, &\quad \forall x \in S \\
+\forall \epsilon>0,& \quad(M-\epsilon, M] \cap S \neq \emptyset
+\end{align}
+where, $S$ be a nonempty subset of $\mathbb{R}$ with an upper bound. Using $X_i \stackrel{a.s.}{\rightarrow} X$ this , we  conclude that
+\begin{align}
+\sup \left\{X_{1}, X_{2}, \ldots\right\}&=2 \;almost\; surely
+\end{align}
+\item Let $m=\inf (S)$. Then
+\begin{align}
+x \geq m, & \quad \forall x \in S \\
+\forall \epsilon>0, &\quad {[m, m+\epsilon] \cap S \neq \emptyset}
+\end{align}
+where, $S$ be a nonempty subset of $\mathbb{R}$ with an lower bound. Again using $X_i \stackrel{a.s.}{\rightarrow} X$ this , we conclude that
+\begin{align}
+\inf \left\{X_{1}, X_{2}, \ldots\right\}&=-1 \;almost\; surely
+\end{align}
+Hence $(\mathrm{B}),(\mathrm{C})$ and $(\mathrm{D})$ are correct options.
+\end{enumerate}

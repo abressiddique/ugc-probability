@@ -5,143 +5,19 @@
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
 
-\item Let $\vec{A}$,$\vec{B}$ be n × n matrices.Which of the following equals trace$(\vec{A}^2 \vec{B}^2)$?\\
 
+\item Assume that $X\sim Binomial(n, p)$ for some $n\geq 1$ and $0<p<1$
+and $Y\sim poisson(\lambda)$for some $\lambda > 0$.Suppose E[X]=E[Y].Then
 \begin{enumerate}
-\item (trace$(\vec{A} \vec{B}))^2.$
-\item trace$(\vec{A} \vec{B}^2 \vec{A}).$
-\item trace$((\vec{A} \vec{B})^2).$
-\item trace$(\vec{B} \vec{A} \vec{B} \vec{A}).$
-\end{enumerate}
-%
-%
-%
-\solution
-\input{solutions/2015/june/27/solution.tex}
-\item The row space of a $20 \times 50$ matrix $\vec{A}$ has dimension 13.What is the dimension of the space of solution $\vec{Ax}=0$?
-\begin{enumerate}
-\item{7}
-\item{13}
-\item{33}
-\item{37}
+    \item $var(X)=Var(Y)$\\
+    \item $var(X)<Var(Y)$\\
+    \item $var(Y)<Var(X)$\\
+    \item $Var(X)$ may be larger or smaller than $Var(Y)$ depending on the values of n,p and $\lambda$
 \end{enumerate}
 %
 %
 \solution
-\input{solutions/2015/june/29/solution.tex}
-\item Given a $4 \times 4$ matrix $\vec{A}$, let $T:\mathbb R^4 \rightarrow \mathbb R^4$ be the linear transformation defined by $\vec{T}\vec{v} = \vec{A}\vec{v}$, where we think of $\mathbb R^4$ as the set of real $4 \times 1$ matrices. For which choices of $\vec{A}$ given below, do Image$(\vec{T})$ and Image$(\vec{T}^2)$ have respective dimensions 2 and 1? ($*$ denotes a nonzero entry)
-\begin{enumerate}
-    \item $\vec{A} = \myvec{0 & 0 & * & * \\ 0 & 0 & * & * \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & 0}$
-    \item $\vec{A} = \myvec{0 & 0 & * & 0 \\ 0 & 0 & * & 0 \\ 0 & 0 & 0 & * \\ 0 & 0 & 0 & *}$
-    \item $\vec{A} = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & * \\ 0 & 0 & * & 0}$
-    \item $\vec{A} = \myvec{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & * & * \\ 0 & 0 & * & *}$
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/31/solution.tex}
-\item %
-Let $\vec{F}:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ be the function $\vec{F}(\vec{x},\vec{y})=\langle\vec{Ax},\vec{y}\rangle$, where $\langle,\rangle$ is the standard inner product of $\mathbb{R}^n$ and $\vec{A}$ is a $n\times n$ real matrix. Here D denotes the total derivative. Which of the following statements are correct?
-\begin{enumerate}
-    \item $(D\vec{F}(\vec{x},\vec{y}))(\vec{u},\vec{v})=\langle\vec{Au},\vec{y}\rangle+\langle\vec{Ax},\vec{v}\rangle$.
-    \item $(D\vec{F}(\vec{x},\vec{y}))(0,0)=0$.
-    \item $D\vec{F}(\vec{x},\vec{y})$ may not exist for some $(\vec{x},\vec{y})\in\mathbb{R}^n\times\mathbb{R}^n$.
-    \item $D\vec{F}(\vec{x},\vec{y})$ does not exist at $(\vec{x},\vec{y})=(0,0)$.
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/68/solution.tex}
-\item 	%
-	An $n\times n$ complex matrix $\vec{A}$ satisfies $\vec{A}^{k} = \vec{I}_n$. the $n\times n$ identity matrix, where $k$ is a positive integer $>$ 1. Suppose 1 is not an eigenvalue of $\vec{A}$. Then which of the following statements are necessarily true?\\
-	
-	\begin{enumerate}
-		\item $\vec{A}$ is diagonalizable. \\
-		\item $\vec{A}+\Vec{A}^2+...+\vec{A}^{k-1} = 0$, the $n\times n$ zero matrix. \\
-		\item $tr(\vec{A})+tr(\Vec{A}^2)+...+tr(\vec{A}^{k-1}) = -n$ \\
-		\item $\vec{A}^{-1}+\Vec{A}^{-2}+...+\vec{A}^{-(k-1)} = -\vec{I}_n$
-	\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/70/solution.tex}
-\item Let $S$ be the set of 3x3 real matrices $\vec{A}$ with 
-\begin{align}
-    \vec{A}^T\vec{A}=\myvec{1&0&0\\0&0&0\\0&0&0}
-\end{align}
-Then the set contains:-\\
-\begin{enumerate}
-    \item a Nilpotent Matrix
-    \item a matrix of rank one
-    \item a matrix of rank two
-    \item a non-zero skew symmetric matrix.
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/71/solution.tex}
-\item Let $\vec{S}: \mathbb R^n \rightarrow \mathbb R^n$ be given by $\vec{S}(\vec{v}) = \alpha\vec{v}$, for a fixed $\alpha \in \mathbb R, \alpha \neq 0$. Let $\vec{T}: \mathbb R^n \rightarrow \mathbb R^n$ be a linear transformation such that $\vec{B} = \{ \vec{v}_1,\ldots,\vec{v}_n \}$ is a set of linearly independent eigenvectors of $\vec{T}$. Then
-\begin{enumerate}
-    \item The matrix of $\vec{T}$ with respect to $\vec{B}$ is diagonal
-    \item The matrix of $(\vec{T}-\vec{S})$ with respect to $\vec{B}$ is diagonal
-    \item The matrix of $\vec{T}$ with respect to $\vec{B}$ is not necessarily diagonal, but is upper triangular
-    \item The matrix of $\vec{T}$ with respect to $\vec{B}$ is diagonal but the matrix of $(\vec{T}-\vec{S})$ with respect to $\vec{B}$ is not diagonal.
-\end{enumerate}
-%
-\solution
-\input{solutions/2015/june/72/solution.tex}
-\item Let $p_n\brak{x}=x^n$ for $x\in\mathbb{R}$ and let $\varrho=span\{p_0,p_1,p_2,...\}$. Then
-\begin{enumerate}
-    \item $\varrho$ is a vector space of all real valued continuous functions on $\mathbb{R}$.
-    \item $\varrho$ is a subspace of all real valued continuous functions on $\mathbb{R}$.
-    \item $\{p_0,p_1,p_2,...\}$ is a linearly independent set in the vector space of all real valued continuous functions on $\mathbb{R}$.
-    \item Trigonometric functions belong to $\varrho$.
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/74/solution.tex}
-\item Which of the following are subspaces of the vector space $\mathbb{R}^3$?
-\begin{enumerate}
-  \item ${(x, y, z):x + y = 0}$
-  \item ${(x, y, z):x - y = 0}$
-  \item ${(x, y, z):x + y = 1}$
-  \item ${(x, y, z):x - y = 1}$
-\end{enumerate}
-%
-%
-\solution
-\input{solutions/2015/june/75/solution.tex}
-
-\item Let $\vec{A}$ be an invertible $4 \times 4$ real matrix. Which of the following are NOT true ? 
-\begin{enumerate}
-\item  Rank $\vec{A}$ =4
-\item For every vector $\vec{b} \in \mathbb{R}$, $\vec{A}\vec{x}=\vec{b}$ has exactly one solution. 
-\item dim(nullspace $\vec{A}$)$\geq$ 1
-\item 0 is an eigenvalue of $\vec{A}$
-\end{enumerate}
-%
-\solution
-\input{solutions/2015/june/76/solution.tex}
-\item 	Consider non-zero vector spaces $\vec{V_1}, \vec{V_2}, \vec{V_3}, \vec{V_4}$ and linear transformations $\phi_1 : \vec{V_1} \rightarrow \vec{V_2}$, $\phi_2 : \vec{V_2} \rightarrow \vec{V_3}$, $\phi_3 : \vec{V_3} \rightarrow \vec{V_4}$ such that $Ker(\phi_1) = \{0\}$, $Range(\phi_1) = Ker(\phi_2)$, $Range(\phi_2) = Ker(\phi_3)$, $Range(\phi_3) = \vec{V_4}$. Then \\
-	
-	\begin{enumerate}
-		\item $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} = 0$ \\
-		\item $\sum_{i=2}^{4} \ (-1)^{i} \ dim \ \vec{V_i} > 0$ \\
-		\item $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} < 0$ \\
-		\item $\sum_{i=1}^{4} \ (-1)^{i} \ dim \ \vec{V_i} \neq 0$
-	\end{enumerate}
-%
-\solution
-\input{solutions/2015/june/77/solution.tex}
-\item Let $\vec{u}$ be a real n $\times$ 1 vector satisfying $\vec{u}^T\vec{u}=1$, where $\vec{u}^T$ is the transpose of $\vec{u}$.Define\\
-$\vec{A}=\vec{I}-2\vec{u}\vec{u}^T$ where $\vec{I}$ is the $n^{th}$ order identity matrix.Which of the following statements are true?\\
-1. $\vec{A}$ is singular\\
-2. $\vec{A}^2=\vec{A}$\\
-3. Trace($\vec{A}$)=n-2\\
-4. $\vec{A}^2=\vec{I}$\\
-%
-\solution
-\input{solutions/2015/june/78/solution.tex}
+\input{solutions/2015/june/53.tex}
 
 \end{enumerate}
+

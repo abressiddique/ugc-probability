@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.14)  18 APR 2021 08:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.14)  19 APR 2021 06:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1869,7 +1869,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3])
 (./solutions/2018/dec/118/Assignment7.tex
-<solutions/2018/dec/118/figures/plot.png, id=189, 383.4325pt x 279.0425pt>
+<solutions/2018/dec/118/figures/plot.png, id=194, 383.4325pt x 279.0425pt>
 File: solutions/2018/dec/118/figures/plot.png Graphic file (type png)
 <use solutions/2018/dec/118/figures/plot.png>
 Package pdftex.def Info: solutions/2018/dec/118/figures/plot.png  used on input
@@ -2088,7 +2088,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<solutions/2018/june/50/Assignment_3_Fig_1.png, id=474, 390.45876pt x 262.9825p
+<solutions/2018/june/50/Assignment_3_Fig_1.png, id=479, 390.45876pt x 262.9825p
 t>
 File: solutions/2018/june/50/Assignment_3_Fig_1.png Graphic file (type png)
 <use solutions/2018/june/50/Assignment_3_Fig_1.png>
@@ -2103,7 +2103,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<solutions/2018/june/50/Assignment_3_Fig_2.png, id=507, 390.45876pt x 262.9825p
+<solutions/2018/june/50/Assignment_3_Fig_2.png, id=512, 390.45876pt x 262.9825p
 t>
 File: solutions/2018/june/50/Assignment_3_Fig_2.png Graphic file (type png)
 <use solutions/2018/june/50/Assignment_3_Fig_2.png>
@@ -2211,7 +2211,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-)) (./chapters/2017/june.tex [22] (./solutions/2017/june/52.tex))
+)) (./chapters/2017/june.tex [22] (./solutions/2017/june/52.tex)
+(./solutions/2017/june/104.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+(./solutions/2017/june/50.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]))
 (./chapters/2016/dec.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
@@ -2222,15 +2233,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-[23] (./solutions/2016/dec/109.tex
+(./solutions/2016/dec/109.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24])
+ [27])
 (./solutions/2016/dec/49.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2243,7 +2254,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [28]
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
@@ -2255,44 +2266,44 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27])
-(./solutions/2016/dec/103.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30])
-(./solutions/2016/dec/107.tex
+(./solutions/2016/dec/103.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31])
+ [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+(./solutions/2016/dec/107.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
 (./solutions/2016/dec/104.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
-[34])
+ [36]
+[37])
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/2016/june.tex (./solutions/2016/june/104.tex
 Underfull \vbox (badness 5119) has occurred while \output is active []
 
- [35]
+ [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36])
-<solutions/2016/june/118/Figures/circuits.png, id=978, 179.67125pt x 237.38687p
-t>
+ [39])
+<solutions/2016/june/118/Figures/circuits.png, id=1060, 179.67125pt x 237.38687
+pt>
 File: solutions/2016/june/118/Figures/circuits.png Graphic file (type png)
 <use solutions/2016/june/118/Figures/circuits.png>
 Package pdftex.def Info: solutions/2016/june/118/Figures/circuits.png  used on 
@@ -2312,27 +2323,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 1014) has occurred while \output is active []
 
- [37])
-(./solutions/2016/june/107/main.tex [38]
-<solutions/2016/june/107/figures/norm.png, id=1009, 462.528pt x 346.896pt>
+ [40])
+(./solutions/2016/june/107/main.tex [41]
+<solutions/2016/june/107/figures/norm.png, id=1090, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/norm.png Graphic file (type png)
 <use solutions/2016/june/107/figures/norm.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/norm.png  used on inpu
 t line 48.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
-<solutions/2016/june/107/figures/expon.png, id=1010, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/expon.png, id=1091, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/expon.png Graphic file (type png)
 <use solutions/2016/june/107/figures/expon.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/expon.png  used on inp
 ut line 54.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
-<solutions/2016/june/107/figures/uniform.png, id=1011, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/uniform.png, id=1092, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/uniform.png Graphic file (type png)
 <use solutions/2016/june/107/figures/uniform.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/uniform.png  used on i
 nput line 60.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
-<solutions/2016/june/107/figures/binom.png, id=1012, 462.528pt x 346.896pt>
+<solutions/2016/june/107/figures/binom.png, id=1093, 462.528pt x 346.896pt>
 File: solutions/2016/june/107/figures/binom.png Graphic file (type png)
 <use solutions/2016/june/107/figures/binom.png>
 Package pdftex.def Info: solutions/2016/june/107/figures/binom.png  used on inp
@@ -2343,17 +2354,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[39] (./solutions/2015/dec/3.tex) (./solutions/2015/dec/108.tex
+[42] (./solutions/2015/dec/3.tex) (./solutions/2015/dec/108.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41])
+ [44])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-(./solutions/2015/dec/106.tex) [43]
+ [45]
+(./solutions/2015/dec/106.tex) [46]
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 54.
 
@@ -2381,11 +2392,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-(./solutions/2015/dec/53.tex [44]) (./solutions/2015/dec/109/main.tex
+(./solutions/2015/dec/53.tex [47]) (./solutions/2015/dec/109/main.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
-<solutions/2015/dec/109/figure/fig.png, id=1190, 462.528pt x 346.896pt>
+ [48]
+<solutions/2015/dec/109/figure/fig.png, id=1271, 462.528pt x 346.896pt>
 File: solutions/2015/dec/109/figure/fig.png Graphic file (type png)
 <use solutions/2015/dec/109/figure/fig.png>
 Package pdftex.def Info: solutions/2015/dec/109/figure/fig.png  used on input l
@@ -2394,9 +2405,9 @@ ine 33.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-[47]
-<solutions/2015/dec/109/figure/plot.png, id=1229, 462.528pt x 346.896pt>
+ [49]
+[50]
+<solutions/2015/dec/109/figure/plot.png, id=1311, 462.528pt x 346.896pt>
 File: solutions/2015/dec/109/figure/plot.png Graphic file (type png)
 <use solutions/2015/dec/109/figure/plot.png>
 Package pdftex.def Info: solutions/2015/dec/109/figure/plot.png  used on input 
@@ -2405,14 +2416,32 @@ line 129.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]))
-(./chapters/2014/dec.tex
+ [51]))
+(./chapters/2015/june.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+(./solutions/2015/june/53.tex [52])) (./chapters/2014/dec.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
 Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
-(./solutions/2014/dec/106/LaTex/Assignment_7.tex) [49]
-(./solutions/2014/dec/104.tex
+(./solutions/2014/dec/106/LaTex/Assignment_7.tex) (./solutions/2014/dec/104.tex
+
 Underfull \hbox (badness 10000) in paragraph at lines 55--2
 
  []
@@ -2420,18 +2449,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--2
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]))
-(./chapters/2013/june.tex [51] (./solutions/2013/june/75.tex
+ [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52])
+ [55]))
+(./chapters/2013/june.tex (./solutions/2013/june/75.tex [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57])
 (./solutions/2013/june/71.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [54])
+ [58])
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
@@ -2441,13 +2470,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
 (./solutions/2013/june/16/Assignment6.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56])
+ [60])
 Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
@@ -2460,21 +2490,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
+ [64]
 Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
-<solutions/2013/june/70/figures/assignment8pdf.png, id=1499, 387.4475pt x 279.0
+<solutions/2013/june/70/figures/assignment8pdf.png, id=1623, 387.4475pt x 279.0
 425pt>
 File: solutions/2013/june/70/figures/assignment8pdf.png Graphic file (type png)
 
@@ -2482,7 +2512,7 @@ File: solutions/2013/june/70/figures/assignment8pdf.png Graphic file (type png)
 Package pdftex.def Info: solutions/2013/june/70/figures/assignment8pdf.png  use
 d on input line 196.
 (pdftex.def)             Requested size: 516.0pt x 371.6328pt.
-<solutions/2013/june/70/figures/assignment8cdf.png, id=1500, 393.47pt x 279.042
+<solutions/2013/june/70/figures/assignment8cdf.png, id=1624, 393.47pt x 279.042
 5pt>
 File: solutions/2013/june/70/figures/assignment8cdf.png Graphic file (type png)
 
@@ -2505,10 +2535,10 @@ Underfull \hbox (badness 4726) in paragraph at lines 76--79
 (./solutions/2013/june/59.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
+ [65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62])
+ [66])
 (./solutions/2013/june/60.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2519,17 +2549,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [67]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64])
+ [68])
 (./solutions/2013/june/16.tex
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
- [65]
+ [69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66])
+ [70])
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
@@ -2547,8 +2577,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 (./solutions/2013/june/42/Assignment7.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
-<solutions/2013/june/42/figures/figure.png, id=1611, 387.4475pt x 262.9825pt>
+ [71]
+<solutions/2013/june/42/figures/figure.png, id=1734, 387.4475pt x 262.9825pt>
 File: solutions/2013/june/42/figures/figure.png Graphic file (type png)
 <use solutions/2013/june/42/figures/figure.png>
 Package pdftex.def Info: solutions/2013/june/42/figures/figure.png  used on inp
@@ -2566,20 +2596,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68])
+ [72])
 (./solutions/2013/june/101.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
+ [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70]
+ [74]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
+ [75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72]))
+ [76]))
 (./chapters/2012/dec.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
@@ -2588,7 +2618,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 (./solutions/2012/dec/104.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73])
+ [77])
 Underfull \hbox (badness 10000) in paragraph at lines 26--20
 
  []
@@ -2596,7 +2626,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--20
 (./solutions/2012/dec/60.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74]))
+ [78]))
 (./chapters/2012/june.tex
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
@@ -2612,36 +2642,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-(./solutions/2012/june/112.tex [75]
+(./solutions/2012/june/112.tex [79]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76]
+ [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77]))
-[78]
+ [81]))
+[82]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
- [79 <./solutions/2016/june/118/Figures/circuits.png>] [80 <./solutions/2016/ju
-ne/107/figures/norm.png>] [81 <./solutions/2016/june/107/figures/expon.png>] [8
-2 <./solutions/2016/june/107/figures/uniform.png>] [83 <./solutions/2016/june/1
-07/figures/binom.png>] [84 <./solutions/2015/dec/109/figure/fig.png>]
-[85 <./solutions/2015/dec/109/figure/plot.png>] [86 <./solutions/2013/june/70/f
-igures/assignment8pdf.png>] [87 <./solutions/2013/june/70/figures/assignment8cd
-f.png>] [88 <./solutions/2013/june/42/figures/figure.png>]
+ [83 <./solutions/2016/june/118/Figures/circuits.png>] [84 <./solutions/2016/ju
+ne/107/figures/norm.png>] [85 <./solutions/2016/june/107/figures/expon.png>] [8
+6 <./solutions/2016/june/107/figures/uniform.png>] [87 <./solutions/2016/june/1
+07/figures/binom.png>] [88 <./solutions/2015/dec/109/figure/fig.png>]
+[89 <./solutions/2015/dec/109/figure/plot.png>] [90 <./solutions/2013/june/70/f
+igures/assignment8pdf.png>] [91 <./solutions/2013/june/70/figures/assignment8cd
+f.png>] [92 <./solutions/2013/june/42/figures/figure.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
  (./gvv_ugc_prob.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
 Package rerunfilecheck Info: File `gvv_ugc_prob.out' has not changed.
-(rerunfilecheck)             Checksum: 3CC413B8C855C868F617A558A2D96853;558.
+(rerunfilecheck)             Checksum: F0ED7818FAF6175F9755F0F1C6888DA7;604.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
  ) 
 Here is how much of TeX's memory you used:
- 56606 strings out of 492615
- 1314544 string characters out of 6131390
- 1603408 words of memory out of 5000000
- 58200 multiletter control sequences out of 15000+600000
- 676634 words of font info for 357 fonts, out of 8000000 for 9000
+ 56725 strings out of 492615
+ 1316157 string characters out of 6131390
+ 1603734 words of memory out of 5000000
+ 58212 multiletter control sequences out of 15000+600000
+ 679579 words of font info for 362 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  73i,19n,96p,734b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2660,10 +2690,10 @@ share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on gvv_ugc_prob.pdf (88 pages, 531257 bytes).
+Output written on gvv_ugc_prob.pdf (92 pages, 548786 bytes).
 PDF statistics:
- 2218 PDF objects out of 2487 (max. 8388607)
- 2000 compressed objects within 20 object streams
- 1271 named destinations out of 1440 (max. 500000)
- 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2366 PDF objects out of 2487 (max. 8388607)
+ 2142 compressed objects within 22 object streams
+ 1369 named destinations out of 1440 (max. 500000)
+ 278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

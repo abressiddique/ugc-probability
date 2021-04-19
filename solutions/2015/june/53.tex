@@ -1,0 +1,83 @@
+For the random variable $$X\sim Binomial(n, p)$$
+As we know,
+\begin{align}
+E[X]&=np\\
+Var(X)&=np(1-p) \label{june/2015/53a}
+\end{align}
+for the random variable $$Y\sim poisson(\lambda)$$
+As we know,
+\begin{align}
+E[Y]&=\lambda\\
+Var(Y)&=\lambda \label{june/2015/53b}
+\end{align}
+given that,
+\begin{align}
+E[X]&=E[Y]\\
+np&=\lambda \label{june/2015/53c}
+\end{align}
+from \eqref{june/2015/53a},
+\begin{align}
+Var(X)&=np(1-p)
+\end{align}
+using \eqref{june/2015/53c},
+\begin{align}
+Var(X)&=\lambda(1-p)
+\end{align}
+\begin{table}[ht]
+\caption{Mean and Variance for random variables X and Y}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+     & $X$&$Y$\\
+    \hline
+    E& $\lambda$& $\lambda$\\
+    \hline
+     $var$& $\lambda(1-p)$ & $\lambda$\\
+    \hline
+    \end{tabular}
+\end{center} 
+\label{june/2015/53tab:1}
+\end{table}
+using \eqref{june/2015/53b},
+\begin{align}
+Var(X)&=Var(Y)(1-p)\\
+\frac{Var(X)}{Var(Y)}&= 1-p
+\end{align}
+as,
+\begin{align}
+1-p &<1\\
+\frac{Var(X)}{Var(Y)}&<1\\
+Var(X) &< Var(Y)
+\end{align}
+$\therefore$ $Var(Y) >Var(X)$, independent of n,p and $\lambda$.
+\begin{enumerate}
+    \item $var(X)=Var(Y)$\\
+          using TABLE \ref{june/2015/53tab:1},
+          \begin{align}
+          \lambda(1-p) = \lambda\\
+          1-p=1\\
+          p=0
+          \end{align}
+          which is wrong as per the question$(0<p<1)$.
+          hence the option is incorrect.
+    \item $var(X)<Var(Y)$\\
+          using TABLE \ref{june/2015/53tab:1},
+          \begin{align}
+          \lambda(1-p) < \lambda\\
+          1-p<1\\
+          p>0
+          \end{align}
+          which is true as per the question$(0<p<1)$.
+          hence the option is correct.
+    \item $var(Y)<Var(X)$\\
+     using TABLE \ref{june/2015/53tab:1},
+          \begin{align}
+          \lambda(1-p) > \lambda\\
+          1-p>1\\
+          p<0
+          \end{align}
+          which is wrong as per the question$(0<p<1)$.
+          hence the option is incorrect.
+    \item $Var(X)$ may be larger or smaller than $Var(Y)$ depending on the values of n,p and $\lambda$.\\
+    Wrong, since we have shown that irrespective of the values of lambda, n, and p, $var(y) > var(x)$
+\end{enumerate}
