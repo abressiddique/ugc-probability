@@ -1,0 +1,58 @@
+Let $f_{X_1,X_2}(x_1,x_2)$ denote the joint probability distribution of random variables $X_1$ and $X_2$. Let $Z$ be another random variable such that $Z=X_1+X_2$. Let $\Phi_{X_1}(\omega)$ and $\Phi_{Z}(\omega)$ be the characteristic functions of the probability density functions $f_{X_1}(x)$ and $f_{Z}(x)$ respectively. The conditional probability density function of $X_2$ can be defined by:
+\begin{align}
+    f_{X_2|(X_1+X_2=t)}(x_2) &= 
+    \begin{cases}
+    \frac{f_{X_1,X_2}(x_1,x_2)}{f_{(X_1+X_2)}(t)} &  \text{if }x_1+x_2=t\\ ~\\[-1em]
+    0 & \text{otherwise}
+    \end{cases}
+    \\ x_1 + x_2 &= t
+    \\ 0 < x_1, x_2&< \infty \label{june/2013/40/equation 2}
+    \\ x_1 &= t-x_2
+    \\ t - x_2 &> 0
+    \\ x_2 &< t \label{june/2013/40/equation 3}
+\end{align}
+From equations \eqref{june/2013/40/equation 2} and \eqref{june/2013/40/equation 3}, we can conclude that $x_2 \in (0, t)$ if $x_1+x_2=t$. Also, given in the question,
+\begin{align}
+    0 &< \theta < \infty
+    \\f_{X_1}(x_1) &= \frac{1}{\theta}e^{\frac{-x_1}{\theta}}, 0<x_1<\infty
+    \\f_{X_2}(x_2) &= \frac{1}{\theta}e^{\frac{-x_2}{\theta}}, 0<x_2<\infty
+\end{align}
+Since $X_1$ and $X_2$ are independent, 
+\begin{align}
+f_{X_1,X_2}(x_1,x_2) &= f_{X_1}(x_1) \times f_{X_2}(x_2)
+    \\&= \frac{1}{\theta}e^{\frac{-x_1}{\theta}} \times \frac{1}{\theta}e^{\frac{-x_2}{\theta}}
+    \\&= \frac{1}{\theta^2}e^{\frac{-(x_1+x_2)}{\theta}}
+    \\\Phi_{X_1}(\omega) &= \frac{1}{\theta} \int_{0}^{\infty}e^{i\omega x} e^{\frac{-x}{\theta}} \,dx
+    \\ &= \frac{1}{\theta} \times \frac{1}{i\omega - \frac{1}{\theta}} \brak{e^{x(i\omega - \frac{1}{\theta}}}\bigg\vert_0^{\infty}
+    \\ &= \frac{1}{1-i\omega\theta} - \frac{\lim_{x\rightarrow \infty} \brak{e^{x(i\omega - \frac{1}{\theta}}}}{1-i\omega\theta}
+    \\&= \frac{1}{1-i\omega\theta} - 0 = \frac{1}{1-i\omega\theta} 
+    \\ \Phi_{Z}(\omega) &= \brak{\frac{1}{1-i\omega\theta} }^2
+    \\ f_Z(x) &= \frac{1}{2\pi} \int_{-\infty}^{\infty}\frac{e^{-i\omega x}}{\brak{\frac{1}{1-i\omega\theta} }^2} \,d\omega \label{june/2013/40/equation 1}
+\end{align}
+The equation \eqref{june/2013/40/equation 1} is the characteristic function expression of a gamma random variable with k=2. Thus,
+\begin{align}
+    f_Z(x) &= \frac{x^{k-1}e^{\frac{-x}{\theta}}}{\Gamma(k)\theta^k}
+    \\ &=  \frac{x^{2-1}e^{\frac{-x}{\theta}}}{\Gamma(2)\theta^2}
+    \\ &= \frac{xe^{\frac{-x}{\theta}}}{\theta^2}
+\end{align}
+\begin{align}
+    f_{X_2|(X_1+X_2=t)}(x_2) = 
+    \begin{cases}
+    \frac{f_{X_1,X_2}(x_1,x_2)}{f_Z(t)} &  x_2 \in (0, t)\\ ~\\[-1em]
+    0 & \text{otherwise}
+    \end{cases}
+\end{align}
+Let $ x_2 \in (0, t)$.
+\begin{align}
+    f_{X_2|(X_1+X_2=t)}(x_2) &= \frac{f_{X_1,X_2}(x_1,x_2)}{f_Z(t)}
+    \\&= \frac{\frac{1}{\theta^2}e^{\frac{-(x_1+x_2)}{\theta}}}{\frac{1}{\theta^2}e^{\frac{-t}{\theta}}t}
+    \\&= \frac{e^{\frac{-(t)}{\theta}}}{e^{\frac{-t}{\theta}}t}
+    \\&= \frac{1}{t} \quad \forall x_2 \in (0, t)
+\end{align}
+The obtained pdf is uniform$(0,t)$. Any distribution is sufficient for underlying parameter $\theta$ if the conditional probability distribution of the data does not depend on the parameter $\theta$.  And since the conditional distribution of $X_2$ does not depend on $\theta$ for any value of $t$, $X_1+X_2$ is sufficient for $\theta$. Verifying the pdf,
+\begin{align}
+    \text{total probability} &= \int_{0}^{t} f_{X_2|(X_1+X_2=t)}(x_2) \,dx_2
+    \\&= \int_{0}^{t} \frac{1}{t} \,dx_2
+    \\&= 1
+\end{align}
+Hence, the correct answer is option \eqref{june/2013/40/option 3}
