@@ -1,0 +1,117 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+\item Let  $X\in \{ 0,1 \}$ and $Y\in \{ 0,1 \}$ be two independent binary random variables. If $\pr{X=0}$ = p and  $\pr{Y=0}$ = q, then $\pr{X+Y \geqslant 1}$) is equal to 
+\begin{enumerate}
+\item $pq+(1-p)(1-q)$ 
+\item  $pq$    
+\item $p(1-q)$ 
+\item  $1-pq$  
+\end{enumerate}
+%
+\solution
+%
+%\input{indep/solutions/1.tex}
+%
+\item Two independent random variables $X$ and $Y$ are uniformly distributed in the interval $\sbrak{-1,1}$. The probability that $\max \brak{X,Y}$ is less than $\dfrac{1}{2}$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\dfrac{3}{4}$
+\item $\dfrac{9}{16}$
+\item $\dfrac{1}{4}$
+\item $\dfrac{2}{3}$
+\end{enumerate}
+\end{multicols}
+\solution
+%
+%\input{indep/solutions/2.tex}
+%
+\item Suppose that $X_1,X_2,X_3,...,X_{10}$ are i.i.d, N(0,1). Which of the following statements are correct ?
+\begin{enumerate}[label = (\Alph*)]
+    \item $\pr{X_1>X_2+X_3+...+X_{10}}=\frac{1}{2}$
+    \item $\pr{X_1>X_2X_3...X_{10}}=\frac{1}{2}$
+    \item $\pr{\sin{X_1}>\sin{X_2}+\sin{X_3}+...+\sin{X_{10}}}=\frac{1}{2}$
+    \item $\pr{\sin{X_1}>\sin({X_2+X_3+\ldots+X_{10}})}=\frac{1}{2}$
+\end{enumerate}
+\solution
+%
+\input{indep/solutions/3.tex}
+
+\item Which of the following conditions imply independence of the random variables $X$
+and $Y$ ?
+\begin{enumerate}
+    \item  $\pr{X\ \mathop{>}\ a|Y\ \mathop{>}\ a} = \pr{X\ \mathop{>}\ a}\ \forall\ a\ \in\ \mathbb{R}$\\ 
+    \item  $\pr{X\ \mathop{>}\ a|Y\ \mathop{<}\ b} = \pr{X\ \mathop{>}\ a}\ \forall\ a,\ b\ \in\ \mathbb{R}$\\ 
+    \item  $X$ and $Y$ are uncorrelated.\\
+    \item  $E[(X-a)(Y-b)] = E(X-a)\ E(Y-b)\ \forall\ a,\ b \in\ \mathbb{R}$\\
+\end{enumerate}
+%
+\solution
+%
+\input{indep/solutions/4.tex}
+%
+\item Let X and Y be two independent and identically distributed (I.I.D) random variables uniformly distributed in (0,1). Let $Z = max(X,Y)$ and $W = min(X,Y)$ , then the probability that $[Z-W >\frac{1}{2}]$ is\\
+\\(A) $\frac{1}{2}$\\
+\\(B) $\frac{3}{4}$\\
+\\(C) $\frac{1}{4}$\\
+\\(D) $\frac{2}{3}$    
+%
+\solution
+\input{solutions/2018/june/50/Assignment_3.tex}
+%
+%
+\item Let $X$ and $Y$ be independent exponential random variables. If $E[X]=1$ and $E[Y]=\frac{1}{2}$ then $\pr{X>2Y|X>Y}$ is
+\begin{multicols}{2}
+    \begin{enumerate}[label=\arabic*.]
+        \item \Large$\frac{1}{2}$ \\
+        \item $\frac{1}{3}$
+        \item $\frac{2}{3}$ \\
+        \item $\frac{3}{4}$
+    \end{enumerate}
+\end{multicols}
+%
+\solution
+\input{./solutions/2017/dec/59.tex}
+%
+%
+\item A fair die is thrown two times independently. Let $X,Y$ be the outcomes of these two throws and $Z=X+Y$. Let $U$ be the remainder obtained when $Z$ is divided by 6. Then which of the following statement(s) is/are true?
+\begin{enumerate}
+    \item $X$ and $Z$ are independent \label{dec2016-103:option 1}
+    \item $X$ and $U$ are independent \label{dec2016-103:option 2}
+    \item $Z$ and $U$ are independent \label{dec2016-103:option 3}
+    \item $Y$ and $Z$ are not independent \label{dec2016-103:option 4}
+\end{enumerate}
+%
+\solution
+\input{solutions/2016/dec/103.tex}
+%
+\item Suppose $X_1$,$X_2$,$X_3$ and $X_4$ are independent and identically distributed random variables, having density function f. Then,
+\begin{enumerate}
+\item \pr{X_4 > Max(X_1,X_2) > X_3} = $\frac{1}{6}$
+\item \pr{X_4 > Max(X_1,X_2) > X_3} = $\frac{1}{8}$
+\item \pr{X_4 > X_3 > Max(X_1,X_2)} = $\frac{1}{12}$
+\item \pr{X_4 > X_3 > Max(X_1,X_2)} = $\frac{1}{6}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2014/dec/104.tex}
+%
+%
+\item Consider a parallel system with two components. The lifetimes of the two components are independent and identically distributed random variables each following an exponential distribution with mean 1. The expected lifetime of the system is:
+\begin{enumerate}[label=\Alph*)]
+    \item $1$\\[0.5pt]
+    \item $\dfrac{1}{2}$\\
+    \item $\dfrac{3}{2}$\\
+    \item $2$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/42/Assignment7.tex}
+
+\end{enumerate}

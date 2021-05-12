@@ -1,0 +1,25 @@
+%
+The  CDF of the X is 
+ \begin{align}
+ F_{X}(x)=\pr{ X<x }= \int _{-1}^{x} f_{X}(x) dx\\
+ = \int _{-1}^{x} \dfrac{1}{2} dx= \dfrac{1}{2} \left( x-(-1) \right) = \dfrac{1}{2}( x+1) 
+ \intertext{so} F_{X}(x)=\begin{cases}
+ 0   &   x<-1\\
+ \dfrac{1}{2} (x+1) &   -1<x<1\\
+ 1  &   x>1 
+ \end{cases}
+  \label{indep/2/eq:9}
+ \end{align}
+$\because X, Y$ are independent,
+ \begin{align}
+ \pr{\max \brak{X,Y} < \dfrac{1}{2}}&= \pr{X<\dfrac{1}{2},  Y<\dfrac{1}{2} }
+ \\
+ & = \pr{ X<\dfrac{1}{2} } \times  \pr{Y<\dfrac{1}{2} }
+ \label{indep/2/eq:7}
+\\ 
+& =\sbrak{F_{X}\left(\dfrac{1}{2} \right)}^2
+\\
+&= \dfrac{9}{16}
+\end{align} 
+upon substituting from   \eqref{indep/2/eq:9}.
+So option 2 is correct answer 

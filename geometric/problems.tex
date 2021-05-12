@@ -1,0 +1,37 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+\item Suppose $X$ has density 
+%
+\begin{align}
+f\brak{x|\theta} = \frac{1}{\theta}e^{-x/\theta}, x>0 
+\end{align}
+Define 
+\begin{align}
+    Y=k, \quad k\leq X< k+1, \quad k=0,1,2\ldots
+\end{align}
+%
+Then the distribution of $Y$ is
+\begin{enumerate}
+\begin{multicols}{2}
+\setlength\itemsep{0.5em}
+    \item Normal
+    \item Binomial
+    \item Poisson
+    \item Geometric
+\end{multicols}
+\end{enumerate}
+\solution
+\input{geometric/solutions/1.tex}
+
+
+
+\end{enumerate}
+
+

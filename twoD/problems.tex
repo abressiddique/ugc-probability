@@ -1,0 +1,143 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $ c \in \mathbb{R} $ be a constant. Let $ X, Y$ be random variables with joint probability density function 
+\begin{align}
+f(x,y)  = 
+\begin{cases}
+cxy &  0<x<y<1,
+\\
+0 & \text{ otherwise }
+\end{cases}
+\label{eq:: joint_pdf}
+\end{align}
+Which of the following statements are correct ?
+\begin{enumerate}
+    \item $c = \frac{1}{8}$
+    \item $ c= 8$
+    \item $X $ and $ Y$ are independent
+    \item $\Pr\brak{X= Y} = 0 $
+\end{enumerate}
+\solution
+\input{twoD/solutions/1.tex}
+%
+\item Let $X$ and $Y$ be random variables having the joining probability density function
+\begin{align}
+f_{XY}(x,y)=
+\begin{cases}
+\frac{1}{\sqrt{2\pi y}}e^{\frac{-1}{2y}(x-y)^2} & 
+\begin{array}{c}
+x \in \brak{-\infty,\infty}, 
+\\
+y \in \brak{0, 1} 
+\end{array}
+\\
+0 &\text{otherwise}
+\end{cases}
+\label{eq:twoD/2}
+\end{align}
+The covariance between the random variables X and Y is
+\\
+%
+\solution
+%\input{twoD/solutions/2.tex}
+\item Let a random variable $X$ follow exponential distribution with mean 2. Define $Y=[X-2|X>2]$. The value of $\pr{Y \geq t}$ is \dots
+\\
+%
+\solution
+\input{twoD/solutions/3.tex}
+%
+\item Let X and Y be two random variables with joint probability density function
+\begin{align*}
+    f(x.y)=
+    \begin{cases}
+    \cfrac{1}{\pi} & 0\le x^2 + y^2 \le 1\\
+    0 & otherwise
+    \end{cases}
+\end{align*}
+Which of the following statements are correct?
+\begin{enumerate}
+    \item
+    X and Y are independent.
+    
+    \item
+    $\pr{X>0}=\cfrac{1}{2}$
+    
+    \item
+    E(Y)=0
+    
+    \item
+    Cov(X,Y)=0
+\end{enumerate}
+%
+%
+\solution
+\input{solutions/2018/june/103.tex}
+
+\item Let X and Y be two random variables satisfying $X\geq 0, Y \geq 0, E(X)=3, Var(X)=9, E(Y)=2$ and $Var(Y)=4$. Which of the following statements are correct?
+\begin{enumerate}[label=\Alph*)]
+    \item $0\leq Cov(X,Y)\leq 4$
+    \item $E(XY)\leq 3$
+    \item $Var(X+Y)\leq 25$
+    \item $E(X+Y)^2\geq 25$
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/june/104.tex}
+%
+\item The joint probability density function of (X,Y) is
+\begin{equation}
+    f(x,y) =
+    \begin{cases}
+        6(1-x) & if \hspace{0.3cm}0<y<x ,0<x<1\label{0.0.1} \\
+        0      & \text{otherwise}
+    \end{cases}
+\end{equation}
+Which among the following are correct?
+\begin{enumerate}\itemsep0.3cm
+    \item X and Y are not independent
+    \item
+          $ f_Y(y) =
+              \begin{cases}
+                  3\brak{y-1}^{2} & if \hspace{0.3cm}0<y<1 \\
+                  0               & \text{otherwise}
+              \end{cases}$
+    \item X and Y are independent
+    \item $ f_Y(y) =
+              \begin{cases}
+                  3\brak{\displaystyle{y-\frac{1}{2}{y}^2}} & if \hspace{0.3cm}0<y<1 \\
+                  0                                         & \text{otherwise}
+              \end{cases}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2016/june/104.tex}
+%
+\item Suppose that $(X,Y)$ has a joint probability distribution with the marginal distribution of $X$ being N(0,1) and $E(Y|X=x)=x^3$ for all $x \in R$. Then, which of the following statements are true?
+\begin{enumerate}
+    \item Corr$(X,Y) = 0$
+    \item Corr$(X,Y) > 0$
+    \item Corr$(X,Y) < 0$
+    \item X and Y are independent
+\end{enumerate}
+\solution
+\input{solutions/2015/dec/108.tex}
+%
+%
+\item  Consider the quadratic equation $x^2+2U x+V=0$ where $U$ and $V$ are chosen independently and randomly from $\{1,2,3\}$ with equal probabilities. Then probability that the equation has both roots real
+\begin{enumerate}
+    \item $\frac{2}{3}$
+    \item $\frac{1}{2}$
+    \item $\frac{7}{9}$
+    \item $\frac{1}{3}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/60.tex}
+
+\end{enumerate}

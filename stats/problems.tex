@@ -1,0 +1,221 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+
+\item Let $Y_1$ denote the first order statistic in a random sample of size $n$ from a distribution that has the pdf 
+\begin{align}
+    f(x) = 
+    \begin{cases}
+    e^{-(x-\theta)}&\text{ when } \theta<x<\infty\\
+    0 &\text{  otherwise} 
+    \end{cases}
+\end{align}
+Obtain the distribution of $Z_n = n(Y_1 - \theta)$.
+%
+\\
+\solution
+\input{stats/solutions/1/main.tex}
+%
+\item Let $X_1, X_2, \ldots , X_n$ be a random sample of size $n \; ( \geq 2 ) $ from a distribution having the probability density function
+\begin{align}
+f(x;\theta) = 
+\begin{cases}
+\dfrac{1}{\theta} \exp\brak{-\dfrac{x}{\theta}} & x > 0, \\
+0, & \text{otherwise,}
+\end{cases}
+\end{align}
+where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n \} $ and $T = \sum_{i=1}^n X_i $. Then $E(X_{(1)} | T)$ equals 
+\begin{enumerate}[label = (\Alph*)]
+\item $\dfrac{T}{n^2}$ \\
+\item $\dfrac{T}{n}$ \\
+\item $\dfrac{(n+1)T}{2n}$ \\
+\item $\dfrac{(n+1)^2 T}{4n^2}$
+\end{enumerate}
+\solution
+\input{stats/solutions/2/Assignment6.tex}
+%
+\item Suppose n units are drawn from a population of N units sequentially as follows. A random sample
+\begin{align}
+    U_1, U_2, ... U_N \text{ of size N, drawn from }U\brak{0, 1} 
+\end{align} 
+The k-th population unit is selected if 
+\begin{align}
+    U_k<\frac{n - n_k}{N-k+1}, k = 1, 2, ..N. \text{where, } n_1=0, n_k = 
+\end{align}
+number of units selected out of first k-1 units for each k = 2, 3, ..N. Then,
+\begin{enumerate}
+    \item The probability of inclusion of the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n}{N}
+    \end{align}
+    \item The probability of inclusion of the first and the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{n-1}}{N \brak{N-1}}
+    \end{align}
+    \item The probability of not including the first and including the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{N-n}}{N \brak{N-1}}
+    \end{align}
+    \item The probability of including the first and not including the second unit in the sample
+    \begin{align}
+        \text{ is } \frac{n \brak{n-1}}{N \brak{N-1}}
+    \end{align}
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/116.tex}
+%
+%
+\item Let $X_{1},X_{2},X_{3},..,X_{n}$ be independent random variables follow a common continuous distribution \textbf{F}, which is symmetric about 0. For i=1,2,3,..n, define 
+\begin{align}
+\tag{1.1}
+\label{eq1}
+S_{i} = 
+\begin{cases}
+1 & if \hspace{0.2cm}X_{i}>0
+\\
+-1 & if\hspace{0.2cm} X_{i}<0 \hspace{0.2cm} and
+\\
+0 & if \hspace{0.2cm}X_{i}=0
+\end{cases}
+\end{align}
+$R_{i}$=rank of $|X_{i}|$ in the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}.Which of the following statements are correct?
+\begin{enumerate}
+\item $S_{1},S_{2},..,S_{n}$ are independent and identically distributed.
+\item $R_{1},R_{2},..,R_{n}$ are independent and identically distributed.
+\item $S=\brak{S_{1},S_{2},..,S_{n}}$ and $R=\brak{ R_{1},R_{2},..,R_{n}}$ are independent.
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/111.tex}
+%
+%
+\item A simple random variable of size n will be drawn from a class of 125 students, and the mean mathematics score of the sample will be computed, If the standard error of the sample mean for "with replacement sampling" is twice as much as the standard error of the sample mean for "without replacement sampling", the value of n is ? 
+	\begin{enumerate}
+	\item 32
+	\item 63
+	\item 79
+	\item 94
+	\end{enumerate}
+%
+\solution
+\input{solutions/2018/june/58.tex}
+
+%
+\item Let $X_1$ and $X_2$ be i.i.d. with probability mass function $f_{\theta}\brak{x} = \theta^x \brak{1-\theta}^{1-x}$; $x=0,1$ where $\theta \in \brak{0,1}$. Which of the following statements are true?
+\begin{enumerate}
+    \item $X_1 + 2X_2 $ is a sufficient statistic
+    \item $X_1 - X_2 $ is a sufficient statistic
+    \item $X_1^2 + X_2^2 $ is a sufficient statistic
+    \item $X_1^2 + X_2 $ is a sufficient statistic
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/june/108.tex}
+%
+%
+\item Let X$_{1}$ and X$_{2}$ be a random sample of size two
+from a distribution with probability density
+function
+\begin{align}
+    f_{\theta}(x) &= \theta \brak{\dfrac{1}{\sqrt{2\pi}}}e^{-\dfrac{1}{2} x^{2}} + \brak{1-\theta}\brak{\dfrac{1}{2}}e^{-\mid x\mid} \nonumber,
+\end{align}
+$-\infty<x<\infty$,\\
+where  $\theta \in \cbrak{ 0,\dfrac{1}{2}, 1 }$. If the observed values
+of X$_{1}$ and X$_{2}$ are 0 and 2, respectively, then
+the maximum likelihood estimate of $\theta$ is
+\begin{enumerate}
+    \item 0 
+    \item $\frac{1}{2}$
+    \item 1
+    \item not unique
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/dec/53.tex}
+%
+%
+\item Let $\left\{X_{n}, n \geq 1\right\}$ be i.i.d. uniform (-1,2) random variables. Which of the following statements are true?
+\begin{enumerate}[label=\alph*)]
+\item $\dfrac{1}{n} \sum_{i=1}^{n} X_{i} \rightarrow 0$ almost surely
+\item $\left\{\dfrac{1}{2 n} \sum_{i=1}^{n} X_{2 i}-\dfrac{1}{2 n} \sum_{i=1}^{n} X_{2 i-1}\right\}\rightarrow 0$
+almost surely
+\item $\sup \left\{X_{1}, X_{2}, \ldots\right\}=2$ almost surely
+\item $\inf \left\{X_{1}, X_{2}, \ldots\right\}=-1$ almost surely
+\end{enumerate}
+\solution
+\input{./solutions/2017/june/104.tex}
+%
+\item $X_{1}, X_{2}, \cdots$ are independent identically distributed random variables
+having common density $f$. Assume $f(x)=f(-x)$ for all $x \in \mathbb{R}$. Which of the following statements is correct?
+\begin{enumerate}[label=\alph*)]
+\item $\dfrac{1}{n}\left(X_{1}+\cdots+X_{n}\right) \rightarrow 0$ in probability
+\item $\dfrac{1}{n}\left(X_{1}+\cdots+X_{n}\right) \rightarrow 0$ almost surely
+\item $\pr{\dfrac{1}{\sqrt{n}}\left(X_{1}+\cdots+X_{n}\right)<0} \rightarrow \dfrac{1}{2}$
+\item $\sum_{i=1}^{n} X_{i}$ has the same distribution as $\sum_{i=1}^{n}(-1)^{i} X_{i}$
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/june/50.tex}
+%
+\item $X_1,X_2,\ldots,X_n$ are independent and identically
+distributed as $N(\mu, \sigma^2)$, $-\infty < \mu < \infty$, $\sigma^2 > 0$. Then
+\begin{enumerate}
+    \item $\sum_1^n\frac{(X_i-\bar{X})^2}{n-1}$ is the Minimum Variance Unbiased Estimate of $\sigma^2$\\
+    \item $\sqrt{\sum_1^n\frac{(X_i-\bar{X})^2}{n-1}}$ is the Minimum Variance Unbiased Estimate of $\sigma$\\
+    \item $\sum_1^n\frac{(X_i-\bar{X})^2}{n}$ is the Maximum Likelihood Estimate of $\sigma^2$\\
+    \item $\sqrt{\sum_1^n\frac{(X_i-\bar{X})^2}{n}}$ is the Maximum Likelihood \qquad Estimate of $\sigma$
+\end{enumerate}
+%
+\solution
+\input{solutions/2016/dec/109.tex}
+%
+%
+\item Suppose $X_1$ and $X_2$ are independent and identically distributed random variables each following an exponential distribution with mean $\theta$, i.e., the common pdf is given by $f_\theta(x) = \frac{1}{\theta}e^{\frac{-x}{\theta}}, 0<x<\infty,0<\theta<\infty.$ Then which of the following is true? Conditional distribution of $X_2$ given $X_1+X_2=t$ is 
+\begin{enumerate}
+    \item exponential with mean $\frac{t}{2}$ and hence $X_1+X_2$ is sufficient for $\theta$ \label{june/2013/40/option 1}
+    \item exponential with mean $\frac{t\theta}{2}$ and hence $X_1+X_2$ is not sufficient for $\theta$ \label{june/2013/40/option 2}
+    \item uniform$(0,t)$ and hence $X_1+X_2$ is sufficient for $\theta$ \label{june/2013/40/option 3}
+    \item uniform$(0,t\theta)$ and hence $X_1+X_2$ is not sufficient for $\theta$ \label{june/2013/40/option 4}
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/40.tex}
+%
+\item Let $X_1,X_2,X_3,....,X_n$ be i.i.d observations from a distribution with continuous probability density function f which is symmetric around $\theta$ i.e
+\begin{align}
+    f\brak{x-\theta}=f\brak{\theta -x}
+\end{align}
+for all real x.Consider the test $H_0: \theta =0$ vs $H_1:  \theta >0$ and the sign test statistic
+\begin{align}
+    S_n = \sum_{i=1}^{n} sign(X_i)
+\end{align}
+where
+\begin{align}
+    sign(x) =
+    \begin{cases}
+    1  & x>0\\
+    0  & x=0\\
+    -1 & x<0
+    \end{cases}
+\end{align}
+Let $z_\alpha$ be the upper $100(1-\alpha)^{th}$ percentile of the standard normal distribution where $0<\alpha <1$. Which of the following is/are correct?
+\begin{enumerate}
+    \item If $\theta =0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =1 $\\
+    \item If $\theta =0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =\alpha $\\
+    \item If $\theta >0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} = 1 $\\
+    \item If $\theta >0$ then $ \lim_{n\to\infty} P\cbrak{S_n > \sqrt{n}z_{\alpha}} =\alpha $
+\end{enumerate}
+%
+\solution
+\input{solutions/2012/june/112.tex}
+%
+
+
+\end{enumerate}

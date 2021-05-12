@@ -1,0 +1,68 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $X$ be a Poisson random variable with p.m.f
+\begin{align}
+\label{poisson/1/eq:1}
+P(X=k) = 
+    \begin{cases} 
+      \frac{e^{-\lambda}\lambda^{k}}{k!},& k=0,1,2,...;  \lambda > 0\\
+      0 & \text{otherwise}
+   \end{cases}
+\end{align}
+If $Y = X^2 + 3$, then what is $P(Y=y)$ equal to?
+\begin{enumerate}[label={(\Alph*)}]
+    \item $\frac{e^{-\lambda}\lambda^{\sqrt{y-3}}}{\sqrt{\brak{y-3}}!}$, for $y =$ \cbrak{3,4,7,12,...}
+    \item $\frac{e^{-\lambda}\lambda^{-\sqrt{y-3}}}{\sqrt{\brak{3-y}}!}$, for $y =$ \cbrak{3,4,7,12,...}
+    \item $\frac{e^{-\lambda}\lambda^{\sqrt{3-y}}}{\sqrt{\brak{3-y}}!}$, for $y =$ \cbrak{4,7,12,...}
+    \item $\frac{e^{-\lambda}\lambda^{-\sqrt{3-y}}}{\sqrt{\brak{3-y}}!}$, for $y =$ \cbrak{4,7,12,...}
+\end{enumerate}
+%
+\solution
+\input{poisson/solutions/1/Assignment4.tex}
+
+\item For $n \geq 1$, let $X_n$ be a Poisson random  variable with mean $n^2$.
+ Which of the following are equal to
+ $\displaystyle{\frac{1}{\sqrt{2\pi}} \int \limits_2^{\infty} e^{-x^2/2}\,dx}$
+\begin{enumerate}
+    \item $\lim \limits_{n \to \infty} $ \pr{X_n > (n+1)^2}
+    \item $\lim \limits_{n \to \infty} $ \pr{X_n \leqslant (n+1)^2}
+    \item $\lim \limits_{n \to \infty} $ \pr{X_n<(n-1)^2}
+    \item $\lim \limits_{n \to \infty} $ \pr{X_n<(n-2)^2}
+\end{enumerate}
+%
+\solution
+\input{poisson/solutions/2.tex}
+%
+%
+\item Suppose customers arrive in a shop according to a Poisson process with rate $4$ per hour. The shop opens at $10:00$ am. If it is given that the second customer arrives at $10:40 $ am, what is the probability that no customer arrived before $10:30 $ am? 
+%
+    \begin{enumerate}
+        \item $\frac{1}{4}$
+        \item $e^{-2}$
+        \item $\frac{1}{2}$
+        \item $e^{\frac{1}{2}}$
+    \end{enumerate}
+%
+%
+\solution
+\input{solutions/2016/dec/51.tex}
+%
+\item Men arrive in a queue according to a Poisson process with rate $\lambda_1$ and women arrive in the same queue according to another Poisson process with rate $\lambda_2$. The arrivals of men and women are independent. The probability that the first person to arrive in the queue is a man is:
+\begin{enumerate}
+\item $\dfrac{\lambda_1}{\lambda_1+\lambda_2}$
+\item $\dfrac{\lambda_2}{\lambda_1+\lambda_2}$
+\item $\dfrac{\lambda_1}{\lambda_2}$
+\item $\dfrac{\lambda_2}{\lambda_1} $
+    
+\end{enumerate}
+%
+\solution
+\input{solutions/2012/dec/60.tex}
+
+\end{enumerate}

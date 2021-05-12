@@ -1,0 +1,17 @@
+The desired probabilty is 
+\begin{align}
+    \pr{X \ge 2 } &= 1 - \pr{X < 2 }
+    \\
+    &= 1-\pr{X=0}-\pr{X=1}
+    \\
+    &= 1-\comb{15}{0} p^{0} q^{15} -\comb{15}{1} p^{1} q^{14}
+    \\
+    &=0.1709   
+\end{align}
+%
+where 
+\begin{align}
+    p = 0.0.5, q = 1-p = 0.95
+\end{align}
+%
+and $X$ is binomial with parameters $\brak{15, p}$.

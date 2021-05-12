@@ -1,0 +1,15 @@
+\begin{align}
+    \pr{Y=k} &= \pr{k\leq X < k+1}\\
+    &= \int_k^{k+1}f\brak{x|\theta}dx\\
+    &= \int_k^{k+1}\frac{1}{\theta}e^{-\frac{x}{\theta}}dx\\
+    &= \sbrak{-e^{-\frac{x}{\theta}}}_k^{k+1}\\
+ &= e^{-\frac{k}{\theta}}\brak{1-e^{-\frac{1}{\theta}}}
+ \\
+ \implies     \pr{Y=k} &= \brak{1-p}^k p \, k=0,1,2\ldots
+\end{align}
+%
+where
+\begin{align}
+    p=1-e^{-\frac{1}{\theta}}
+\end{align}
+Therefore, the distribution of $Y$ is 4) Geometric.

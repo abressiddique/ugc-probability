@@ -1,0 +1,88 @@
+Given that 
+\begin{align}
+ \vec{M} = \myvec{ X \\ Y}
+ \sim  \gauss{\boldsymbol{\upmu}}{\boldsymbol{\Sigma}}
+\end{align}
+%
+where 
+%Here, Mean matrix of X and Y is:
+\begin{align}
+    \boldsymbol{\upmu} &= \myvec{0 \\ 0}
+    \\
+\boldsymbol{\Sigma} &= \myvec{
+            1 & \rho\\
+            \rho & 1 
+        }
+\end{align}
+Also, 
+\begin{align}
+    X+Y &
+    = \vec{A}^\top \vec{M}
+    \\
+    X-Y &
+    =\vec{B}^\top \vec{M}
+\end{align}
+where
+\begin{align}
+ \vec{A} &= \myvec{1 \\ 1}, 
+    \vec{B} &= \myvec{1 \\ -1}
+\end{align}
+% Defining Covariance in terms of expectation value:
+% \begin{align}
+%     Cov(X,Y)=& E[(X-\boldsymbol{\upmu}_x)(Y-\boldsymbol{\upmu}_y)] \\
+%     =& E[(X-0)(Y-0)]\\
+%     =& E(XY)
+% \end{align}
+Thus, 
+\begin{align}
+ Cov(X+Y,X-Y) =& \vec{A}^\top \boldsymbol{\Sigma} \vec{B} \\
+    % =& \myvec{1 \\ 1}^\top
+    % \myvec{
+    %         1 & \rho\\
+    %         \rho & 1 
+    %     }
+    %     \myvec{1 \\ -1}\\ 
+    % =& \myvec{1+\rho \\ 1+\rho}^\top
+    %     \myvec{1 \\ -1}\\
+    % =& (1+\rho)-1(1+\rho) \\
+    =&   0
+\end{align}
+% Note that 
+% \begin{align}
+% Var(X+Y) = Cov(X+Y , X+Y)\\ 
+%  Var(X-Y)  = Cov(X-Y , X-Y)
+% \end{align}
+% Hence,
+% \begin{align}
+%     Var(X+Y) =&\vec{A^\top} \boldsymbol{\Sigma} \vec{A} \\
+%         =& \myvec{1 \\ 1}^\top
+%          \myvec{
+%             1 & \rho\\
+%             \rho & 1 
+%         }
+%         \myvec{1 \\ 1}\\
+%     =& \myvec{1+\rho \\ 1+\rho}^\top
+%         \myvec{1 \\ 1}\\
+%     =& 1+\rho+1+\rho \\
+%     =& 2+2\rho \neq 0
+% \end{align}
+% \begin{align}
+%     Var(X-Y) =& \vec{B^\top} \boldsymbol{\Sigma} \vec{B} \\
+%         =& \myvec{1 \\ -1}^\top
+%     \myvec{
+%             1 & \rho\\
+%             \rho & 1 
+%         }
+%          \myvec{1 \\ -1}\\
+%     =& \myvec{1-\rho \\ \rho-1}^\top
+%         \myvec{1 \\ -1}\\
+%     =& 1-\rho-\rho+1 \\
+%     =& 2-2\rho \neq 0
+% \end{align}
+% So correlation coefficient is:
+% \begin{align}
+%     \rho(X+Y,X-Y) = \frac{Cov(X+Y,X-Y)}{\sqrt{var(X+Y) \times var(X-Y)}}
+%     = 0
+% \end{align}
+$\therefore$ X+Y and X-Y are uncorrelated irrespective of value of $\rho$ where $\rho \in \brak{-1,1}$.
+%$\therefore$ The correct answer is \textbf{option 4}.

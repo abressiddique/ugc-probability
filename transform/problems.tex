@@ -1,0 +1,66 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+%
+\item X and Y are independent random variables each having the density
+\begin{align}
+    f(t) = \displaystyle\frac{1}{\pi} \frac{1}{1+{t}^2} -\infty < t < +\infty
+\end{align}
+Then the density function of $\displaystyle\frac{X+Y}{3}$ for \\$-\infty <$ t $< +\infty$ is\bigskip
+    \begin{enumerate}\itemsep0.5cm
+        \item $\displaystyle\frac{6}{\pi} \frac{1}{4+9{t}^2}$
+        \item $\displaystyle\frac{6}{\pi} \frac{1}{9+4{t}^2}$
+        \item $\displaystyle\frac{3}{\pi} \frac{1}{1+9{t}^2}$
+        \item $\displaystyle\frac{3}{\pi} \frac{1}{9+{t}^2}$
+    \end{enumerate}
+
+%
+\solution
+\input{./solutions/2017/june/52.tex}
+
+\item Suppose X and Y are independent and identically distributed random variables and let $Z = X + Y$. Then the distribution of $Z$ is in the same family as that of $X$ and $Y$ if X is
+\begin{table}[h]
+\setlength{\tabcolsep}{30pt}
+    \begin{tabular}{ll}
+         1) Normal  & 2) Exponential  \\
+         3) Uniform & 4) Binomial
+    \end{tabular}
+\end{table}
+%
+\solution
+\input{solutions/2016/june/107/main.tex}
+\item  $N,A_1,A_2\cdots$ are independent real valued random variables such that 
+    \begin{align}
+        \pr{N=k}=(1-p)p^k,k=0,1,2,3\cdots
+    \end{align}
+    where $0<p<1$ and $\{A_i:i=1,2,\cdots\}$ is a sequence of independent and identically distributed bounded random variables. Let 
+    \begin{align}
+        X(w) = 
+        \begin{cases}
+        0  & \text{if } N(w)=0\\
+        \sum_{j=1}^{k} A_j & \text{if } N(w)=k,k=1,2,3\cdots 
+        \end{cases}
+    \end{align}
+    Which of the following are necessarily correct?\\
+    \begin{enumerate}
+        \item $X$ is a bounded random variable. 
+        \item Moment generating function $m_X$ of $X$ is
+        \begin{align}
+            m_X(t)=\dfrac{1-p}{1-pm_A(t)}, t\in \mathbb{R},
+        \end{align}
+        where $m_A$ is moment generating function of $A_1$.
+        \item Characteristic function $\varphi_X$ of $X$ is
+        \begin{align}
+            \varphi_X(t)=\dfrac{1-p}{1-p\varphi_A(t)},t\in \mathbb{R},
+        \end{align}
+        where $\varphi_A$ is the characteristic function of $A_1$.
+        \item $X$ is symmetric about 0.
+    \end{enumerate}
+
+\end{enumerate}

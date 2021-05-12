@@ -1,0 +1,19 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+\item Which of the following conditions imply independence of the random variables $X$
+and $Y$ ?\\
+\begin{enumerate}
+    \item  $\pr{X\ \mathop{>}\ a|Y\ \mathop{>}\ a} = \pr{X\ \mathop{>}\ a}\ \forall\ a\ \in\ \mathbb{R}$\\ 
+    \item  $\pr{X\ \mathop{>}\ a|Y\ \mathop{<}\ b} = \pr{X\ \mathop{>}\ a}\ \forall\ a,\ b\ \in\ \mathbb{R}$\\ 
+    \item  $X$ and $Y$ are uncorrelated.\\
+    \item  $E[(X-a)(Y-b)] = E(X-a)\ E(Y-b)\ \forall\ a,\ b \in\ \mathbb{R}$\\
+\end{enumerate}
+
+\end{enumerate}

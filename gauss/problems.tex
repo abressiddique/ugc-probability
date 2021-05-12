@@ -1,0 +1,44 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $U$ and $V$ be two independent zero mean Gaussian random variables of variances $\frac{1}{4}$ and $\frac{1}{9}$ respectively. The probability $\pr{3V \geq 2U}$ is \dots
+\\
+\solution
+\input{gauss/solutions/1.tex}
+%
+\item $(X,Y)$ follows bivariate normal distribution $N_2$(0,0,1,1,$\rho$),  -1 $<$ $\rho$ $<$ 1. Then,
+\begin{enumerate}
+    \item $X+Y$ and $X-Y$ are uncorrelated only if $\rho$ = 0
+    \item $X+Y$ and $X-Y$ are uncorrelated only if $\rho$ $<$ 0
+    \item $X+Y$ and $X-Y$ are uncorrelated only if $\rho$ $>$ 0
+    \item $X+Y$ and $X-Y$ are uncorrelated for all values of $\rho$
+\end{enumerate}
+\solution
+\input{gauss/solutions/2.tex}
+%
+\item Let $U$ and $V$ be two independent zero mean Gaussian random variables of variances $\frac{1}{4}$ and $\frac{1}{9}$ respectively. The probability $\pr{3V \geq 2U}$ is \dots
+\\
+\solution
+\input{gauss/solutions/1.tex}
+%
+\item Suppose
+$\begin{pmatrix}
+X\\
+Y
+\end{pmatrix}$ is a random vector such that the marginal distribution of $X$ and the marginal distribution of $Y$ are the same and each is normally distributed with mean 0 and variance 1. Then, which of the following conditions imply independence of $X$ and $Y?$
+\begin{enumerate}
+\item Cov$\brak{X,Y}=0$
+\item $aX+bY$ is normally distributed with mean 0 and variance $a^2+b^2$ for all real $a$ and $b$
+\item $\pr{X\le 0, Y\le0}=\frac{1}{4}$
+\item $E\sbrak{e^{itX+isY}}=E\sbrak{e^{itX}}E\sbrak{e^{isY}}$ for all real $s$ and $t$
+\end{enumerate}
+%
+\solution
+\input{solutions/2015/dec/109/main.tex}
+
+\end{enumerate}

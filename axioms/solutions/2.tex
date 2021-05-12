@@ -1,0 +1,36 @@
+The given information can be expressed as
+\begin{align}
+    \label{eq:axioms/2/given}
+    \pr{P} &= \frac{1}{4} \\
+    \pr{P|Q} &= \frac{1}{2}  = \frac{\pr{PQ}}{\pr{Q}}\\
+    \pr{Q|P} &= \frac{1}{3}  =  \frac{\pr{PQ}}{\pr{P}}
+    \end{align}
+    which yields
+    \begin{align}
+        \label{eq:axioms/2/derived}
+        \begin{split}
+        \pr{PQ} &= \frac{1}{3} \times \frac{1}{4}  = \frac{1}{12}
+        \\
+        \pr{Q} &= \frac{\frac{1}{12}}{\frac{1}{2}} = \frac{1}{6}
+        \end{split}
+        \end{align}
+    
+The objective is to find
+\begin{align}
+    \pr{P^{\prime}|Q^{\prime}}
+    \label{eq:axioms/2/tofind}
+\end{align}
+\eqref{eq:axioms/2/given} can be expressed as 
+\begin{align}
+    \pr{P^{\prime}|Q^{\prime}} &= \frac{\pr{P^{\prime}Q^{\prime}}}{\pr{Q^{\prime}}} 
+\\
+&= \frac{\pr{1 - \brak{P + Q}^{\prime}}}{\pr{Q^{\prime}}} 
+\\
+&= \frac{1 - \pr{P}-\pr{Q} +\pr{PQ}}{1 - \pr{Q}} 
+   \label{2.0.19}   
+    \end{align}
+Substituting from     \eqref{eq:axioms/2/derived} and     \eqref{eq:axioms/2/given} in    \eqref{2.0.19},   
+\begin{align}
+    \pr{P^{\prime}|Q^{\prime}} = \frac{4}{5}
+\end{align}
+

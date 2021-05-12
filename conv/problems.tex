@@ -1,0 +1,135 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+%
+\item 
+Let $X_{1},X_{2},\dots$ be independent and identically distributed random variables each following a uniform distribution on (0,1). Denote 
+\begin{align}
+T_{n}=\max\cbrak{ X_{1},X_{2},\dots,X_{n}}. 
+\end{align}
+Then, which of the following statements are true?
+\begin{enumerate}
+    \item $T_{n}$ converges to 1 in probability.
+    \item $n(1-T_{n})$ converges in distribution.
+    \item $n^{2}(1-T_{n})$ converges in distribution.
+    \item $\sqrt{n}(1-T_{n})$ converges to 0 in probability.
+\end{enumerate}
+%
+\solution
+\input{conv/solutions/1.tex}
+%
+\item Let $\{X_i\}_{i \geq 1}$ be a sequence of i.i.d. random variables with $E(X_i)=0$ and $V(X_i)=1$. Which of the following are true?
+%
+\begin{enumerate}
+    \setlength{\itemsep}{2pt}
+    \item $\dfrac{1}{n} \sum_{i=1}^n X_i^2 \to 0$ in probability 
+    \item $\dfrac{1}{n^{3/4}} \sum_{i=1}^n X_i \to 0$ in probability 
+    \item $\dfrac{1}{n^{1/2}} \sum_{i=1}^n X_i \to 0$ in probability 
+    \item $\dfrac{1}{n} \sum_{i=1}^n X_i^2 \to 1$ in probability
+\end{enumerate}
+%
+\solution
+\input{conv/solutions/2.tex}
+%
+\item Let $\{X_{n}\}$ be a sequence of independent random variables where the distribution of $X_{n}$ is normal with mean $\mu$ and variance $n$ for $n$ = 1,2,\dots Define
+\begin{align}
+    \Bar{X_{n}}&=\frac{1}{n}\sum_{i=1}^{n}X_{i}\\ S_{n}&=\frac{\sum_{i=1}^{n}\frac{1}{i}X_{i}}{\sum_{i=1}^{n}\frac{1}{i}}
+\end{align}
+Which of the following are true?
+\begin{enumerate}
+    \item E($\Bar{X_{n}}$) = E($S_{n}$) for sufficiently large $n$
+    \label{conv/3/option 1}
+    \item Var($S_{n}$) $<$ Var($\Bar{X_{n}}$) for sufficiently large $n$
+    \label{conv/3/option 2}
+    \item $\Bar{X_{n}}$ is consistent for $\mu$
+    \label{conv/3/option 3}
+    \item $\Bar{X_{n}}$ is sufficient for $\mu$
+    \label{conv/3/option 4}
+\end{enumerate}
+%
+\solution
+\input{conv/solutions/3.tex}
+%
+
+\item Let $X_1,X_2, \dots$ be i.i.d. $N(0,1)$ random variables. Let 
+\begin{align}
+S_{n}=X_{1}^2+X_{2}^2+\dots+X_{n}^2 \forall n \geq 1. 
+\end{align}
+Which of the following statements are correct?
+%
+\begin{enumerate}
+\setlength\itemsep{1em}
+\item 
+\begin{align}
+    \frac{S_{n}-n}{\sqrt{2}}\sim N(0,1) \quad  \forall n\geq 1
+\end{align}
+\item 
+\begin{align}
+    \forall \epsilon > 0,\pr{\abs{\frac{S_n}{n}-2}>\epsilon}\to 0, n \to \infty
+\end{align}
+
+\item $\frac{S_{n}}{n} \to 1$ with probability 1
+\item 
+\begin{multline}
+    \pr{{S_{n} \leq n+\sqrt{n}x}} \to \pr{{Y \leq x}}
+    \\
+    \forall x\in \mathbb{R}, Y \sim N\brak{0,2}
+\end{multline}
+%
+\end{enumerate}
+%
+\item Let $X_1,X_2, \cdots$ be i.i.d. $N(0,1)$ random variables.Let $S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1.$Which of the following statements are correct?
+\begin{enumerate}
+\setlength\itemsep{1em}
+\item $\frac{S_{n}-n}{\sqrt{2}}\sim N(0,1)$ for all $n\geq 1$
+\item For all $\epsilon > 0$,$\Pr{\brak{\left|\frac{S_n}{n}-2\right|>\epsilon}}\to 0$ as $n \to \infty$
+\item $\frac{S_{n}}{n} \to 1$ with probability 1
+\item $\Pr({S_{n} \leq n+\sqrt{n}x}) \to \Pr({Y \leq x}) \forall x\in R$ ,where $Y \sim N(0,2)$
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/104.tex}
+%
+\item Let $X_1,X_2,...,X_n$ be independent and identically distributed, each having a uniform distribution on $(0,1)$. Let $S_n=\sum_{i=1}^{n}X_i$ for $n\ge 1$. Then, which of the following statements are true? 
+\begin{enumerate}[label=\Alph*)]
+\item $\frac{S_n}{n \log{n}}\to 0 \text{ as } n \to \infty$ with probability 1.
+\item $\pr{\brak{S_n>\frac{2n}{3}}\text{occurs for infinitely many n}}=1$
+\item $\frac{S_n}{\log{n}}\to 0\text{ as } n \to \infty$ with probability 1.
+\item $\pr{\brak{S_n>\frac{n}{3}}\text{occurs for infinitely many n}}=1$
+\end{enumerate}
+%
+\solution
+\input{solutions/2015/dec/106.tex}
+%
+%
+\item Let $U_1,U_2\dots,U_n$ be independent and identically distributed random variables each
+having a uniform distribution on (0,1). Then,$\lim_{n \to +\infty} \pr{U_1+U_2\dots,U_n\leq \frac{3}{4}n}$
+\begin{enumerate}
+    \item does not exist
+    \item exists and equals 0
+    \item exists and equals 1
+    \item exists and equals $\frac{3}{4}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/59.tex}
+%
+%
+\item Let $X_{1},X_{2},\dots$ be independent and identically distributed random variables each following a uniform distribution on (0,1). Denote $T_{n}=max\{ X_{1},X_{2},\dots,X_{n}\}$. Then, which of the following statements are true?
+\begin{enumerate}
+    \item $T_{n}$ converges to 1 in probability.
+    \item $n(1-T_{n})$ converges in distribution.
+    \item $n^{2}(1-T_{n})$ converges in distribution.
+    \item $\sqrt{n}(1-T_{n})$ converges to 0 in probability.
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/72/Assignment9.tex}
+
+
+%
+\end{enumerate}

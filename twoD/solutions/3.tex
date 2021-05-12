@@ -1,0 +1,40 @@
+%Given that, $Y=[X-2|X>2]$
+From the given information, 
+\begin{align}
+\pr{Y \geq t} &= \frac{\pr{X-2 \geq t, X>2}}{\pr{X>2}} 
+\\
+&= \frac{\pr{X \geq t + 2, X>2}}{\pr{X>2}} 
+\label{twoD/3/Eq:1}
+\end{align}
+$\because  X$ has an exponential distribution with parameter $\lambda = \frac{1}{2}$, 
+\begin{align}
+	F_X\brak{x} &= \begin{cases} \label{twoD/3/Eq:3}
+				1 - e^{-\lambda x}, & \text{if $0 < x< \infty $}\\
+				0, & \text{otherwise}
+			 \end{cases} 
+%	E\brak{x} &= \frac{1}{\lambda} \label{twoD/3/Eq:4}
+	\end{align}
+	and
+	%
+\begin{align}
+	\pr{X >2} = 1- F_X\brak{2} = e^{-2\lambda}
+	\label{twoD/3/Eq:7} 
+	\end{align}
+%	
+Also, 
+\begin{align}
+	\label{twoD/3/Eq:6}
+	\pr{X \geq t+2,X>2} &= 
+	\begin{cases}
+	\pr{X \geq t+2} & t \ge 0 \\
+	\pr{X > 2} & t < 0	
+	\end{cases}
+		\end{align}
+Substituting \eqref{twoD/3/Eq:6} in \eqref{twoD/3/Eq:1},  using 	\eqref{twoD/3/Eq:7} and simplifying,  
+\begin{align}
+\pr{Y \geq t} = 
+\begin{cases}
+	 e^{-\frac{t}{2}} & t \ge 0 \\
+	1 & t < 0	
+	\end{cases}
+\end{align}

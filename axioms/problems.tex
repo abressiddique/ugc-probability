@@ -1,0 +1,76 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item The probability that a given positive integer lying between 1 and 100 (both inclusive) is NOT divisible by 2,3 or 5 is \dots
+\\
+\solution
+\input{axioms/solutions/1.tex}
+%
+\item P and Q are considering to apply for a job. The probability that P applies for the job is $\dfrac{1}{4}$, the probability that P applies for the job given that Q applies for the job is $\dfrac{1}{2}$, and the probability that Q applies for the job given that P applies for the job is $\dfrac{1}{3}$. Then the probability that P does not apply for the job given that Q does not apply for the job is 
+
+\begin{enumerate}
+\begin{multicols}{4}
+\setlength\itemsep{2em}
+
+\item $
+\dfrac{4}{5}
+$
+
+\item $
+\dfrac{5}{6}
+$
+
+\item $
+\dfrac{7}{8}
+$
+
+\item $
+\dfrac{11}{12}
+$
+
+\end{multicols}
+\end{enumerate}
+\solution
+\input{axioms/solutions/2.tex}
+%
+%
+\item Out of 6 unbiased coins, 5 are tossed independently and they all result in heads. If the 6th coin is now independently tossed, the probability of getting head is:
+\begin{enumerate}[label=(\alph*)]
+\item 1
+\item 0
+\item $\frac{1}{2}$
+\item $\frac{1}{6}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/2.tex}
+
+\item Two students are solving the same problem independently,if the probability of first one solves the problem is $\frac{3}{5}$ and the probability that the second one solves the problem is $\frac{4}{5}$ ,what is the probability that atleast one of them solves the problem?
+\begin{enumerate}
+
+\item $ \frac{17}{25}$\\
+\item $\frac{19}{25}$\\
+\item $ \frac{21}{25}$\\
+\item $\frac{23}{25}$
+
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/june/18.tex}
+%
+\item Three types of components are used in electrical circuits 1, 2, 3 as shown below in the figure
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{solutions/2016/june/118/Figures/circuits.png}
+    \caption{Figure}
+    \label{fig:fig_label}
+\end{figure}
+%
+\solution
+\input{solutions/2016/june/118/Assignment9.tex}
+\end{enumerate}

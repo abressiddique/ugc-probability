@@ -1,0 +1,26 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let X be a random variable with pdf
+\begin{align}
+    f_{X}(x)=\begin{cases} 
+            \frac{2x}{\pi^2}  &  0<x<\pi\\
+            0 & \text{otherwise}
+            \end{cases} 
+\end{align}
+Let Y = $\sin{X}$, then for $0<y<1$, the pdf of Y is given by,
+\begin{enumerate}[label = (\Alph*)]
+    \item  $\frac{2\pi}{\sqrt{1-y^2}}$\\
+    \item  $\frac{\pi}{2}\sqrt{1-y^2}$\\
+    \item  $\frac{2}{\pi}\sqrt{1-y^2}$\\
+    \item  $\frac{2}{\pi\sqrt{1-y^2}}$
+\end{enumerate}
+\solution
+\input{trans/solutions/1/main.tex}
+
+\end{enumerate}

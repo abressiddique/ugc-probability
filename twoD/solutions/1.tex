@@ -1,0 +1,125 @@
+\begin{enumerate}
+    \item False
+    \item By definition, 
+    \begin{align}
+        f_Y\brak{y} &=  \int_{-\infty}^{\infty} f(x,y) \,dx \\
+        &= \int_{0}^{y} cxy \,dx \\
+        &= cy \brak{\frac{x^2}{2}} \Biggr|_{0}^{y} \\
+        &= \frac{ cy^3}{2}
+    \end{align}
+     \begin{align}
+    \label{eq:: pdfy}
+    \implies f_Y(y)  = 
+    \begin{cases}
+    \frac{ cy^3}{2}, &  0<y<1
+    \\
+    0 & \text{ otherwise. }
+    \end{cases}
+    \end{align}   
+    $\because$ the area under the pdf is 1,  from \eqref{eq:: pdfy},
+    \begin{align}
+    \implies    \int_{-\infty}^{\infty} f_Y(y) \,dy &= 1 \\
+    \implies        \int_{0}^{1} c\frac{y^3}{2} & =1 \\
+    \implies    \frac{c}{8} &= 1 \\
+    \text{or, }    c & = 8
+    \end{align}
+%
+Also,
+% The pdf of Y is 
+ \begin{align}
+\label{eq:: pdf_y}
+f_Y(y)  = 
+\begin{cases}
+ 4y^3 & \text{, if } 0<y<1
+\\
+0 & \text{, otherwise }
+\end{cases}
+\end{align}   
+
+\item 
+\begin{align}
+    f_X\brak{x} &=  \int_{-\infty}^{\infty} f(x,y) \,dy \\
+    &= \int_{x}^{1} cxy \,dy \\
+    &= cx \brak{\frac{y^2}{2}} \Biggr|_{x}^{1} \\
+    &= cx \brak{\frac{1- x^2}{2}}
+\end{align}
+%
+\begin{align}
+\label{eq:: pdf_x}
+\implies f_X(x)  = 
+\begin{cases}
+4x \brak{1- x^2}, &  0<x<1
+\\
+0 & \text{ otherwise }
+\end{cases}
+\end{align} 
+%
+From \eqref{eq:: pdf_x} and \eqref{eq:: pdf_y}
+\begin{align}
+f_X(x) \times f_Y(y) & = 
+\begin{cases}
+16xy^3 \brak{1- x^2} & \text{, if } 0<x,y<1 
+\\
+0 & \text{, otherwise }
+\end{cases}
+\\
+  &\neq f(x,y)
+\end{align} 
+%Since $f(x,y) $ and $ f_X(x) \times f_Y(y) $ are different, random variables 
+Hence, $X$ and $Y$ are not independent. 
+%Therefore option (3) is not correct. \\
+\item
+% The marginal PDF of X is given by,
+% \begin{align}
+% \label{eq:: pdf_x1}
+% f_X(x)  = 
+% \begin{cases}
+% 4x \brak{1- x^2} & \text{, if } 0<x<1
+% \\
+% 0 & \text{, otherwise }
+% \end{cases}
+% \end{align} 
+% The marginal CDF of X, $ F_X(x)$ is given by,
+\begin{align}
+    F_X(x) &=  \int_{-\infty}^{x} f_X(x) \,dx \\
+    &= \int_{0}^{x} 4x(1-x^2) \,dx \\
+     &= \int_{0}^{x} 4x-4x^3 \,dx \\
+     & = 2x^2 - 4x^4 \text{ for }  0< x< 1
+\end{align}
+yielding
+\begin{align}
+\label{eq:: cdf_x}
+F_X(x)  = 
+\begin{cases}
+0 &  x \le 0
+\\
+2x^2 - 4x^4    &  0 <x< 1
+\\
+1 &    x \ge 1
+\end{cases}
+\end{align}
+From \eqref{eq:: cdf_x},
+\begin{multline}
+    \Pr\brak{Y- \epsilon < X < Y + \epsilon} 
+    \\
+    = F_X(Y + \epsilon) -  F_X(Y - \epsilon)  
+    \\
+     = 8\epsilon Y\brak{1 - Y^2 - \epsilon^2}
+\end{multline}
+upon simplification.  Letting
+%
+\begin{align}
+g(Y)&= 8\epsilon Y(1 - Y^2 - \epsilon^2), \\
+    E[g(Y)] &= \int_{-\infty}^{\infty} g(y) f_Y(y) \,dy 
+    \\
+     & = \int_{0}^{1} (4y^3) (8\epsilon y)(1 - y^2 - \epsilon^2) \,dy 
+\end{align}
+\begin{multline}
+\implies     \Pr\brak{Y- \epsilon < X < Y + \epsilon}     \\
+= 32\epsilon \brak{\frac{2- 7\epsilon^2}{35}}
+\end{multline}
+Now substituting $ \epsilon = 0 $ in the above, 
+\begin{align}
+    \pr{X =Y}  = 0
+\end{align}
+\end{enumerate}

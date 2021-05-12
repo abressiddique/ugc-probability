@@ -1,0 +1,30 @@
+The covariance is defined as
+%
+\begin{align}
+    \cov{XY} = \mean{XY}-\mean{X}\mean{Y}
+\end{align}
+From \eqref{eq:twoD/2},
+%
+\begin{align}
+    E\brak{XY}=&\int_{0}^{1}\int_{-\infty}^{\infty}xy f_{XY}(x,y)\,dx\,dy\\
+    =&\int_{0}^{1}\int_{-\infty}^{\infty}xy\frac{1}{\sqrt{2\pi y}}e^{\frac{-1}{2y}(x-y)^2}\,dx \,dy\\
+    =&\int_{0}^{1}y^2 \,dy\\
+     \implies E\brak{XY}=&\frac{1}{3} \label{eq:1}
+    \end{align}
+Y has marginal probability
+\begin{align}
+    f_Y(y)=&\int_{-\infty}^{\infty}f_{XY}(x,y)\,dx =1\\
+    \implies E\brak{Y}=&\frac{1}{2} \label{eq:2}
+\end{align}
+\begin{align}
+ E\brak{X}=&\int_{0}^{1}\int_{-\infty}^{\infty}x f_{XY}(x,y)\,dx\,dy\\
+    =&\int_{0}^{1}\int_{-\infty}^{\infty}x\frac{1}{\sqrt{2\pi y}}e^{\frac{-1}{2y}(x-y)^2}\,dx \,dy\\
+    =&\int_{0}^{1}y\,dy\\
+E\brak{X}=&\frac{1}{2} \label{eq:3} \\
+\end{align}
+From \eqref{eq:1},\eqref{eq:2},\eqref{eq:3}
+\begin{align}
+Cov(X,Y)=&E\brak{XY}-E\brak{X}E\brak{Y}\\
+       =&\frac{1}{3}-\frac{1}{2}\times \frac{1}{2}\\
+Cov(X,Y)=&\frac{1}{12}
+\end{align}

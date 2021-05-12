@@ -1,0 +1,38 @@
+Table \ref{gate:11} summarizes the given information. 
+\begin{table}[!ht]
+    \begin{center}
+        \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Event & Definition & Probability  \\
+    \hline
+    A    & $n \equiv 0 \pmod{2}$  & $\cfrac{50}{100}$ \\ \hline
+    B    & $n \equiv 0 \pmod{3}$ & $\cfrac{33}{100}$ \\ \hline
+    C    & $n \equiv 0 \pmod{5}$  & $\cfrac{20}{100}$ \\ \hline
+    AB   & $n \equiv 0 \pmod{6}$ & $\cfrac{16}{100}$ \\ \hline
+    BC   & $n \equiv 0 \pmod{15}$ & $\cfrac{6}{100}$ \\ \hline
+    AC   & $n \equiv 0 \pmod{10}$ & $\cfrac{10}{100}$ \\ \hline
+    ABC  & $n \equiv 0 \pmod{30}$ & $\cfrac{3}{100}$ \\
+    \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
+    \end{center}
+    \caption{$1 \le n \le 100$}
+    \label{gate:11}
+    \end{table}
+    %
+%
+\begin{multline}
+\because     \pr{A+B+C} = \pr{A} + \pr{B} + \pr{C} \\- \pr{AB} - \pr{BC} \\- \pr{AC} + \pr{ABC}\label{Shurururururururu}    
+\end{multline}
+
+Substituting from Table \ref{gate:11} in \eqref{Shurururururururu},
+\begin{multline}
+    \pr{A+B+C} = \frac{50}{100} + \frac{33}{100} + \frac{20}{100} \\- \frac{16}{100} - \frac{6}{100} - \frac{10}{100} + \frac{3}{100} 
+    \\
+    = \frac{74}{100}
+\end{multline}
+Thus, the  required probability is
+\begin{align}
+    1 - \pr{A+B+C} = \frac{26}{100}
+\end{align}

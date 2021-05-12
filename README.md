@@ -1,2 +1,1 @@
-# ugc-probability
-UGC NET probability
+# probtext

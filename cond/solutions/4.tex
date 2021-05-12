@@ -1,0 +1,26 @@
+Let $X_i \in \cbrak{0,1}$ represent the $i^{th}$ draw where 1 denotes a red ball being drawn.
+
+\begin{table}[h]
+\centering 
+\begin{tabular}{|c|c|c|}
+\hline
+           & $X_1 = 0$ & $X_1 = 1$\\
+\hline
+$X_2 = 0$  & 4/18      & 5/18  \\
+\hline
+$X_2 = 1$  & 5/18      & 4/18  \\
+\hline
+\end{tabular}
+\caption{The probabilities of all possible cases when two balls are drawn one by one from the urn.}
+\label{axioms/4/table:}
+\end{table}
+ 
+From Table \ref{axioms/4/table:},
+
+\begin{align}
+    \pr{X_2 = 1} &= \pr{X_2 = 1,X_1 = 0} \nonumber \\
+    & \quad +\pr{X_2 = 1,X_1 = 1} \\
+                 &=\frac{5}{18}+\frac{4}{18} \\
+                 &= \frac{1}{2}
+\end{align}
+The required option is (A).

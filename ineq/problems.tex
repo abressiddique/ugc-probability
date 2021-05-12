@@ -1,0 +1,39 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+%
+\item Let $X_i 's$ be independent random variables such that $X_i 's$ are symmetric about 0 and $var(X_i)=2i - 1$,for $i\geq 1$.then,
+$\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n\log{n}}$
+\begin{enumerate}
+\begin{multicols}{2}
+\setlength\itemsep{2em}
+\item does not exist.
+\item equals $\dfrac{1}{2}$.\\
+\item equals 1.
+\item equals 0.
+\end{multicols}
+\end{enumerate}
+%
+\solution
+\input{solutions/2015/dec/53.tex}
+%
+%
+\item Let $X_1$,$X_2$,... be independent random variables each following exponential distribution with mean 1. Then which of the following statements are correct?
+\begin{enumerate}
+    \item P($X_n > \log n$ for infinitely many $n \geq 1$) = 1
+    \item P($X_n > 2$ for infinitely many $n \geq 1$) = 1
+    \item P($X_n > \frac{1}{2}$ for infinitely many $n \geq 1$) = 0
+    \item P($X_n > \log n, X_{n+1}>\log (n+1)$ for infinitely many $n \geq 1$) = 0
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/101.tex}
+
+
+\end{enumerate}

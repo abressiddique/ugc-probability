@@ -1,0 +1,147 @@
+\begin{figure}[!ht]
+  \centering
+  \begin{tikzpicture}
+         
+               % Setup the style for the states
+          \tikzset{node style/.style={state, 
+                                      minimum width=2cm,
+                                      line width=1mm,
+                                      fill=gray!20!white}}
+          % Draw the states
+          \node[node style] at (3, 0)      (bull)     {1};
+          \node[node style] at (0, -4)      (bear)     {2};
+          \node[node style] at (6, -4) (stagnant) {3};
+          % Connect the states with arrows
+          \draw[every loop,
+                auto=right,
+                line width=0.7mm,
+                >=latex,
+                draw=orange,
+                fill=orange]
+             (bull)     edge[bend left=20]            node {$\frac{1}{2}$} (stagnant)
+              (bull)     edge[bend right=20] node {$\frac{1}{4}$} (bear)
+              
+              
+              (bull) edge[loop above]             node  {$\frac{1}{4}$} (bull)
+              (bear) edge[loop below]             node  {1} (bear)
+              (stagnant) edge[loop below]             node  {1} (stagnant);
+      \end{tikzpicture}
+      \caption{}
+      \label{fig:markov/1}
+  \end{figure}
+  The given problem can be represented using Table \ref{ec9:table:1} and the Markov chain in Fig. \ref{fig:markov/1}.
+% Given, a fair coin is tossed is tossed two times.
+% Let's define a Markov chain $\{X_{n},n=0,1,2,\dots\}$, where $X_{n}\in S=\{1,2,3\}$, such that
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|c|}
+    \hline
+    State & Description \\
+    \hline
+    1 & $\cbrak{T, T}$\\[1ex]
+    \hline
+    2 &  $Y = \cbrak{T, H}$\\[1ex]
+    \hline
+    3 & $N = \cbrak{\cbrak{H, H},\cbrak{H, T}}$\\[1ex]
+    \hline
+\end{tabular}
+\caption{States and their notations}
+\label{ec9:table:1}
+\end{table}
+The state transition matrix for the Markov chain can be expressed as
+\begin{align}
+  P=\begin{blockarray}{cccccc}
+  &2 & 3 & 1  \\
+  \begin{block}{c[ccccc]}
+    2 & 1 & 0 & 0  \\
+    3 & 0 & 1 & 0 \\
+    1 & 0.25 & 0.5 & 0.25  \\
+  \end{block}
+  \end{blockarray}
+  \label{ec9:eq:1}
+  \end{align}
+%  
+Clearly, the state $1$ is transient, while $2,3$ are absorbing. Comparing   \eqref{ec9:eq:1} with the standard form of 
+the state transition matrix 
+\begin{align}
+\label{ec9:eq:2}
+P=\begin{blockarray}{ccc}
+&A & N \\
+\begin{block}{c[cc]}
+  A & I & O  \\
+  N & R & Q \\
+\end{block}
+\end{blockarray}
+\end{align}
+where,
+\begin{table}[ht!]
+\centering
+\caption{Notations and their meanings}
+\label{ec9:table:2}
+\begin{tabular}{|c|c|}
+    \hline
+    Notation & Meaning \\
+    \hline
+    $A$ & All absorbing states\\[1ex]
+    \hline
+    $N$ & All non-absorbing states\\[1ex]
+    \hline
+    $I$ & Identity matrix\\[1ex]
+    \hline
+    $O$ & Zero matrix\\[1ex]
+    \hline
+    $R,Q$ & Other submatices\\[1ex]
+    \hline
+\end{tabular}
+\end{table}
+From   \eqref{ec9:eq:1} and  \eqref{ec9:eq:2},
+\begin{align}
+\label{ec9:eq:r,q}
+    R=\myvec{
+    0.25 & 0.5\\
+    },
+    Q=\myvec{
+    0.25\\
+    }
+\end{align}
+The limiting matrix for absorbing Markov chain is
+\begin{align}
+\bar P=\myvec{
+    I & O\\
+    FR & O\\
+    }
+    \label{eq:markov/1/limit}
+\end{align}
+where
+\begin{align}
+F=\brak{I-Q}^{-1} = \brak{1-0.25}^{-1} = \frac{4}{3}
+\label{eq:markov/1/fund}
+\end{align}
+is called the fundamental matrix of $P$. 
+Upon substituting from \eqref{ec9:eq:r,q} in \eqref{eq:markov/1/fund},
+\begin{align}
+  F=\brak{1-0.25}^{-1} = \frac{4}{3}
+  \end{align}
+  %
+  and
+  \begin{align}
+    FR=\myvec{\frac{1}{3} & \frac{2}{3}}
+    \end{align}
+  which, upon substituting in \eqref{eq:markov/1/limit} yields
+\begin{align}
+\bar P=\begin{blockarray}{cccccc}
+&2 & 3 & 1 \\
+\begin{block}{c[ccccc]}
+    2 & 1 & 0 & 0\\ 
+    3 & 0 & 1 & 0\\ 
+    1 & \frac{1}{3} & \frac{2}{3} & 0\\    
+\end{block}
+\end{blockarray}
+\end{align}
+% The desired probability is given by $\bar{p}_{12}$
+% A element $\bar p_{ij}$ of $\bar P$ denotes the absorption probability in state $j$, starting from state $i$. 
+
+% \\ Then, the absorption probability in state 2 $\brak{\text{i.e getting output Y}}$ starting from state 1 is $\bar p_{12}$.
+\begin{align}
+\therefore \bar p_{12}=\frac{1}{3}
+\end{align}

@@ -1,0 +1,170 @@
+
+\begin{definition}
+    Two random variables $X$ and $Y$ are independent when the joint probability distribution of random variables is product of their individual probability distributions i.e for all sets A,B
+    \begin{align}
+        \label{indep/4/eq1} \pr{X\in A,Y \in B}=\pr{X \in A}\pr{Y \in B}
+    \end{align}
+    Alternatively, 
+    \begin{align}
+        \label{indep/4/eq1/cdf} F_{X,Y}\brak{a,b}=F_X\brak{a}F_Y\brak{b}
+     \end{align}
+  
+\end{definition}
+\begin{lemma}
+From \eqref{indep/4/eq1/cdf}, it follows that 
+\begin{align}
+    \implies f_{X,Y}\brak{a,b}=f_X\brak{a}f_Y\brak{b}
+    \label{indep/4/eq1/pdf}
+\end{align}
+\end{lemma}
+\begin{proof}
+    From \eqref{indep/4/eq1/cdf},
+    \begin{align}
+        \frac{\partial^2 F_{X,Y}\brak{a,b}}{\partial b \partial a}=\frac{\partial F_X\brak{a} }{\partial a}\frac{\partial F_Y\brak{b} }{\partial b} 
+    \end{align}
+    yielding     \eqref{indep/4/eq1/pdf}.
+\end{proof}
+
+
+\begin{enumerate}
+     \item  From the given information, 
+     \begin{align}
+        \pr{X>a,Y>a} &=         \pr{X>a}\pr{Y>a}
+        \\
+        &= \sbrak{1-F_X\brak{a}}\sbrak{1-F_Y\brak{a}}
+        \label{indep/4/eq1/sp/1}
+     \end{align}
+    \begin{multline}
+\because \pr{X>a}-\pr{Y<a}\\=\pr{X>a,Y>a}+\pr{X>a,Y<a}\\-\pr{X>a,Y<a}-\pr{X<a,Y<a}, 
+\\
+\pr{X>a,Y>a} =         1-F_X\brak{a}-F_Y\brak{a}\\ +F_{X,Y}\brak{a,a}
+    \end{multline}
+which, upon substituting from         \eqref{indep/4/eq1/sp/1} yields
+\begin{align}
+\implies F_{X,Y}\brak{a,a}=F_X\brak{a}F_Y\brak{a}
+\label{indep/4/eq1/sp}
+\end{align}
+which is a special case of \eqref{indep/4/eq1} for $b=a$.  The spectrum of conditions for independence is hence underrepresented. 
+Thus, the given  condition does not imply independence of $X$ and $Y$.    
+% \begin{example}
+%     Consider two random variables $X$,$Y \in \{0,1,2\}$ with the probabilities of the ordered pairs \brak{X,Y} given in the Table\ref{indep/4/table1}.  The given
+%     distribution satisfies 
+% \end{example}
+%     \begin{table}[!ht]
+%      \centering
+%      \resizebox{\columnwidth}{!}{
+% \begin{tabular}{|l|c|c|c|}
+%     \hline
+%     \diagbox{$X$}{$Y$}&0&1&2\\ 
+%     \hline
+%      0&0.2&0.1 &0.1\\     \hline
+%      1&0.2&0.1&0.05\\     \hline
+%      2&0.1&0.1&0.05\\     \hline
+%     \hline
+%     \end{tabular}}
+%     \caption{\pr{X,Y}}
+%     \label{indep/4/table1}
+%         \end{table}    
+    
+%     Case 1: $a<0$
+%     \begin{align}
+%         \pr{X>a|Y>a}=1=\pr{X>a}
+%     \end{align}
+%     Case 2: $0\leq a <1$
+%     \begin{align}
+%         \pr{X>a|Y>a}=\frac{\pr{X,Y>a}}{\pr{Y>a}}=\frac{0.3}{0.5}=0.6\\
+%         \pr{X>a}=\pr{X=1}+\pr{X=2}=0.6
+%     \end{align}
+%     Case 3: $1\leq a <2$
+%     \begin{align}
+%         \pr{X>a|Y>a}=\frac{\pr{X,Y>a}}{\pr{Y>a}}=\frac{0.05}{0.2}=0.25\\
+%         \pr{X>a}=\pr{X=2}=0.25
+%     \end{align}
+%     Case 4: $a\geq 2$
+%     \begin{align}
+%         \pr{X>a|Y>a}=\frac{\pr{X,Y>a}}{\pr{Y>a}}
+%     \end{align}
+%     is not defined as $\pr{Y>a}=0$.
+%     In all the cases, $\pr{X>a|Y>a}=\pr{X>a}$ is true.
+    
+%     Consider,
+%     \begin{align}
+%         \pr{X=1,Y=2}=0.05
+%     \end{align}
+%     \begin{multline}
+%         \pr{X=1}\pr{Y=2}=0.35\times0.2=0.7\\\neq\pr{X=1,Y=2}
+%     \end{multline} 
+%     Clearly, $X$ and $Y$ are not independent. 
+    
+     {\em Option 1 is incorrect}.
+    
+    \item From Bayes theorem,
+    \begin{align}
+        \pr{X>a|Y<b}&=\pr{X>a}
+    \end{align}
+    \begin{multline}
+            \label{indep/4/eq3}
+            \implies \pr{X>a,Y<b} \\ =\pr{X>a}\pr{Y<b}
+        \end{multline}
+    for all $a,b\in R$. 
+    \begin{multline}
+    \because     F_Y\brak{b}=\pr{X>a,Y<b} \\ +\pr{X<a,Y<b}, 
+    \end{multline}
+    \begin{multline}
+    \pr{X>a,Y<b} \\= F_Y\brak{b}-F_{X,Y}\brak{a,b}
+    \\
+    \implies           F_Y\brak{b}-F_{X,Y}\brak{a,b} \\=\brak{1-F_X\brak{a}}F_Y\brak{b}\\
+    \text{or, }
+        F_{X,Y}\brak{a,b}=F_X\brak{a}F_Y\brak{b}
+    \end{multline}
+    upon substituting from  \eqref{indep/4/eq3} and simplifying.
+     Thus, $X$ and $Y$ are independent. 
+    
+{\em Option 2 is correct}.
+\item  We prove through a counterexample.
+\begin{definition}
+    Two random variables $X$ and $Y$ are uncorrelated if their covariance is zero, i.e., 
+    \begin{align}
+        \cov{X}{Y}=\mean{XY}-\mean{X}\mean{Y}=0
+    \end{align}
+\end{definition}
+    % Uncorrelatedness does not imply independence.
+    Let $X\sim U \sbrak{-1,1}$ be a uniformly distributed random variable such that 
+    \begin{align}
+        f_X\brak{x}=
+        \begin{cases}
+        \frac{1}{2} & -1\leq x \leq 1\\
+        0 & otherwise
+        \end{cases}\\
+        \mean{X}=\int_{-1}^{1}x f\brak{x} dx=0
+    \end{align}
+    Let 
+    \begin{align}
+        Y=X^2.
+    \end{align}
+   so that  $X$ and $Y$ are dependent.  Then, 
+    \begin{align}
+        \cov{X}{Y}&=\mean{XY}-\mean{X}\mean{Y}\\
+        &=\mean{X^3}-0\times \mean{Y}\\
+        &=\int_{-1}^{1}x^3 f\brak{x} dx=0
+    \end{align}
+    $X$ and $Y$ are uncorrelated but not independent.
+    
+    {\em Option 3 is incorrect}
+    
+    \item Given that,
+    \begin{align}
+        \mean{\brak{X-a}\brak{Y-b}}=\mean{X-a}\mean{Y-b}
+    \end{align}
+    \begin{multline}
+    \implies     \cov{X-a}{Y-b}=
+    \\
+        \mean{\brak{X-a}\brak{Y-b}}\\-\mean{X-a}\mean{Y-b}
+    \end{multline}
+    \begin{align}
+        \text{or, } \cov{X-a}{Y-b}=0=\cov{X}{Y}
+    \end{align}
+    From option 3, it follows that $X$ and $Y$ are not necessarily independent.
+    
+    \textbf{Option 4 is incorrect.}
+\end{enumerate}

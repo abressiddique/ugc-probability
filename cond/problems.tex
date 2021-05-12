@@ -1,0 +1,108 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item There are 3 red socks, 4 green socks and 3 blue socks.You choose 2 socks.The probability that they are of the same colour is
+
+\begin{enumerate}
+\begin{multicols}{4}
+\setlength\itemsep{2em}
+
+\item $\dfrac{1}{5}$
+\item $\dfrac{7}{30}$
+\item $\dfrac{1}{4}$
+\item $\dfrac{4}{15}$
+
+\end{multicols}
+\end{enumerate}
+\solution
+\input{cond/solutions/1.tex}
+%
+\item A box contains 40 numbered red balls and 60 numbered black balls. From the box, balls are drawn one by one at random without replacement till all the balls are drawn. The probability that the last ball drawn is black equals \dots
+\input{cond/solutions/2.tex}
+
+\item An experiment consists of two papers.paper1 and paper2.The probability of failing in paper 1 is .3 and that in paper 2 is .2.Given that a student has failed in paper 2,the probability of failing in paper 1 is .6.The probability of student failing in both is\\
+\begin{enumerate}
+    \setlength\itemsep{2em}
+\item .5 
+\item .18 
+\item .12 
+\item .06 
+\end{enumerate}
+%
+\solution
+\input{cond/solutions/3.tex}
+%
+\item An urn contains 5 red balls and 5 black balls.In the first draw, one ball is picked at random and discarded without noticing its colour.The probability to get a red ball in the second draw is 
+\begin{enumerate}
+    \begin{multicols}{4}
+    \setlength\itemsep{2em}
+    
+    \item $\dfrac{1}{2}$
+    \item $\dfrac{4}{9}$
+    \item $\dfrac{5}{9}$
+    \item $\dfrac{6}{9}$
+    \end{multicols}
+    \end{enumerate}    
+%
+\solution
+\input{cond/solutions/4.tex}
+%
+%
+\item A sample of size $n =2$ is drawn from a population of size $N=4$ using probability proportional to size without replacement scheme , Where the probabilities proportional to size are
+\begin{table}[h!]
+\resizebox{\columnwidth}{0.6cm}{%
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    i: & 1 & 2 & 3 & 4\\
+    \hline
+    $p_{i}$ & 0.4 & 0.2 & 0.2 & 0.2\\
+    \hline
+  \end{tabular}%
+} 
+   \caption*{Table : Probability vs Size}
+\end{table}  
+The probability of inclusion of unit (1) in the sample is 
+\begin{enumerate}
+\begin{multicols}{4}
+\setlength\itemsep{2em}
+\item $0.4$
+\item $0.6$
+\item $0.7$
+\item $0.75$
+\end{multicols}
+%
+
+\end{enumerate}
+%
+\solution
+\input{solutions/2019/58.tex}
+%
+%
+\item There are two boxes. Box-$1$ contains $2$ red balls and $4$ green balls. Box-$2$ contains $4$ red balls and $2$ green balls. A box is selected at random and a ball is chosen randomly from the selected box. If the ball turns out to be red, what is the probability that Box-$1$ had been selected?
+%
+\solution
+\input{solutions/2016/dec/49.tex}
+%
+\item An urn has 3 red and 6 black balls. Balls are drawn at random one by one without replacement. The probability that second red ball appears on fifth draw is: \\
+\begin{enumerate}
+    \item $\frac{1}{9!}$
+    \newline
+    \item $\frac{4!}{9!}$
+    \newline
+    \item $4\brak{\frac{6!4!}{9!}}$
+    \newline
+    \item $\frac{6!4!}{9!}$
+\end{enumerate}
+%
+%
+\solution
+\input{solutions/2015/dec/104.tex}
+%
+
+
+\end{enumerate}

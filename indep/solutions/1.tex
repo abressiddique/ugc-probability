@@ -1,0 +1,51 @@
+From the given information, 
+\begin{align}
+    p_{X}(n) &= 
+\begin{cases}
+p & n=0
+\\
+1-p & n=1
+\end{cases}\label{sum/1/1}
+\\
+p_{Y}(n) &= 
+\begin{cases}
+q & n=0
+\\
+1-q & n=1
+\end{cases}\label{sum/1/2}
+\end{align}
+%
+  The characteristic functions of $X$ and $Y$ are 
+%
+\begin{align}
+\phi_X(z)&=\mean{z^{-X}} =  p+(1-p)z^{-1}
+\\
+\phi_Y(z)&= q+(1-q)z^{-1}
+\end{align}
+and the CF of $  Z=X+Y$ is 
+\begin{align}
+\phi_{X+Y}(z)&=\mean{z^{-(X+Y)}} \\
+               &=\phi_X(z)\times \phi_Y(z)
+               \\
+  & =\sbrak{p+(1-p)z^{-1}}\sbrak{q+(1-q)z^{-1}}
+  \end{align}
+  \begin{multline}
+\implies \phi_{Z}(z) = pq+(p+q-2pq)z^{-1}\\
+  +(1-p)(1-q)z^{-2}
+\end{multline}
+yielding 
+%   From equation \eqref{sum/1/1}, we get\\
+%     The pmf of Z is 
+\begin{align}
+    p_{Z}(n) = 
+\begin{cases}
+pq & n=0
+\\
+p+q-2pq & n=1\\
+(1-p)(1-q) & n=2
+\end{cases}\label{sum/1/3}
+\end{align}
+Thus, 
+\begin{align}
+    \pr{X+Y\geq1} = 1 - \pr{Z<1}= 1-pq   
+\end{align}

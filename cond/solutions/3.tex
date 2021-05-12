@@ -1,0 +1,25 @@
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+         &Description  & Probability \\
+         \hline
+         0&failure & $\pr{X=0} = 0.3$\\
+         \hline
+         1&success & $\pr{Y=0} = 0.2$\\
+         \hline
+         X&Paper 1 & $\pr{X=0|Y=0} = 0.6$\\
+         \hline
+         Y&Paper 2 & \\
+         \hline
+    \end{tabular}
+    \caption{Description}
+    \label{table:axioms/3}
+\end{table}
+%
+Table \ref{table:axioms/3} summarises the given information.  The desired probability is
+%
+    \begin{align}
+        \pr{X=0,Y=0} &= \pr{X=0|Y=0}\pr{Y=0}\\ 
+        &=.12
+       \end{align}

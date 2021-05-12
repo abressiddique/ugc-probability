@@ -1,0 +1,124 @@
+\begin{lemma}
+    If $X \sim \mathcal{N}(0,1)$ then $Y =-X$ also follows standard normal distribution.
+\end{lemma}
+\begin{proof}
+\begin{align}
+    P(Y \leq u) &= P(-X \leq u) \\
+    &= P(X > -u) \\
+    &= 1 - P(X \leq -u) \\
+    &= 1 - (1 - P(X \leq u) \\
+    &= P(X \leq u) 
+\end{align}
+As the distribution is symmetric, 
+\begin{align}
+ P(X\leq -u)=P(X\geq u)= 1-P(X\leq u)   
+\end{align} 
+\end{proof}
+\begin{lemma}
+    If $n$ is an even number and $g(x)$ is an odd function, then,
+    \begin{enumerate}
+        \item 
+    \begin{multline}\label{indep/3/equality}
+        \pr{g(X_1)>\sum_{k=2}^ng(X_k)} \\=
+        \pr{g(X_1)<\sum_{k=2}^ng(X_k)} \\
+        = \frac{1}{2}
+    \end{multline}
+    \item 
+    \begin{multline}
+        \pr{g(X_1)>\prod_{k=2}^ng(X_k)}\\=
+        \pr{g(X_1)<\prod_{k=2}^ng(X_k)} = \frac{1}{2}
+    \end{multline}
+    
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item 
+\begin{multline}
+    \pr{g(X_1)>\sum_{k=2}^ng(X_k)}\\=
+    \pr{g(-X_1)<\sum_{k=2}^ng(-X_k)}\\=
+    \pr{g(X_1)<\sum_{k=2}^ng(X_k)}
+\end{multline}
+%
+As the cases
+\begin{align}
+    g(X_1)>\sum_{k=2}^ng(X_k)
+\end{align}
+and
+\begin{align}
+    {g(X_1)<\sum_{k=2}^ng(X_k)}
+\end{align}
+are complementary to each other, 
+\begin{align}\label{indep/3/sum}
+ \pr{g(X_1)>\sum_{k=2}^ng(X_k)}=\frac{1}{2}    
+\end{align}
+%
+\item Similarly, 
+\begin{multline}
+    \pr{g(X_1)>\prod_{k=2}^ng(X_k)}\\=
+    \pr{g(-X_1)<\prod_{k=2}^ng(-X_k)}\\=
+    \pr{g(X_1)<\prod_{k=2}^ng(X_k)}
+\end{multline}
+As they follow the same distribution, the above expression is true. Thus we have
+\begin{align}
+    %\label{indep/3/equality}
+    \pr{g(X_1)>\prod_{k=2}^ng(X_k)}=
+    \pr{g(X_1)<\prod_{k=2}^ng(X_k)}
+\end{align}
+%
+As the cases
+\begin{align}
+    g(X_1)>\prod_{k=2}^ng(X_k)
+\end{align}
+and
+\begin{align}
+    {g(X_1)<\prod_{k=2}^ng(X_k)}
+\end{align}
+are complementary to each other and from 
+ \eqref{indep/3/equality} we have
+\begin{align}\label{indep/3/prod}
+ \pr{g(X_1)>\prod_{k=2}^ng(X_k)}=\frac{1}{2}    
+\end{align}
+\end{enumerate}
+\begin{enumerate}[label = (\Alph*)]
+    \item 
+    From \eqref{indep/3/sum} , taking $g(x)=x$,
+    \begin{align}
+        \pr{X_1>X_2+...+X_{10}}=\frac{1}{2}
+    \end{align}
+\item
+From \eqref{indep/3/prod} taking $g(x)=x$
+        \begin{align}
+         \pr{X_1>X_2X_3...X_{10}}=\frac{1}{2}   
+        \end{align}
+\item 
+From \eqref{indep/3/sum} taking $g(x)=\sin{x}$
+        \begin{align}
+         \pr{\sin{X_1}>\sin{X_2}+...+\sin{X_{10}}}=\frac{1}{2}   
+        \end{align}
+\item \begin{multline}
+        \pr{\sin{X_1}>\sin{(X_2+...+X_{10})}}\\=\pr{\sin{(-X_1)}<\sin{(-X_2-...-X_{10})}}\\
+        =\pr{\sin{X_1}<\sin{(X_2+...+X_{10})}}
+    \end{multline}
+    As they follow the same distribution, the above expression is true.
+    Thus we have
+    \begin{multline} 
+    \pr{\sin{X_1}>\sin{(X_2+...+X_{10}})}\\
+        =\pr{\sin{X_1}<\sin{(X_2+...+X_{10}})}    
+    \end{multline}
+    Also, as $X_1$ is a continuous random variable
+    \begin{align}
+       \pr{\sin{X_1}=\sin{(X_2+...+X_{10})}}=0
+    \end{align}
+     As the cases
+     \begin{align}
+      {X_1>X_2+...+X_{10}}   
+     \end{align}and 
+     \begin{align}
+         {X_1<X_2+...+X_{10}}
+     \end{align}are complementary to each other 
+        \begin{align}
+         \pr{\sin{X_1}>\sin{(X_2+...+X_{10}})}=\frac{1}{2}   
+        \end{align}
+\end{enumerate}
+\end{proof}

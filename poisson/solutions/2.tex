@@ -1,0 +1,101 @@
+\begin{lemma}
+    Let $Y_i$ be a Poisson random variable with mean $1$ for $i$ $\in$ $\brak{1,n^2}$
+Then, 
+\begin{align}
+    \sum \limits_{i}^{n^2} Y_i = X_n   
+\end{align}
+
+\end{lemma}
+\begin{lemma}
+    \begin{align}
+         \lim  \limits_{n\to \infty} \frac{X_n-n^2}{n} = \mathcal{N}\brak{0,1}
+         \label{poisson/2/central}
+    \end{align}
+    \label{poisson/2/central/lemma}
+\end{lemma}
+\begin{proof}
+Using the  central limit theorem,
+    \begin{align}
+        \lim  \limits_{n \to \infty} \frac{Y_1+Y_2+..+Y_{n^2} - n^2}{n} = \mathcal{N}(0,1)
+    \end{align}
+yielding \eqref{poisson/2/central}.
+\end{proof}
+\begin{lemma}
+    \begin{align}
+    Q\brak{2} = \displaystyle{\frac{1}{\sqrt{2\pi}} \int \limits_2^{\infty} e^{-x^2/2}\,dx}
+\end{align}
+\label{poisson/2/qfunc/lemma}
+\end{lemma}
+\begin{lemma}
+        \begin{align}
+            \pr{X_n>k} 
+            \\ =& Q\brak{\frac{k-n^2}{n}}
+            \label{poisson/2/eq-cdf}
+        \end{align}        
+        \label{poisson/2/eq-cdf/lemma}
+\end{lemma}
+\begin{proof}
+    For $X \sim \gauss{0}{1}$, using Lemma     \ref{poisson/2/central/lemma},
+    \begin{align}
+        \pr{X_n>k} 
+            =& \pr{X>\frac{k-n^2}{n}}
+    \end{align}
+    yielding             \eqref{poisson/2/eq-cdf}.
+\end{proof}
+\begin{lemma}
+\begin{align}
+    Q\brak{X}=1-Q\brak{-x}
+    \label{poisson/2/eq-Qx}
+\end{align}
+\label{poisson/2/eq-Qx/lemma}
+\end{lemma}
+
+% Here, $\mathcal{N}\brak{0,1}$ is normal distribution with unit mean and variance
+% Now 
+% \begin{align*}
+%     \because \,{\frac{1}{\sqrt{2\pi}} \int \limits_{-x}^{\infty} e^{-x^2/2}\,dx}\,=\,{\frac{1}{\sqrt{2\pi}} \int \limits_{-\infty}^x e^{-x^2/2}\,dx}
+%     \\ \text{and} \quad \frac{1}{\sqrt{2\pi}} \int \limits_{-\infty}^{\infty} e^{-x^2/2}\,dx\,=1
+% \end{align*}
+% Also
+% \begin{align}
+%     \frac{1}{\sqrt{2\pi}} \int \limits_2^{\infty} e^{-x^2/2}\,dx=& Q\brak{2}
+% \end{align}
+\begin{enumerate}
+%\setlength\itemsep{1em}
+\item Using Lemma         \ref{poisson/2/eq-cdf/lemma},
+\begin{align}
+    \lim \limits_{n \to \infty} \pr{X_n > (n+1)^2} =& \lim \limits_{n \to \infty}Q \brak{\frac{(n+1)^2-n^2}{n}}
+    \\=&Q\brak{2}
+\end{align}
+$\mathbf{\therefore}$ \textbf{Option 1 is correct}
+\item Using Lemma         \ref{poisson/2/eq-cdf/lemma},
+\begin{align}
+\begin{split}
+    \lim \limits_{n \to \infty} & \pr{X_n \leqslant (n+1)^2}\\ =&1-\lim \limits_{n \to \infty}  \pr{X_n > (n+1)^2}
+\end{split}
+    \\=&1- \lim \limits_{n \to \infty}Q \brak{\frac{(n+1)^2-n^2}{n}}
+    \\=&1- Q \brak{2}
+    \\ \ne &  Q\brak{2}
+\end{align}
+$\mathbf{\therefore}$, from Lemma \ref{poisson/2/qfunc/lemma} \textbf{Option 2 is incorrect}
+\item   Using Lemma         \ref{poisson/2/eq-cdf/lemma} and Lemma \ref{poisson/2/eq-Qx/lemma}
+\begin{align}
+\begin{split}
+    \lim \limits_{n \to \infty} & \pr{X_n < (n-1)^2}\\ =&1-\lim \limits_{n \to \infty}  \pr{X_n \geq (n-1)^2}
+\end{split}
+    \\=&1-\lim \limits_{n \to \infty}Q \brak{\frac{(n-1)^2-n^2}{n}}
+    \\=& 1-Q \brak{-2}
+    \\=& Q\brak{2}
+\end{align}
+$\mathbf{\therefore}$ \textbf{Option 3 is also correct}
+\item Using Lemma         \ref{poisson/2/eq-cdf/lemma} and Lemma \ref{poisson/2/eq-Qx/lemma},
+\begin{align}
+   \begin{split}
+    \lim \limits_{n \to \infty} & \pr{X_n < (n-2)^2}\\ =&1-\lim \limits_{n \to \infty}  \pr{X_n \geq (n-2)^2}
+\end{split}
+    \\=&1-\lim \limits_{n \to \infty}Q \brak{\frac{(n-2)^2-n^2}{n}}
+    \\=&1- Q \brak{-4}
+    \\=& Q\brak{4} < Q \brak{2}
+\end{align}
+$\mathbf{\therefore}$ \textbf{Option 4 is incorrect}
+\end{enumerate}

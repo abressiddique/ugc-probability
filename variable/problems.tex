@@ -1,0 +1,239 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+
+
+\item Consider the function \textit{f(x)} defined as \textit{f(x)} = \textit{ce$^{-x^{4}}$}, $\textit{x} \in R$ . For what value of \textit{c} is \textit{f} a probability density function?\\
+\begin{enumerate}
+    \item $\displaystyle\frac{2}{\Gamma(1/4)}$\\\label{june/2019/52/option 1}
+    \item $\displaystyle\frac{4}{\Gamma(1/4)}$\\
+    \item $\displaystyle\frac{3}{\Gamma(1/3)}$\\
+    \item $\displaystyle\frac{1}{4\Gamma(4)}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2019/52.tex}
+
+\item Let X and Y be i.i.d random variables uniformly distributed on (0,4).Then \pr{X>Y|X<2Y} is
+\begin{enumerate}
+    \item 1/3
+    \item 5/6
+    \item 1/4
+    \item 2/3
+\end{enumerate}
+\solution
+\input{solutions/2018/dec/50.tex}
+%
+\item Suppose $X$ is a positive random variable with the following probability density function,
+\begin{align*}
+f(x) = (\alpha x^{\alpha -1} + \beta x^{\beta-1} ) e^{-x^{\alpha}-x^{\beta}} ; x>0
+\end{align*}
+for $ \alpha >0, \beta >0$.
+Then the hazard function of $X$ for some choices of $\alpha$ and $\beta$ can be
+\begin{enumerate}
+    \item an increasing function.
+    \item a decreasing function.
+    \item a constant function.
+    \item a non monotonic function
+\end{enumerate}
+%
+\solution
+\input{solutions/2018/dec/118/Assignment7.tex}
+%
+\item Suppose the random variable X has the following probability density funtion 
+\begin{align}
+    f(x)=\begin{cases}\alpha\brak{x-\mu}^{\alpha -1}e^{-\brak{x-\mu}^\alpha};&x>\mu\\
+                        0                               &x\leq\mu    
+    \end{cases}\nonumber
+\end{align}
+where $\alpha>0,-\infty <\mu<\infty$. Which of the following are correct? The hazard function of $X$ is
+\begin{enumerate}
+    \item an increasing function for all $\alpha>0$
+    \item a decreasing function for all $\alpha >0$
+    \item an increasing function for some $\alpha>0$
+    \item a decreasing function for some $\alpha>0$
+\end{enumerate}
+%
+\solution
+\input{./solutions/2017/june/118/Assignment5.tex}
+%
+%
+\item Let $X$ be a random variable with a certain non-degenerate distribution. Then identify the correct statements
+\begin{enumerate}
+    \item If $X$ has an exponential distribution then $median\brak{X}<E\brak{X}$
+    \item If $X$ has a uniform distribution on an interval $[a,b]$, then $E\brak{X}<median\brak{X}$
+    \item If $X$ has a Binomial distribution then $V\brak{X}<E\brak{X}$
+    \item If $X$ has a normal distribution, then $E\brak{X}<V\brak{X}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2016/dec/107.tex}
+%
+\item A fair coin is tossed repeatedly. Let $X$ be the number of tails before the first heads occurs. Let $Y$ denote the number of tails between the first and second heads. Let $X+Y = N$. Then which of the following are true?
+\begin{enumerate}
+    \item X and Y are independent random variables with
+    {\footnotesize
+    \begin{align}
+        \pr{X = k} = \pr{Y = k} =
+        \begin{cases}
+            2^{-(k+1)} & k=0,1,2 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    }
+    \item $N$ has a probability mass function given by
+    {\small
+     \begin{align}
+        \pr{N = k} =
+        \begin{cases}
+            (k-1)2^{-k} & k=2,3,4 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    }
+    \item Given $N = n$, the conditional distribution of X and Y are independent
+    \item Given $N = n$
+     \begin{align}
+        \pr{X = k} =
+        \begin{cases}
+            \frac{1}{n+1} & n=0,1,2 \ldots
+            \\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+\end{enumerate}
+%
+
+\item Assume that $X\sim Binomial(n, p)$ for some $n\geq 1$ and $0<p<1$
+and $Y\sim poisson(\lambda)$for some $\lambda > 0$.Suppose E[X]=E[Y].Then
+\begin{enumerate}
+    \item $var(X)=Var(Y)$\\
+    \item $var(X)<Var(Y)$\\
+    \item $var(Y)<Var(X)$\\
+    \item $Var(X)$ may be larger or smaller than $Var(Y)$ depending on the values of n,p and $\lambda$
+\end{enumerate}
+%
+%
+\solution
+\input{solutions/2015/june/53.tex}
+%
+%
+\item Let $X$ be a non-negative integer valued random variable with probability mass function $f(x)$ satisfying $(x+1)f(x+1)=(\alpha + \beta x)f(x)$, $x=0,1,2,...$; $\beta \neq 1$. You may assume that $E(X)$ and $Var(X)$ exist. Then which of the following statements are true?
+
+\begin{enumerate}
+    \item $E(X)=\dfrac{\alpha}{1-\beta}$ \vspace{0.2cm}
+    \item $E(X)=\dfrac{\alpha^2}{(1-\beta)(1+\alpha)}$ \vspace{0.2cm}
+    \item $Var(X)=\dfrac{\alpha^2}{(1-\beta)^2}$ \vspace{0.2cm}
+    \item $Var(X)=\dfrac{\alpha}{(1-\beta)^2}$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/75.tex}
+%
+\item Let X be a random variable with probability density function,
+\begin{align}
+    f(x)=\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^{\alpha}}
+\end{align}
+such that $-\infty<\mu<\infty\;;\alpha>0\;;x>\mu$, The hazard function is: 
+\begin{enumerate}
+    \item constant for all $\alpha$
+    \item an increasing function for some $\alpha$
+    \item independent of $\alpha$
+    \item independent of $\mu$ when $\alpha=1$
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/71.tex}
+%
+\item 
+A point is chosen at random from a circular disc shown below. What is the probability that the point lies in the sector OAB?\\
+
+\begin{tikzpicture}
+\draw (0,0) circle (3cm);
+\draw (0,0) node{O}-- (2,2.25) node{A};
+\draw (0,0) -- (2.828,1) node{B};
+\end{tikzpicture}\\
+
+( where $\angle$AOB = x radians )
+
+
+    \begin{enumerate}
+        \item $\frac{2x}{\pi}$
+        \item $\frac{x}{\pi}$
+        \item $\frac{x}{2\pi}$
+        \item $\frac{x}{4\pi}$
+    \end{enumerate}
+
+%
+\solution
+\input{solutions/2013/june/16/Assignment6.tex}
+%
+\item Let $X$ and $Y$ be independent random variables each following a uniform distribution on $(0,1)$.Let $W=XI_{\{Y\leq X^2\}}$,where $I_A$ denotes the indicator function of set $A$.Then which of the following statements are true? \\
+\begin{enumerate}
+\item The cumulative distribution function of $W$ is given by
+\begin{align}
+  F_W(t)=t^2I_{\{0\leq t \leq 1\}}+ I_{\{t > 1\}}
+\end{align}
+\item $P\sbrak{W>0}=\frac{1}{3}$
+\item The cumulative distribution function of $W$ is continuous
+\item The cumulative distribution function of $W$ is given by
+\begin{align}
+  F_W(t)=\brak{\frac{2+t^3}{3}}I_{\{0\leq t \leq 1\}}+ I_{\{t > 1\}}
+\end{align}
+\end{enumerate}
+%
+\solution
+\input{solutions/2013/june/70/assignment8.tex}
+%
+%
+\newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
+  \def\tikz@AngleOfLine(#1)(#2)#3{%
+  \pgfmathanglebetweenpoints{%
+    \pgfpointanchor{#1}{center}}{%
+    \pgfpointanchor{#2}{center}}
+  \pgfmathsetmacro{#3}{\pgfmathresult}%
+  }
+
+\item A point is chosen at random from a circular disc shown below. What is the probability that the point lies in the sector OAB?\\
+\begin{tikzpicture}[
+    colorstyle/.style={
+       circle, draw=black,fill=black,
+       thick, inner sep=0pt, minimum size=2 mm,
+       outer sep=0pt
+        },
+    scale=2]
+\draw (0,0) circle (2cm);
+\node at (0,0) [colorstyle,label=below:O]{};
+\node at (1,1.732) [colorstyle,label=above:A]{};
+\node at (1.732,1) [colorstyle,label=above right:B]{};
+\draw (0,0) -- (1,1.732);
+\draw (0,0) -- (1.732,1);
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,1.732);
+\coordinate (B) at (1.732,1);
+\tikzAngleOfLine(O)(B){\AngleStart}
+    \tikzAngleOfLine(O)(A){\AngleEnd}
+    \draw[red,<->] (O)+(\AngleStart:1cm) arc (\AngleStart:\AngleEnd:1 cm);
+    \node[circle,fill=green] at ($(O)+({(\AngleStart+\AngleEnd)/2}:1.5 cm)$) {x};
+\end{tikzpicture}\\
+( where $\angle$AOB = x radians )
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\frac{2x}{\pi}$
+        \item $\frac{x}{\pi}$
+        \item $\frac{x}{2\pi}$
+        \item $\frac{x}{4\pi}$
+    \end{enumerate}
+\end{multicols}
+%
+\solution
+\input{solutions/2013/june/16.tex}
+
+\end{enumerate}
