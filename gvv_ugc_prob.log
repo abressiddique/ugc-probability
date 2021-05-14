@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.13)  12 MAY 2021 10:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.13)  14 MAY 2021 09:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**gvv_probtext.tex
-(./gvv_probtext.tex
+**gvv_ugc_prob.tex
+(./gvv_ugc_prob.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
@@ -1722,8 +1722,8 @@ Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
 \diagbox@outsepl=\dimen412
 \diagbox@outsepr=\dimen413
 )
-(./gvv_probtext.aux)
-\openout1 = `gvv_probtext.aux'.
+(./gvv_ugc_prob.aux)
+\openout1 = `gvv_ugc_prob.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 101.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
@@ -1893,9 +1893,9 @@ LaTeX Info: Redefining \ref on input line 101.
 LaTeX Info: Redefining \pageref on input line 101.
 LaTeX Info: Redefining \nameref on input line 101.
 
-(./gvv_probtext.out) (./gvv_probtext.out)
+(./gvv_ugc_prob.out) (./gvv_ugc_prob.out)
 \@outlinefile=\write4
-\openout4 = `gvv_probtext.out'.
+\openout4 = `gvv_ugc_prob.out'.
 
 
 
@@ -1972,9 +1972,9 @@ LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 6.64998pt on input line 267.
 
-(./gvv_probtext.toc)
+(./gvv_ugc_prob.toc)
 \tf@toc=\write5
-\openout5 = `gvv_probtext.toc'.
+\openout5 = `gvv_ugc_prob.toc'.
 
  (./axioms/problems.tex (./axioms/solutions/1.tex
 Underfull \vbox (badness 4181) has occurred while \output is active []
@@ -2921,7 +2921,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [60])
-Overfull \hbox (1.68398pt too wide) in paragraph at lines 100--101
+Overfull \hbox (1.68398pt too wide) in paragraph at lines 115--116
 []$[] [] \OT1/txr/m/n/12 =
  []
 
@@ -2929,12 +2929,12 @@ Overfull \hbox (1.68398pt too wide) in paragraph at lines 100--101
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-Underfull \hbox (badness 6157) in paragraph at lines 109--112
+Underfull \hbox (badness 6157) in paragraph at lines 124--127
 \OT1/txr/m/n/12 ti-cally dis-tributed ran-dom vari-ables each
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 109--112
+Underfull \hbox (badness 7221) in paragraph at lines 124--127
 \OT1/txr/m/n/12 hav-ing a uni-form dis-tri-bu-tion on (0,1).
  []
 
@@ -3307,10 +3307,10 @@ Underfull \hbox (badness 2165) in paragraph at lines 114--115
 )) [77]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
- (./gvv_probtext.aux)
+ (./gvv_ugc_prob.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
-Package rerunfilecheck Info: File `gvv_probtext.out' has not changed.
+Package rerunfilecheck Info: File `gvv_ugc_prob.out' has not changed.
 (rerunfilecheck)             Checksum: 9F5FB70A65FE7DFABFCA7E9BF2305BC7;798.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
  ) 
@@ -3340,7 +3340,7 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on gvv_probtext.pdf (77 pages, 774640 bytes).
+Output written on gvv_ugc_prob.pdf (77 pages, 774640 bytes).
 PDF statistics:
  3126 PDF objects out of 3580 (max. 8388607)
  2881 compressed objects within 29 object streams

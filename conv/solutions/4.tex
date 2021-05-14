@@ -1,0 +1,86 @@
+\begin{lemma}
+For independent random variables $X_{i}, i = 1,2,\dots,n$, 
+   \begin{align}
+    Var\brak{\sum_{i=1}^{n}g(X_{i})}=\sum_{i=1}^{n}Var(g(X_{i}))\label{conv/4/basic}
+    \end{align}
+\end{lemma}
+    \begin{definition}\label{conv/4/definition_of_Random_sample}
+     Random Sample: The set $\cbrak{X_{i}}_{i=1}^{n}$ constitutes a random sample if
+   \begin{enumerate}
+       \item  $X_{i}$ are independent \label{conv/4/point 1}
+       \item $F_{X_{i}}(x)=F_X(x)$ \label{conv/4/point 2}
+%       \item $F_{X_{\large{1}}}(x)=F_{X_{\large{2}}}(x)=\dots=F_{X_{\large{n}}}(x)=F_X(x)$ \label{conv/4/point 2}
+       \item $\mean{X_i}=\mean{X}=\mu<\infty$ \label{conv/4/point 3}
+       \item$ 0 < \var{X_i}=\var{X}=\sigma^2<\infty$ \label{conv/4/point 4}
+   \end{enumerate}
+    \end{definition}
+ 
+ 
+\begin{enumerate}
+    \item Expectation of $\Bar{X_{n}}$ and $S_{n}$
+    \begin{align}
+    E(\Bar{X_{n}}) &= E\brak{\frac{1}{n}\sum_{i=1}^{n}X_{i}}\\
+                   &= \frac{1}{n}\sum_{i=1}^{n}E\brak{X_{i}}\\
+                   &= \frac{1}{n}\sum_{i=1}^{n}\mu\\
+                   &= \mu \label{conv/4/expectation of Xn}\\
+      E(S_{n}) &= E\brak{\frac{\sum_{i=1}^{n}\frac{1}{i}X_{i}}{\sum_{i=1}^{n}\frac{1}{i}}}      \\
+               &= \frac{1}{\brak{\sum_{i=1}^{n}\frac{1}{i}}}\sum_{i=1}^{n}E\brak{\frac{1}{i}X_{i}}\\
+               &= \frac{1}{\brak{\sum_{i=1}^{n}\frac{1}{i}}}\sum_{i=1}^{n}\frac{\mu}{i}\\
+               &= \mu   \label{conv/4/expectation of Sn}
+   \end{align}
+   
+   From \eqref{conv/4/expectation of Xn} and \eqref{conv/4/expectation of Sn} we get option\eqref{conv/4/option 1} is correct.
+   
+   \item 
+    Variance of $\Bar{X_{n}}$ and $S_{n}$ using \eqref{conv/4/basic}
+    \begin{align}
+    Var(\Bar{X_{n}})&= Var\brak{\frac{1}{n}\sum_{i=1}^{n}X_{i}}\\
+                   &= \frac{1}{n^{2}}\brak{\sum_{i=1}^{n}Var(X_{i})}\\
+                   &= \frac{1}{n^{2}}\brak{\sum_{i=1}^{n}i}\\
+                   &= \frac{1}{2} + \frac{1}{2n}\label{conv/4/variance of Xn}\\
+    Var(S_{n}) &= Var\brak{\frac{\sum_{i=1}^{n}\frac{1}{i}X_{i}}{\sum_{i=1}^{n} \frac{1}{i}}}
+    \end{align}
+    \begin{align}
+               &= \frac{1}{\brak{\sum_{i=1}^{n}\frac{1}{i}}^{2}}\sum_{i=1}^{n}\frac{1}{i^{2}}Var\brak{X_{i}}\\
+               &= \frac{1}{\brak{\sum_{i=1}^{n}\frac{1}{i}}^{2}}\sum_{i=1}^{n}\frac{1}{i^{2}}i\\
+               &= \frac{1}{\sum_{i=1}^{n}\frac{1}{i}}\label{conv/4/Variance of Sn}
+   \end{align}
+   As $n$ is sufficiently large 
+   \begin{align}
+       Var(\Bar{X_{n}}) &= \frac{1}{2}\\
+       Var(S_{n})       &= 0\\
+       Var(S_{n}) &< Var(\Bar{X_{n}})\label{conv/4/option 2 ans}
+   \end{align}
+   from \eqref{conv/4/option 2 ans} we get option\eqref{conv/4/option 2} as correct.
+   
+   \item
+   \begin{definition}
+   
+     Point Estimator : Let $\theta$ be an unknown fixed(non-random) parameter be estimated. To estimate $\theta$ we define a point estimator $\hat{\Theta}$ that is a function of the random sample  $X_{1},X_{2},X_{3},\dots,X_{n}$ i.e.,
+     \begin{align}
+       \hat{\Theta}=h(X_1,X_2,\cdots,X_n)
+   \end{align}
+   
+   \end{definition}
+   
+   \begin{definition}
+     Consistent Estimator : Let $\hat{\Theta}_1$,$\hat{\Theta}_2$ $\dots$,$\hat{\Theta}_n$,$\dots$ be a sequence of point estimators of $\theta$. We say that $\hat{\Theta}_n$ is a consistent estimator of $\theta$ , if 
+   \begin{align} \label{conv/4/consistent estimator definition}
+       \lim_{n \rightarrow \infty} P\big(|\hat{\Theta}_n-\theta| \geq \epsilon \big)=0, \textrm{ for all }\epsilon>0.
+   \end{align}
+   \end{definition}
+   From the given sample $Var(X_{i}) = i$ for \textit{i} = 1,2,\dots
+   Hence the given random variables doesn't follow point\eqref{conv/4/point 4} in  definition\eqref{conv/4/definition_of_Random_sample} and hence the random variables are not a random sample.
+  
+   As given random variables are not random sample we don't define point estimator and hence option\eqref{conv/4/option 3} is incorrect.
+   
+   \item
+   \begin{definition}
+     Statistic : A statistic is a function T = r($X_{1},X_{2},\dots,X_{n}$) of the random sample $X_{1},X_{2},\dots,X_{n}$.
+   \end{definition}
+   \begin{definition}
+    Sufficient Statistics : A statistic t = T(X) is sufficient for $\theta$ if the conditional probability distribution of data X, given the statistic t = T(X), doesn't depend on the parameter $\theta$.
+   \end{definition}
+   As given random variables are not random sample we don't define statistic and hence option\eqref{conv/4/option 4} is incorrect.
+\end{enumerate}
+Hence option\eqref{conv/4/option 1} and option\eqref{conv/4/option 2} are correct.
