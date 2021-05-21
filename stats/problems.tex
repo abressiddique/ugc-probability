@@ -40,6 +40,32 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 \solution
 \input{stats/solutions/2/Assignment6.tex}
 %
+\item Let $X$, $Y$, have the joint discrete distribution such that $X|Y=y \sim$ Binomial($y$, 0.5) and $Y\sim$ Poisson($\lambda$), $\lambda>0$, where $\lambda$ is an unknown parameter. Let $T=T(X, Y)$ be any unbiased estimator of $\lambda$. Then
+\begin{enumerate}
+    \item  $Var(T) \leq Var(Y)  \text{ for all } \lambda$
+    \item $Var(T) \geq Var(Y) \text{ for all } \lambda$
+    \item $Var(T) \geq \lambda \text{ for all } \lambda$
+    \item $Var(T) = Var(Y) \text{ for all } \lambda$
+\end{enumerate}
+\solution
+\input{stats/solutions/3.tex}
+
+
+\item Let $ X_1, \cdots , X_n $ be independent and identically distributed random variables with probability density function
+\begin{align*}
+    f(x) = \frac{1}{2} \lambda^3x^2e^{-\lambda x} ; x>0 ; \lambda > 0
+\end{align*}
+Then which of the following statements are true?
+\begin{enumerate}
+    \item $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is an unbiased estimator of $ \lambda$
+    \item $\dfrac{3n}{\sum_{i=1}^{n} X_i } $ is an unbiased estimator of $ \lambda$ \\
+    \item $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is a consistent estimator of $ \lambda$
+    \item $\dfrac{3n}{\sum_{i=1}^{n} X_i } $ is a consistent estimator of $ \lambda$
+\end{enumerate}
+\solution
+\input{stats/solutions/4.tex}
+
+
 \item Suppose n units are drawn from a population of N units sequentially as follows. A random sample
 \begin{align}
     U_1, U_2, ... U_N \text{ of size N, drawn from }U\brak{0, 1} 
@@ -216,6 +242,6 @@ Let $z_\alpha$ be the upper $100(1-\alpha)^{th}$ percentile of the standard norm
 \solution
 \input{solutions/2012/june/112.tex}
 %
-
+  
 
 \end{enumerate}

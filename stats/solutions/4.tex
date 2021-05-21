@@ -1,0 +1,166 @@
+\begin{definition}
+    An \textbf{estimator} is a statistic that estimates some fact about the population.
+    The quantity that is being estimated is called the \textbf{estimand.} 
+    \end{definition}
+    \begin{definition}
+    Let $ \Theta = h(X_1,X_2, \cdots, X_n) $  be a point estimator for $ \theta$. The \textbf{bias} of the estimator $ \Theta $ is defined by 
+    \begin{align}
+        B(\Theta ) = E[\Theta ] - \theta
+    \end{align}
+    where $ E[\Theta ]$ is the expectation value of the estimator $ \Theta $ and $ \theta$ is the estimand.
+    \end{definition}
+        \begin{definition}
+        Let $\Theta = h(X_1,X_2, \cdots , X_n) $ be a point estimator for a parameter $ \theta $. We say that $ \Theta $ is an \textbf{unbiased estimator} of $ \theta $ if
+        \begin{align}
+           B(\Theta )= 0 \text{, for all possible values of $\theta$.}
+        \end{align}
+        \end{definition} 
+    \begin{definition}
+    Let $ \Theta_1,\Theta_2, \cdots, \Theta_n , \cdots, $  be a sequence of point estimators of $ \theta $. We say that $ \Theta_n $ is a \textbf{consistent} estimator of $ \theta $, if 
+    \begin{align}
+        \lim_{n\to\infty} \Pr\brak{| \Theta_n - \theta | \ge \epsilon} = 0 \text{ ,for all $ \epsilon > 0$.}
+    \end{align}
+    \end{definition}
+    \begin{definition}
+    The \textbf{mean squared error (MSE)} of a point estimator $ \Theta $, shown by $ MSE(\Theta) $, is defined as
+    \begin{align}
+        MSE(\Theta ) &= E[(\Theta - \theta)^2] \\
+        &= Var(\Theta) + B(\Theta)^2
+    \end{align}
+    where $ B(\Theta ) $ is the bias of $ \Theta $. 
+    \end{definition}    
+    \begin{theorem}
+     Let $ \Theta_1,\Theta_2 , \cdots$ be a sequence of point estimators of $ \theta $. If
+    \begin{align}
+         \lim_{n\to\infty} MSE( \Theta_n) = 0,
+    \end{align}
+    then $ \Theta_n $ is a consistent estimator of $ \theta$.
+    \end{theorem}
+    \textbf{Solving all options : }
+    \begin{enumerate}
+        \item 
+      Now here we have our estimator $ \Theta$ and estimand $ \theta $ as,
+     \begin{align}
+         \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
+         \theta = \lambda
+     \end{align}
+    The expectation value of the estimator is given by, 
+    \begin{align}
+        E[\Theta ] &= E  \left[   \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i}  \right] \\
+        & = \dfrac{2}{n} \sum_{i=1}^{n} E  \left[ \dfrac{1}{X_i}  \right] \\
+        & =  \dfrac{2}{n} \sum_{i=1}^{n} \int_{-\infty}^{\infty} \dfrac{1}{x} f(x)\,dx \\
+        \label{eq1}
+        & = \dfrac{2n}{n} \int_{0}^{\infty} \dfrac{1}{x} \dfrac{1}{2} \lambda^3x^2e^{-\lambda x}\,dx \\
+        & = \lambda^3  \int_{0}^{\infty}  x e^{-\lambda x}\,dx \\
+        &= \lambda
+    \end{align}
+    So the bias of estimator is given by,
+    \begin{align}
+        B(\Theta) &= E[\Theta] - \theta  \\
+        &= \lambda - \lambda = 0
+    \end{align}
+    Therefore $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is an unbiased estimator of $ \lambda$ \\
+    Option 1 is correct. \\
+    \item
+     Now in this option we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
+     \begin{align}
+         \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } \text{  and  }
+         \theta = \lambda
+     \end{align}
+    The expectation value of the estimator is given by, 
+    \begin{align}
+        E[\Theta ] &= E  \left[   \dfrac{3n}{\sum_{i=1}^{n} X_i }  \right] \\
+        & = \dfrac{3n}{\sum_{i=1}^{n}}  E  \left[ \dfrac{1}{X_i}  \right] 
+    \end{align}
+    The value of $  E  \left[ \dfrac{1}{X_i}  \right]  $ can be obtained from \eqref{eq1} as 
+    \begin{align} 
+         E  \left[ \dfrac{1}{X_i}  \right] = \dfrac{\lambda}{2}
+         \label{eq2}
+    \end{align}
+    So we have,
+    \begin{align}
+         E[\Theta ] &= \dfrac{3n}{\sum_{i=1}^{n}} \dfrac{\lambda}{2} \\
+         &= \dfrac{3n}{n} \dfrac{\lambda}{2} \\
+         &= \dfrac{3\lambda}{2}
+    \end{align}
+    So the bias of estimator is given by,
+    \begin{align}
+        B(\Theta) &= E[\Theta] - \theta  \\
+        &= \dfrac{3\lambda}{2}- \lambda \\
+        &= \dfrac{\lambda}{2} \neq 0
+    \end{align}
+    Therefore $ \dfrac{3n}{\sum_{i=1}^{n} X_i } $ is not an unbiased estimator of $ \lambda$ \\
+    Option 2 is not correct. \\
+    \item
+     Now here we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
+     \begin{align}
+         \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
+         \theta = \lambda
+     \end{align}
+    Now the variance of $ \Theta$ is calculated as
+    \begin{align}
+        Var(\Theta) &= Var\brak{\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} } \\
+        & = \dfrac{4}{n^2} \sum_{i=1}^{n} Var\brak{\dfrac{1}{X_i}} \\
+        \label{eq3}
+        & = \dfrac{4n}{n^2} \brak{E  \left[ {\dfrac{1}{X_i}}^2  \right] - {E  \left[ {\dfrac{1}{X_i}}  \right]}^2 } \\
+        & = \dfrac{4}{n} \brak{ \int_{-\infty}^{\infty} \dfrac{1}{x^2} f(x)\,dx  - \brak{\dfrac{\lambda}{2}}^2 } \\
+        & =  \dfrac{4}{n} \brak{ \int_{0}^{\infty} \dfrac{1}{x^2}  \dfrac{1}{2} \lambda^3x^2e^{-\lambda x} \,dx  - {\dfrac{\lambda^2}{4}} } \\
+          & =  \dfrac{4}{n} \brak{ \dfrac{\lambda^3}{2}\int_{0}^{\infty} e^{-\lambda x} \,dx  - {\dfrac{\lambda^2}{4}} } \\ 
+        & =  \dfrac{4}{n} \brak{ {\dfrac{\lambda^2}{2}} - {\dfrac{\lambda^2}{4}} } \\ 
+        &= \dfrac{\lambda^2}{n}
+    \end{align}
+    The bias of $ \Theta $ from option 1 is given as
+    \begin{align}
+        B(\Theta) = 0
+    \end{align}
+    So we have,
+    \begin{align}
+        MSE(\Theta_n) &= Var(\Theta) + B(\Theta)^2 \\
+        &= \dfrac{\lambda^2}{n}
+    \end{align}
+    Now,
+    \begin{align}
+         \lim_{n\to\infty} MSE( \Theta_n) &=    \lim_{n\to\infty} \dfrac{\lambda^2}{n} \\
+          &= 0
+    \end{align}
+    Therefore, $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is a consistent estimator of $ \lambda$. 
+    Option 3 is correct. \\
+    \item 
+     Now in this option we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
+     \begin{align}
+         \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } \text{  and  }
+         \theta = \lambda
+     \end{align}
+    Now the variance of $ \Theta$ is calculated as
+    \begin{align}
+        Var(\Theta) &= Var\brak{\dfrac{3n}{\sum_{i=1}^{n} X_i } } \\
+        & = \dfrac{9n^2}{ \sum_{i=1}^{n}} Var\brak{\dfrac{1}{X_i}} \\
+    \end{align}
+    Now the value of $ Var\brak{\dfrac{1}{X_i}} $ from \eqref{eq3} is substituted, we have
+    \begin{align}
+         Var(\Theta) &= \dfrac{9n^2}{ \sum_{i=1}^{n}} \dfrac{\lambda^2}{4} \\
+         & = \dfrac{9n^2 \lambda^2}{4n }
+         & = \dfrac{9n \lambda^2}{4 }
+    \end{align}
+    The bias of $ \Theta $ from option 2 is given as
+    \begin{align}
+        B(\Theta) = \dfrac{\lambda}{2}
+    \end{align}
+    So we have,
+    \begin{align}
+        MSE(\Theta_n) &= Var(\Theta) + B(\Theta)^2 \\
+        &= \dfrac{9n \lambda^2}{4 } + \brak{\dfrac{\lambda}{2}}^2 \\
+        & = \dfrac{ \lambda^2}{4 } (9n+1)
+    \end{align}
+    Now,
+    \begin{align}
+         \lim_{n\to\infty} MSE( \Theta_n) &=    \lim_{n\to\infty} \dfrac{ \lambda^2}{4 } (9n+1) \\
+    \end{align}
+    Clearly as n grows larger $ 9n+1$ also grows larger, so
+    \begin{align}
+         \lim_{n\to\infty} MSE( \Theta_n) \neq 0   
+    \end{align}
+    Therefore, $\dfrac{3n}{\sum_{i=1}^{n} X_i} $ is not a consistent estimator of $ \lambda$. \\
+    Option 4 is not correct. \\
+    \end{enumerate}
+    \textbf{Therefore option 1 and option 3 are correct.}

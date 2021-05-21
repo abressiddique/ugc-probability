@@ -1,0 +1,39 @@
+\begin{definition}
+    {\em Unbiased Estimator: } Suppose we have an estimator $T(X, Y)$; which estimates a parameter $\theta$.  If
+    \begin{equation}
+        E\brak{T(X, Y)}=\theta
+    \end{equation}
+    the estimator is unbiased. 
+    \end{definition}
+    \begin{lemma}
+    Since Y has a Poisson distribution, we know that:
+    \begin{align}\label{stats/3/Var=lam}
+    Var(Y)=\lambda
+    \end{align}
+    \end{lemma}
+    From Bayes Theorem,
+    \begin{align}
+        \pr{X=x,Y=y}&=\pr{Y=y}  \pr{X=x|Y=y}\\
+        &= \comb{y}{x} \frac{1}{2^y} \frac{\lambda^y}{y!} e^{- \lambda}
+    \end{align}
+    Let us represent $ \pr{X=x,Y=y}$ as a function of $x, y$, and $\lambda$: $f(x, y;\lambda)$.
+    \begin{definition} 
+    If $T(X, Y)$ is an unbiased estimator of a parameter $\lambda$, the Cramer-Rao bound states that:
+    \begin{align}
+        Var\brak{T\brak{X,Y}}\geq -\frac{1}{E\brak{\frac{\partial^2 \ln(f(x,y;\lambda))}{\partial\lambda^2}}} \label{stats/3/def CRB}
+    \end{align}
+    \end{definition}
+    From using $\eqref{stats/3/def CRB}$ on $T(X,Y)$,
+    \begin{align}
+        Var(T(X, Y))&\geq -\frac{1}{E\brak{\frac{\partial^2 \ln(f(x,y;\lambda))}{\partial\lambda^2}}}\\
+        &\geq-\frac{1}{E\brak{-\frac{y}{\lambda^2}}}\\
+        &\geq\frac{\lambda^2}{E\brak{y}}\\
+        &\geq \lambda \label{stats/3/CramerRao}
+    \end{align}
+    because the expectation value of a Poisson distribution with parameter $\lambda$ is $\lambda$.
+    The correct options are options (2) and (3), since by \eqref{stats/3/CramerRao}, we see that 
+    \begin{align*}
+    Var(T) \geq \lambda=Var(Y)
+    \end{align*}
+    (from \eqref{stats/3/Var=lam}). (1) and (4) do not hold for all $\lambda$.
+    

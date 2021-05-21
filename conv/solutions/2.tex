@@ -1,8 +1,215 @@
-        \begin{lemma}
-            {\em Strong Law of Large Numbers: }
-            Let $X_1, X_2, \cdot \cdot \cdot$ be a sequence of i.i.d. random variables, each having finite mean $E(X_i)$. Then for any $\epsilon >0$,
-            \begin{align}
-                \lim_{n \to \infty}\pr{\left|\dfrac{1}{n}\sum_{i=1}^nX_i - E(X_i)\right|\geq \epsilon}=0
+\begin{definition}
+    (Convergence in distribution)\\
+    A sequence of random variables $Y$, $Y_1$, $Y_2 \ldots$   converges in distribution to a random variable $Y$, if
+    \begin{align}
+        \lim_{n \to \infty}F_{X_{n}} (a) = F_{X} (a)  \text{  }\forall a \in \mathbb{R}.
+    \end{align}
+\end{definition}
+\begin{definition} \label{conv/2/def2}
+    (Convergence in probability)\\
+    A sequence of random variables $Y$, $Y_1$, $Y_2 \ldots$ is said to converge in probability to $Y$, if
+    \begin{align}
+        \lim_{n \to \infty}\pr{\abs{Y_n - Y} > \epsilon} = 0  \text{  }\forall \epsilon > 0.
+    \end{align}
+\end{definition}
+\begin{lemma}\label{conv/2/lma1}
+    If
+    \begin{math}
+    {Y_n} \to Y \text{ in probability, }{Y_n} \to Y \text{ in distribution.}
+    \end{math}
+\end{lemma}
+\begin{lemma}\label{conv/2/lma3}
+    (Strong Law of Large Numbers)\\ 
+Let $X_1$, $X_2$, \ldots $X_n$ be i.i.d. random variables with expected value $E(X_i)=\mu < \infty$, then,
+\begin{align}
+%    \lim_{n \to \infty}\pr{\left|\dfrac{1}{n}\sum_{i=1}^n X_i - \mu \right|\geq \epsilon}=0
+X_i \xrightarrow[]{p}\mu
+\end{align}
+Or, 
+\begin{align}
+    \dfrac{1}{n}\sum_{i=1}^n X_i \xrightarrow[]{p} \mu
+\end{align}
+%
+\end{lemma}
+\begin{lemma} \label{conv/2/lmaconda}
+    If $X_i$ is a sequence of i.i.d. random variables, with
+    \begin{align}
+        \label{conv/2/maincondA}
+        F_{X_i}(x)=F_X(x),
+    \end{align}
+    then,
+    \begin{align}
+        F_{X_i^2}(x)=F_{X^2}(x)
+    \end{align}
+    $\forall x \in \mathbb{R}$, where $F_{X}(x)$ is the c.d.f. of $X_i$.
+\end{lemma}
+\begin{proof}
+% ${X_i}$ is a sequence of i.i.d. random variables, which means it satisfies the following condition.
+% \begin{align}
+%         F_{X_1}(x)=F_{X_2}(x)&=\ldots=F_{X_n}(x)=F_X(x) 
+% \end{align}
+% where $F_X(x)$ is the c.d.f. of $X_i$.
+% Let $Y_i=X_i^2$. For $y \geq 0$,
+\begin{align}
+    F_{{X_i}^2}(y) &=\pr{X_i^2 \leq y}
+%     &=\pr{Y_i \leq y}\\
+%     \implies F_{Y_i}(y)
+% \end{align}
+% \begin{align}
+    \\
+    \implies F_{Y_i}(y)&=\pr{-\sqrt{y} \leq X_i \leq \sqrt{y}}\label{conv/2/eqref}\\
+%     \implies F_{Y_i}(y)&=\pr{X_i \leq \sqrt{y}}-\pr{X_i \leq -\sqrt{y}}
+% \end{align}
+% \begin{align}
+\implies   F_{{X_i}^2}(y)&=F_{X_i}(\sqrt{y})-F_{X_i}(-\sqrt{y})
+\\
+&= F_{X}(\sqrt{y})-F_{X}(-\sqrt{y}) 
+\\
+&= F_{{X}^2}(y)
+\end{align}
+Using \eqref{conv/2/maincondA},
+% \begin{align} 
+%     F_{Y_i}(y)&=F_X(\sqrt{y})-F_X(-\sqrt{y})\label{conv/2/eqY}
+% \end{align}
+% From \eqref{conv/2/eqY},
+% \begin{align} 
+%     F_{Y_1}(y)=F_{Y_2}(y)=\ldots=F_{Y_n}(y)=F_Y(y)\label{conv/2/condnA}
+% \end{align}
+% where $F_Y(y)$ is the c.d.f. of $Y_i=X_i^2$.
+\end{proof}
+\begin{corollary} \label{conv/2/xi2lma}
+    If $X_i$ are i.i.d, $X_i^2$ are i.i.d.
+    % \begin{align}
+    %     F_{X_1,\ldots X_n}(x_1\ldots x_n)&=F_X(x_1)F_X(x_2)\ldots F_X(x_n)\label{conv/2/maincondnB}
+    % \end{align} 
+    % where $F_{X}(x)$ is the c.d.f. of $X_i$, then for $Y_i = X_i^2$
+    % \begin{align}
+    % F_{Y_1,Y_2,\dots,Y_n}&(y_1,y_2,\dots,y_n)=F_Y(y_1)F_Y(y_1)\dots F_Y(y_n)
+    % \end{align}
+%    where $F_Y(y)$ is the c.d.f. of 
+\end{corollary}
+\begin{proof}
+Let $Y_i = X_i^2$.
+%Now, for $y_i\geq0$, consider
+\begin{multline}
+    F_{Y_1,Y_2,\ldots,Y_n}(y_1,y_2,\ldots,y_n)
+\\=\pr{Y_1 \leq y_1,Y_2 \leq y_2,\ldots,Y_n \leq y_n}
+     \\=\pr{X_1^2 \leq y_1,X_2^2 \leq y_2,\ldots,X_n^2 \leq y_n}
+    %\\=\pr{-\sqrt{y_1} \leq X_1 \leq \sqrt{y_1},\ldots,-\sqrt{y_n} \leq X_n \leq \sqrt{y_n}}
+    \\ = \prod_{i=1}^{n}\sbrak{\pr{-\sqrt{y_i} \leq X_i \leq \sqrt{y_i}}}
+    \\= \prod_{i=1}^{n}F_Y(y_i) 
+ \end{multline}
+$\implies X_i^2$ are i.i.d.
+% So,
+% \begin{align} \label{conv/2/condnB}
+%     F_{Y_1,Y_2,\dots,Y_n}&(y_1,y_2,\dots,y_n)\nonumber \\
+%     &=F_Y(y_1)F_Y(y_1)\dots F_Y(y_n)
+% \end{align}
+\end{proof}
+% \begin{lemma} 
+% If ${X_i}$ is a sequence of i.i.d. random variables, it follows that $X_i^2$ is also a sequence of i.i.d. random variables.
+% \end{lemma}
+% \begin{proof}
+%     From Lemma \ref{conv/2/lmaconda} and Lemma \ref{conv/2/lmacondb}, $X_i^2$ is also a sequence of i.i.d. random variables.
+% \end{proof}
+\begin{lemma} \label{conv/2/varsum}
+    If $X_1, X_2, \ldots X_n$ are independent random variables,
+    \begin{align}
+        \var{\sum_{i=1}^n X_i} = \sum_{i=1}^{n}\var{X_i}
+    \end{align}
+\end{lemma}
+\begin{lemma}\label{conv/2/lma4}
+    (Chebyshev's Inequality)\\
+Let the random variable $X$ have a finite mean $\mu$ and a finite variance $\sigma^2$. For every $\epsilon>0$, 
+\begin{align}
+    \pr{\abs{X - \mu} \geq \epsilon} \leq \frac{\sigma^2}{\epsilon^2}
+\end{align}
+\end{lemma}
+\begin{lemma}\label{conv/2/lma2}
+    (Central Limit Theorem)
+Let $X_1$, $X_2$, \ldots $X_n$ be i.i.d. random variables with expected value $E(X_i)=\mu < \infty$  and $0 < V(X_i)=\sigma^2 < \infty$. Then the random variable 
+\begin{align}
+    Z_n 
+%    = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}} 
+    = \frac{\sum_{i=1}^n X_i - n\mu}{\sqrt{n}\sigma}
+    \xrightarrow[]{d} \gauss{0}{1}
+\end{align}
+% converges in distribution to the standard normal random variable as n goes to infinity, that is
+% \begin{align}
+%     \lim_{n \to \infty}\pr{Z_n \leq a} = \Phi(a)   \text{        }\forall a \in \mathbb{R}.
+% \end{align}
+% where $\Phi(a)$ is the standard normal CDF.
+\end{lemma}
+\begin{enumerate}
+\item 
+From Lemma \ref{conv/2/xi2lma}, \{$X_i^2$\} is a sequence of i.i.d. random variables.  Hence, 
+%Now, we know,
+\begin{align}
+    E(X_i^2)=\var{X_i}+\sbrak{\mean{X_i}}^2 = 1
+\end{align}
+% Putting given values, we get,
+% \begin{align} 
+%     E(X_i^2)&=1 \label{conv/2/muval}
+% \end{align}
+From Lemma \ref{conv/2/lma3},  
+\begin{align} \label{conv/2/opt4}
+   \dfrac{1}{n}\sum_{i=1}^n X_i^2 \xrightarrow[]{p} 1 \ne 0 
+\end{align}
+Therefore, option 1 is incorrect.
+\item 
+\begin{lemma} \label{conv/2/result2}
+    Let    
+    \begin{align}
+        Y_n=\dfrac{1}{n^{3/4}}\sum_{i=1}^n X_i,
+    \end{align}
+    where $X_i$ are i.i.d.  with 
+    \begin{align}
+        \mean{X_i} = 0, \var{X_i} = 1
             \end{align}
-            Or, $\frac{1}{n}\sum_{i=1}^nX_i$ converges in probability to $E(X_i)$.
-        \end{lemma}
+        Then 
+        \begin{align}
+            \mean{Y_n} = 0,  \var{Y_n} = \dfrac{1}{n^{1/2}} 
+                \end{align}
+            
+\end{lemma}
+
+\begin{proof}
+\begin{align}
+    \mean{Y_n} &= \dfrac{1}{n^{3/4}}\mean{\brak{\sum_{i=1}^n X_i}} = 0
+\end{align}
+Since $E(X_i) = 0$. Also, from Lemma \ref{conv/2/varsum},
+\begin{align}
+    \var{Y_n} &= \dfrac{1}{n^{3/2}} \brak{\sum_{i=1}^n\mean{ X_i}}
+    \\
+    &= \dfrac{1}{n^{3/2}} \times n = \dfrac{1}{n^{1/2}}
+\end{align}
+  $\because \var{X_i}=1$. 
+\end{proof}
+Now, from Lemma \ref{conv/2/lma4} and Lemma \ref{conv/2/result2}
+\begin{align}
+    \lim_{n \to \infty}\pr{|Y_n-0|\geq \epsilon} &\leq \lim_{n \to \infty }\dfrac{1}{n^{1/2}\epsilon^2}\\
+    &= 0
+%    \implies &\lim_{n \to \infty}\pr{\left | \dfrac{1}{n^{3/4}}\sum_{i=1}^n X_i - 0 \right|\geq \epsilon}=0
+\end{align}
+From Definition \ref{conv/2/def2},
+\begin{align}
+    \dfrac{1}{n^{3/4}}\sum_{i=1}^n X_i \xrightarrow[]{p} 0
+\end{align}
+Thus, option 2 is correct.
+\item Substituting $\mu=0$ and $\sigma=1$, in  Lemma \ref{conv/2/lma2},
+\begin{align}
+    Z_n &= \dfrac{1}{n^{1/2}} \sum_{i=1}^n X_i  \xrightarrow[]{d} \gauss{0}{1} \ne 0
+\end{align}
+% From Lemma \ref{conv/2/lma2} 
+% \begin{align}
+%     \dfrac{1}{n^{1/2}} \sum_{i=1}^n X_i \to  N(0,1)
+% \end{align}
+% whereas the option states that
+% \begin{align}
+%  \dfrac{1}{n^{1/2}} \sum_{i=1}^n X_i \to 0
+% \end{align} 
+% from Lemma \ref{conv/2/lma1}.
+Therefore, option 3 is incorrect.
+\item From \eqref{conv/2/opt4}, option 4 is correct.
+\end{enumerate}
+Therefore, options 2 and 4 are correct.
