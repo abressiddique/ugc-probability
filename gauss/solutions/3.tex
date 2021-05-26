@@ -1,4 +1,5 @@
 \begin{lemma}
+    \label{gauss/3/xy}
 Let 
 \begin{align}
     \vec{x}=\myvec{X_1\\
@@ -6,231 +7,180 @@ Let
              X_3\\
              X_4\\
              X_5}
+, 
+             \vec{y}=\myvec{Y_1\\
+             Y_2\\
+             Y_3\\
+             Y_4\\
+             Y_5}, 
              \sim \gauss{\vec{0}}{\vec{I}}
-\end{align}
-and 
-\begin{align}
-    \vec{u}=\myvec{1\\
-                      1\\
-                      1\\
-                      1\\
-                      1}
+             \\
+% \end{align}
+% and 
+% \begin{align}
+    \vec{u}&=\myvec{1\\ 1\\ 1\\ 1\\ 1}, 
+    \vec{v}=\myvec{1\\ 1\\ 1\\ 1\\ 0}.
 \end{align} 
 %
 Then 
 \begin{align}
     \overline{X}&=\frac{1}{5}\vec{u}^{\top}\vec{x}
     \\
-   T&=\vec{x}^{\top}\vec{M}\vec{x}
+    T &= \norm{\vec{v}^{\top}\vec{y}}^2
+    \label{gauss/3/T}
 \end{align}
 where
 \begin{align}
-    \vec{M}&=\myvec{\frac{4}{5}&-1/5&-1/5&-1/5&-1/5\\
-                   -1/5&\frac{4}{5}&-1/5&-1/5&-1/5\\
-                   -1/5&-1/5&\frac{4}{5}&-1/5&-1/5\\
-                   -1/5&-1/5&-1/5&\frac{4}{5}&-1/5\\
-                   -1/5&-1/5&-1/5&-1/5&\frac{4}{5}}
+\vec{y} &= \vec{P}\vec{x}, 
+\\
+\vec{M} &= \vec{I}- \frac{1}{5}\vec{1}
+\\
+&= \vec{P}^{\top}\vec{D}\vec{P}, 
+\\
+    \vec{D} &=\myvec{1&0&0&0&0\\
+                   0&1&0&0&0\\
+                   0&0&1&0&0\\
+                   0&0&0&1&0\\
+                   0&0&0&0&0}
 \end{align}
+% \begin{align}
+% %     \vec{M}&=\myvec{\frac{4}{5}&-1/5&-1/5&-1/5&-1/5\\
+% %                    -1/5&\frac{4}{5}&-1/5&-1/5&-1/5\\
+% %                    -1/5&-1/5&\frac{4}{5}&-1/5&-1/5\\
+% %                    -1/5&-1/5&-1/5&\frac{4}{5}&-1/5\\
+% %                    -1/5&-1/5&-1/5&-1/5&\frac{4}{5}}
+% \vec{M} = \vec{I}- \frac{1}{5}\vec{1}
+%  \end{align}
+  and $\vec{1}$ is the all ones matrix.
 \end{lemma}
 %
-\begin{lemma}
-\begin{align}
-    \vec{M}^2&=\vec{M}
-\end{align}
-\end{lemma}
-\begin{definition}{chi-square distribution}
- Let $X_1,X_2,..X_k$ be i.i.d  standard normal random variables.Define a random variable Y as
- \begin{align}
-     Y=X_1^2+X_2^2+....+X_k^2
- \end{align}
- We say Y is chi-square distributed with k degrees of freedom.The mean and variance is given by
- \begin{align}
-   \mean{Y}&=k\\
-   Var\sbrak{Y}&=2k
- \end{align}
- 
-\end{definition}
-\begin{lemma}
-\label{gauss/3/l2.1}
-\begin{align}
-   \brak{\vec{u}^{\top}\vec{x}}\brak{\vec{x}^{\top}\vec{v}}=\vec{u}^{\top}\brak{\vec{x}\vec{x}^{\top}}\vec{v}
-\end{align}
-This lemma is verified using python simulation.
-\end{lemma}
-\begin{theorem}
-\label{gauss/3/shit}
-If the random variables X and Y are independent,then the random variables $Z=g\brak{X}$ and $W=h(Y)$ are also independent.
-\end{theorem}
 \begin{proof}
-We denote by $A_z$ the set of points such that $g\brak{X}\leq \textit{z}$ and by  $B_w$ the set of points such that $h\brak{Y}\leq \textit{w}$.Clearly,
+From  \eqref{gauss/3/mean} and  \eqref{gauss/3/var}, it is easy to verify that 
 \begin{align}
-    \cbrak{Z\leq \textit{z}}&=\cbrak{X\in A_z}\\
-    \cbrak{W\leq \textit{w}}&=\cbrak{Y\in B_w}
-\end{align}
-Therefore the events $\cbrak{Z\leq \textit{z}}$ and $\cbrak{W\leq \textit{w}}$ are independent because the events $\cbrak{X\in A_z}$ and $\cbrak{Y\in B_w}$ are independent.
-\end{proof}
-\begin{definition}[cross-covariance]
-\begin{align}
-    Cov\sbrak{\vec{x},\vec{y}}=\mean{\brak{\vec{x}-\mean{\vec{x}}}\brak{\vec{y}-\mean{\vec{y}}}^{\top}}
-\end{align}
-\end{definition}
-\begin{lemma}
-Two jointly normal vectors are independent if and only if their cross-covariance is zero.
-\end{lemma}
-\begin{theorem}
-\label{gauss/3/t2.2}
-Let $\vec{x}$ be a $5\times 1$ standard multivariate normal random vector.Let $\vec{B}$ be an $l\times 5$ real matrix.Then the $l\times 1$ random vector $\vec{y}$ defined by $\vec{y}=\vec{B}\vec{x}$ has multivariate normal distribution with mean $\mean{\vec{y}}=\vec{0}$ and covariance matrix $Var\sbrak{\vec{y}}=\vec{B}\vec{B}^{\top}$ 
-\end{theorem}
-\begin{proof}
-The joint moment generating function of $\vec{x}$ is
-\begin{align}
-    M_{\vec{x}}\brak{\vec{t}}=exp\brak{\vec{t}^{\top}\mu+\frac{1}{2}\vec{t}^{\top}\vec{V}\vec{t}}
-\end{align}
-since for standard normal distribution $\vec{\mu}=\vec{0}$ and $\vec{V}=\vec{I}$.So
-\begin{align}
-     M_{\vec{x}}\brak{\vec{t}}=exp\brak{\frac{1}{2}\vec{t}^{\top}\vec{I}\vec{t}}\label{gauss/3/2.11}
-\end{align}
-Therefore the joint moment generating function of $\vec{y}$ is
-\begin{align}
-    M_{\vec{y}}\brak{\vec{t}}&=M_{\vec{x}}\brak{\vec{B}^{\top}\vec{t}}\\
-    &=exp\brak{\frac{1}{2}\vec{t}^{\top}\vec{B}\vec{B}^{\top}\vec{t}}
-\end{align}
-on comparing with $\eqref{gauss/3/2.11}$ we can say $\vec{y}$ has multivariate normal distribution. 
-\end{proof}
-\begin{theorem}
-\label{gauss/3/t2.3}
-Let $\vec{x}$ be a $5\times 1$ standard multivariate normal random vector.Let $\vec{A}$ ,$\vec{B}$ be two matrices.Define
-\begin{align}
-    \vec{T_1}&=\vec{A}\vec{x}\\
-    \vec{T_2}&=\vec{B}\vec{x}
-\end{align}
-Then $\vec{T_1}$ and $\vec{T_2}$ are two independent random vectors if and only if $\vec{A}\vec{B}^{\top}=0$
-\end{theorem}
-\begin{proof}
-From theorem $\ref{gauss/3/t2.2}$,$\vec{T_1}$ and $\vec{T_2}$ are jointly normal.Their cross-covariance is
-\begin{align}
-    Cov\sbrak{\vec{T_1},\vec{T_2}}&=\mean{\brak{\vec{T_1}-\mean{\vec{T_1}}}\brak{\vec{T_2}-\mean{\vec{T_2}}}^{\top}}\\
-    &=\mean{\brak{\vec{A}\vec{x}-\mean{\vec{A}\vec{x}}}\brak{\vec{B}\vec{x}-\mean{\vec{B}\vec{x}}}^{\top}}\\
-    &=\vec{A}\mean{\brak{\vec{x}-\mean{\vec{x}}}\brak{\vec{x}-\mean{\vec{x}}}^{\top}}\vec{B}^{\top}\\
-    &=\vec{A}Var\sbrak{x}\vec{B}^{\top}\\
-    &=\vec{A}\vec{B}^{\top}
-\end{align}
-So $\vec{T_1}$ and $\vec{T_2}$ are independent if and only if $\vec{A}\vec{B}^{\top}=0$
-\end{proof}
-\begin{theorem}
-Let $\overline{X}$ be the sample mean of size 5 from a standard normal distribution.Then
-\begin{enumerate}
-    \item $\overline{X} \sim N(0,\frac{1}{5})$
-    \item $\overline{X}$ and $T$ are independent.
-    \item $T \sim \chi_{4}^2$
-\end{enumerate} 
-where $\chi_{4}^2$  is  chi-square distribution
-with   $4$ degrees of freedom and $T$ is defined as
-\begin{align}
-    T=\sum_{i=1}^{5}(X_i-\overline{X})^2
-\end{align}
-\end{theorem}
-\begin{proof}
-\begin{enumerate}
-\item 
-\begin{align}
-    \overline{X}=\frac{1}{5}\vec{u}^{\top}\vec{x}\label{gauss/3/3.1}
-\end{align}
-From theorem $\ref{gauss/3/t2.2}$ we can say $\overline{X}$ has normal distribution with mean $\mean{\overline{X}}=\vec{0}$ and covariance matrix
-\begin{align}
-    Var\sbrak{\overline{X}}&=\frac{1}{25}\vec{u}^{\top}\vec{u}\\
-    &=\frac{1}{5}
-\end{align}
-\item since $\vec{M}$ is symmetric and idempotent we have
-\begin{align}
-   T&=\vec{x}^{\top}\vec{M}\vec{x}\\
-    &=\vec{x}^{\top}\vec{M}\vec{M}\vec{x}\\
-    &=\vec{x}^{\top}\vec{M}^{\top}\vec{M}\vec{x}\\
-    &=\brak{\vec{M}\vec{x}}^{\top}\brak{\vec{M}\vec{x}}\label{gauss/3/3.5} 
-\end{align}
-\begin{multline}
-    Cov\sbrak{\frac{1}{5}\vec{u}^{\top}\vec{x},\vec{M}\vec{x}}
-    =E\lbrak{\sbrak{\frac{1}{5}\vec{u}^{\top}\vec{x}-\mean{\frac{1}{5}\vec{u}^{\top}\vec{x}}}}
+       T&=\vec{x}^{\top}\vec{M}\vec{x},
+    \vec{M}^2=\vec{M}
     \\
-\rbrak{\sbrak{\vec{M}\vec{x}-\mean{\vec{M}\vec{x}}}^{\top}}
-\end{multline}
-Using lemma $\ref{gauss/3/l2.1}$ we get
-\begin{multline}
-  Cov\sbrak{\frac{1}{5}\vec{u}^{\top}\vec{x},\vec{M}\vec{x}}\\=\frac{1}{5}\vec{u}^{\top}\mean{\brak{\vec{x}-\mean{\vec{x}}}\brak{\vec{x}-\mean{\vec{x}}}^{\top}}\vec{M}^{\top}  
-\end{multline}
-\begin{align}
-    &=\frac{1}{5}\vec{u}^{\top}Var\sbrak{\vec{x}}\vec{M}\\
-    &=\frac{1}{5}\vec{u}^{\top}\vec{M}\\
-    &=0
-\end{align}
-So $\vec{M}\vec{x}$ and $\frac{1}{5}\vec{u}^{\top}\vec{x}$ are independent.From theorem $\ref{gauss/3/shit}$(functions of two independent variables are also independent), we can say $\overline{X}$ and T(A function of $\vec{M}\vec{x}$)are independent
-\item Since $\vec{M}$ is symmetric it can be expressed as
-\begin{align}
-    \vec{M}=\vec{P}\vec{D}\vec{P}^{\top}
-\end{align}
-where $\vec{P}$ is orthogonal and $\vec{D}$ is diagonal.Then
-\begin{align}
-    T&=\vec{x}^{\top}\vec{M}\vec{x}\\
-    &=\vec{x}^{\top}\vec{P}\vec{D}\vec{P}^{\top}\vec{x}\\
-    &=\brak{\vec{P}^{\top}\vec{x}}^{\top}\vec{D}\vec{P}^{\top}\vec{x}\\
+    \implies T&=\vec{x}^{\top}\vec{P}\vec{D}\vec{P}^{\top}\vec{x}\\
     &=\vec{y}^{\top}\vec{D}\vec{y}
 \end{align}
-where $\vec{y}=\vec{P}^{\top}\vec{x}$.Since $\vec{x}$ is standard normal, from theorem $\ref{gauss/3/t2.2}$ we can say $\vec{y}$ is also jointly normal with
-\begin{align}
-    \mean{\vec{y}}&=0\\
-    Var\sbrak{\vec{y}}&=\vec{P}^{\top}\brak{\vec{P}^{\top}}^{\top}\\
-    &=\vec{P}^{\top}\vec{P}\\
-    &=\vec{I} \hspace{1cm} \brak{\text{Since P is orthogonal}}
-\end{align}
-So $\vec{y}\sim N\brak{0,\vec{I}}$ is standard normal.
-\begin{enumerate}
-    \item The eigen values of $\vec{M}$ are $1,1,1,1,0$.So $\vec{D}$ can be written as
-    \begin{align}
-        \vec{D}=\myvec{1&0&0&0&0\\
-                       0&1&0&0&0\\
-                       0&0&1&0&0\\
-                       0&0&0&1&0\\
-                       0&0&0&0&0}
-    \end{align}
-    Let $\vec{v_1},..,\vec{v_5}$ be corresponding eigen vectors.Then $\vec{P}=\brak{\vec{v_1},..,\vec{v_5}}$.Since $\vec{P}$ is orthogonal the dot product of any two eigen vectors is zero.i.e
-    \begin{align}
-        \vec{v_i}^{\top}\vec{v_j}=0 \label{gauss/3/ind}
-    \end{align}
-    for any $i\neq j$
-    \begin{align}
-     \vec{y}&=\vec{P}^{\top}\vec{x}\\
-     \implies 
-        \vec{y}&=\myvec{y_1=\vec{v_1}^{\top}\vec{x}\\
-                       y_2=\vec{v_2}^{\top}\vec{x}\\
-                       y_3=\vec{v_3}^{\top}\vec{x}\\
-                       y_4=\vec{v_4}^{\top}\vec{x}\\
-                       y_5=\vec{v_5}^{\top}\vec{x}}\\
-    \end{align}
-    From $\eqref{gauss/3/ind}$ and theorem $\ref{gauss/3/t2.3}$,it follows $y_1,y_2,y_3,y_4,y_5$ are mutually independent.
-    \begin{align}
-    T&=\vec{y}^{\top}\vec{D}\vec{y}\\
-        \implies
-         T&=y_1^2+y_2^2+y_3^2+y_4^2 
-    \end{align}
-    So T is sum of squares of four independent standard normal variables which is chi-square distribution with 4 degrees of freedom.
-\end{enumerate}
-\end{enumerate}
+yielding     \eqref{gauss/3/T}.  We have used spectral decomposition above.
+%
 \end{proof}
-\begin{align}
-    \mean{T^2\overline{X}^2}=\mean{T^2}\mean{\overline{X}^2}\label{gauss/3/ra}
-\end{align}
-\begin{align}
-    \mean{\overline{X}^2}&=Var\sbrak{\overline{X}}+\brak{\mean{\overline{X}}}^2\\
-    &=\frac{1}{5}
-\end{align}
- since T is chi-squared distributed with 4 degrees of freedom
+\begin{lemma}    
+    \label{gauss/3/orth}
+    $\vec{y}=\vec{P}\vec{x} \sim \gauss{\vec{0}}{\vec{I}}$ if $\vec{P}^{\top}\vec{P} = \vec{I}$.
+\end{lemma}
+\begin{proof}
+    The  moment generating function 
+    \begin{align}
+        M_{\vec{x}}\brak{\vec{t}}=exp\brak{\vec{t}^{\top}\vec{\mu}+\frac{1}{2}\vec{t}^{\top}\vec{V}\vec{t}}
+    \end{align}
+    $\because \vec{\mu}=\vec{0}$ and $\vec{V}=\vec{I}$,
+    \begin{align}
+         M_{\vec{x}}\brak{\vec{t}}=\exp\brak{\frac{1}{2}\vec{t}^{\top}\vec{t}}\label{gauss/3/2.11}
+    \end{align}
+    Therefore the joint moment generating function of $\vec{y}$ is
+    \begin{align}
+        M_{\vec{y}}\brak{\vec{t}}&=M_{\vec{x}}\brak{\vec{P}\vec{t}}\\
+        &=exp\brak{\frac{1}{2}\vec{t}^{\top}\vec{P}^{\top}\vec{P}\vec{t}}
+        \\
+        &= M_{\vec{x}}\brak{\vec{t}}
+    \end{align}
+%    on comparing with $\eqref{gauss/3/2.11}$ we can say $\vec{y}$ has multivariate normal distribution. 
+    \end{proof}
+    \begin{corollary}
+        \label{gauss/3/xbar}
+        $\overline{X} \sim \gauss{0}{\frac{1}{5}}$
+    \end{corollary}
+
+    \begin{definition}
+        \begin{enumerate}
+        \item {\em Random Variable:} A random variable X is a real-valued function defined on the "sample space" $\Omega$ (the set of outcomes being studied via probability).
+        \item {\em Borel Set:} A random variable X is studied by means of the probabilities that its value lies within various intervals of real numbers (or, more generally, sets constructed in simple ways out of intervals: these are the Borel measurable sets of real numbers).         
+        \item {sigma-algebra: }  Corresponding to any Borel measurable set I is the event $X^*(I)$ consisting of all outcomes $\omega$ for which $X(\omega)$ lies in I.
+        The sigma-algebra generated by X is determined by the collection of all such events.
+        \item {\em Independent random variables: } The naive definition says two random variables X and Y are independent "when their probabilities multiply." That is, when I is one Borel measurable set and J is another, then 
+        \begin{multline}
+            \pr{X(\omega)\in I , Y(\omega)\in J}\\=\pr{X(\omega)\in I}\pr{Y(\omega)\in J}.
+        \end{multline}
+        But in the language of events (and sigma algebras) that's the same as
+        \begin{multline}
+            \pr{\omega \in X^*(I) , \omega \in Y^*(J)}\\=\pr{\omega \in X^*(I)}\pr{\omega \in Y^*J)}.
+        \end{multline}
+        \item {\em Function of a random variable: }
+        \begin{align}
+            (f\circ X)(\omega)&=f(X(\omega))
+            \\
+            (f\circ X)^*(I)&=X^*(f^*(I))
+            \label{eq:gauss/3/omega}
+        \end{align}
+        \end{enumerate}
+    
+    \end{definition}
+    
+\begin{lemma}
+    Functions of independent random variables are themselves independent.
+    \end{lemma}
+    \begin{proof}
+     Consider now two functions $f,g:\mathbb{R}\rightarrow \mathbb{R}$ and suppose that $f\circ X$ and $g\circ Y$ are random variables. 
+    In other words, every event generated by $f\circ X$ (which is on the left) in         \eqref{eq:gauss/3/omega} is automatically an event generated by X (as exhibited by the form of the right hand side). Therefore         \eqref{eq:gauss/3/omega} automatically holds for $f\circ X$ and $g\circ Y$.
+    This covers the case of vector-valued random variables as well.
+    \end{proof}
+    \begin{corollary}
+        Let $\vec{y}$ and $\vec{z}$ be two independent normal random vectors. Then $\vec{y}$ and $\vec{\norm{z}}$ are also independent.
+    \end{corollary}
+
+    \begin{lemma}
+        \label{gauss/3/t2.3}    
+        $\vec{A}\vec{x}, \vec{B}\vec{x}$ are  independent  if and only if $\vec{A}\vec{B}^{\top}=0$
+        \end{lemma}
+        \begin{proof}
+        The given vectors are independent $\iff$ 
+        \begin{multline}
+            \mean{\brak{\vec{A}\vec{x}-\mean{\vec{A}\vec{x}}}\brak{\vec{B}\vec{x}-\mean{\vec{B}\vec{x}}}^{\top}} = 0\\
+             \implies \vec{A}\mean{\brak{\vec{x}-\mean{\vec{x}}}\brak{\vec{x}-\mean{\vec{x}}}^{\top}}\vec{B}^{\top} = 0\\
+             \implies \vec{A}\var{\vec{x}}\vec{B}^{\top} = 0\\
+             \text{or, } \vec{A}\vec{B}^{\top} = 0, \quad \because \var{\vec{x}} = \vec{I}
+        \end{multline}        
+        \end{proof}
+\begin{theorem}    
+    $\vec{u}^{\top}\vec{x}$ and $\vec{v}^{\top}\vec{y}$ are independent.
+\end{theorem}
+\begin{proof}
+    From Lemma     \ref{gauss/3/xy}, 
+    \begin{align}
+        \vec{y} = \vec{P}\vec{x}. 
+    \end{align}        
+The given statement can be proved  using Lemma         \ref{gauss/3/t2.3} and noting that      
+    \begin{align}
+        \vec{u}^{\top}\vec{P}^{\top} \vec{v}=0, 
+    \end{align}            
+\end{proof}
+\begin{corollary}    
+    $\overline{X} and T$ are independent.
+\end{corollary}
+    % \begin{conjecture}
+    %     \label{l2.1/gauss/3/}
+    %     For any vectors $\vec{u}, \vec{v}$, 
+    %     \begin{align}
+    %        \brak{\vec{u}^{\top}\vec{x}}\brak{\vec{x}^{\top}\vec{v}}=\vec{u}^{\top}\brak{\vec{x}\vec{x}^{\top}}\vec{v}
+    %     \end{align}
+    % \end{conjecture}
+\begin{definition}
+    \label{gauss/3/chisq}
+    {\em chi-square distribution: } $\norm{\vec{x}}^2$ is said to be chi-square distributed.  If the length of $\vec{x}$ is $k$,
+ The mean and variance are given by
  \begin{align}
-     \mean{T}&=4\\
-     Var\sbrak{T}&=8\\
-     \implies \mean{T^2}&=Var\sbrak{T}+\brak{\mean{T}}^2\\
-    &=24
+   \mean{Y}&=k\\
+   \var{Y}&=2k
  \end{align}
- From $\eqref{gauss/3/ra}$
+\end{definition}
+From       Corollary  \ref{gauss/3/xbar} and      Definition \ref{gauss/3/chisq},
 \begin{align}
-    \mean{T^2\overline{X}^2}=4.8
+    \mean{\overline{X}^2} &= \frac{1}{5}, 
+    \\
+    \mean{T^2} &=  \var{T}+\brak{\mean{T}}^2\\
+    &=24
+    \\
+    \implies  \mean{T^2\overline{X}^2}=4.8
 \end{align}
