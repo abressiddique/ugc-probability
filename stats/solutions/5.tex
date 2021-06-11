@@ -1,0 +1,129 @@
+\begin{definition}
+    For a given statistical sample $\{X_1, X_2,\cdots X_n\}$, the order statistics is obtained by sorting the
+    sample in ascending order. It denoted as $\{X_{(1)}, X_{(2)},\cdots X_{(n)}\}$. The $k^{th}$ smallest value
+    $X_{(k)}$ is called  $k^{th}$ order statistic 
+    \end{definition}
+    \begin{theorem}
+    Let $\{X_1, X_2, \cdots X_n\}$ be n i.i.d random variables with common CDF $= F(x)$ and common PDF $= f(x)$, 
+    then the marginal probability distribution of $k^{th}$ order statistic (CDF) is denoted by $F_{(k,n)}(x)$ 
+    and is given by
+    \begin{align}
+    F_{(k,n)}(x) =  \sum_{j=k}^{n}\comb{n}{j} \brak{F(x)}^{j}\brak{1-F(x)}^{n-j} \label{stats/5/eqn_1}
+    \end{align}
+    \label{stats/5/th1}
+    \end{theorem}
+    \begin{proof}
+    %    \begin{align}
+        % F_{(k,n)}(x) &= \pr{X_{(k)}\leq x} \\
+        % F_{(k,n)}(x) &= \pr{\text{At least k elements have value $\leq x$}} \label{kcdf}
+        % \end{align}
+        % Since $\pr{X\leq x} = F(x)$ , 
+    %     Let $ Q \sim Bern(F(x))$ such that
+    %     \begin{align}
+    % \pr_Q{q} = \begin{cases}
+    %  F(x)  & q = 1\\
+    %      1-F(x) & q = 0
+    % \end{cases}
+%        \end{align}
+        Let $P \sim B(n,F(x))$.  Then
+        % \begin{align}
+        % \pr{P=i} &= \comb{n}{i}\,\pr{Q=1}^{i}\,\pr{Q=0}^{n-i} \\
+        % \pr{P=i} &= \comb{n}{i}\,F(x)^{i}\,(1-F(x))^{n-i}\label{bin}  
+        % \end{align}
+        % Equation \eqref{bin} is probability of exactly $i$ R.V of given sample have values $\leq x$   
+        \begin{align}
+         F_{(k,n)}(x) &= \pr{P\geq k} \\
+         &=  \sum_{j=k}^{n}\comb{n}{j}\, \brak{F(x)}^{j}\,\brak{1-F(x)}^{n-j} 
+        \end{align}
+        \end{proof}
+    \begin{corollary}
+    The marginal probability density of $k^{th}$ order statistic (PDF) is denoted by $f_{(k,n)}(x)$  and 
+     given by
+    \begin{align}
+    f_{(k,n)}(x) = n\;\comb{n-1}{k-1}\,f(x)\,(F(x))^{k-1}\,\brak{1-F(x)}^{n-k} \label{stats/5/eqn_2}
+    \end{align}
+    \label{stats/5/th2}
+    \end{corollary}
+%
+\begin{definition}[Beta function]
+    \label{stats/5/def2}
+    % The \textbf{Beta function} is defined for $r, s \in \R^{+}$ by 
+    \begin{equation}
+    B(r,s) = \Int_{0}^{1} x^{r-1}\,\brak{1-x}^{s-1}\,dx = \dfrac{\Gamma(r)\,\Gamma(s)}{\Gamma(r+s)} 
+    \label{stats/5/eqn_5}
+    \end{equation}
+    \end{definition}
+    \begin{definition}[Beta Distribution]
+    \label{stats/5/bddef}
+    The Beta distribution is a continuous distribution defined on the range $(0,1)$ whose PDF given by 
+    \begin{align}
+    f(x) &= \dfrac{1}{B(r,s)}\,x^{r-1}\,\brak{1-x}^{s-1} 
+    \end{align}
+    where $\Int_{0}^1f(x) = 1$ as per definition \eqref{stats/5/def2} 
+    CDF, Mean value and Variance of Beta distribution
+    \begin{align}
+     F(x)   &=\dfrac{\Int_{0}^{x}x^{r-1}\,\brak{1-x}^{s-1}}{B(r,s)} =    \dfrac{B_{x}(r,s)}{B(r,s)} \\
+     E(x)   &=   \dfrac{r}{r+s} \\
+     \var(x) &= \dfrac{rs}{(r+s)^{2}\,(r+s+1)}
+    \end{align}
+    \end{definition}
+    \begin{definition}[Uniform Order Statistics]
+    Let $\{X_1,\cdots X_n\}$ be i.i.d form a uniform distribution on $[0,1]$ such that $f_{X}(x) = 1$ and $F_{X}(x)=x$.
+    From Theorem \eqref{stats/5/th2}, equation \eqref{stats/5/eqn_2}
+    \begin{align}
+    f_{(k,n)}(x) &= n\;\comb{n-1}{k-1}\,x^{k-1}\,\brak{1-x}^{n-k}\label{stats/5/eqn_3}
+    \end{align}
+    \end{definition}
+    \begin{lemma}
+    \label{stats/5/lma}
+    Uniform order statistics on [0,1] the PDF of $k^{th}$ order statistic follows Beta distribution with $r=k$, $s=n-k+1$
+    and  PDF is given by 
+    \begin{align}
+    f_{(k,n)}(x) &= \dfrac{1}{B(k,n-k+1)}\,x^{k-1}\,\brak{1-x}^{(n-k+1)-1} 
+    \end{align}
+    \end{lemma}
+    \newpage
+    \begin{proof}
+    Since  \eqref{stats/5/eqn_3} is the PDF,
+    \begin{equation}
+     \Int_{0}^{1} n\;\comb{n-1}{k-1}\,x^{k-1}\,\brak{1-x}^{n-k} \,dx  = 1    
+    \end{equation}
+    \begin{align}
+    \Int_{0}^{1} x^{k-1}\brak{1-x}^{n-k} \,dx  &= \dfrac{(k-1)!\,(n-k)!}{n!}  \\
+    \Int_{0}^{1} x^{k-1}\brak{1-x}^{n-k} \,dx  &= \dfrac{\Gamma(k)\,\Gamma(n-k+1)}{\Gamma\brak{k+(n-k+1))}} \\
+    \Int_{0}^{1} x^{k-1}\brak{1-x}^{n-k} \,dx  &= B(k,n-k+1) \\
+    \Int_{0}^{1} \dfrac{x^{k-1}\brak{1-x}^{(n-k+1)-1}}{B(k,n-k+1)}\,dx  &= 1
+    \end{align}
+    from definition \eqref{stats/5/bddef} with $r=k$ and $s=n-k+1$ equation \eqref{stats/5/eqn_3} follows beta distribution
+    \end{proof}
+    From lemma \eqref{stats/5/lma}, PDF of $k^{th}$ order statistic of a uniform distribution on $[0,1]$ follows 
+    beta distribution
+    \begin{align}
+    \Int_{0}^{2}f_{(k,8)}(x)\,dx &= \Int_{0}^{2} \dfrac{7}{32}\,x^{6}\,\brak{2-x}\,dx \\
+    \Int_{0}^{2}f_{(k,8)}(x)\,dx &= \Int_{0}^{2} 56\,\brak{\dfrac{x}{2}}^{6}\,\brak{1-\dfrac{x}{2}}\,d\brak{\dfrac{x}{2}}
+    \end{align}
+    Let new random variable be $t$ such that $t=x/2$, New sample be $\{T_1,\cdots T_8\}$ such that $T_{i}=X_{i}/2$.
+    \begin{align}
+    f_{(k,8)}(t) &= 56\,t^{6}\,\brak{1-t} \\
+    \Int_{0}^{2}f_{(k,8)}(x)\,dx &=  \Int_{0}^{1}f_{(k,8)}(t)\,dt = 1
+    \end{align}
+    The Uniform distribution of new random sample is on $[0,1]$ such that   PDF $= 1$ and CDF $= t$ 
+    $f(k,8)(x)$ 
+    %in equation \eqref{stats/5/qnpdf}  (after conversion)
+    \begin{align}
+    f_{(k,8)}(t) =
+      \begin{cases}
+          56\,t^{6}\,\brak{1-t},  & 0<t<1, \\ 
+          \hspace{1cm}   0,               & \text{otherwise,} 
+      \end{cases}
+      \label{stats/5/pdf_t}
+    \end{align}
+    Since equation \eqref{stats/5/pdf_t} is a Beta distribution with $r=k$, $s=n-k+1$  
+    \begin{align}
+    r-1 = k-1 &= 6 \\
+    \therefore k &= 7 
+    \end{align}
+    Hence the \textbf{value of k is 7}
+
+
+    

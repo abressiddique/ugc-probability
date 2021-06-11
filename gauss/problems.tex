@@ -44,6 +44,23 @@ then $\mean{T^2\overline{X}^2}$ is equal to
 \end{enumerate} 
 \solution
 \input{gauss/solutions/3.tex}
+%
+\item Suppose $(X_1,X_2)$ follows a bivariate  normal distribution with
+\begin{align}
+    &E(X_1)=E(X_2)=0\\
+    &V(X_1)=V(X_2)=2\\
+    &Cov(X_1,X_2)=-1
+\end{align}
+If $\Phi(x)$=$\frac{1}{ \sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{{y}^2}{2}}\, dy$, then $\pr{X_1-X_2>6}$ = ?
+\begin{enumerate}
+    \item $\Phi(-1)$
+    \item $\Phi(-3)$
+    \item $\Phi(\sqrt{6})$
+    \item $\Phi(-\sqrt{6})$
+\end{enumerate}
+\solution
+\input{gauss/solutions/4.tex}
+
 
 \item Suppose
 $\begin{pmatrix}
@@ -53,7 +70,7 @@ Y
 \begin{enumerate}
 \item Cov$\brak{X,Y}=0$
 \item $aX+bY$ is normally distributed with mean 0 and variance $a^2+b^2$ for all real $a$ and $b$
-\item $\pr{X\le 0, Y\le0}=\frac{1}{4}$
+\item $\pr{X\le 0, Y\le 0}=\frac{1}{4}$
 \item $E\sbrak{e^{itX+isY}}=E\sbrak{e^{itX}}E\sbrak{e^{isY}}$ for all real $s$ and $t$
 \end{enumerate}
 %

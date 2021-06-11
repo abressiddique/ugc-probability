@@ -1,0 +1,163 @@
+\begin{definition}[Posterior Mean]
+    Posterior mean is the mean of the posterior distribution of $\theta$, i.e., 
+    \begin{align}
+        E\brak{\theta|X} = \int{\theta\;f\brak{\theta|X}\,d\theta}\label{stats/7/eq5}
+    \end{align}
+    \end{definition}
+    \begin{definition}[Beta Function]
+    The beta function, $B\brak{x,y}$, is defined by the integral
+    \begin{align}
+        B\brak{x,y} &= \int_0^1 t^{x-1}\,\brak{1-t}^{y-1}\,dt\nonumber\\
+        &= \frac{x+y}{xy}\times \frac{1}{\comb{x+y}{x}}\label{stats/7/eq1}
+    \end{align}
+    where $Re\brak{x}>0$ and $Re\brak{y}>0$.
+    \end{definition}
+    
+    \begin{lemma}
+        Let $f\brak{\theta}$ be the prior density of $\theta$.  Then 
+    \begin{align}
+        f\brak{\theta} = \frac{\theta^{-\frac{1}{2}}\,\brak{1-\theta}^{-\frac{1}{2}}}{B\brak{\frac{1}{2},\frac{1}{2}}}\label{stats/7/eq6}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    \begin{align}
+        &f\brak{\theta} \propto \frac{1}{\sqrt{\theta\,\brak{1-\theta}}}\nonumber\\
+        \implies &f\brak{\theta} = \frac{K}{\sqrt{\theta\,\brak{1-\theta}}}
+    \end{align}
+    where $K$ is the proportionality constant.
+    \begin{align}
+        &\int_0^1 f\brak{\theta}\,d\theta = 1\nonumber\\
+        \implies &K\;\int_0^1 \frac{1}{\sqrt{\theta\,\brak{1-\theta}}}\,d\theta =1
+    \end{align}
+    From \eqref{stats/7/eq1} we get,
+    \begin{align}
+        &K\times B\brak{\frac{1}{2},\frac{1}{2}} = 1\nonumber\\
+        \implies &K = \frac{1}{B\brak{\frac{1}{2},\frac{1}{2}}}\\
+        \therefore\, &f\brak{\theta} = \frac{\theta^{-\frac{1}{2}}\,\brak{1-\theta}^{-\frac{1}{2}}}{B\brak{\frac{1}{2},\frac{1}{2}}}
+    \end{align}
+    \end{proof}
+    \begin{definition}[Likelihood Function]
+    The likelihood function is defined as 
+    \begin{align}
+        f\brak{\vec{X}|\theta} = \prod_{i=1}^n f\brak{X_i|\theta}\label{stats/7/eq8}
+    \end{align}
+    \end{definition}
+    \begin{lemma}
+    \begin{align}
+        f\brak{\vec{X}|\theta}=\theta^S\,\brak{1-\theta}^{n-S}\label{stats/7/eq7}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    From \eqref{stats/7/eq8} we get,
+    \begin{align}
+        f\brak{\vec{X}|\theta} &= \prod_{i=1}^n\theta^{X_i}\,\brak{1-\theta}^{1-X_i}\nonumber\\
+        &=\theta^S\,\brak{1-\theta}^{n-S}
+    \end{align}
+    \end{proof}
+    \begin{definition}[Maximum Likelihood Esitmator]
+    The maximum likelihood estimator is the value which maximizes the likelihood function, i.e.,
+    \begin{align}
+        \text{MLE} = \text{arg$_{\theta \in (0,1)}$ max}\brak{f\brak{\vec{X}|\theta}}
+    \end{align}
+    \end{definition}
+    \begin{lemma}
+    \begin{align}
+        \text{MLE} = \frac{S}{n}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    Using log of likelihood function in \eqref{stats/7/eq7} and differentiating,  we get,
+    \begin{align}
+        &\ln\brak{{f\brak{\vec{X}|\theta}}} = S\ln\brak{{\theta}} + \brak{n-S}\ln\brak{{1-\theta}}\\
+        &\frac{\partial \ln\brak{{f\brak{X|\theta}}}}{\partial \theta} = \frac{S}{\theta} + \frac{S-n}{1-\theta} = 0 \nonumber\\
+         \therefore\, &\text{MLE} = \frac{S}{n}
+    \end{align}
+    \end{proof}
+    % \begin{definition}
+    % The marginal distribution of $X$ is given by
+    % \begin{align}
+    %     f\brak{X} = \int f\brak{X,Y}\,dY\label{stats/7/eq9}
+    % \end{align}
+    %\end{definition}
+    \begin{definition}[Posterior Density]
+    The posterior density of $\theta$ is defined as 
+    \begin{align}
+        f\brak{\theta|\vec{X}} = \frac{f\brak{\vec{X},\theta}}{f\brak{\vec{X}}}
+    \end{align}
+    \end{definition}
+    \begin{lemma}
+    \begin{align}
+        f\brak{\theta|\vec{X}} = \frac{\theta^{S-\frac{1}{2}}\,\brak{1-\theta}^{n-S-\frac{1}{2}}}{B\brak{S+\frac{1}{2},n-S+\frac{1}{2}}}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    Using Bayes' theorem, 
+    \begin{align}
+        f\brak{\theta|X} &= \frac{f\brak{\vec{X},\theta}}{\int_0^1 f\brak{\vec{X},\theta}\,d\theta} \nonumber\\
+        &= \frac{f\brak{\vec{X}|\theta}\, f\brak{\theta}}{\int_0^1 f\brak{\vec{X}|\theta}\, f\brak{\theta}\,d\theta}\label{stats/7/eq10}
+    \end{align}
+    Using \eqref{stats/7/eq6} and \eqref{stats/7/eq7} in \eqref{stats/7/eq10} we get,
+    \begin{align}
+        f\brak{\theta|\vec{X}} &= \frac{\theta^{S-\frac{1}{2}}\,\brak{1-\theta}^{n-S-\frac{1}{2}}}{\int_0^1 \theta^{S-\frac{1}{2}}\,\brak{1-\theta}^{n-S-\frac{1}{2}}\,d\theta}
+    \end{align}
+    Using \eqref{stats/7/eq1} we get,
+    \begin{align}
+        f\brak{\theta|\vec{X}} = \frac{\theta^{S-\frac{1}{2}}\,\brak{1-\theta}^{n-S-\frac{1}{2}}}{B\brak{S+\frac{1}{2},n-S+\frac{1}{2}}}
+    \end{align}
+    \end{proof}
+    \begin{corollary}
+    \begin{align}
+        E\brak{\theta|\vec{X}} = \frac{S+\frac{1}{2}}{n+1}\label{stats/7/eq3}
+    \end{align}
+    \end{corollary}
+    \begin{proof}
+    From \eqref{stats/7/eq5} we get,
+    \begin{align}
+        E\brak{\theta|\vec{X}} &= \int_0^1 \theta\;f\brak{\theta|\vec{X}}\,d\theta\nonumber\\
+        &=\int_0^1 \frac{\theta^{S+\frac{1}{2}}\,\brak{1-\theta}^{n-S-\frac{1}{2}}}{B\brak{S+\frac{1}{2},n-S+\frac{1}{2}}}\,d\theta\nonumber\\
+        &=\frac{B\brak{S+\frac{3}{2},n-S+\frac{1}{2}}}{B\brak{S+\frac{1}{2},n-S+\frac{1}{2}}}\label{stats/7/eq2}
+    \end{align}
+    Using \eqref{stats/7/eq1} in \eqref{stats/7/eq2} we get
+    \begin{align}
+        E\brak{\theta|\vec{X}} = \frac{S+\frac{1}{2}}{n+1}
+    \end{align}
+    \end{proof}
+    \begin{corollary}
+    For $E\brak{\theta|\vec{X}}$ to be greater than MLE,
+    \begin{align}
+        n>2\,S\label{stats/7/eq4}
+    \end{align}
+    \end{corollary}
+    \begin{proof}
+    \begin{align}
+        &\frac{S+\frac{1}{2}}{n+1} > \frac{S}{n}\nonumber\\
+         \therefore\;&n>2\,S
+    \end{align}
+    \end{proof}
+    \begin{enumerate}
+        \item From \eqref{stats/7/eq3} we get 
+            \begin{align*}
+            E\brak{\theta|\vec{X}} = \frac{S+\frac{1}{2}}{n+1} 
+            \end{align*}
+            $\implies$ for $ E\brak{\theta|\vec{X}}$ to exist, 
+            \begin{align*}
+                n\neq-1
+            \end{align*}
+            Given in the question,
+            \begin{align*}
+                n>1
+            \end{align*}
+             $\implies E\brak{\theta|\vec{X}}$ exists.\\
+             $\therefore$ Option 2 is correct and option 1 is incorrect.
+        \item From \eqref{stats/7/eq4} we get 
+            \begin{align*}
+                E\brak{\theta|\vec{X}}>\, \text{MLE}\\
+            \end{align*}
+            when
+            \begin{align*}
+                n>2\,S
+            \end{align*}
+            $\implies E\brak{\theta|\vec{X}}>\, $MLE for some values of S.\\
+            $\therefore$ Option 4 is correct and option 3 is incorrect.
+    \end{enumerate}
+    $\therefore$ Option 2 and 4 are correct.

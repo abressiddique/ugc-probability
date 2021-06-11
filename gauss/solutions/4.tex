@@ -1,0 +1,152 @@
+\begin{definition}
+    $\vec{x}\sim\mathcal{N}(\mu_{\vec{x}},\Sigma_{\vec{x}})$ is a bivariate random vector given by
+    \begin{align}
+        \vec{x}&=\myvec{X_1\\
+                       X_2}\\
+        \vec{\mu_{\vec{x}}}&=\myvec{\mu_1\\
+                                    \mu_2}\\
+        \vec{\Sigma_{\vec{x}}}&=\myvec{\sigma_1^2&\rho\sigma_1\sigma_2\\
+                                        \rho\sigma_1\sigma_2&\sigma_2^2}
+    \end{align}
+    where $\vec{\Sigma_{\vec{x}}}$ is covariance matrix of $\vec{x}$ and $\rho$ is correlation of $X_1$ and $X_2$ which is given by
+    \begin{align}
+        \rho=\frac{\cov{X_1}{,X_2}}{\sigma_1\sigma_2}
+    \end{align}
+\end{definition}
+\begin{lemma}
+    \label{gauss/4/stats}
+    Let $\vec{x}$ be a $K\times1$ multivariate normal random vector with mean $\vec{\mu}_x$ and covariance matrix $\vec{\Sigma_{\vec{x}}}$. Let $\vec{a}$ be an $L\times1$ real vector and $\vec{B}$ an $L\times K$ full rank real matrix with $K>L$ .Then the $L\times1$ random vector $\vec{y}$ defined by
+    \begin{align}
+        \vec{y}=\vec{a}+\vec{B}\vec{x}
+    \end{align}
+    has a multivariate normal distribution with mean
+    \begin{align}
+        \vec{\mu_\vec{y}}=\vec{a}+\vec{B}\vec{\mu_x}
+    \end{align}
+    and covariance matrix
+    \begin{align}
+        \vec{\Sigma_y}=\vec{B}\vec{\Sigma_x}\vec{B}^{\top}
+    \end{align}
+\end{lemma}
+\begin{proof}
+   The joint moment generating function of $\vec{x}$ is
+   \begin{align}
+       M_{\vec{x}}(\vec{t})&=\mathbb{E}[\exp{\brak{\vec{t}^{\top}\vec{x}}}]\\
+       \implies M_{\vec{x}}(\vec{t})&=\exp{\brak{\vec{t}^{\top}\vec{\mu_x}+\frac{1}{2}\vec{t}^{\top}\vec{\Sigma_x}\vec{t}}}
+   \end{align}
+   $\therefore$, the joint moment generating function of $\vec{y}$ is
+   \begin{align}
+       M_{\vec{y}}(\vec{t})&=\mathbb{E}[\exp{\brak{\vec{t}^{\top}\vec{y}}}]\\
+                           &=\mathbb{E}[\exp{\brak{\vec{t}^{\top}\brak{\vec{a}+\vec{B}\vec{x}}}}]\\ &=\exp{\brak{\vec{t}^{\top}\vec{a}}}\mathbb{E}[\brak{\vec{t}^{\top}{\vec{B}\vec{x}}}]\\ &=\exp{\brak{\vec{t}^{\top}\vec{a}}}\mathbb{E}[\brak{\vec{B}^{\top}\vec{t}}^{\top}\vec{x}]\\
+                           &=\exp{\brak{\vec{t}^{\top}\vec{a}}}M_{\vec{x}}(\vec{B}^{\top}\vec{t})
+        \end{align}
+        which can be expressed as
+        \begin{multline}
+            M_{\vec{y}}(\vec{t})     \\                      =\exp{\brak{\vec{t}^{\top}\vec{a}}}\exp{\brak{(\vec{B}^{\top}\vec{t})^{\top}\vec{\mu_x}+\frac{1}{2}(\vec{B}^{\top}\vec{t})^{\top}\vec{\Sigma_x}\vec{B}^{\top}\vec{t}}}\\
+                           =\exp\brak{\vec{t}^{\top}(\vec{a}+\vec{B}\vec{\mu_x})+\frac{1}{2}\vec{t}\vec{B}\vec{\Sigma_x}\vec{B}^{\top}\vec{t}^{\top}}
+        \end{multline}
+   
+   which is the moment generating function of a multivariate normal distribution with mean $\vec{a}+\vec{B}\vec{\mu}$ and covariance matrix $\vec{B}\vec{\Sigma_x}\vec{B}^{\top}$.\\
+   
+   $\therefore$ $\vec{\mu_\vec{y}}=\vec{a}+\vec{B}\vec{\mu_x}$ and $\vec{\Sigma_y}=\vec{B}\vec{\Sigma_x}\vec{B}^{\top}$
+\end{proof}
+\begin{theorem}\label{1.1}
+   If $(X_1,X_2)$ follows a bivariate distribution then 
+   \begin{align}
+    \pr{X_1-X_2>\alpha}=\Phi\brak{\frac{-(\alpha+\vec{u}^{\top}\vec{\mu_{\vec{x}})}}{\sqrt{\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u}}}}
+   \end{align}
+\end{theorem}
+\begin{proof}
+   Let $\vec{u}=\myvec{-1\\
+                       1}$ and $\vec{x}=\myvec{X_1\\
+                                           X_2}$.  Then 
+   \begin{align}
+       Y = X_2-X_1=\vec{u}^{\top}\vec{x}
+   \end{align}
+%    Now consider a random variable Y defined as follows
+%    \begin{align}
+%        Y&=X_2-X_1\\
+%        \implies y&=\vec{u}^{\top}\vec{x}
+%    \end{align}
+%   then $Y$ has normal distribution with mean
+with 
+   \begin{align}
+       \mu_{y}&=\vec{u}^{\top}\vec{\mu_{\vec{x}}} \\
+%    \end{align}
+%    and variance is given by
+%    \begin{align}
+       \sigma^2_{y}&=\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\brak{\vec{u}^{\top}}^{\top}\\
+       \implies \sigma^2_{y}&=\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u}
+       \\
+       \text{or, } Y&\sim\mathcal{N}(\vec{u}^{\top}\vec{\mu_{\vec{x}}},\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u})
+   \end{align}
+   from Lemma     \ref{gauss/4/stats}.  Also, 
+   \begin{align}
+    Z  = \frac{Y-\mu_y}{\sigma_y} \sim \mathcal{N}(0,1) 
+   \end{align}
+   Thus, 
+   
+%    The Standard Normal, often written Z, is a Normal with $\mu=0$ and $\sigma^2=1$. Thus, $Z \sim \mathcal{N}(\mu=0,\sigma^2=1)$\\
+%    Now $\pr{X_1-X_2>\alpha}$ can be written as $\pr{Y<-\alpha}$
+   \begin{align}
+       \pr{Y<-\alpha}&=\pr{\frac{Y-\mu_y}{\sigma_y}<\frac{-\alpha-\mu_y}{\sigma_y}}\\
+       &=\pr{Z<\frac{-(\alpha+\vec{u}^{\top}\vec{\mu_{\vec{x}})}}{\sqrt{\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u}}}}
+    \end{align}
+    \begin{align}
+       \implies  \pr{X_1-X_2>\alpha}=\Phi\brak{\frac{-(\alpha+\vec{u}^{\top}\vec{\mu_{\vec{x}})}}{\sqrt{\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u}}}}
+       \label{gauss/4/temp}
+   \end{align}
+\end{proof}
+   From the given information,
+   \begin{align}
+    \mu_1=\mu_2&=0\\
+    \sigma^2_1=\sigma^2_2&=2\\
+    Cov(X_1,X_2)&=-1\\
+    \rho=\frac{Cov(X_1,X_2)}{\sigma_1\sigma_2}&=\frac{-1}{2}\\
+    \vec{\mu_{\vec{x}}}=\myvec{\mu_1\\
+                                    \mu_2}&=\myvec{0\\
+                                                  0}\\
+     \vec{\Sigma_{\vec{x}}}=\myvec{\sigma_1^2&\rho\sigma_1\sigma_2\\
+                                        \rho\sigma_1\sigma_2&\sigma_2^2}&=\myvec{2&-1\\
+                                                                                -1&2}
+\end{align}
+which, upon substituting in        \eqref{gauss/4/temp} yields 
+\begin{align}
+    \implies \pr{X_1-X_2>6}&=\Phi\brak{\frac{-6}{\sqrt{6}}}\\
+    &=\Phi(-\sqrt{6})
+\end{align}
+%    \begin{lemma}
+%        \begin{align}
+%            \mu_{y}&=\vec{u}^{\top}\vec{\mu_{\vec{x}}}\\
+%            \implies \mu_{\vec{y}}&=\myvec{-1\,\,1}\myvec{\mu_1\\
+%                                                      \mu_2}\\
+%            \implies \mu_{\vec{y}}&=\myvec{\mu_2-\mu_1}
+%        \end{align}
+%    \end{lemma}
+%    \begin{lemma}
+%        \begin{align}
+%        \sigma^2_{y}&=\vec{u}^{\top}\vec{\Sigma_{\vec{x}}}\vec{u}\\
+%        \implies \sigma^2_{y}&=\myvec{-1\,\,1}\myvec{\sigma^2_1&\rho\sigma_1\sigma_2\\
+%                                                         \rho\sigma_1\sigma_2&\sigma^2_2}\myvec{-1\\
+%                                                                                                1}\\
+%        \implies \sigma^2_{y}&=\myvec{\sigma^2_1+\sigma^2_2-2\rho\sigma_1\sigma_2}
+%        \end{align}
+%    \end{lemma}
+%    \begin{align}
+%        \therefore \pr{X_1-X_2>\alpha}&=\Phi\brak{\frac{(\mu_1-\mu_2)-\alpha}{\sqrt{\sigma^2_1+\sigma^2_2-2\rho\sigma_1\sigma_2}}}
+%    \end{align}
+ %\end{proof}
+% Given $(X_1,X_2)$ follow a bivariate normal distribution with
+% \begin{align}
+%    \mu_1=\mu_2&=0\\
+%    \sigma^2_1=\sigma^2_2&=2\\
+%    Cov(X_1,X_2)&=-1\\
+%    \rho=\frac{Cov(X_1,X_2)}{\sigma_1\sigma_2}&=\frac{-1}{2}
+% \end{align}
+% for $\pr{X_1-X_2>6}$ we can use the above theorem as follows
+% \begin{align}
+%    \pr{X_1-X_2>\alpha}&=\Phi\brak{\frac{(\mu_1-\mu_2)-\alpha}{\sqrt{\sigma^2_1+\sigma^2_2-2\rho\sigma_1\sigma_2}}}\\
+%    \implies \pr{X_1-X_2>6}&=\Phi\brak{\frac{(0-0)-6}{\sqrt{2+2-2\brak{\frac{-1}{2}}2}}}\\
+%    \implies \pr{X_1-X_2>6}&=\Phi\brak{\frac{-6}{\sqrt{6}}}\\
+%    \therefore \pr{X_1-X_2>6}&=\Phi(-\sqrt{6})
+% \end{align}

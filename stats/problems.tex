@@ -52,9 +52,10 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 
 
 \item Let $ X_1, \cdots , X_n $ be independent and identically distributed random variables with probability density function
-\begin{align*}
+\begin{align}
     f(x) = \frac{1}{2} \lambda^3x^2e^{-\lambda x} ; x>0 ; \lambda > 0
-\end{align*}
+    \label{stats/4/pdf}
+\end{align}
 Then which of the following statements are true?
 \begin{enumerate}
     \item $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is an unbiased estimator of $ \lambda$
@@ -64,7 +65,68 @@ Then which of the following statements are true?
 \end{enumerate}
 \solution
 \input{stats/solutions/4.tex}
+%
+\item If the marginal probability density function of the $k^{th}$ order statistic of a 
+random sample of size 8 from a uniform distribution on $\sbrak{0,2}$ is
+\begin{align}
+  f(x) =
+  \begin{cases}
+   \dfrac{7}{32}\,x^{6}\,\brak{2-x},  & 0<x<2, \\ 
+         0,               & \text{otherwise,} 
+  \end{cases}
+\label{stats/qnpdf}
+\end{align}
+then $k$ equals \underline{\hspace{3cm}}
+%
+\\
+%
+\solution
+\input{stats/solutions/5.tex}
+\item Let $X_1, X_2, \ldots , X_n$ be a random sample of size $n \; ( \geq 2 ) $ from a distribution having the probability density function
+\begin{align}
+f(x;\theta) = 
+\begin{cases}
+\dfrac{1}{\theta} \exp\brak{-\dfrac{x}{\theta}} & x > 0, \\
+0, & \text{otherwise,}
+\end{cases}
+\end{align}
+where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n \} $ and $T = \sum_{i=1}^n X_i $. Then $E(X_{(1)} | T)$ equals $\ldots \ldots \ldots$
+\begin{enumerate}[label = (\Alph*)]
+\item $\dfrac{T}{n^2}$ \\
+\item $\dfrac{T}{n}$ \\
+\item $\dfrac{(n+1)T}{2n}$ \\
+\item $\dfrac{(n+1)^2 T}{4n^2}$
+\end{enumerate}
+%
+\solution
+\input{stats/solutions/6/Assignment6.tex}
 
+\item Let $X_1,X_2,...,X_n$ be independent and identically distributed Bernoulli($\theta$), where $0<\theta<1$ and $n>1$. Let the prior density of $\theta$ be proportional to $\frac{1}{\sqrt{\theta\,(1-\theta)}}$, $0<\theta<1$. Define $S=\sum_{i=1}^nX_i$.\\[1pt] Then valid statements among the following are:
+\begin{enumerate}[label = \arabic*.]
+    \item The posterior mean of $\theta$ does not exist;
+    \item The posterior mean of $\theta$ exists;
+    \item The posterior mean of $\theta$ exists and it is larger than the maximum likelihood estimator for all values of S.
+    \item The posterior mean of $\theta$ exists and it is larger than the maximum likelihood estimator for some values of S.
+\end{enumerate}
+\solution
+\input{stats/solutions/7.tex}
+%
+\item Let \cbrak{X_n: n>0} and X be random variables defined on a common probability space. Further assume that \cbrak{X_n \geq 0 \ \forall n > 0} and
+\begin{align}
+\pr{X = x} =\begin{cases}
+   p, & x = 0  \\
+   1-p, & x =1 \\
+    0, &\text{otherwise} 
+\end{cases}\end{align}
+where, $0 \leq p \leq 1$. Which of the following statements are necessarily true?
+\begin{enumerate}
+   \item If $p = 0$ and $X_n \ce{->[d]} X$, $X_n \ce{->[p]} X$ 
+   \item If $p = 1$ and $X_n \ce{->[d]} X$, then $X_n  \ce{->[p]} X$
+   \item If $0<p<1$ and $X_n \ce{->[d]} X$, then $X_n \ce{->[p]} X$
+   \item If $X_n \ce{->[p]} X$, then $X_n  \ce{->T[a.s]} X$
+\end{enumerate}
+\solution
+\input{stats/solutions/8.tex}
 
 \item Suppose n units are drawn from a population of N units sequentially as follows. A random sample
 \begin{align}

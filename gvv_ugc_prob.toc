@@ -6,10 +6,10 @@
 \contentsline {section}{\numberline {6}Binomial Distribution}{28}{section.6}%
 \contentsline {section}{\numberline {7}Poisson Distribution}{30}{section.7}%
 \contentsline {section}{\numberline {8}Gaussian Distribution}{32}{section.8}%
-\contentsline {section}{\numberline {9}Geometric Distribution}{37}{section.9}%
-\contentsline {section}{\numberline {10}Two Dimensions}{38}{section.10}%
-\contentsline {section}{\numberline {11}Integral Transforms}{44}{section.11}%
-\contentsline {section}{\numberline {12}Markov Chain}{46}{section.12}%
-\contentsline {section}{\numberline {13}Inequalities}{54}{section.13}%
-\contentsline {section}{\numberline {14}Convergence}{56}{section.14}%
-\contentsline {section}{\numberline {15}Statistics}{67}{section.15}%
+\contentsline {section}{\numberline {9}Geometric Distribution}{39}{section.9}%
+\contentsline {section}{\numberline {10}Two Dimensions}{39}{section.10}%
+\contentsline {section}{\numberline {11}Integral Transforms}{45}{section.11}%
+\contentsline {section}{\numberline {12}Markov Chain}{48}{section.12}%
+\contentsline {section}{\numberline {13}Inequalities}{56}{section.13}%
+\contentsline {section}{\numberline {14}Convergence}{58}{section.14}%
+\contentsline {section}{\numberline {15}Statistics}{69}{section.15}%

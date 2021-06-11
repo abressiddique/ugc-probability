@@ -5,9 +5,9 @@
     \begin{definition}
     Let $ \Theta = h(X_1,X_2, \cdots, X_n) $  be a point estimator for $ \theta$. The \textbf{bias} of the estimator $ \Theta $ is defined by 
     \begin{align}
-        B(\Theta ) = E[\Theta ] - \theta
+        B(\Theta ) = \mean{\Theta} - \theta
     \end{align}
-    where $ E[\Theta ]$ is the expectation value of the estimator $ \Theta $ and $ \theta$ is the estimand.
+    where $ \mean{\Theta}$ is the expectation value of the estimator $ \Theta $ and $ \theta$ is the estimand.
     \end{definition}
         \begin{definition}
         Let $\Theta = h(X_1,X_2, \cdots , X_n) $ be a point estimator for a parameter $ \theta $. We say that $ \Theta $ is an \textbf{unbiased estimator} of $ \theta $ if
@@ -24,7 +24,7 @@
     \begin{definition}
     The \textbf{mean squared error (MSE)} of a point estimator $ \Theta $, shown by $ MSE(\Theta) $, is defined as
     \begin{align}
-        MSE(\Theta ) &= E[(\Theta - \theta)^2] \\
+        MSE(\Theta ) &= \mean{(\Theta - \theta)^2} \\
         &= Var(\Theta) + B(\Theta)^2
     \end{align}
     where $ B(\Theta ) $ is the bias of $ \Theta $. 
@@ -39,12 +39,21 @@
     \begin{definition}
     The \textbf{moment generating function (MGF)} of a random variable $X$ is a function $ M_X(s) $ defined as
     \begin{align}
-        M_X(s) = \mean{e^{sX}}.
+        M_X(s) = E[e^{sX}].
     \end{align}
     \end{definition}
     \begin{lemma}
-        The PDF of the Gamma distribution is given by 
-     
+    \label{stats/4/ibp}
+    The Gamma function is defined through the integral
+    \begin{align}
+        \int_{0}^{\infty} x^a e^{-bx}\,dx = \dfrac{\Gamma(a+1)}{b^{a+1}}
+        \label{stats/4/eqidentity}
+    \end{align}
+    where $ \Gamma(a) = (a-1)!$ for $ a \in Z$
+    \end{lemma}
+    \begin{theorem}
+    %\label{stats/4/gamma}
+     The Moment generating function of the gamma distribution with PDF
      \begin{align}
     f_{X}(x)  = 
     \begin{cases}
@@ -54,227 +63,265 @@
     \end{cases}
     \end{align}
     where $ \Gamma(\alpha) = \dfrac{1}{(\alpha-1)!}$
-with MGF
+    is given by,
     \begin{align}
         M_X(s) = \brak{\dfrac{\lambda}{\lambda-s}}^{\alpha}
     \end{align}
-    \end{lemma}
+    \end{theorem}
     \begin{proof}
     \begin{align}
-        M_X(s) &= \mean{e^{sX}} \\
+        M_X(s) &= E[e^{sX}] \\
         &=  \int_{-\infty}^{\infty} e^{sx} f(x)\,dx \\
         &=    \int_{0}^{\infty} e^{sx} \dfrac{1}{\Gamma(\alpha)} \lambda^\alpha x^{\alpha-1}e^{-\lambda x}\,dx \\
         &= \dfrac{\lambda^\alpha}{\Gamma(\alpha)} \int_{0}^{\infty} x^{\alpha-1} e^{-(\lambda - s) x}\,dx 
     \end{align}
-    From a well known result of Integration by parts we have,
+    Substituting from Lemma \ref{stats/4/ibp} in the above,
+    % \begin{align}
+    %     \int_{0}^{\infty} x^a e^{-bx}\,dx = \dfrac{\Gamma(a+1)}{b^{a+1}}
+    %     \label{stats/4/eqidentity}
+    % \end{align}
+    % Making this substitution we get,
+    % \begin{align}
+    %   \int_{0}^{\infty} x^{\alpha-1} e^{-(\lambda - s) x}\,dx    &= \dfrac{\Gamma(\alpha)}{(\lambda - s)^\alpha}
+    % \end{align}
+    % Therefore,
     \begin{align}
-        \int_{0}^{\infty} x^a e^{-bx}\,dx = \dfrac{\Gamma(a+1)}{b^{a+1}}
-        \label{stats/4/eqidentity}
-    \end{align}
-    Making this substitution we get,
-    \begin{align}
-      \int_{0}^{\infty} x^{\alpha-1} e^{-(\lambda - s) x}\,dx    &= \dfrac{\Gamma(\alpha)}{(\lambda - s)^\alpha}
-    \end{align}
-    %
-    \begin{align}
-    \therefore     M_X(s) &= \dfrac{\lambda^\alpha}{\Gamma(\alpha)} \times \dfrac{\Gamma(\alpha)}{(\lambda-s)^\alpha} \\
+         M_X(s) &= \dfrac{\lambda^\alpha}{\Gamma(\alpha)} \times \dfrac{\Gamma(\alpha)}{(\lambda-s)^\alpha} \\
          &= \brak{\dfrac{\lambda}{\lambda-s}}^\alpha
     \end{align}
     \end{proof}
-    \begin{lemma}
+    \begin{theorem}
     \label{stats/4/mgf}
      The MGF (if it exists) uniquely determines the distribution. That is, if two random variables have the same MGF, then they must have the same distribution. 
-    \end{lemma}
+    \end{theorem}
     \begin{lemma}
     \label{stats/4/var}
-    If $X_{i}$ for $i = 1,2,\dots,n$ are independent and identically distributed random variables (i.i.ds), then we have the following property, 
+    If $X_{i}$ for $i = 1,2,\dots,n$ are i.i.d,
        \begin{align}
         \var{a\sum_{i=1}^{n}g(X_{i})}=a^2 \sum_{i=1}^{n}\var{g(X_{i})}\label{stats/4/basic}
         \end{align}
     \end{lemma}
-    %
-    \begin{enumerate}
+    \begin{lemma}
+        \label{stats/4/expected}
+        For $X$ in \eqref{stats/4/pdf},
+        \begin{align}
+                E \left[  \dfrac{1}{\Bar{X}}  \right] &= \dfrac{n\lambda}{3n-1}
+        \end{align}
+        \end{lemma}
+        \begin{proof}
+        Let 
+        \begin{align}
+            T = \sum_{i=1}^{n} X_i \sim \Gamma(3n, \lambda)
+        \end{align}
+        with pdf,
+        \begin{align}
+            f_T(t)= \dfrac{\lambda^{3n} t^{3n-1}e^{-\lambda t}}{\Gamma(3n)} , t>0
+        \end{align}
+         $ \because \dfrac{1}{\Bar{X}} = \dfrac{n}{T}$,
+        \begin{multline}
+            E \left[   \dfrac{1}{\Bar{X}}  \right] =  \int_{0}^{\infty} \dfrac{n}{t} \dfrac{1}{\Gamma(3n)} \lambda^{3n}t^{3n-1}e^{-\lambda t}\,dt \\
+            = \dfrac{n\lambda}{(3n-1)} \int_{0}^{\infty}  \dfrac{1}{\Gamma(3n-1)} \lambda^{3n-1}t^{3n-2}e^{-\lambda t}\,dt \\
+%            \label{expect}
+        % \end{align}
+        % Using lemma \ref{gp} we have,
+        % \begin{align}
+        %     \int_{0}^{\infty}  \dfrac{1}{\Gamma(3n-1)} \lambda^{3n-1}t^{3n-2}e^{-\lambda t}\,dt = 1
+        %     \label{1}
+        % \end{align}
+        % Using equations \eqref{1} and \eqref{expect} we have,
+        % \begin{align}
+\implies            E \left[  \dfrac{1}{\Bar{X}}  \right] = \dfrac{n\lambda}{3n-1}
+        \end{multline}
+        \end{proof}
+        \begin{corollary}
+        \label{stats/4/expxi}
+        % The expected value of $ \dfrac{1}{X_i} $ with distribution of X from equation \eqref{stats/4/pdf} is calculated by  substituting $ n=1 $ in lemma \ref{stats/4/expected} as,
+         \begin{align}
+           E \left[  \dfrac{1}{X_i}  \right] &= \dfrac{1 \times\lambda}{3-1}  \\
+          &= \dfrac{\lambda}{2}
+          \end{align}
+        \end{corollary}
+        \begin{lemma}
+        \label{stats/4/varxbar}
+%        The variance of $ \dfrac{1}{\Bar{X}} $ with distribution of X from equation \eqref{stats/4/pdf} is
+        \begin{align}
+            \var{\dfrac{1}{\Bar{X}}} &= \dfrac{n^2\lambda^2}{(3n-1)^2(3n-2)}
+        \end{align}
+        \end{lemma}
+        \begin{proof}
+%         Similar to lemma \ref{stats/4/expected} we have, rv $ T$
+         \begin{align}
+           \var{\dfrac{1}{\Bar{X}}}    &=   E \left[   {\dfrac{1}{\Bar{X}^2}}  \right] - { E \left[   \dfrac{1}{\Bar{X}}  \right]}^2
+         \end{align}
+%         To calculate, $E \left[   {\dfrac{1}{\Bar{X}^2}}  \right] $ we use,
+        %  \begin{align}
+        %       {\dfrac{1}{\Bar{X}^2}} = \dfrac{n^2}{t^2}
+        %  \end{align}
+         \begin{multline}
+              E \left[   {\dfrac{1}{\Bar{X}^2}}  \right] = \int_{0}^{\infty} \dfrac{n^2}{t^2} \dfrac{1}{\Gamma(3n)} \lambda^{3n}t^{3n-1}e^{-\lambda t}\,dt \\
+              = \dfrac{n^2\lambda^2}{(3n-1)(3n-2)} 
+         \end{multline}
+        %  As from lemma \ref{gp} we have,
+        %  \begin{align}
+        %      \int_{0}^{\infty} \dfrac{1}{\Gamma(3n-2)} \lambda^{3n-2}t^{3n-3}e^{-\lambda t}\,dt = 1
+        %  \end{align}
+        
+        \begin{align}
+            \therefore    \var{\dfrac{1}{\Bar{X}}} &= \brak{\dfrac{n^2\lambda^2}{(3n-1)(3n-2)} - \dfrac{n^2\lambda^2}{(3n-1)^2}} \\
+            &= \dfrac{n^2\lambda^2}{3n-1} \brak{\dfrac{1}{3n-2}- \dfrac{1}{3n-1}} \\
+            &= \dfrac{n^2\lambda^2}{(3n-1)^2(3n-2)}
+        \end{align}
+        \end{proof}
+        \begin{corollary}
+        \label{stats/4/varxi}
+%        The variance of $ \dfrac{1}{X_i} $ with distribution of X from equation \eqref{stats/4/pdf} is calculated by 
+        Substituting $ n=1 $ in Lemma \ref{stats/4/varxbar} as,
+        \begin{align}
+             \var{\dfrac{1}{X_i}} &= \dfrac{1^2\lambda^2}{(3-1)^2(3-2)}\\
+             &= \dfrac{\lambda}{4}
+        \end{align}
+        \end{corollary}
+%        \textbf{Solving all options : }
+        \begin{enumerate}
+            \item 
+In this case, 
+         \begin{align}
+             \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
+             \theta = \lambda
+         \end{align}
+Then 
+        \begin{align}
+            E[\Theta ] &= E  \left[   \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i}  \right] \\
+            & = \dfrac{2}{n} \sum_{i=1}^{n} E  \left[ \dfrac{1}{X_i}  \right] 
+         \end{align}
+        Using corollary \ref{stats/4/expxi},
+         \begin{align}
+         E[\Theta]     &= \dfrac{2n}{n} \times \dfrac{\lambda}{2} \\
+                      &= \lambda
+        \end{align}
+        So the bias of estimator is given by,
+        \begin{align}
+            B(\Theta) &= E[\Theta] - \theta  \\
+            &= \lambda - \lambda = 0
+        \end{align}
+        Therefore $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is an unbiased estimator of $ \lambda$.
+        Option 1 is correct. 
+        \item
+        % Now in this option we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
+         \begin{align}
+             \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } = \dfrac{3}{ \Bar{X}}  \text{  and  }
+             \theta = \lambda
+         \end{align}
+        % We have that sample mean, $ \Bar{X}$,
+        % \begin{align}
+        %     \Bar{X} &= \dfrac{X_1+X_2+ \cdots +X_n}{n} \\
+        %     & = \dfrac{\sum_{i=1}^{n} X_i}{n}
+        % \end{align}
+        % Therefore estimator,
+        % \begin{align}
+        %     \Theta &= \dfrac{3n}{n \Bar{X}} 
+        %     = \dfrac{3}{ \Bar{X}} 
+        %     \label{stats/4/xbar}
+%        \end{align}
+        % To check the distribution is gamma or not we calculate, MGF , i.e., $ M_X(s) $ for random variable, $ X $
+        % \begin{align}
+        %     M_X(s) &= E[e^{sX}]
+        %     \end{align}
+        % Using theorem \ref{gamma} and lemma \ref{ibp} we have,
+        % \begin{align}
+        %     M_X(s) & = \dfrac{\lambda^3}{2} \times \dfrac{\Gamma(3)}{(\lambda- s)^3} \\
+        %     &= \brak{\dfrac{\lambda}{\lambda-s}}^3  \text{, as $\Gamma(3) = 2!$} \\
+        %     &= \brak{\dfrac{\lambda}{\lambda-s}}^\alpha  \text{, for $\alpha= 3$} 
+        % \end{align}
+        % Therefore the MGF of $ X $ is same as the MGF of gamma distribution. \\
+        % So from the theorem \ref{mgf}, the distribution of $ X$ is gamma distribution, i.e. $ X \sim \Gamma(\alpha,\lambda)$ with PDF,
+        % \begin{align}
+        % f_{X}(x)  = 
+        % \begin{cases}
+        % \dfrac{\lambda^{\alpha}x^{\alpha-1}e^{-\lambda x}}{\Gamma(\alpha)} &  x > 0
+        % \\
+        % 0 & otherwise
+        % \end{cases}
+        % \end{align}
+        % where $ \alpha = 3 $. \\
+        From Lemma \ref{stats/4/expected} and equation \eqref{stats/4/xbar},
+        \begin{align}
+            E[\Theta] &= E\left[  \dfrac{3}{\Bar{X}}  \right]  \\
+%            &= 3\times  E \left[  \dfrac{1}{\Bar{X}}  \right] \\
+            &= \dfrac{3n\lambda}{3n-1}
+        \end{align}
+and
+        \begin{align}
+            B(\Theta) & = E[\Theta] - \lambda \\
+            &= \dfrac{3n\lambda}{3n-1} - \lambda \\
+            &= \dfrac{\lambda}{3n-1} \neq 0
+        \end{align}
+        Therefore $ \dfrac{3n}{\sum_{i=1}^{n} X_i } $ is not an unbiased estimator of $ \lambda$.
+        Option 2 is not correct. 
+        \item
+%         Now here we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
+         \begin{align}
+             \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
+             \theta = \lambda
+         \end{align}
+Using Lemma \ref{var},
+        \begin{align}
+            \var{\Theta} &= \var{\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} } \\
+            & = \dfrac{4}{n^2} \sum_{i=1}^{n} \var{\dfrac{1}{X_i}} 
+            \label{eq3}
+        \end{align}
+        Using Corollary \ref{stats/4/varxi},
+        \begin{align}
+         \var{\Theta}   & = \dfrac{4n}{n^2} \times \dfrac{\lambda^2}{4} \\
+            &= \dfrac{\lambda^2}{n}
+        \end{align}
+From  option 1, 
+        \begin{align}
+            B(\Theta) &= 0
+        % \end{align}
+        % So we have,
+        % \begin{align}
+\implies             MSE(\Theta_n) &= Var(\Theta) + B(\Theta)^2 \\
+            &= \dfrac{\lambda^2}{n}
+        % \end{align}
+        % Now,
+        % \begin{align}
+\text{or, }             \lim_{n\to\infty} MSE( \Theta_n) &=    \lim_{n\to\infty} \dfrac{\lambda^2}{n} \\
+              &= 0
+        \end{align}
+        $\therefore \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is a consistent estimator of $ \lambda$. 
+        Option 3 is correct. 
         \item 
-      Given 
-     \begin{align}
-         \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
-         \theta = \lambda
-     \end{align}
-    The expectation value of the estimator is given by, 
-    \begin{align}
-        E[\Theta ] &= E  \left[   \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i}  \right] \\
-        & = \dfrac{2}{n} \sum_{i=1}^{n} E  \left[ \dfrac{1}{X_i}  \right] \\
-     & =  \dfrac{2}{n} \sum_{i=1}^{n} \int_{-\infty}^{\infty} \dfrac{1}{x} f(x)\,dx \\
-        \label{stats/4/eq1}
-       & = \dfrac{2n}{n} \int_{0}^{\infty} \dfrac{1}{x} \dfrac{1}{2} \lambda^3x^2e^{-\lambda x}\,dx \\
-        & = \lambda^3  \int_{0}^{\infty}  x e^{-\lambda x}\,dx \\
-        &= \lambda
-    \end{align}
-    So the bias of estimator is given by,
-    \begin{align}
-        B(\Theta) &= E[\Theta] - \theta  \\
-        &= \lambda - \lambda = 0
-    \end{align}
-    Therefore $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is an unbiased estimator of $ \lambda$ \\
-    Option 1 is correct. 
-    \item
-    Given
-     \begin{align}
-         \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } \text{  and  }
-         \theta = \lambda
-     \end{align}
-    and defining the sample mean
-    \begin{align}
-        \Bar{X} = \dfrac{\sum_{i=1}^{n} X_i}{n},
-    \end{align}
-    %
-    \begin{align}
-        \Theta = \dfrac{3}{ \Bar{X}} 
-    \end{align}
-    To check the distribution is gamma or not we calculate, MGF , i.e., $ M_X(s) $ for random variable, $ X $
-    \begin{align}
-        M_X(s) &= \mean{e^{sX}} \\
-        &=  \int_{-\infty}^{\infty} e^{sx} f(x)\,dx \\
-        &=    \int_{0}^{\infty} e^{sx} \dfrac{1}{2} \lambda^3x^2e^{-\lambda x}\,dx \\
-        &= \dfrac{\lambda^3}{2} \int_{0}^{\infty} x^2 e^{-(\lambda - s) x}\,dx 
-    \end{align}
-    Using the same result from equation \eqref{stats/4/eqidentity} we have,
-    \begin{align}
-        M_X(s) & = \dfrac{\lambda^3}{2} \times \dfrac{\Gamma(3)}{(\lambda- s)^3} \\
-        &= \brak{\dfrac{\lambda}{\lambda-s}}^3  \text{, as $\Gamma(3) = 2!$} \\
-        &= \brak{\dfrac{\lambda}{\lambda-s}}^\alpha  \text{, for $\alpha= 3$} 
-    \end{align}
-    Therefore the MGF of $ X $ is same as the MGF of gamma distribution. \\
-    So from the theorem \ref{stats/4/mgf}, the distribution of $ X$ is gamma distribution, i.e. $ X \sim \Gamma(\alpha,\lambda)$ with PDF,
-    \begin{align}
-    f_{X}(x)  = 
-    \begin{cases}
-    \dfrac{\lambda^{\alpha}x^{\alpha-1}e^{-\lambda x}}{\Gamma(\alpha)} &  x > 0
-    \\
-    0 & otherwise
-    \end{cases}
-    \end{align}
-    where $ \alpha = 3 $. \\
-    Let r.v. $T $ be,
-    \begin{align}
-        T = \sum_{i=1}^{n} X_i \sim \Gamma(3n, \lambda)
-    \end{align}
-    with pdf,
-    \begin{align}
-        f_T(t)= \dfrac{\lambda^{3n} t^{3n-1}e^{-\lambda t}}{\Gamma(3n)} , t>0
-    \end{align}
-    Using, $ \dfrac{1}{\Bar{X}} = \dfrac{n}{T}$
-    \begin{align}
-       & E \left[   \dfrac{1}{\Bar{X}}  \right] =  \int_{0}^{\infty} \dfrac{n}{t} \dfrac{1}{\Gamma(3n)} \lambda^{3n}t^{3n-1}e^{-\lambda t}\,dt \\
-        &= \dfrac{n\lambda}{(3n-1)} \int_{0}^{\infty}  \dfrac{1}{\Gamma(3n-1)} \lambda^{3n-1}t^{3n-2}e^{-\lambda t}\,dt 
-    \end{align}
-    Using property of gamma distributions that
-    \begin{align}
-        \int_{0}^{\infty}  \lambda^{\alpha}t^{\alpha-1}e^{-\lambda t}\,dt \\ 
-        = \dfrac{1}{\Gamma(\alpha)}
-    \end{align}
-    So we have,
-    \begin{align}
-        \int_{0}^{\infty}  \dfrac{1}{\Gamma(3n-1)} \lambda^{3n-1}t^{3n-2}e^{-\lambda t}\,dt = 1
-    \end{align}
-    \begin{align}
-        E \left[   \Theta  \right] &= \dfrac{3n\lambda}{3n-1}
-    \end{align}
-    So we calculate bias as follows,
-    \begin{align}
-        B(\Theta) & = E[\Theta] - \lambda \\
-        &= \dfrac{3n\lambda}{3n-1} - \lambda \\
-        &= \dfrac{\lambda}{3n-1} \neq 0
-    \end{align}
-    Therefore $ \dfrac{3n}{\sum_{i=1}^{n} X_i } $ is not an unbiased estimator of $ \lambda$ \\
-    Option 2 is not correct. \\
-    \item
-     Now here we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
-     \begin{align}
-         \Theta = \dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} \text{  and  }
-         \theta = \lambda
-     \end{align}
-    Now the variance of $ \Theta$ is calculated as
-    \begin{align}
-        Var(\Theta) &= Var\brak{\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} } \\
-        & = \dfrac{4}{n^2} \sum_{i=1}^{n} Var\brak{\dfrac{1}{X_i}} 
-        \label{stats/4/eq3}
-    \end{align}
-    This follows from lemma \ref{stats/4/var}.
-    \begin{align}
-     Var(\Theta)   & = \dfrac{4n}{n^2} \brak{E  \left[ {\dfrac{1}{X_i}}^2  \right] - {E  \left[ {\dfrac{1}{X_i}}  \right]}^2 } \\
-        & = \dfrac{4}{n} \brak{ \int_{-\infty}^{\infty} \dfrac{1}{x^2} f(x)\,dx  - \brak{\dfrac{\lambda}{2}}^2 } 
-     \end{align}
-     \begin{align}
-        & =  \dfrac{4}{n} \brak{ \int_{0}^{\infty} \dfrac{1}{x^2}  \dfrac{1}{2} \lambda^3x^2e^{-\lambda x} \,dx  - {\dfrac{\lambda^2}{4}} } \\
-          & =  \dfrac{4}{n} \brak{ \dfrac{\lambda^3}{2}\int_{0}^{\infty} e^{-\lambda x} \,dx  - {\dfrac{\lambda^2}{4}} } \\ 
-        & =  \dfrac{4}{n} \brak{ {\dfrac{\lambda^2}{2}} - {\dfrac{\lambda^2}{4}} } \\ 
-        &= \dfrac{\lambda^2}{n}
-    \end{align}
-    The bias of $ \Theta $ from option 1 is given as
-    \begin{align}
-        B(\Theta) = 0
-    \end{align}
-    So we have,
-    \begin{align}
-        MSE(\Theta_n) &= Var(\Theta) + B(\Theta)^2 \\
-        &= \dfrac{\lambda^2}{n}
-    \end{align}
-    Now,
-    \begin{align}
-         \lim_{n\to\infty} MSE( \Theta_n) &=    \lim_{n\to\infty} \dfrac{\lambda^2}{n} \\
-          &= 0
-    \end{align}
-    Therefore, $\dfrac{2}{n} \sum_{i=1}^{n} \dfrac{1}{X_i} $ is a consistent estimator of $ \lambda$. 
-    Option 3 is correct. \\
-    \item 
-     Now in this option we have our estimator $ \Theta$ and quantity to be estimated $ \theta $ as,
-     \begin{align}
-         \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } \text{  and  }
-         \theta = \lambda
-     \end{align}
-     Similar to option 2 we have, rv $ T$
-     \begin{align}
-         Var(\Theta)&= Var\brak{\dfrac{3}{\Bar{X}}} \\
-         &= 9 \brak{ E \left[   {\dfrac{1}{\Bar{X}}}^2  \right] - { E \left[   \dfrac{1}{\Bar{X}}  \right]}^2}
-     \end{align}
-     To calculate, $E \left[   {\dfrac{1}{\Bar{X}}}^2  \right] $ we use,
-     \begin{align}
-          {\dfrac{1}{\Bar{X}}}^2 = \dfrac{n^2}{t^2}
-     \end{align}
-     \begin{align}
-        &  E \left[   {\dfrac{1}{\Bar{X}}}^2  \right] = \int_{0}^{\infty} \dfrac{n^2}{t^2} \dfrac{1}{\Gamma(3n)} \lambda^{3n}t^{3n-1}e^{-\lambda t}\,dt \\
-          &= \dfrac{n^2\lambda^2}{(3n-1)(3n-2)} \times (1)
-     \end{align}
-     As from property of gamma distribution we have,
-     \begin{align}
-         \int_{0}^{\infty} \dfrac{1}{\Gamma(3n-2)} \lambda^{3n-2}t^{3n-3}e^{-\lambda t}\,dt = 1
-     \end{align}
-    Therefore,
-    \begin{align}
-        Var(\Theta) &= 9\brak{\dfrac{n^2\lambda^2}{(3n-1)(3n-2)} - \dfrac{n^2\lambda^2}{(3n-1)^2}} \\
-        &= \dfrac{9n^2\lambda^2}{3n-1} \brak{\dfrac{1}{3n-2}- \dfrac{1}{3n-1}} \\
-        &= \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)}
-    \end{align}
-    The bias calculated from option 2 is 
-    \begin{align}
-        B(\Theta) = \dfrac{\lambda}{3n-1}
-    \end{align}
-    So we have, 
-    \begin{align}
-        MSE(\Theta) &= Var(\Theta) + B(\Theta)^2 \\
-        &= \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)} + \dfrac{\lambda^2}{(3n-1)^2}
-    \end{align}
-    Finally,
-    \begin{align}
-        & \lim_{n\to\infty} MSE( \Theta_n) \\
-         &= \lim_{n\to\infty} \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)} + \dfrac{\lambda^2}{(3n-1)^2} \\
-    \end{align}
-    Now in first limit multiply and divide by $ n^2$ and $ {n\to\infty} $ we get,
-    \begin{align}
-         & \lim_{n\to\infty} MSE( \Theta_n) =0
-    \end{align}
-    Therefore, $\dfrac{3n}{\sum_{i=1}^{n} X_i} $ is a consistent estimator of $ \lambda$. \\
-    Option 4 is correct. \\
-    \end{enumerate}
-    \textbf{Therefore option 1, option 3 and option 4 are correct.}
+        
+         \begin{align}
+             \Theta = \dfrac{3n}{\sum_{i=1}^{n} X_i } \text{  and  }
+             \theta = \lambda
+         \end{align}
+         The variance of estimator similar to option 2 and using Lemma \ref{stats/4/varxbar},
+         \begin{align}
+             \var{\Theta} &= \var{\dfrac{3}{\Bar{X}}}\\
+             &= 9 \var{\dfrac{1}{\Bar{X}}}\\
+             &=  \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)}
+         \end{align}
+        From option 2,
+        \begin{align}
+            B(\Theta) = \dfrac{\lambda}{3n-1} \\
+        % \end{align}
+        % So we have, 
+        % \begin{align}
+\implies             MSE(\Theta) &= Var(\Theta) + B(\Theta)^2 \\
+            &= \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)} + \dfrac{\lambda^2}{(3n-1)^2}
+        \end{align}
+        Thus, 
+        \begin{align}
+            & \lim_{n\to\infty} MSE( \Theta_n) \\
+             &= \lim_{n\to\infty} \dfrac{9n^2\lambda^2}{(3n-1)^2(3n-2)} + \dfrac{\lambda^2}{(3n-1)^2} 
+        % \end{align}
+        % Now in first limit multiply and divide by $ n^2$ and $ {n\to\infty} $ we get,
+        % \begin{align}
+             &=0
+        \end{align}
+        $\therefore\dfrac{3n}{\sum_{i=1}^{n} X_i} $ is a consistent estimator of $ \lambda$. 
+        Option 4 is correct. 
+        \end{enumerate}
+        \textbf{Therefore option 1, option 3 and option 4 are correct.}
