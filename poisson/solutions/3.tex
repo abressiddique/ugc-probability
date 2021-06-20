@@ -1,0 +1,90 @@
+\begin{definition}\label{poisson/3/poisson_process}
+    (Poisson Process)\\
+    A counting process (number of arrivals from time $0$ to $t$) is called a Poisson process with rate $\lambda$ if
+    \begin{enumerate}[label=(\roman*)]
+        \item The process has independent increments, and
+        \item The number of arrivals in any interval of length $\tau > 0$ has Poisson($\lambda \tau$) distribution.
+    \end{enumerate}
+    $\therefore$ The distribution of the number of arrivals in any interval depends only on the length of the interval, and not on the exact location of the interval on the real line or on past or future arrivals.
+    \end{definition}
+    \begin{definition}
+        $X$ and $Y$ are Poisson distributions with parameters $\mu_1 = \lambda \, \tau_1 = 2 \times 1$ and $\mu_2 = \lambda \, \tau_2 = 2 \times 5$ respectively. \\
+        The pmf (probability mass function) of a Poisson distribution with parameter $\mu$ is given by
+        \begin{align}
+            p_N(n) &= \dfrac{e^{-\mu}\cdot \mu^{n}}{n!}
+        \end{align}
+        Hence the pmfs of random variables $X$ and $Y$ are given by:
+        \begin{align}
+            p_X(x) &= \dfrac{e^{-2}\cdot 2^{x}}{x!}, & \text{for } x=0,1,2,\dots \label{poisson/3/pmf(X)}\\
+            p_Y(y) &= \dfrac{e^{-10}\cdot 10^{y}}{y!}, & \text{for } y=0,1,2,\dots \label{poisson/3/pmf(Y)}
+        \end{align}
+    \end{definition}
+        
+        \begin{lemma}\label{poisson/3/lemma_X+Y}
+            If $X$ and $Y$ are two independent Poisson distributions with parameters $\mu_1$ and $\mu_2$ respectively, then the distribution of $X+Y$ is also Poisson with parameter $\mu_1 + \mu_2$. 
+        \end{lemma}
+        \begin{proof}
+             We have for $k \geq 0$, the probability mass function $p_{X+Y}(k)$ is a convolution of pmfs $p_X(x)$ and $p_Y(y)$: 
+        \begin{align}
+           p_{X+Y}(k) &= \pr{X+ Y = k} = \pr{Y = k - X}\\
+           &= \sum_{i}\pr{Y = k - i| X=i}\times p_X(i)\label{poisson/3/p_(x+y)}
+        \end{align}
+        As X and Y are independent: 
+        \begin{align}
+            \pr{Y\! =\! k - i \mid X=i} = \pr{Y\! = \! k - i} = p_Y(k-i)
+        \end{align}
+        Simplifying \eqref{poisson/3/p_(x+y)}
+        \begin{align}
+            p_{X+Y}(k) &= \sum_{i=0}^k p_Y(k-i) \times p_X(i)\\
+            &= \sum_{i=0}^k e^{-\mu_2}\frac{\mu_2^{k-i}}{(k-i)!}e^{-\mu_1}\frac{\mu_1^i}{i!}\\
+            &= e^{-(\mu_1 + \mu_2)}\frac 1{k!}\sum_{i=0}^k \frac{k!}{i!(k-i)!}\,\mu_1^i\,\mu_2^{k-i}\\
+            &= e^{-(\mu_1 + \mu_2)}\frac 1{k!}\sum_{i=0}^k {k\choose i}\, \mu_1^i\,\mu_2^{k-i}\\
+            p_{X+Y}(k) &= \frac{e^{-(\mu_1 + \mu_2)} \cdot (\mu_1 + \mu_2)^k}{k!}
+        \end{align}
+        \end{proof}
+        \begin{lemma}\label{poisson/3/lemma_X-Y}
+            If $X$ and $Y$ are two independent Poisson distributions with parameters $\mu_1$ and $\mu_2$ respectively, then the distribution of $X-Y$ is no longer Poisson, as $X - Y$ will also attain negative values.  More precisely, pmf of $X-Y$ is given by \eqref{poisson/3/pmf(X-Y)}, which is a Skellam distribution.
+        \end{lemma}
+        \begin{proof}
+             We have for $k \in \mathbb{Z}$, the probability mass function $p_{X-Y}(k)$ is a convolution of pmfs $p_X(x)$ and $p_Y(y)$: 
+        \begin{align}
+           p_{X-Y}(k) &= \pr{X\! -\! Y\! =\! k} = \pr{X\! =\! k\! +\! Y}\\
+           &= \sum_{i}\pr{X = k + i| Y = i}\times p_Y(i)\label{poisson/3/p_(x-y)}
+        \end{align}
+        As X and Y are independent, and the Poisson distribution is zero for negative values of the count, the sum is only taken for those terms where $i \geq 0$ and $i+k\geq 0$. 
+        \begin{align}
+            p_{X-Y}(k) &= \sum_{i=max(0, -k)}^\infty p_X(k+i) \times p_Y(i)\\
+            &=\sum_{i=max(0, -k)}^\infty e^{-\mu_1}\frac{\mu_1^{k+i}}{(k+i)!}e^{-\mu_2}\frac{\mu_2^i}{i!}\\
+            &= e^{-(\mu_1 + \mu_2)}\sum_{i=max(0, -k)}^\infty \dfrac{\mu _{1}^{k+i}\mu _{2}^{i}}{i!(k+i)!}\label{poisson/3/pmf(X-Y)}
+        \end{align}
+        Hence we can see from \eqref{poisson/3/pmf(X-Y)} that X - Y is not a Poisson distribution.\\
+        
+        \par \textbf{Note: } This result is valid only for independent Poisson distributions. We may have dependent Poisson distributions whose difference is also Poisson. For example let $Z$ be the random variable with distribution $X + Y$, where $X$ and $Y$ are independent Poisson distributions. From lemma \eqref{poisson/3/lemma_X+Y}, Z is Poisson. And, $Z - Y = X$ is also Poisson by definition, as $Z$ is always at least as great as $Y$ ($i.e.$ not independent).\\
+        \end{proof}
+        
+        
+    \begin{enumerate}[label=\textbf{(\Alph*)}]
+        \item From the definition of Poisson process (Definition \ref{poisson/3/poisson_process}), $X$ and $Y$ are independent. Hence option (A) is \textbf{correct.}\\
+        %Alternatively, using memorylessness property for exponential distributions, we can prove that $X$ and $Y$ are independent.
+        \item As $X$ and $Y$ are independent Poisson distributions, using lemma \eqref{poisson/3/lemma_X+Y}, $X+ Y$ is a Poisson with parameter $\mu_1 + \mu_2 = 12 \neq 6$. Hence option (B) is \textbf{incorrect.}
+        \begin{align}
+             p_{X+Y}(k) &= \frac{e^{-(12)} \cdot (12)^k}{k!}\label{poisson/3/pmf(X+Y)}
+        \end{align}\\
+        \item  As $X$ and $Y$ are independent Poisson distributions, using lemma \eqref{poisson/3/lemma_X-Y}, $X-Y$ is not Poisson. Hence option (C) is \textbf{incorrect.}\\
+    %     \begin{figure}[h!]\label{poisson/3/graph_X-Y}
+    %     \centering
+    %       \includegraphics[width=\columnwidth]{Figures/pmf(X-Y).png}
+    %      \caption{$p_{X-Y}(k)$, with $\mu_1=2$ and $\mu_2=10$}
+    % \end{figure}
+        \item \begin{align}
+            \pr{X=0\mid X+Y=12} = \dfrac{\pr{X=0, Y=12}}{\pr{X+Y=12}}
+        \end{align}
+        As $X$ and $Y$ are independent, and using \eqref{poisson/3/pmf(X)}, \eqref{poisson/3/pmf(Y)}, and \eqref{poisson/3/pmf(X+Y)}, we have:
+        \begin{align}
+            \pr{X\!=\!0\mid X\!+\!Y\!=\!12} &= \frac{\pr{X\!=\!0} \cdot \pr{Y\!=\!12}}{\pr{X+Y=12}} \\
+            &= \frac{\dfrac{e^{-2}\times 2^{0}}{0!} \times \dfrac{e^{-10}\times10^{12}}{12!}}{\dfrac{e^{-12}\times12^{12}}{12!}}\\
+            &= \left(\dfrac{5}{6}\right)^{12}
+        \end{align}
+        Hence option (D) is \textbf{correct.}
+    \end{enumerate}
+    \textbf{Ans: (A), (D)}

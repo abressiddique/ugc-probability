@@ -54,6 +54,25 @@ Which of the following are true?
 \solution
 \input{conv/solutions/3.tex}
 %
+\item Let \cbrak{X_n: n>0} and X be random variables defined on a common probability space. Further assume that \cbrak{X_n \geq 0 \ \forall n > 0} and
+\begin{align}
+\pr{X = x} =\begin{cases}
+   p, & x = 0  \\
+   1-p, & x =1 \\
+    0, &\text{otherwise} 
+\end{cases}\end{align}
+where, $0 \leq p \leq 1$. Which of the following statements are necessarily true?
+\begin{enumerate}
+   \item If $p = 0$ and $X_n \ce{->[d]} X$, $X_n \ce{->[p]} X$ 
+   \item If $p = 1$ and $X_n \ce{->[d]} X$, then $X_n  \ce{->[p]} X$
+   \item If $0<p<1$ and $X_n \ce{->[d]} X$, then $X_n \ce{->[p]} X$
+   \item If $X_n \ce{->[p]} X$, then $X_n  \ce{->T[a.s]} X$
+\end{enumerate}
+\solution
+\input{conv/solutions/5.tex}
+
+
+%
 % \item Let $\{X_{n}\}$ be a sequence of independent random variables where the distribution of $X_{n}$ is normal with mean $\mu$ and variance $n$ for $n$ = 1,2,\dots Define
 % \begin{align}
 %     \Bar{X_{n}}&=\frac{1}{n}\sum_{i=1}^{n}X_{i}\\ S_{n}&=\frac{\sum_{i=1}^{n}\frac{1}{i}X_{i}}{\sum_{i=1}^{n}\frac{1}{i}}
@@ -97,17 +116,20 @@ Which of the following statements are correct?
 %
 \end{enumerate}
 %
-\item Let $X_1,X_2, \cdots$ be i.i.d. $N(0,1)$ random variables.Let $S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1.$Which of the following statements are correct?
-\begin{enumerate}
-\setlength\itemsep{1em}
-\item $\frac{S_{n}-n}{\sqrt{2}}\sim N(0,1)$ for all $n\geq 1$
-\item For all $\epsilon > 0$,$\Pr{\brak{\left|\frac{S_n}{n}-2\right|>\epsilon}}\to 0$ as $n \to \infty$
-\item $\frac{S_{n}}{n} \to 1$ with probability 1
-\item $\Pr({S_{n} \leq n+\sqrt{n}x}) \to \Pr({Y \leq x}) \forall x\in R$ ,where $Y \sim N(0,2)$
-\end{enumerate}
-%
 \solution
-\input{solutions/2018/dec/104.tex}
+\input{conv/solutions/4.tex}
+
+% \item Let $X_1,X_2, \cdots$ be i.i.d. $N(0,1)$ random variables.Let $S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1.$Which of the following statements are correct?
+% \begin{enumerate}
+% \setlength\itemsep{1em}
+% \item $\frac{S_{n}-n}{\sqrt{2}}\sim N(0,1)$ for all $n\geq 1$
+% \item For all $\epsilon > 0$,$\Pr{\brak{\left|\frac{S_n}{n}-2\right|>\epsilon}}\to 0$ as $n \to \infty$
+% \item $\frac{S_{n}}{n} \to 1$ with probability 1
+% \item $\Pr({S_{n} \leq n+\sqrt{n}x}) \to \Pr({Y \leq x}) \forall x\in R$ ,where $Y \sim N(0,2)$
+% \end{enumerate}
+% %
+% \solution
+% \input{solutions/2018/dec/104.tex}
 %
 \item Let $X_1,X_2,...,X_n$ be independent and identically distributed, each having a uniform distribution on $(0,1)$. Let $S_n=\sum_{i=1}^{n}X_i$ for $n\ge 1$. Then, which of the following statements are true? 
 \begin{enumerate}[label=\Alph*)]

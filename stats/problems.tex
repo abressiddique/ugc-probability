@@ -111,19 +111,12 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 \solution
 \input{stats/solutions/7.tex}
 %
-\item Let \cbrak{X_n: n>0} and X be random variables defined on a common probability space. Further assume that \cbrak{X_n \geq 0 \ \forall n > 0} and
-\begin{align}
-\pr{X = x} =\begin{cases}
-   p, & x = 0  \\
-   1-p, & x =1 \\
-    0, &\text{otherwise} 
-\end{cases}\end{align}
-where, $0 \leq p \leq 1$. Which of the following statements are necessarily true?
+\item Let $X_1,X_2,X_3,X_4,X_5$ be independent and identically distributed random variables each following a uniform distribution on (0,1) and M denote their median. Then which of the following statements are true?
 \begin{enumerate}
-   \item If $p = 0$ and $X_n \ce{->[d]} X$, $X_n \ce{->[p]} X$ 
-   \item If $p = 1$ and $X_n \ce{->[d]} X$, then $X_n  \ce{->[p]} X$
-   \item If $0<p<1$ and $X_n \ce{->[d]} X$, then $X_n \ce{->[p]} X$
-   \item If $X_n \ce{->[p]} X$, then $X_n  \ce{->T[a.s]} X$
+    \item $\pr{M<\frac{1}{3}}=\pr{M>\frac{2}{3}}$\\
+    \item $M$ is uniformly distributed on (0,1)\\
+    \item $E(M)=E(X_1)$\\
+    \item $V(M)=V(X_1)$
 \end{enumerate}
 \solution
 \input{stats/solutions/8.tex}

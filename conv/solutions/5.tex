@@ -1,0 +1,72 @@
+\begin{definition}[Convergence in Distribution or Weak convergence]
+    For any given sequence of real-valued random variables $X_1,X_2,X_3, \dots ,X_n$ and a random variable X,
+    \begin{equation}
+    \lim_{n \rightarrow \infty} F_{X_n}(x) = F_X(x)
+\end{equation}
+where $F_{X_n}$ and $F_X$ are the cumulative probability distribution functions of $X_n$ and X respectively.
+\end{definition}
+\begin{definition}[Convergence in Probability]
+    \begin{align}
+    \lim_{n \rightarrow \infty} \pr{|X_n - X| > \epsilon} = 0 \forall \epsilon > 0
+\end{align}
+\end{definition}
+This is stronger than the convergence in distribution but weaker than Almost sure convergence.
+\begin{definition}[Almost sure Convergence]
+    \begin{align}
+  \pr{\lim_{n \rightarrow \infty} X_n = X} = 1  
+\end{align}
+\end{definition}
+This type of convergence is stronger than both convergence in distribution and probability.
+\begin{itemize}
+    \item In general, stronger statements imply weaker statements but not vice versa, i.e. Convergence in probability implies convergence in distribution and Almost sure convergence implies convergence in probability.
+    \item We shall use the following statement from Portmanteau's Lemma in the following proof:
+    \end{itemize}
+    \begin{lemma}[Portmanteau's Lemma]\label{conv/5/Portmanteau's Lemma}
+             The sequence $X_1,X_2,X_3, \dots ,X_n$ converges in distribution to X if and only if \begin{equation}
+                  \limsup \pr{X_{n}\in F} \leq \pr{X \in F}
+             \end{equation} for every closed set F;
+        \end{lemma}
+\begin{lemma} Convergence in distribution implies convergence in probability if X is a constant.\end{lemma}
+    \textbf{Proof}:
+    \begin{itemize}
+        \item Let $\epsilon > 0$. Let X = c and the sequence $X_1,X_2,X_3, \dots ,X_n$ converges to X in distribution.
+        \item Let \begin{align}
+            &S = \{X : |X - c| > \epsilon\} \\
+            \implies &\pr{|X_n - c|>\epsilon} = \pr{X_ n\in S}
+        \end{align}
+        \item From Lemma \ref{conv/5/Portmanteau's Lemma}, 
+        \begin{align}
+           &\because \lim_{n \rightarrow \infty}X_n = c \\
+            \implies &\limsup_{n \rightarrow \infty} \pr{X_n \in S} \leq  \pr{c \in S} \\
+            &\because \pr{c \in S} = 0 \text{ (By defn)} \\
+            \implies &\limsup_{n \rightarrow \infty} \pr{X_n \in S} \leq 0 \\
+            \implies &\lim_{n \rightarrow \infty} \pr{X_n \in S} \leq 0\\
+            \implies &\lim_{n \rightarrow \infty} \pr{X_n \in S} = 0 \text{ (Probability $\geq 0$)}
+        \end{align}
+        
+        \item Thus, by definition,
+        \begin{multline}
+             \pr{|X_n-c|> \epsilon} = 0 \text{ for any }\epsilon > 0 \text{ given,} \\    
+            \lim_{n \rightarrow \infty} F_{X_n}(x) = F_X(x)\text{ and X is constant}
+        \end{multline}
+    \end{itemize}
+Let us look at each option one after another.
+\begin{enumerate}
+    \item Given,
+    \begin{align}\nonumber
+        p = 0 \implies X = 1
+    \end{align}
+    Since X is a constant, from Lemma \ref{conv/5/1}, we can say that option 1 is true.
+    \item Given,
+      \begin{align}\nonumber
+        p = 1 \implies X = 0
+    \end{align}
+    Since X is a constant, from Lemma \ref{conv/5/1}, we can say that option 2 is true.
+    \item Given,
+      \begin{align}\nonumber
+        0 < p < 1 \implies X \neq 0,1 
+    \end{align}
+    Since X is not a constant, we can say that option 3 is false.
+    \item Since Convergence in probability is weaker than Almost sure convergence, we can say that option 4 is false as a weaker statement does not imply a stronger statement.
+\end{enumerate}
+Therefore, the true statements from the options are options 1 and 2.

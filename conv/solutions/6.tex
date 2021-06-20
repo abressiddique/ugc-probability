@@ -1,0 +1,197 @@
+\begin{theorem}[chi-square distribution]
+    If $X_1,X_2,\cdots$ are independent normally distributed random variables with mean 0 and variance 1. Then $\chi=X_{1}^2+X_{2}^2+\cdots+X_{n}^2$ is chi-square distributed with $n$ degrees of freedom.
+    \begin{align}
+        E(\chi)=n \label{conv/6/eq:x2}
+    \end{align}
+    \begin{align}
+        Var(\chi)=2n\label{conv/6/eq:x10}
+    \end{align}\label{conv/6/lem}
+    \end{theorem}
+    \begin{theorem}[Weak law of large numbers]
+    \label{conv/6/theorem}
+    Let $X_1,X_2,\cdots $ be i.i.d random variables with same expectation($\mu$) and finite variance($\sigma^2$).Let $S_{n}=X_1+X_2+\cdots X_n$,Then as $n \to \infty$
+    \begin{align}
+        \frac{S_n}{n} \xrightarrow{i.p}  \mu,
+    \end{align}
+    in probability
+    \end{theorem}
+    \begin{proof}
+    Define a new variable
+    \begin{align}
+        X \equiv \frac{X_1+X_2+\cdots X_n}{n}
+    \end{align}
+    Then, as $n \to \infty$
+    \begin{align}
+        E(X)&=E\brak{\frac{X_1+X_2+\cdots X_n}{n}}\\
+        &=\frac{E(X_1)+\cdots E(X_n)}{n}\\
+        &=\frac{n \mu}{n}\\
+        &=\mu
+    \end{align}
+    In addition,
+    \begin{align}
+        Var(X)&=Var\brak{\frac{X_1+X_2+\cdots X_n}{n}}\\
+        &=Var\brak{\frac{X_1}{n}}+\cdots Var{\brak{\frac{X_n}{n}}}\\
+        &=n\frac{\sigma^2}{n^2}\\
+        &=\frac{\sigma^2}{n}
+    \end{align}
+    Therefore, by Chebyshev inequality, for all $\epsilon>0$,
+    \begin{align}
+       \pr{|X-\mu| \geq \epsilon} \leq \frac{Var(X)}{\epsilon^2}=\frac{\sigma^2}{n\epsilon^2}   
+    \end{align}
+    As $n \to \infty$, it follows that
+    \begin{align}
+        \lim_{n \to \infty} \pr{|X-\mu| \geq \epsilon}=0
+    \end{align}
+    Stated other way as $n \to \infty$
+    \begin{align}
+        \frac{S_n}{n} \xrightarrow{i.p}  \mu,
+    \end{align}
+    in probability 
+    \end{proof}
+     \begin{theorem}[Strong law of large numbers]
+    \label{conv/6/theorem1}
+    Let $X_1,X_2,\cdots $ be i.i.d random variables with same expectation($\mu$) and finite variance($\sigma^2$).Let $S_{n}=X_1+X_2+\cdots X_n$,Then as $n \to \infty$
+    \begin{align}
+        \frac{S_n}{n} \xrightarrow{a.s}  \mu,
+    \end{align}
+    almost surely.
+    \end{theorem}
+    \begin{theorem}[Central limit theorem]
+    \label{conv/6/theorem3}
+    The Central limit theorem states that the distribution of the sample approximates a normal distribution as the sample size becomes larger,given that all the samples are equal in size,regardless of the distribution of the individual samples.\label{conv/6/central}
+    \end{theorem}
+    \begin{definition}[Almost sure convergence]
+    A sequence of random variables $\cbrak{X_n}_{n\in N}$ is said to converge almost surely or with probability 1 (denoted by a.s or w.p 1) to X if \label{conv/6/with prob 1}
+    \begin{align}
+        \Pr(\omega |X_n(\omega) \to X(\omega))=1
+    \end{align}
+    \end{definition}
+    \begin{lemma}[Properties of mean and variance]
+    If $X$ is a random variable with a probability density function of $f(x)$. If $a$ and $b$ are constants.
+    \begin{align}
+        \label{conv/6/1}
+        E(X)&=\int_R xf(x)dx\\ 
+        \label{conv/6/2}
+        E(X+Y)&=E(X)+E(Y)\\    
+        \label{conv/6/3}
+        E(aX+b)&=aE(X)+b, \\   
+        \label{conv/6/4}
+        Var(X)&=E(X^2)-{E(X)}^2\\  
+        \label{conv/6/5}
+        Var(X+Y)&=Var(X)+Var(Y)\\  
+        \label{conv/6/6}
+        Var(aX+b)&=a^2 Var(X)
+        
+    \end{align}
+    \end{lemma}
+    Given $X_1,X_2, \cdots$ follow normal distribution with mean 0 and variance 1.
+    \begin{align}
+        f_{X_i}(x)=\frac{1}{\sqrt{2}\pi}e^{-\frac{x^2}{2}} ,i \in \cbrak{1,2,\cdots}
+    \end{align}
+     \begin{enumerate}[(A)]
+    \item
+    From theorem \eqref{conv/6/conv/6/lem} $S_n$ is a chi-distributed function with $n$ degrees of freedom.\\
+    From \eqref{conv/6/conv/6/eq:x2} 
+    \begin{align}
+        E(S_n)=n \label{conv/6/eq:8}
+    \end{align}
+    From \eqref{conv/6/conv/6/eq:8} and \eqref{conv/6/conv/6/3}
+    \begin{align}
+        E\brak{\frac{S_{n}-n}{\sqrt{2}}}&=\frac{E(S_n)-n}{\sqrt{2}}\\
+         &=\frac{n-n}{\sqrt{2}}\\
+        &=0
+    \end{align}
+    From \eqref{conv/6/conv/6/eq:x10}
+    \begin{align}
+        Var(S_n)= 2n\label{conv/6/var}
+    \end{align}
+    From \eqref{conv/6/conv/6/var} and \eqref{conv/6/conv/6/6}
+    \begin{align}
+        Var\brak{\frac{S_{n}-n}{\sqrt{2}}}
+        &= Var\brak{\frac{S_n}{\sqrt{2}}}\\
+        &=\frac{Var(S_n)}{2}\\
+        &=\frac{2n}{2}\\
+        &=n
+    \end{align}
+    Hence,
+    \begin{align}
+        \brak{\frac{S_{n}-n}{\sqrt{2}}}\sim N\brak{0,n}
+    \end{align}
+    Hence \textbf{Option A is false.}
+    \item Given 
+    \begin{align}
+        S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1
+    \end{align}
+    Assume that For all $\epsilon > 0$,$\pr{\brak{\left|{\frac{S_n}{n}-2}\right|>\epsilon}}\to 0$ as $n \to \infty$ is true
+    \\From \eqref{conv/6/conv/6/eq:8} and \eqref{conv/6/conv/6/3}
+    \begin{align}
+        E\brak{\frac{S_n}{n}}&=\frac{E(S_n)}{n}\\
+            &=\frac{n}{n}\\
+            &=1\label{conv/6/25}
+    \end{align}
+    From theorem \eqref{conv/6/conv/6/theorem}
+    \begin{align}
+        \frac{S_n}{n} \xrightarrow{i.p}  E\brak{\frac{S_n}{n}}
+    \end{align}
+    \begin{align}
+        \lim_{n \to \infty} \pr{\left|{\frac{S_n}{n}-1}\right|>\epsilon}=0
+    \end{align}
+    This means for all $\epsilon>0$ ,$\pr{\left|{\frac{S_n}{n}-1}\right|>\epsilon}\to 0$ as $n \to \infty$
+    But this is contradiction to our assumption.\\
+    Hence \textbf{Option B is false .}
+     
+     
+     
+     \item Given 
+    \begin{align}
+        S_{n}=X_{1}^2+X_{2}^2+\cdots+X_{n}^2.\forall n\geq 1
+    \end{align}
+    Hence from theorem \ref{conv/6/conv/6/theorem1} we can write 
+    \begin{align}
+        \frac{S_n}{n} \xrightarrow{a.s} E\brak{\frac{S_n}{n}}
+    \end{align}
+    From \eqref{conv/6/conv/6/25}
+    \begin{align}
+         \frac{S_n}{n} \xrightarrow{a.s} 1
+    \end{align}
+    almost surely.
+    \begin{align}
+        \pr{\lim_{n\to \infty}\frac{S_n}{n}=1}=1\label{conv/6/eq:27}
+    \end{align}
+    From definition \ref{conv/6/conv/6/with prob 1} and \eqref{conv/6/conv/6/eq:27} we can write,
+    \begin{align}
+        \frac{S_{n}}{n} \xrightarrow{w.p.1} 1
+    \end{align}
+    with probability 1.\\
+    Hence \textbf{Option C is true}.
+    \item
+    Let 
+    \begin{align}
+        Y=\frac{S_{n}-n}{\sqrt{n}}
+    \end{align}
+    Using \eqref{conv/6/conv/6/eq:8} and \eqref{conv/6/conv/6/3}
+    \begin{align}
+        E\brak{\frac{S_{n}-n}{\sqrt{n}}}&=\frac{E(S_n)-n}{\sqrt{n}}\\
+        &=\frac{n-n}{\sqrt{n}}\\
+        &=0
+    \end{align}
+    using \eqref{conv/6/conv/6/eq:8} and \eqref{conv/6/conv/6/3}
+    \begin{align}
+         Var\brak{\frac{S_{n}-n}{\sqrt{n}}}&=\frac{Var(S_n)}{n}\\
+         &=\frac{2n}{n}\\
+         &=2
+    \end{align}
+    Hence, from theorem \eqref{conv/6/conv/6/central}
+    \begin{align}
+        Y \sim N(0,2)\label{conv/6/eq:D}
+    \end{align}
+    \begin{align}
+         \Pr{\brak{\frac{S_{n}-n}{\sqrt{n}} \leq x}}= \Pr{\brak{S_{n} \leq n+\sqrt{n}x}}
+    \end{align}
+    Therefore,
+    \begin{align}
+       \pr{S_n \leq n+ \sqrt{n}x} \rightarrow \pr{Y \leq x} \forall x \in R \label{conv/6/new}
+    \end{align}
+    Hence, \textbf{Option D is true.}
+     
+     \end{enumerate}

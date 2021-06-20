@@ -1,0 +1,77 @@
+\begin{theorem}
+    If ${ X_{1},\dots ,X_{n}}$ are i.i.d. random variables, all Bernoulli trials with success probability p, then their sum is distributed according to a binomial distribution with parameters $n$ and $p$
+    {\centering
+    ${\displaystyle \sum _{k=1}^{n}X_{k}\sim  {B} (n,p)}$
+    }
+    \label{binom/3/binom_theorem}
+    \end{theorem}
+    \begin{corollary}
+    For a binomial random variable $X$ with parameters $n$ and $p$ and $q=1-p$
+    \begin{align}
+        E\brak{X}=& n p 
+        \\E\brak{X^2}=& n p \brak{n p+q}
+        \\E\brak{X^3}=& n p \brak{n^{2} p^{2} + 3 n p q - 2 p q + q}
+        \\
+        \begin{split}
+             E\brak{X^4}=&n p \Bigl(n^{3} p^{3} + 6 n^{2} p^{2} q
+            - 11 n p^{2} q  \\& + 7 n p q - 6 p q^{2} + q\Bigr)
+        \end{split}
+    \end{align}
+    \label{binom/3/corolary-momentof-Binom}
+    \end{corollary}
+    Given that $X_i$ are i.i.d random variable for $i \in \cbrak{1,2,3,4} $ 
+    with,
+    \begin{align}
+        \pr{X_i=+1}=&\frac{1}{2}
+        \\\pr{X_i=-1}=&\frac{1}{2}
+    \end{align}
+    \begin{lemma}
+    Let random variables $M_i=\frac{X_i+1}{2}$ then,
+    $M_i$ are Bernoulli random variables with $p=0.5$
+    \end{lemma}
+    \begin{proof}
+    \begin{align}
+        \pr{M_i=1}=&\pr{X_i=1}=\frac{1}{2}
+        \\\pr{M_i=0}=&\pr{X_i=-1}=\frac{1}{2}
+    \end{align}
+    $\therefore$ $M_i$ are Bernoulli random variables with $p=0.5$
+    \end{proof}
+    Let assume random variable $Y$ as
+    \begin{align}
+    Y=\sum_{i=1}^{4}X_i
+    \end{align} 
+    similarly let 
+    \begin{align}
+    Z=&\sum_{i=1}^{4}M_i
+    \end{align}
+    \begin{corollary}
+    $Z$  is Binomial random variable , \\from theorem \ref{binom/3/binom_theorem}
+    {\centering
+    ${\displaystyle Z \sim  {B} (4,0.5)}$
+    }
+    \label{binom/3/cor-Z_as_binom}
+    \end{corollary}
+    \begin{align}
+    Z=&\sum_{i=1}^{4} \frac{X_i+1}{2}
+    \\ Z=&\frac{Y}{2} + 2
+    \end{align}
+    \begin{align}
+        {Y^4}=16{(Z-2)^4}
+    \end{align}
+    \begin{align}
+        {Y^4}=16\brak{Z^4-8z^3+24Z^2-32Z+16}
+    \end{align}
+    \begin{align}
+    \begin{split}
+        E\brak{Y^4}=&16\Bigl(E\brak{Z^4}-8E\brak{z^3}
+        \\&+24E\brak{Z^2}-32E\brak{Z}+16\Bigr)
+    \end{split}    
+    \end{align}
+    From corollary \ref{binom/3/corolary-momentof-Binom} and  \ref{binom/3/cor-Z_as_binom}
+    \begin{align}
+        E\brak{Y^4}=&40 &
+    \end{align}
+    % {\centering
+    % $\mbf{\therefore E\brak{X_1+X_2 +X_3 +X_4}^4=40}$
+    % }
+    

@@ -1,0 +1,116 @@
+\begin{definition}
+    PDF of normal distribution is given as
+    \begin{align}
+        \phi_Z\brak{z} = N\brak{\mu,\sigma^2} = \frac{1}{\sqrt{2\pi\sigma^2}}e^\frac{-\brak{z-\mu}^2}{2\sigma^2}
+    \end{align}
+    \end{definition}
+    \begin{corollary}
+    \begin{align}
+        \phi_X\brak{x} = \frac{1}{\sqrt{2\pi}}e^\frac{-x^2}{2}\label{gauss/5/eq1}\\
+        \phi_Y\brak{y} = \frac{1}{\sqrt{2\pi}}e^\frac{-y^2}{2}\label{gauss/5/eq2}
+    \end{align}
+    \end{corollary}
+    \begin{proof}
+    Since $\phi\brak{.}$ is the pdf of $N\brak{0,1}$ distribution (given in question),
+    $\mu = 0$ and $\sigma^2 = 1$.
+    \begin{align*}
+        \implies \phi_X\brak{x} = \frac{1}{\sqrt{2\pi}}e^\frac{-x^2}{2}\,\text{and}\,
+        \phi_Y\brak{y} = \frac{1}{\sqrt{2\pi}}e^\frac{-y^2}{2}
+    \end{align*}
+    \end{proof}
+    \begin{lemma}
+    For circle $C$,
+    \begin{align}
+        \iint_C{\phi\brak{x}\,\phi\brak{y}\,dx\,dy} = 1 - e^{\frac{-1}{2\pi}}  \label{gauss/5/eq9}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    $C$ has unit area with centre at origin.
+    \begin{align}
+        \implies &\pi\times r^2=1\\
+        \implies &|r| = \frac{1}{\sqrt{\pi}}
+    \end{align}
+    For the area inside circle $C$ we get,
+    \begin{align}
+        x^2+y^2\leq \frac{1}{\pi}
+        \implies |y| \leq \sqrt{\frac{1}{\pi}-x^2}\label{gauss/5/eq3}
+    \end{align}
+    From \eqref{gauss/5/eq3} we get,
+    \begin{align}
+        \iint_C{\phi\brak{x}\,\phi\brak{y}\,dx\,dy} = \nonumber\\
+        \int\limits_{x=\frac{-1}{\sqrt{\pi}}}^{x=\frac{1}{\sqrt{\pi}}}\, \int\limits_{y=-\sqrt{\frac{1}{\pi}-x^2}}^{y=\sqrt{\frac{1}{\pi}-x^2}} \phi\brak{x}\,\phi\brak{y}\,dy\,dx \label{gauss/5/eq4}
+    \end{align}
+    Using \eqref{gauss/5/eq1} and \eqref{gauss/5/eq2} in \eqref{gauss/5/eq4} we get,
+    \begin{align}
+        \int\limits_{x=\frac{-1}{\sqrt{\pi}}}^{x=\frac{1}{\sqrt{\pi}}} \int\limits_{y=-\sqrt{\frac{1}{\pi}-x^2}}^{y=\sqrt{\frac{1}{\pi}-x^2}} \frac{1}{2\pi}e^\frac{-\brak{x^2+y^2}}{2}\,dy\,dx
+    \end{align}
+    Converting it to polar coordinates we get,
+    \begin{align}
+        &\int\limits_{r=0}^{r=\frac{1}{\sqrt{\pi}}} \int\limits_{\theta=0}^{\theta=2\pi} \frac{1}{2\pi}e^\frac{-r^2}{2}\,r\,d\theta\,dr\\
+        &= \int_{0}^{\frac{1}{\sqrt{\pi}}}e^\frac{-r^2}{2}\,r\,dr\\
+        &= 1 - e^{\frac{-1}{2\pi}}
+    \end{align}
+    \end{proof}
+    \begin{definition}
+    The $Q$ function is defined as
+    \begin{align}
+        Q\brak{x} = \frac{1}{\sqrt{2\pi}}\int_x^\infty e^{\frac{-u^2}{2}}\, du\label{gauss/5/eq5}
+    \end{align}
+    \end{definition}
+    \begin{lemma}
+    \begin{align}
+        \int_{-a}^{a} e^{\frac{-x^2}{2}}\, dx = \sqrt{2\pi}\,\brak{1-2Q\brak{a}}\label{gauss/5/eq6}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    Since $e^{\frac{-x^2}{2}}$ is an even function,
+    \begin{align}
+        &\int_{-a}^{a} e^{\frac{-x^2}{2}}\, dx = 2\int_{0}^{a} e^{\frac{-x^2}{2}}\, dx\\
+        &\implies 2\int_{0}^{a} e^{\frac{-x^2}{2}}\, dx = 2 \brak{\int_{0}^{\infty} e^{\frac{-x^2}{2}}\, dx - \int_{a}^{\infty} e^{\frac{-x^2}{2}}\, dx} \nonumber\\
+        &= 2\sqrt{2\pi} \times \frac{1}{\sqrt{2\pi}} \brak{\int_{0}^{\infty} e^{\frac{-x^2}{2}}\, dx - \int_{a}^{\infty} e^{\frac{-x^2}{2}}\, dx} \label{gauss/5/eq7}
+    \end{align}
+    Comparing \eqref{gauss/5/eq7} with \eqref{gauss/5/eq5} we get,
+    \begin{align}
+        \int_{-a}^{a} e^{\frac{-x^2}{2}}\, dx &= 2\sqrt{2\pi}\brak{Q\brak{0} - Q\brak{a}}\\
+        &= 2\sqrt{2\pi}\brak{\frac{1}{2} - Q\brak{a}}\\
+        &= \sqrt{2\pi}\,\brak{1 - 2Q\brak{a}}
+    \end{align}
+    \end{proof}
+    \begin{lemma}
+    For square $S$,
+    \begin{align}
+        \iint_S{\phi\brak{x}\,\phi\brak{y}\,dx\,dy} = \brak{1-2Q\brak{\frac{1}{2}}}^2 \label{gauss/5/eq10}
+    \end{align}
+    \end{lemma}
+    \begin{proof}
+    For square $S$ (given in question),
+    \begin{align}
+        \frac{-1}{2}\leq x \leq \frac{1}{2}\\
+        \frac{-1}{2}\leq y \leq \frac{1}{2}
+    \end{align}
+    From this we get,
+    \begin{align}
+        \iint_S{\phi\brak{x}\,\phi\brak{y}\,dx\,dy} = \nonumber\\
+        \int\limits_{x=\frac{-1}{2}}^{x=\frac{1}{2}} \int\limits_{y=\frac{-1}{2}}^{y=\frac{1}{2}} \phi\brak{x}\,\phi\brak{y}\,dy\,dx \label{gauss/5/eq8}
+    \end{align}
+    Using \eqref{gauss/5/eq1} and \eqref{gauss/5/eq2} in \eqref{gauss/5/eq8} we get,
+    \begin{align}
+        \int\limits_{x=\frac{-1}{2}}^{x=\frac{1}{2}} \int\limits_{y=\frac{-1}{2}}^{y=\frac{1}{2}}\frac{1}{2\pi}e^\frac{-\brak{x^2+y^2}}{2}\,dy\,dx
+    \end{align}
+    Using \eqref{gauss/5/eq6} twice we get,
+    \begin{align}
+        \int\limits_{x=\frac{-1}{2}}^{x=\frac{1}{2}} \int\limits_{y=\frac{-1}{2}}^{y=\frac{1}{2}}\frac{1}{2\pi}e^\frac{-\brak{x^2+y^2}}{2}\,dy\,dx &= \brak{1-2Q\brak{\frac{1}{2}}}^2
+    \end{align}
+    \end{proof}
+    %
+    Calculating the values of \eqref{gauss/5/eq9} and \eqref{gauss/5/eq10} we get,
+    \begin{align}
+        1 - e^{\frac{-1}{2\pi}} &= 0.147136\\
+        \brak{1-2Q\brak{\frac{1}{2}}}^2 &= 0.146631
+    \end{align}
+    This proves that 
+    \begin{align}
+        &1 - e^{\frac{-1}{2\pi}} \geq \brak{1-2Q\brak{\frac{1}{2}}}^2\\
+        \implies  &\iint_C{\phi\brak{x}\,\phi\brak{y}\,dx\,dy} \geq \iint_S{\phi\brak{x}\,\phi\brak{y}\,dx\,dy}
+    \end{align}
+    
