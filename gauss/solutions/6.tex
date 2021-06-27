@@ -1,0 +1,88 @@
+Given, $X_1,X_2,\dots$ are independent random variables with $X_i\sim \mathcal U(-i,3i)$. Let us define:
+\begin{align}
+    Y_i = \frac{X_i}{i}\text{ }\forall\text{ i} \\
+    \implies Y_i \sim \mathcal U(-1,3)
+\end{align}
+Now, $Y_1,Y_2,\dots$ are i.i.d (independent and identically distributed) uniform random variables.
+\begin{definition}
+The probability density function of a uniformly distributed continuous random variable in the interval [a,b] is 
+\begin{align}
+  f_X(x) = 
+  \begin{cases}
+      \dfrac{1}{b-a}, & \text{for } a\leq x \leq b\\
+    0, & \text{otherwise } 
+  \end{cases}
+\end{align}
+\end{definition}
+\begin{lemma} 
+For a uniformly distributed continuous random variable in the interval [a,b], the mean and variance are given by:
+\begin{align}
+    \mu &= \frac{a+b}{2} \label{gauss/6/mu}\\
+    \sigma^2 &= \frac{(b-a)^2}{12} \label{gauss/6/sigma^2}
+\end{align}
+\end{lemma}
+\begin{proof}
+\begin{align}
+       E(X) = \int_{-\infty}^{+\infty} xf_X(x) \,dx
+\end{align}
+\begin{align}      
+     \mu &= \int_{-\infty}^{a} 0 x \,dx + \int_{a}^{b} \frac{1}{b-a} x \,dx + \int_{b}^{+\infty} 0 x \,dx\\
+     &= 0 + \frac{1}{b-a} \left(\frac{x^2}{2}\right)\Bigr|_{a}^{b} + 0 \\
+     &= \frac{b^2 - a^2}{2(b - a)} = \frac{a+b}{2}
+\end{align}
+\begin{align}      
+       E(X^2) = \int_{-\infty}^{+\infty} x^2f_X(x) \,dx
+\end{align}
+\begin{align}      
+     E(X^2) &= \int_{-\infty}^{a} 0 x^2 \,dx + \int_{a}^{b} \frac{1}{b-a} x^2 \,dx + \int_{b}^{+\infty} 0 x^2 \,dx\\
+     &= 0 + \frac{1}{b-a} \left(\frac{x^3}{3}\right)\Bigr|_{a}^{b} + 0 \\
+     &= \frac{b^3 - a^3}{3(b - a)} = \frac{a^2 + ab + b^2}{3}
+\end{align}   
+\begin{align}
+       \sigma^2 &= E(X^2) - [E(X)]^2 \\
+       &= \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2\\
+       &= \frac{(b-a)^2}{12}
+\end{align}
+\end{proof}
+Using \eqref{gauss/6/mu} and \eqref{gauss/6/sigma^2}, we get:
+\begin{align}
+    \mu = \frac{-1 + 3}{2} = 1\\
+    \sigma^2 = \frac{[3 - (-1)]^2}{12} = \frac{16}{12} = \frac{4}{3}
+\end{align}
+And, we have:
+\begin{align}
+  S_N &= \frac{1}{\sqrt{N}} \sum_{n=1}^N \frac{X_n}{n} \\
+      &= \frac{1}{\sqrt{N}} \sum_{n=1}^N Y_n
+\end{align}
+\begin{lemma}[Central Limit theorem]
+Let $X_1,X_2,\dots,X_n$ be i.i.d random variables with finite $\mu$ and $\sigma^2$. If $Z_n$ is defined as
+\begin{align}
+  Z_n = \frac{1}{\sqrt{n}} \sum_{i=1}^n X_i
+ \end{align}
+Then,
+\begin{align}
+   \lim_{n \to \infty} Z_n \sim \mathcal N(\mu,\sigma^2) \label{gauss/6/CLT}
+\end{align}
+\end{lemma}
+By \eqref{gauss/6/CLT}, we can conclude
+\begin{align}
+\lim_{N\to\infty} S_N \sim \mathcal N(\mu,\sigma^2)\\
+\implies \lim_{N\to\infty} F_N(x) &= \phi\left(\frac{x-\mu}{\sigma}\right)\\
+&= \phi\left(\frac{\sqrt{3}(x-1)}{2}\right)
+\end{align}
+Substituting $x=1$, we get
+\begin{align}
+    \lim_{N\to\infty} F_N(1) &=  \phi\left(\frac{\sqrt{3}(1-1)}{2}\right)\\
+    &= \phi(0)
+\end{align}
+The distribution function $F_N$ is non-decreasing. So,
+\begin{align}
+    \lim_{N\to\infty} F_N(0) \leq \lim_{N\to\infty} F_N(1) = \phi(0)\\
+    \lim_{N\to\infty} F_N(0) \leq \phi(0)
+\end{align}
+The distribution function $\phi$ is non-decreasing. So,
+\begin{align}
+    \lim_{N\to\infty} F_N(1) = \phi(0) \leq \phi(1)\\
+    \lim_{N\to\infty} F_N(1) \leq \phi(1)
+\end{align}
+Answer: Option (A) and (C)
