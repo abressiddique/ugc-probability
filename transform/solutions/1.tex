@@ -1,0 +1,45 @@
+
+
+    \begin{definition}[Characteristic Function]
+    The function $\phi_X(t) = E\brak{e^{itX}}$ is called the characteristic function (cf ) of random variable $X$.
+    \label{transform/1/def:characterstic_function}
+   \end{definition}
+   \begin{proposition}[Properties of a Characteristic function]
+   All cf’s have the following properties:\\
+   \begin{enumerate}
+       \item $\phi_X(-t) =\overline{\phi_X(t)}$ (complex conjugate)
+       \item  $\phi_{-X}(t) = \overline{\phi_X(t)}$  
+   \end{enumerate}
+   \label{transform/1/prop:properties_of_cf}
+   \end{proposition}
+   \begin{proposition}[Cf of sum of independent r.v.’s]
+    If $X$ and $Y$ are independent, then
+    \begin{align}
+        \phi_{X+Y}(t) = \phi_X(t)\times\phi_Y(t)
+    \end{align}
+    \label{transform/1/prop:Sum_of_independent_cvs}
+   \end{proposition}
+   Let $X$ be the given random variable and let $Y$  and $-X$ have the same distribution.
+   \begin{enumerate}
+       \item \begin{align} [\phi_X(t)]^2 &= \phi_X(t)\times\phi_X(t) \\
+                   &= \phi_{2X}(t) & & \text{(by  \ref{transform/1/prop:Sum_of_independent_cvs})}
+   \end{align}
+   Thus, $f(t) = [\phi(t)]^2$ is a characteristic function of random variable $2X$.
+   \item \begin{align} |\phi_X(t)|^2 &= \phi_X(t)\times\overline{\phi_X(t)} \\
+                   &= \phi_X(t)\times\phi_Y(t) & & \text{(by  \ref{transform/1/prop:properties_of_cf})}\\
+                   &= \phi_{X+Y}(t)
+   \end{align}
+   Thus, $f(t)=|\phi(t)|^2$ is a characteristic function of random variable $(X+Y)$.\\
+   \item \begin{align} \phi_X(-t) &= E\brak{e^{i(-t)X}} & & \text{(by  \ref{transform/1/def:characterstic_function})} \\
+                   &= E\brak{e^{it(-X)}} \\
+                   &= E\brak{e^{itY}}\\
+                   &= \phi_Y(t)
+   \end{align}
+   Thus, $f(t) = \phi(-t)$ is a characteristic function of random variable $Y$.
+   \item \begin{align} \phi_X(t+1) &= E\brak{e^{i(t+1)X}}  & & \text{(by  \ref{transform/1/def:characterstic_function})} \\
+   &= E\brak{e^{itX}\times e^{iX}} 
+   \end{align}
+   Thus, $f(t) = \phi(t+1)$ is a not a characteristic function.\\
+   \end{enumerate}
+   Hence, correct options are 1, 2, 3.
+   

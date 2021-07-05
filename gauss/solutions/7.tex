@@ -1,0 +1,51 @@
+\begin{lemma}
+    $Q(x)+Q(-x)=1$
+\end{lemma}
+\begin{lemma}
+Chernoff Lower Bound Property
+    $$Q(x)\geq f(x)$$
+    where $f(x) = \alpha \exp(-\beta x^2)$ and \\[3pt]$\beta > 1, 0 < \alpha \leq \dfrac{\sqrt{2e}\sqrt{\beta-1}}{\sqrt{\pi}\beta} $
+\end{lemma}
+Simplifying the inequality given in question,
+\begin{align}
+    1-\exp(-2 \pi)  &\geq \brak{1-2Q\brak{\dfrac{1}{2}}}^2 \\[1.5pt]
+    1-\exp(-2 \pi) &\geq 1+4Q^2\brak{\dfrac{1}{2}}^2-4Q\brak{\dfrac{1}{2}}\\[1.5pt]
+    -\exp(-2 \pi) &\geq 4Q\brak{\dfrac{1}{2}}\brak{Q\brak{\dfrac{1}{2}}-1} \\[1.5pt]
+    \exp(-2 \pi) &\leq 4Q\brak{\dfrac{1}{2}}\brak{1-Q\brak{\dfrac{1}{2}}} \\[1.5pt]
+    4Q\brak{\dfrac{1}{2}}\brak{1-Q\brak{\dfrac{1}{2}}}&\geq \exp(-2 \pi)
+\end{align}
+Using Lemma 0.1 of Q-functions,
+\begin{equation}
+    Q(x)+Q(-x)=1
+\end{equation}
+\begin{align}
+    4Q\brak{\dfrac{1}{2}}Q\brak{-\dfrac{1}{2}}\geq \exp(-2 \pi)
+\end{align}
+\\
+% Let $erfc(x)$ denote the Complementary Error function.\\
+\begin{lemma}
+$4Q\brak{\dfrac{1}{2}}Q\brak{-\dfrac{1}{2}}\geq \exp(-2 \pi)$
+\end{lemma}
+\begin{proof}
+Using Lemma 0.2 of Q-functions and the fact that $f(x)$ is even.
+\begin{align}
+    4Q(x\sqrt{2})Q(-x\sqrt{2}) \geq \alpha^{2}\exp(-2\beta x^{2})
+\end{align}
+Putting $x=\dfrac{1}{2 \sqrt{2}}$, we get,\\
+\begin{align}
+    4Q\brak{\dfrac{1}{2}}Q\brak{-\dfrac{1}{2}}\geq \alpha^{2}\exp\brak{\dfrac{-\beta}{4}}
+\end{align}
+For $\beta = 8\pi$, 
+\begin{align}
+    0 < \alpha \leq \dfrac{\sqrt{2e}\sqrt{8 \pi-1}}{\sqrt{\pi} 8\pi}\\
+\end{align} 
+ Clearly, denominator is greater than numerator, therefore, $\alpha < 1$
+\begin{align}
+    4Q\brak{\dfrac{1}{2}}Q\brak{-\dfrac{1}{2}}\geq \alpha^{2}\exp(-2\pi)
+\end{align}
+where $\alpha < 1$
+Therefore,
+\begin{align}
+    4Q\brak{\dfrac{1}{2}}Q\brak{-\dfrac{1}{2}}\geq \exp(-2\pi)
+\end{align}
+\end{proof}

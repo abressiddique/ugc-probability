@@ -4,10 +4,11 @@
 \usepackage{gensymb}
 \singlespacing
 \usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{xurl}
 
 \usepackage{amsthm}
-
-\usepackage{float}
+\usepackage{comment}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
@@ -15,9 +16,7 @@
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
-% \usepackage[demo]{graphicx}
-% \usepackage{caption}
-% \usepackage{subcaption}
+
 \usepackage{longtable}
 \usepackage{multirow}
 
@@ -46,6 +45,7 @@
 \usepackage{chngcntr}
 
 \DeclareMathOperator*{\Res}{Res}
+
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
@@ -57,6 +57,15 @@
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -87,12 +96,12 @@
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-% \providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\abs}[1]{\vert#1\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-% \providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\mean}[1]{E[ #1 ]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -114,111 +123,109 @@
      \def\centbox#1{\makebox[0in]{#1}}
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-
-\lstset{
-%language=C,
-frame=single, 
-breaklines=true,
-columns=fullflexible
-}
-\title{Assignment 6}
-\author{Varenya Upadhyaya EP20BTECH11026}
-\date{}
-\begin{document}
-
+\vspace{3cm}
+\title{AI1103 : Assignment 3}
+\author{Prashanth Sriram S - CS20BTECH11039}
 \maketitle
-Download all python codes from:
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python codes from 
 \begin{lstlisting}
-https://github.com/varenya27/AI1103/blob/main/Assignment6/codes
+https://github.com/prashanthsriram-s/AI1103/tree/main/Assignment3/codes/
 \end{lstlisting}
-and all latex-tikz codes from:
+%
+and latex codes from 
+%
 \begin{lstlisting}
-https://github.com/varenya27/AI1103/blob/main/Assignment6/main.tex
+https://github.com/prashanthsriram-s/AI1103/tree/main/Assignment3/Assignment3.tex
 \end{lstlisting}
-\maketitle   
-\begin{center}
-\section{\textbf{Problem}}
-\end{center}
-Let $Y_1$ denote the first order statistic in a random sample of size $n$ from a distribution that has the pdf, 
+\section*{\textbf{Problem statement}}
+(AS3)=UGC / MATH (mathA June 2017), Q.118
+Suppose the random varible $X$ has the following probability density function
 \begin{align}
-    f(x) = \nonumber
-    \begin{cases}
-    e^{-(x-\theta)}&\text{ when } \theta<x<\infty\\
-    0 &\text{  otherwise} 
-    \end{cases}
+f(x)=
+\begin{cases}
+\alpha(x-\mu)^{\alpha-1}e^{-(x-\mu)^\alpha} &x>\mu\\
+0 &x\leq\mu,
+\end{cases}
 \end{align}
-Obtain the distribution of $Z_n = n(Y_1 - \theta)$\\
-\maketitle
-\section{\textbf{Solution}}
-The first order statistic for any sample is the the minimum of the given sample. In order to calculate the distribution for $Z_n$, we need the the cumulative distribution function $F(x)$:\\
+Where $\alpha>0, -\infty<\mu<\infty$. Which of the following statements are correct? The Hazard function of $X$ is
+\begin{enumerate}[label=\alph*)]
+\item an increasing function for all $\alpha>0$
+\item a decreasing function for all $\alpha>0$
+\item an increasing function for some $\alpha>0$
+\item a decreasing function for some $\alpha>0$
+\end{enumerate}
+\section*{\textbf{Solution}}
+The Hazard function of $X$,
 \begin{align}
-  F(x) &=\displaystyle\int\limits_{-\infty}^{x} f(t) \,dt\\
-  &= \displaystyle\int\limits_{-\infty}^{\theta}0\,dt + \displaystyle\int\limits_{\theta}^{x}e^{\theta-t}\,dt\\
-  &=\brak{e^{\theta-t}}_{x}^{\theta}\\
-  &= 1-e^{\theta-x} \\
-  &= 1-f(x) \label{eq_1}
+\lambda(X) = \frac{f(x)}{S(x)} \label{eq:1}
 \end{align}
-This gives,
+where $S(x)$ is the survival function given by,
 \begin{align}
-    F(x) = 
-    \begin{cases}
-    1-e^{-(x-\theta)} &\text{when }\theta<x<\infty\\
-    0 &\text{otherwise}
-    \end{cases}
+S(x) = P(X \geq x) = 1-F(x) = \int_{x}^{\infty}f(t)dt
 \end{align}
-Also,
+\begin{lemma}
 \begin{align}
-    F(x) = \pr{X\leq x}\\
-    \implies 1-F(x) = \pr{X>x}\\
-    Y_1 = \min\{X_1, X_2, ... X_n\}
+S(x)=
+\begin{cases}
+e^{-(x-\mu)^\alpha} &x>\mu\\
+1 &x\leq\mu
+\end{cases}
 \end{align}
-Distributions for $Z_n = n(Y_1-\theta)$ are required; let $f_{Z_n}(z)$ and $F_{Z_n}(z)$ be the pdf and cdf for $Z_n$ respectively. The cdf can be calculated as: 
-\begin{align}
-    F_{Z_n}(z) &= \pr{n(Y_1-\theta)\leq z}\\
-    &= \pr{Y_1\leq \frac{z}{n} +\theta}\\
-    &= 1-\pr{Y_1\ > \frac{z}{n} +\theta}\label{eq_2}
-\end{align}
-Since $Y_1$ is a minimum order statistic, every term in the random sample must be included in \eqref{eq_2}. Let $\brak{\dfrac{z}{n}+\theta} = z'$:
-\begin{align}
-    F_{Z_n}&= 1-\pr{X_1>z', X_2>z', ..., X_n>z'}\\
-    &= 1-\prod_{i=1}^{n}\pr{X_i>z'}\\
-    &= 1-\brak{1-F(z')}^n\\
-    \implies F_{Z_n}(z) &= 1-\brak{1-F\brak{\frac{z}{n}+\theta}}^n\label{eq_3}\\
-    &=1-\brak{f\brak{\frac{z}{n}+\theta}}^n 
-\end{align}
-The expression for the cdf can thus be written as:
-\begin{align}
-    F_{Z_n}(z) &=
-    \begin{cases}
-    1-e^{-n\brak{\frac{z}{n}+\theta-\theta}}&\text{when } \theta<\frac{z}{n}+\theta<\infty\\
-    0&\text{otherwise}
-    \end{cases}\\
-    &= \begin{cases}
-    1-e^{-z}&\text{when } 0<z<\infty\\
-    0 &\text{otherwise}\label{cdf}
-    \end{cases}
-\end{align}
-Using the cdf in \eqref{cdf} to calculate the pdf:\\
-\begin{align}
-    f_{Z_n}(z) &= \frac{d}{dz}F_{Z_n}(z)\\
-    &=\begin{cases}
-    e^{-z}&\text{when } 0<z<\infty\\
-    0&\text{otherwise}
-    \end{cases}\label{pdf}
-\end{align}
-\\The plots for the cdf in \eqref{cdf} and the pdf in \eqref{pdf} are shown in Fig. \ref{fig_cdf} and Fig. \ref{fig_pdf} respectively:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\columnwidth]{cdf.png}
-    \caption{cdf of $Z_n$}
-    \label{fig_cdf}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\columnwidth]{pdf.png}
-    \caption{pdf of $Z_n$}
-    \label{fig_pdf}
-\end{figure}
+\end{lemma}
+\begin{proof}
 
-\end{document} 
-
+\begin{align}
+\int f(t)dt=\int \alpha(t-\mu)^{\alpha-1}e^{-(t-\mu)^\alpha}dt\\
+=-e^{-(t-\mu)^\alpha} + C
+\end{align}
+If $x>\mu$, 
+\begin{align}
+S(x) = \int_{x}^{\infty} \alpha(t-\mu)^{\alpha-1}e^{-(t-\mu)^\alpha}dt\\
+=-e^{-(t-\mu)^\alpha}]_{x}^{\infty}\\
+=e^{-(x-\mu)^{\alpha}} \label{eq:2}
+\end{align}
+If $x\leq\mu$,
+\begin{align}
+S(x) = \int_{x}^{\mu}f(t)dt + \int_{\mu}^{\infty}f(t)dt\\
+     = 0 + e^{-(\mu-\mu)^{\alpha}}\\
+     =1 \label{eq:3}
+\end{align}
+From \eqref{eq:2} and \eqref{eq:3}, we get $S(x)$ as,
+\begin{align}
+S(x)=
+\begin{cases}
+e^{-(x-\mu)^\alpha} &x>\mu\\
+1 &x\leq\mu \label{eq:4}
+\end{cases}
+\end{align}
+\end{proof}
+From \eqref{eq:1} and \eqref{eq:4}, we get
+\begin{align}
+\lambda(x) = 
+\begin{cases}
+\alpha(x-\mu)^{\alpha-1} &x>\mu\\
+0 &x\leq\mu \label{eq:5}
+\end{cases}
+\end{align}
+So,\\ if $\alpha>1$, $\lambda(x)$ is an increasing function
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=\columnwidth]{alphagrt1.png}
+    \caption{$\alpha=2$ for red. $\alpha=1$ for green, $\mu=1$ for both}
+    \label{fig:grt1}
+\end{figure}
+and\\ if $0<\alpha<1$, $\lambda(x)$ is a decreasing function
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=\columnwidth]{alphales1.png}
+    \caption{$\alpha=0.5$ for blue. $\alpha=1$ for green, $\mu=1$ for both}
+    \label{fig:les1}
+\end{figure}
+and\\ for $\alpha=1$, $\lambda(x)=1$, a constant function.\\
+So, for some values of $\alpha$, it is increasing, for some it is decreasing function\\
+\textbf{Therefore, answer is (C) and (D)}
+\end{document}

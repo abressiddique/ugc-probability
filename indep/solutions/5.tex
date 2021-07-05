@@ -1,0 +1,73 @@
+\begin{lemma}
+    \label{indep/5/lem1}
+    If a random variable $X$ has a symmetrical distribution about the origin, i.e.,\\
+    $f_X(-x) = f_X(x)$, then $\phi_X(t)$ is even function of $t$.
+    \end{lemma}
+    \begin{proof}
+    \begin{align}
+        \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{itx}f_X(x) \, dx \\
+        \intertext{Put $x = -y$}
+        \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f_X(-y) \, dy \\
+        \phi_X(t) &= \int \limits_{-\infty}^{\infty} e^{-ity}f_X(y) \, dy \\
+        \phi_X(t) &= \phi_X(-t)
+    \end{align}
+    \end{proof}
+    \begin{lemma}
+        \label{indep/5/lem2}
+    If $X_1$ and $X_2$ are independent random variables, then $\phi_{X_1 + X_2}(t) = \phi_{X_1}(t)\, \phi_{X_2}(t)$.
+    \end{lemma}
+    \begin{proof}
+    \begin{align}
+        \phi_{X_1 + X_2}(t) &= \mathbb{E}\brak{e^{it(X_1+X_2}}\\
+        &= \mathbb{E}\brak{e^{itX_1+itX_2}}\\
+        &= \mathbb{E}\brak{e^{itX_1}e^{itX_2}}\\
+        &= \mathbb{E}\brak{e^{itX_1}}\mathbb{E}\brak{e^{itX_2}}\\
+        \phi_{X_1 + X_2}(t) &= \phi_{X_1}(t)\phi_{X_2}(t)
+    \end{align}
+    \end{proof}
+    Since $Y$ is symmetric about $0$, from Lemma     \ref{indep/5/lem1} $\phi_Y(t)$ is an even function.
+    \begin{equation}
+        \phi_Y(-t) = \phi_Y(t) \label{indep/5/eq1}
+    \end{equation}
+    Since $X$ and $Y$ are independent random variables, from Lemma \ref{indep/5/lem2},
+    \begin{align}
+        \phi_{X+Y}(t) &= \phi_X(t)\, \phi_Y(t) \label{indep/5/eq2}\\
+        \phi_{X-Y}(t) &= \phi_X(t)\, \phi_Y(-t) \label{indep/5/eq3}\\
+        \phi_{X-Y}(t) &= \phi_X(t)\, \phi_Y(t) \hspace{1cm}\brak{\text{from} \eqref{indep/5/eq1}} \label{indep/5/eq4}
+    \end{align}
+    Let $U=X+Y$ and $V=X-Y$.
+    \begin{align}
+        \phi_U(t) &= \phi_X(t)\, \phi_Y(t) \label{indep/5/eq5}\\
+        \phi_V(t) &= \phi_X(t)\, \phi_Y(t) \label{indep/5/eq6}\\
+        \phi_U(t) \, \phi_V(t) &= \phi_X^2(t) \, \phi_Y^2(t) \label{indep/5/eq7}\\
+        \phi_{U+V}(t) &= \phi_{2X}(t) = \phi_{X}(2t) \label{indep/5/eq8}
+    \end{align}
+    \\\\
+    \textbf{Examining each option :} 
+    \begin{enumerate}
+        \item 
+        If $U$ and $V$ are independent, then \[\phi_{U+V}(t) = \phi_U(t)\, \phi_V(t)\]
+        But from \eqref{indep/5/eq7} and \eqref{indep/5/eq8}, 
+        \begin{equation}
+            \phi_{U+V}(t) \neq \phi_U(t)\, \phi_V(t)
+        \end{equation}
+        Hence, \textbf{Option 1 is incorrect.}\\
+        
+        \item 
+        From \eqref{indep/5/eq5} and \eqref{indep/5/eq6}, \[\phi_U(t) = \phi_V(t)\]
+        $\implies$ $U$ and $V$ have same distribution.\\
+        Hence, \textbf{Option 2 is correct.}\\
+        
+        \item 
+        \begin{align}
+            \phi_U(-t) &= \phi_X(-t)\, \phi_Y(-t) \\
+            \phi_U(-t) &= \phi_X(-t)\, \phi_Y(t) 
+        \end{align}
+        \(\implies \phi_U(-t) \neq \phi_U(t)\) \\
+        $\implies$ $U$ is not symmetric about $0$.\\
+        Hence, \textbf{Option 3 is incorrect.}\\
+        
+        \item 
+        Since $U$ and $V$ have the same distribution, $V$ is also not symmetric about $0$.\\
+        Hence, \textbf{Option 4 is incorrect.}
+    \end{enumerate}

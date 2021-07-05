@@ -1,0 +1,67 @@
+\begin{align}
+    Var(N) = \mean{N^2} - \mean{N}^2
+\end{align}
+Replacing n with n+1\\
+\begin{definition}[infimum]
+$N$ is the greatest lower bound of the subset $S$ of $T$ (where $T$ is the set of all natural numbers and $S$ is the set of all natural numbers such that $S_n \geq 1$).\\
+($N = inf \{n \geq 1: S_n > 1\}$)\\
+The event $\{N \leq n\}$ implies $\{S_{n+1} > 1\}$ (or equivalently, $\{N > n\}$ implies $\{S_{n+1} \leq 1\}$).\\
+\end{definition}
+\begin{lemma}\label{exp/1/lemma1}
+\textbf{[Tail Sum formula] : } A random variable $X$ which takes values only in $\mathbf{N}$, then $\mean{X} = \sum _{k=1} ^\infty Pr(X\geq k)$\\
+\end{lemma}
+\begin{proof}
+\begin{align}
+    \mean{X} &= \sum _{k = 1} ^\infty k Pr(X=k)\\
+    &= \sum _{k = 1} ^\infty \sum _{n=1} ^k Pr(X=k)\\
+    &= \sum _{n = 1} ^\infty \sum _{k = n} ^\infty Pr(X=k)\\
+    &= \sum _{n = 1} ^\infty Pr(X\geq n)
+\end{align}
+\end{proof}
+\begin{corollary}
+Summation of independent and identical exponential random variables follows Erlang Distribution.\\
+\end{corollary}
+\textbf{P.D.F [Erlang distribution] : }\\
+\begin{align}
+    f(x) = \frac{\lambda^{k} x^{k-1}e^{-\lambda x}}{(k-1)!}
+\end{align}
+where,\\
+$k$ is the shape\\
+$\lambda$ is the rate\\
+$S_n = \text{Erlang}(n,\lambda)$ \\
+\begin{align}
+    \text{P.D.F of }S_n = f(x)_{S_n} = \frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!}\\
+    Pr(S_n \leq 1) = \int _0 ^1 \frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!} dx
+\end{align}
+ \\ \\ \\
+ 
+ By the tail-sum formula(lemma \ref{exp/1/lemma1}), we can thus get the expectation of $N$ as\\
+\begin{align}
+    \mean{N} = \sum ^\infty _{n = 0} Pr(N > n) = \sum ^\infty _{n = 0} Pr(S_n \leq 1)
+\end{align}
+Substituting the value\\
+\begin{align}
+    \mean{N} &= \sum _{n = 0} ^\infty \int _0 ^1  \frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!} dx\\
+    &= \int _0 ^1 \sum _{n = 0} ^\infty \frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!} dx\\
+    e^{x\lambda} &= \sum _{n = 0} ^ \infty\frac{(x\lambda)^n}{(n)!}\\
+    \mean{N} &=\lambda  \int _0 ^1 e^{\lambda x} e^{-\lambda x} dx\\
+    &= \lambda \int _0 ^1 dx\\
+    &= \lambda
+\end{align}
+By tail-sum formula (lemma \ref{exp/1/lemma1}) the expectation of $N^2$ is\\
+\begin{align}
+    \mean{N^2} &= \sum _{n = 0} ^\infty Pr(N^2 \geq n)\\
+    &= \sum _{n = 0} ^\infty [(n+1)^2 - n^2] Pr(N \geq n)\\
+    &= \sum _{n = 0} ^\infty [2n + 1] Pr(S_{n+1} \leq 1)\\
+    &=  \sum _{n = 0} ^\infty \int _0 ^1 [2n+1] \frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!} dx\\
+    &= \int _0 ^1 \sum _{n = 0} ^\infty [2n+1]\frac{\lambda^{n+1} x^{n}e^{-\lambda x}}{(n)!} dx\\
+    &= \int _0 ^1 2\lambda^2 x e^{\lambda x} e^{-\lambda x} + \lambda e^{\lambda x} e^{-\lambda x} dx\\
+    &= \lambda ^2 + \lambda
+\end{align}
+Substituting the values of $\mean{N}$ and $\mean{N^2}$ in eq.(2.0.1)
+\begin{align}
+    Var(N) &= \mean{N^2} - \mean{N}^2\\
+    &= \lambda^2 + \lambda - (\lambda)^2\\
+    &= \lambda
+\end{align}
+Thus Option 2 is correct.

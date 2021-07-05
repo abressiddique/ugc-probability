@@ -1,0 +1,120 @@
+Given, $X_1,X_2,X_3,X_4$ are i.i.d random variables.
+\begin{lemma}
+Every i.i.d sequence of random variables is exchangeable. 
+Any value of a finite sequence is as likely as any permutation of those values. The joint probability distribution is invariant under the symmetric group.
+\end{lemma}
+\begin{proof}
+\begin{align}
+    f_{X_1,X_2,X_3,\dots,X_n}(x) = f_{X_1}(x) \times f_{X_2}(x) \times \dots f_{X_n}(x) 
+\end{align}
+As $X_i$s are i.i.d random variables, their joint probability density function is the product of their marginal probability density functions and as multiplication is commutative, it is exchangeable.
+    
+\end{proof}
+\begin{definition}[Symmetric Group]
+It is the group of permutation on a set with $n$ elements and has $n!$ elements. Order of a symmetric group represents the number of elements in it.
+\end{definition}
+\begin{lemma}
+If $n$ elements of a set are random, then probability of each element '$E_i$' of the symmetric group 'S' is $\frac{1}{n!}$.
+\end{lemma}
+\begin{proof}
+As the $n$ values are completely random, there will be no bias for a particular arrangement and hence all the elements of the symmetric group are equally likely.
+\begin{align}
+    O(S) = n!
+\end{align}
+where: O(S) denotes the order of the symmetric group.
+\begin{align}
+\implies \pr{E_i} = \frac{1}{n!} \forall E_i \in S \label{indep/6/Pr(E)}
+\end{align}
+\end{proof}
+Hence, any permutation of $X_1,X_2,X_3,X_4$ is equally likely.
+As there are 4 random values that the random variables represent, they can be arranged in 4! ways. By \eqref{indep/6/Pr(E)}, we have:
+\begin{align}
+   \pr{X_1>X_2>X_3>X_4} &= \pr{X_1>X_2>X_4>X_3} \\&= \dots\\ &= \frac{1}{24}
+\end{align}
+\begin{enumerate}
+    \item \textbf{Options A and B:}
+\begin{multline}
+    \pr{X_4 > Max(X_1,X_2) > X_3} = \\\pr{X_4 > Max(X_1,X_2) > X_3 | X_1>X2 } + \\ \pr{X_4 > Max(X_1,X_2) > X_3 | X_2>X_1 }
+\end{multline}
+Clearly, by definition:
+\begin{align}
+  Max(X_1,X_2) = 
+  \begin{cases}
+      X_1, & \text{if } X_1>X_2\\
+    X_2, & \text{if } X_2>X_1
+  \end{cases}
+\end{align}
+\begin{multline}
+    \implies \pr{X_4 > Max(X_1,X_2) > X_3} = \\\pr{X_4 > X_1 > X_3| X_1 > X_2 } + \\ \pr{X_4 > X_2 > X_3| X_2 > X_1}
+\end{multline}
+\begin{multline}
+    \pr{X_4 > X_1 > X_3 | X_1 > X_2 } = \\ \frac{\pr{(X_4 > X_1 > X_3) \cap (X_1 > X_2) }}{\pr{X_1>X_2}} \label{indep/6/defn_AB}
+\end{multline}
+$(X_4>X_1) \cap (X_1>X_2) \implies X_4>X_2$ . Hence, imposing the additional condition, we get:
+\begin{multline}
+    \pr{(X_4 > X_1 > X_3) \cap (X_1 > X_2)} = \\\pr{X_4>X_2} \times \pr{X_4 > X_1 > X_3}\\ \times \pr{X_1 > X_2}
+\end{multline}
+\begin{multline}
+ \pr{(X_4 > X_1 > X_3) \cap (X_1 > X_2)}\\
+    = \frac{1}{2!}\times \frac{1}{3!}\times \frac{1}{2!}
+    = \frac{1}{2}\times \frac{1}{6}\times \frac{1}{2}= \frac{1}{24} \label{indep/6/NR_AB}
+\end{multline}
+\begin{align}
+    \pr{X_1>X_2} = \frac{1}{2!} = \frac{1}{2} \label{indep/6/DR_AB}
+\end{align}
+Substituting \eqref{indep/6/NR_AB} and \eqref{indep/6/DR_AB} in \eqref{indep/6/defn_AB}:
+\begin{align}
+    \pr{X_4 > X_1 > X_3 | X_1 > X_2 } = \dfrac{\frac{1}{24}}{\frac{1}{2}} = \frac{1}{12}
+\end{align}
+\textbf{Aliter:}\\
+The event $(X_4 > X_1 > X_3 | X_1 > X_2)$ can be decomposed into its constituent sub-events and hence we have:
+\begin{multline}
+    \pr{X_4 > X_1 > X_3 | X_1 > X_2 } = \\\pr{X_4 > X_1 > X_2> X_3} \\+\pr{X_4 > X_1 > X_3 > X_2}
+= \frac{1}{12}
+\end{multline}
+As $Max(X_1,X_2)$ being $X_1$ or $X_2$ is equally likely,
+\begin{align}
+\pr{X_4 > X_2 > X_3| X_2 > X_1} = \frac{1}{12}
+\end{align}
+\begin{align}
+\pr{X_4 > Max(X_1,X_2) > X_3} = 2 \times \frac{1}{12} = \frac{1}{6}
+\end{align}
+\item \textbf{Options C and D:} 
+\begin{multline}
+    \pr{X_4 > X_3 > Max(X_1,X_2)} = \\\pr{X_4 > X_3 > Max(X_1,X_2)| X_1>X_2} + \\\pr{X_4 > X_3 > Max(X_1,X_2)| X_2>X_1}
+\end{multline}
+\begin{multline}
+    \pr{X_4 > X_3 > Max(X_1,X_2)} = \\\pr{X_4 > X_3 > X_1| X_1>X_2} + \\\pr{X_4 > X_3 > X_2| X_2>X_1}
+\end{multline}
+\begin{multline}
+    \pr{X_4 > X_3 > X_1 | X_1 > X_2 } = \\ \frac{\pr{(X_4 > X_3 > X_1) \cap (X_1 > X_2) }}{\pr{X_1>X_2}} \label{indep/6/defn_CD}
+\end{multline}
+ $(X_4>X_1) \cap (X_1>X_2) \implies X_4>X_2$ and $(X_3>X_1) \cap (X_1>X_2) \implies X_3>X_2$ . Hence, Hence, imposing the additional conditions, we get:
+\begin{multline}
+    \pr{(X_4 > X_3 > X_1) \cap (X_1 > X_2)} = \\\pr{X_3>X_2} \times \pr{X_4>X_2} \times \pr{X_4 > X_1 > X_3} \\\times \pr{X_1 > X_2}
+\end{multline}
+\begin{multline}
+ \pr{(X_4 > X_3 > X_1) \cap (X_1 > X_2)}\\
+    = \frac{1}{2!}\times \frac{1}{2!}\times \frac{1}{3!}\times \frac{1}{2!}
+    = \frac{1}{2}\times \frac{1}{2}\times \frac{1}{6}\times \frac{1}{2}= \frac{1}{48} \label{indep/6/NR_CD}
+\end{multline}
+\begin{align}
+    \pr{X_1>X_2} = \frac{1}{2!} = \frac{1}{2} \label{indep/6/DR_CD}
+\end{align}
+Substituting \eqref{indep/6/NR_CD} and \eqref{indep/6/DR_CD} in \eqref{indep/6/defn_CD}:
+\begin{align}
+    \pr{X_4 > X_3 > X_1 | X_1 > X_2 } = \dfrac{\frac{1}{48}}{\frac{1}{2}} = \frac{1}{24}
+\end{align}
+\textbf{Aliter:}\\
+The event $(X_4 > X_3 > X_1 | X_1 > X_2)$ can be decomposed into its constituent sub-events and hence we have:
+\begin{multline}
+    \pr{X_4 > X_3 > X_1|X_1>X_2} \\= \pr{X_4 > X_3 > X_1 > X_2} = \frac{1}{24}
+\end{multline}
+As $Max(X_1,X_2)$ being $X_1$ or $X_2$ is equally likely,
+\begin{align}
+\pr{X_4 > X_3 > X_2| X_2 > X_1} = \frac{1}{24}
+\end{align}
+\begin{align}
+    \pr{X_4 > X_3 > Max(X_1,X_2)} = 2 \times \frac{1}{24} = \frac{1}{12}
+\end{align}
+\end{enumerate}

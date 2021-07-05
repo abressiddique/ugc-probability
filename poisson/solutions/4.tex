@@ -1,0 +1,69 @@
+\begin{definition}
+    Statistic : A statistic is a function T = r($X_{1},X_{2},\dots,X_{n}$) of the random sample $X_{1},X_{2},\dots,X_{n}$.
+  \end{definition}
+  \begin{definition}
+   Sufficient Statistics : A statistic t = T(X) is sufficient for $\theta$ if the conditional probability distribution of data X, given the statistic t = T(X), doesn't depend on the parameter $\theta$.
+   \begin{align}
+       \pr{\theta \vert T(X)}=\pr{\theta \vert X}
+   \end{align}
+  \end{definition}
+  \begin{theorem}[Factorization theorem]\label{poisson/4/factor}
+   : Let $X_{1},X_{2} · · · , X_{n}$ form a random sample from either a continuous
+distribution or a discrete distribution for which the pdf or the point mass function is $f(x\vert\theta)$,
+where the value of $\theta$ is unknown and belongs to a given parameter space $\Theta$. A statistic
+T($X_{1},X_{2} · · · , X_{n}$) is a sufficient statistic for $\theta$ if and only if the joint pdf or the joint point mass
+function $f_{n}$(x$\vert\theta$) $X_{1},X_{2} · · · , X_{n}$ can be factorized as follows for all values of $x = (X_{1},X_{2} · · · , X_{n}) \to$
+$R^{n}$ and all values of $\theta \in \Theta$:
+$f_{n}(x\vert \theta) = u(x)v\brak{T(x), \theta}.$\\
+Here the function u may depend on x but does not
+depend on $\theta$, and the function v depends on $\theta$ but will depend on the observed value x only through the value of the statistic T(x).
+  \end{theorem}
+  \begin{lemma} \label{poisson/4/a}
+Suppose that $X_{1}$ and $X_{2}$ are i.i.d poisson random variables with parameter $\lambda$, $T=X_{1}+2X_{2}$ does not follow poisson distribution.
+\end{lemma}
+\begin{proof}
+Let $\Phi_{X_{1}}(\omega)$, $\Phi_{2X_{2}}(\omega)$ and  $\Phi_{T}(\omega)$be the characteristic functions of probability density function of random variables $X_{1}$, $2X_{2}$ and T respectively.\\
+\begin{align}
+    \Phi_{X_{1}}(\omega)=E(e^{i\omega X_{1}})&=\sum_{x=0}^{\infty}\pr{X_{1}=x}e^{i\omega x}\\
+                    &=\sum_{x=0}^{\infty}\frac{e^{i\omega x-\lambda}\lambda^{x}}{x!}\\
+                    &=e^{-\lambda}\sum_{x=0}^{\infty}\frac{(e^{i\omega}\lambda)^{x}}{x!}\\
+                    &=e^{\lambda\brak{e^{i\omega}-1}}
+\end{align}
+Similarly,
+% \begin{multline}
+%     \Phi_{2X_{2}}(\omega)=E\brak{e^{i\omega 2X_{2}}}&=\sum_{x=0}^{\infty}\pr{X_{2}=\frac{x}{2}}e^{i\omega x}\\
+%                     =\sum_{x=0,2,4....}^{\infty}\frac{\brak{e^{i\omega x-\lambda}}\lambda^{\frac{x}{2}}}{(\frac{x}{2})!}\\
+%                     =e^{-\lambda}\sum_{\frac{x}{2}=0,1,2..}^{\infty}\frac{\brak{e^{2i\omega}\lambda}^{\frac{x}{2}}}{(\frac{x}{2})!}\\
+%                     =e^{\lambda\brak{e^{2i\omega}-1}}\\
+%                     \end{multline}
+                    \begin{align}
+\Phi_{T}\brak{\omega}&=\Phi_{X_{1}}\brak{\omega}\times\Phi_{2X_{2}}\brak{\omega}\\
+ &=e^{\lambda\brak{e^{i\omega}+e^{2i\omega}-2}}\\ 
+ &\neq e^{\mu\brak{e^{i\omega}-1}}
+ \end{align}
+ Hence the characteristic function of T ($\Phi_{T}(\omega)$) is not in the form of the characteristic function of a poisson random variable (for any value of the parameter $\mu$).\\
+ \end{proof}
+ \begin{lemma}
+ Suppose that $X_{1}$ and $X_{2}$ are i.i.d random variables with poisson distribution then T=$X_{1}+2X_{2}$ is not a sufficient statistic.
+ \end{lemma}
+ \begin{proof}
+ Joint p.m.f of $X_{1}$ and $X_{2}$ is,
+ \begin{align}
+     f_{X_{1}X_{2}}(x_{1},x_{2})&=\frac{e^{-2\lambda}\lambda^{\brak{x_{1}+x_{2}}}}{x_{1}!x_{2}!}\label{poisson/4/a}\\
+     &=\frac{1}{x_{1}!x_{2}!}\times\lambda^{T\brak{X_{1},X_{2}}}e^{-2\lambda}\lambda^{-x_{2}}
+ \end{align}
+ As we can see \eqref{poisson/4/a} cannot be expressed in the form of $u(x)v\brak{T(x), \theta}$\\
+ Hence using factorization theorem \ref{poisson/4/factor}, T is not a sufficient statistic. 
+ \end{proof}
+  \begin{enumerate}
+ \item We know T=3 when $(X_{1},X_{2})$ have values (1,1) and (3,0)
+  \begin{multline}
+\pr{X_{1}=1,X_{2}=1 |T=3}\\&=\frac{\pr{X_{1}=1,X_{2}=1 \cap T=3}}{\pr{T=3}}\\
+=\frac{\pr{X_{1}=1,X_{2}=1}}{\pr{X_{1}=1,X_{2}=1}+\pr{X_{1}=3,X_{2}=0}}\\
+=\frac{e^{-2\lambda}\lambda^{2}}{e^{-2\lambda}\lambda^{2}+\frac{e^{-3\lambda}\lambda^{3}}{6}}\\
+=\frac{6}{6+\lambda}\neq \frac{e^{-1}1^{\lambda}}{\lambda!}
+\end{multline}
+Hence $\pr{X_{1}=1,X_{2}=1 |T=3}$ depends on $\lambda$ but is not poisson with parameter 1.
+$\implies$option 4 is incorrect and option 1 is correct.\\
+\item Using lemma $\ref{poisson/4/a}$, $T=X_{1}+2X_{2}$ is not poisson.\\
+$\implies$ option 2 is incorrect, option 3 is correct\\

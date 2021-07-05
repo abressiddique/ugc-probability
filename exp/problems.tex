@@ -1,0 +1,18 @@
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+\item Let $X_1, X_2, \dots, X_n$ be independent and identically distributed random variables having an exponential distribution with mean $\frac{1}{\lambda}$.Let $S_n = X_1 + X_2 + \cdots + X_n$ and $N = inf \{n \geq 1: S_n > 1\}$. Then $Var(N)$ is\\
+\begin{enumerate}
+    \item 1
+    \item $\lambda$
+    \item $\lambda^2$
+    \item $\infty$
+\end{enumerate}
+\solution
+\input{exp/solutions/1.tex}
+\end{enumerate}
